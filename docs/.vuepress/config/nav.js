@@ -43,7 +43,7 @@ module.exports = [
                 },
                 {
                     text: 'Bugs',
-                    link:'/technology/tool/bug'
+                    link:'/technology/bug/bug'
                 },
             ]
     },
