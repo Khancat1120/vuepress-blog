@@ -25,5 +25,8 @@ for file in all_files:
         result = re.sub(pattern_2, r'<div style="text-align: center;"><tex>\1</tex></div>', result, flags=re.DOTALL)
         result = re.sub(pattern_1, r'<tex>\1</tex>', result)
 
-    with open(file.replace("md_files", "docs"), "w") as f:
+    new_file = file.replace("md_files", "docs")
+    os.chmod(new_file, 0o644)
+    with open(new_file, "w") as f:
         f.write(result)
+    os.chmod(new_file, 0o444)
