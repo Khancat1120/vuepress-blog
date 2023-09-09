@@ -1,5 +1,6 @@
 import os
 import re
+import subprocess
 
 prefix_l_1 = "md_files/"
 
@@ -26,7 +27,7 @@ for file in all_files:
         result = re.sub(pattern_1, r'<tex>\1</tex>', result)
 
     new_file = file.replace("md_files", "docs")
-    os.chmod(new_file, 0o644)
+    subprocess.run(['chattr', '+i', new_file])
     with open(new_file, "w") as f:
         f.write(result)
-    os.chmod(new_file, 0o444)
+    subprocess.run(['chattr', '-i', new_file])
