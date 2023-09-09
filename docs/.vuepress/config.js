@@ -87,14 +87,14 @@ module.exports = {
         repoLabel: 'Github',
         // 以下为可选的编辑链接选项
         // 假如你的文档仓库和项目本身不在一个仓库：
-        // docsRepo: 'Kehan1120/Kehan1120.github.io',
-        // editLinkPattern: 'https://github.com/Kehan1120/Kehan1120.github.io/issues',
+        docsRepo: 'Khancat1120/Khancat1120.github.io',
+        editLinkPattern: 'https://github.com/Khancat1120/Khancat1120.github.io/issues',
         // 假如文档不是放在仓库的根目录下：
         // docsDir: 'docs',
         // 假如文档放在一个特定的分支下：
         // docsBranch: 'main',
         // 默认是 false, 设置为 true 来启用
-        editLinks: false,
+        editLinks: true,
         // 默认为 "Edit this page"
         // editLinkText: '对本篇的内容有任何疑问吗？请来这里发表issue吧！',
         // editLinkPattern: ':repo/edit/:branch/:path',
