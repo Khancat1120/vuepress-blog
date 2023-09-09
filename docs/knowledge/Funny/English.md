@@ -161,6 +161,7 @@ sidebar: true
 * prentend：假装，假装的
 * proactively：积极主动地
 * procrastinate：拖延
+* pseudo：虚伪（标签）的
 * possess：具有，拥有
 
 ### r
@@ -198,6 +199,7 @@ sidebar: true
 * ultimate：最好的，最终的，最后的
 * uninformed：无知的，蒙昧的
 * uphold：维持，确认
+* utilize：利用
 
 ### v
 * versus：比较

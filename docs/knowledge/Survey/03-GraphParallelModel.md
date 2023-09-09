@@ -1,9 +1,9 @@
 ---
-title: Graph computation model
+title: Graph parallel model
 sidebar: true
 # isShowComments: true
 ---
-# Graph computation model
+# Graph parallel model
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

@@ -34,14 +34,12 @@ Although the above attempts to apply data augmentation to Graphs often <font col
 ### Mixup Method
 Mixup[1] is a simple data augmentation method proposed in ICLR2017 used in computer vision. It improves model's generaliztion power as well as robust to adversarial attack by perform linear transformation on input data. 
 
-Basic mixup method use formula as below <tex>\frac{\exp(1)}{\lambda+1}</tex>:
+Basic mixup method use formula as below:
 
 <div style="text-align: center;"><tex>
   X_m=\lambda X_i+(1-\lambda)X_j\\
   L_m=\lambda L_i+(1-\lambda)L_j
 </tex></div>
-
-
 
 It's applications are usually used for these four motivation.
 
@@ -57,12 +55,30 @@ They proposed a model to classify whether samples come from hybrid or real sampl
 3. **Patup** fix **CutMix**'s weakness, they do mix-up in high-dimension. And PuzzleMix mix different part with a hign information density in each images. 
 
 #### Semi-supervised method 
+Mixup method can generation pseudo labels with high quality by mixing up labeled and unlabeled images and other labeled image as training set. **ICT** first launched a semi-supervised method by utilizing consistent loss. Consistency regularization is another commonly used operation in semi supervised learning, in addition to pseudo labels. It assumes that if we perturb the input to a certain extent, the model predictions should be similar.
+<img src="/img/paper-4-2.png" style="margin-bottom: -20px;">
+Here strong or weak augmentation often include three aspects:
+* Data augmentation
+* Adversarial training
+* Transformation, e.g., automatic exposure, brightness, color, contrast, sharpness, equalization, posterize, overexposure, rotate, translate
 
+#### Domain Adaptation
+Domain Adaptation can be seen as cross-domain semi-supervised learning where the source domain is labeled and the target domain is unlabeled. Based on this approach, Mixup can provide high-quality pseudo labels for the target domain. The existing usage methods include:
 
-#### 
+1. Adversarial training + domain sample Mixup, such as **Dual Mixup** and **Virtual Mixup**, treats Mixup as a regularization method to enhance the diversity of features learned by the model
 
-#### 
+2. When using intra domain and inter domain mixups in combination, multiple methods are used to obtain sample pseudo labels for unlabeled target domains. The prediction target of the model is obtained through the mixture of pseudo labels and true labels. The acquisition of pseudo labels is the key to the success of these methods. 
 
+3. Use collaborative training similar to Teacher Student to train multiple classifiers, and then mix the provided labels with samples with real labels to provide pseudo labels for Mixup. The main function played by Mixup here is to reduce the noise of pseudo labels.
+
+#### Generation
+Manifold Mixup pointed out that Mixup can be used to regularize GAN. Note that this mixing must be cross domain, that is, mixing Fake to Fake and Fake to Real. However, in the Real Image domain, such as Real to Real mixing, mixing can actually reduce the generation effect of the model. In fact, the mixed image produced by Real to Real is not a Real Image, which is also worth studying. However, in summary, this mixing is meaningful for improving the generation model.
+
+In addition, Mixup can also be used for training VAE and GAN hybrid generation models [5], as shown in the following figure. The entire generation model consists of an autoencoder and a discriminator. Among them, the autoencoder maps the input to the feature space and maps it back to the original space through the decoder, using classical reconstruction loss for training, requiring the distance between the pre and post mapping to be as close as possible. The discriminator tries to distinguish the features before and after the mapping, usually trained with a binary loss function. In addition, it is also required that the generated results of the autoencoder can confuse the discriminator. Because autoencoder is generated one-on-one, in order to maximize the discriminator's ability to utilize as many samples as possible, reference [5] proposes that for two features
+
+By fusing in the feature space, mixed features can be obtained in the feature space <tex>h_{mixup}</tex>, and then map back to <tex>X_{mixup}</tex> in the original space.
+
+<img src="/img/paper-4-3.png" style="margin-bottom: -20px;">
 
 ## 
 
