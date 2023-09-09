@@ -16,7 +16,6 @@ def find_files_in_directory(directory):
 
 all_files = find_files_in_directory(prefix_l_1)
 
-
 for file in all_files:
     pattern_1 = r'\$(.*?)\$'
     pattern_2 = r'\$\$(.*?)\$\$'
@@ -27,7 +26,7 @@ for file in all_files:
         result = re.sub(pattern_1, r'<tex>\1</tex>', result)
 
     new_file = file.replace("md_files", "docs")
-    subprocess.run(['chattr', '+i', new_file])
+    subprocess.run(['chattr', '-i', new_file])
     with open(new_file, "w") as f:
         f.write(result)
-    subprocess.run(['chattr', '-i', new_file])
+    subprocess.run(['chattr', '+i', new_file])
