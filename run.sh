@@ -2,7 +2,7 @@
 python3 revise.py
 npm run docs:build
 # 确保脚本抛出遇到的错误
-set -e
+# set -e
 
 git init
 git add -A
