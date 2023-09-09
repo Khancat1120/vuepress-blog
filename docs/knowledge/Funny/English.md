@@ -160,6 +160,7 @@ sidebar: true
 * plate：盘子，号码牌
 * prentend：假装，假装的
 * proactively：积极主动地
+* procrastinate：拖延
 * possess：具有，拥有
 
 ### r
@@ -186,6 +187,7 @@ sidebar: true
 * speculative：投机的
 * substantial：大量的
 * stillborn：夭折的
+* so-called：所谓的，号称的
 
 ### t
 * talent：有天赋的

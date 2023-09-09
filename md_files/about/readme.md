@@ -16,10 +16,10 @@ sidebar: false
 
 ### About me
 
-- Occupation: A PhD student who knows one thing or two about everything.
+- Occupation: A PhD student who is a jack of all trades, master of none.
 - Current residence: Shenzhen, Guangdong Province, China.
 - Research directions: Knowledge reasoniong, graph data augmentation.
-- Hobbies: sleeping, fishing, ACGN.
+- Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
 ### Contact me
 

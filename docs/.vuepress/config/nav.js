@@ -39,7 +39,7 @@ module.exports = [
                 },
                 {
                     text: 'Tools',
-                    link:'/technology/tool/test'
+                    link:'/technology/tool/01-git'
                 },
                 {
                     text: 'Bugs',
