@@ -90,7 +90,7 @@ module.exports = {
         // docsRepo: 'Khancat1120/vuepress-blog',
         // editLinkPattern: 'https://github.com/Khancat1120/vuepress-blog/edit/main/docs/',
         // 假如文档不是放在仓库的根目录下：
-        // docsDir: 'docs',
+        docsDir: 'docs',
         // 假如文档放在一个特定的分支下：
         // docsBranch: 'main',
         // 默认是 false, 设置为 true 来启用

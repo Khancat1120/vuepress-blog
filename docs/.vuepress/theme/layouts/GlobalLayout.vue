@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     privacy() {
-      return { id: 'privacy', text: 'Please contact me if you have any question about this page or this blog.', link: 'https://github.com/Khancat1120/Khancat1120.github.io', }
+      return { id: 'privacy', text: 'Please contact me if you have any question about this page or this blog.', link: 'https://github.com/Khancat1120/Khancat1120.github.io/issues', }
     },
     // imprint() {
     //   return { id: 'imprint', text: 'Imprint', link: '/imprint/', }
