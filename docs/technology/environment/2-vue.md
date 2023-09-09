@@ -12,6 +12,8 @@ sidebar: true
 
 ## Vue安装
 
+
+
 ### 安装nodejs
 于nodejs的官网下载对应安装包：https://nodejs.org/en/download/
 在服务器下解压，将bin文件夹添加到环境变量。

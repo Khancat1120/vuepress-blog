@@ -1,24 +1,20 @@
 import os
 import re
 
-prefix_l_1 = "md_files/knowledge/"
+prefix_l_1 = "md_files/"
 
-def get_subdirectories(directory):
-    subdirectories = [d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))]
-    return subdirectories
+def find_files_in_directory(directory):
+    file_list = []
 
-def get_files_in_directory(directory):
-    files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
-    return files
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            file_list.append(file_path)
 
-prefix_l_2 = get_subdirectories(prefix_l_1)
+    return file_list
 
-all_files = []
+all_files = find_files_in_directory(prefix_l_1)
 
-for module in prefix_l_2:
-    prefix = prefix_l_1 + module + "/"
-    for f in get_files_in_directory(prefix):
-        all_files.append(prefix + f)
 
 for file in all_files:
     pattern_1 = r'\$(.*?)\$'
