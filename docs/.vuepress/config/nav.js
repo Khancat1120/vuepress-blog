@@ -28,15 +28,22 @@ module.exports = [
                 {
                     text: 'Algorithms',
                     link:'/technology/code/test' 
-                },{
+                },
+                {
                     text: 'Models',
                     link:'/technology/model/test'
-                },{
+                },
+                {
                     text: 'Environments',
                     link:'/technology/environment/1-install'
-                },{
+                },
+                {
                     text: 'Tools',
                     link:'/technology/tool/test'
+                },
+                {
+                    text: 'Bugs',
+                    link:'/technology/tool/bug'
                 },
             ]
     },
