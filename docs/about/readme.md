@@ -3,7 +3,7 @@ title: About me
 sidebar: false
 ---
 
-<p align="center"><img style="border-radius:41%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/icon.jpg')" alt="Mandarine-个人博客" width=260></p>
+<p align="center"><img style="border-radius:41%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/icon.jpg')" alt="Kehan-个人博客" width=260></p>
 
 ### One sentence
 
@@ -27,7 +27,7 @@ sidebar: false
 
 - Alternate email：[188962479@qq.com](mailto:188962479@qq.com)
 
-- Github Issue：[launch an issue](https://github.com/Khancat1120/Mandarine/issues)
+- Github Issue：[launch an issue](https://github.com/Khancat1120/Kehan/issues)
 
 ### Skill tree
 

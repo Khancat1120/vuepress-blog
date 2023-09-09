@@ -2,7 +2,7 @@
 <template>
 <div class="msga">
     <i class="iconfont icon-renyuan title-text" v-if="this.$page.frontmatter.username" >{{this.$page.frontmatter.username}}</i>
-    <i class="iconfont icon-renyuan title-text" v-else>Mandarine</i>
+    <i class="iconfont icon-renyuan title-text" v-else>Kehan</i>
     <i class="iconfont icon-liulan title-text"> {{dataList.pv}}</i>
 </div>
 </template>
