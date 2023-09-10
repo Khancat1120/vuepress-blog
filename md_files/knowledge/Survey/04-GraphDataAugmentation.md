@@ -80,12 +80,15 @@ By fusing in the feature space, mixed features can be obtained in the feature sp
 
 <img src="/img/paper-4-3.png" style="margin-bottom: -20px;">
 
-## 
+## G-Mixup
 
 
 
-## 
+## AutoGCL
 
+
+
+## MEGA
 
 
 <ClientOnly>

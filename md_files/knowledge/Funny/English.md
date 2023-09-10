@@ -72,6 +72,7 @@ sidebar: true
 * demonstrated：证明;演示;示范;论证;
 * delinquent：拖欠债务的，有违法倾向的
 * democracy：民主
+* dumb：愚蠢的
 * devolve：退化
 
 ### e
@@ -90,6 +91,7 @@ sidebar: true
 * efficacy：功效
 * empirical：经验主义
 * explicit：显式
+* extroversion：外向的
 
 ### f
 * forex：外汇
@@ -119,6 +121,7 @@ sidebar: true
 * inept：无能的
 * invincible：不可战胜的
 * implicit：隐式
+* introverted：内向的
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -151,6 +154,7 @@ sidebar: true
 * oppressed：压迫，欺压
 * octogenarian：耄耋老人
 * onslaught：猛攻
+* outgoing：外向的
 
 ### p
 * presumptuous：专横的；放肆的；冒昧的；自负的
@@ -163,6 +167,8 @@ sidebar: true
 * procrastinate：拖延
 * pseudo：虚伪（标签）的
 * possess：具有，拥有
+* perceptron：感知机
+* progress：进展
 
 ### r
 * ridiculous：荒谬的
@@ -269,6 +275,10 @@ sidebar: true
 * With all due respect：恕我直言，容我冒昧
 * What the heck is wrong with you：你他妈怎么了
 
+
+### 汉译英
+
+进展：progress
 
 
 <ClientOnly>
