@@ -20,6 +20,11 @@ module.exports = {
             children:getChildren('./docs/knowledge/Survey/')
         },
         {
+            title: 'Papers',
+            collapsable: true,
+            children:getChildren('./docs/knowledge/Paper/')
+        },
+        {
             title: 'Interview',
             collapsable: true,
             children:getChildren('./docs/knowledge/Interview/')

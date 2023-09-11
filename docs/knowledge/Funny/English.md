@@ -58,6 +58,8 @@ sidebar: true
 * clueless：无知的，无能的
 * clown：小丑
 * coordinate：坐标
+* curriculum：课程
+* cloze：完形填空
 
 ### d
 * dismissed：解散
@@ -122,6 +124,7 @@ sidebar: true
 * invincible：不可战胜的
 * implicit：隐式
 * introverted：内向的
+* intractable：棘手的
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -195,11 +198,13 @@ sidebar: true
 * substantial：大量的
 * stillborn：夭折的
 * so-called：所谓的，号称的
+* symmetric：对称的
 
 ### t
 * talent：有天赋的
 * tempting：诱人的
 * thrived：蓬勃发展
+* tractable：易做的
 
 ### u
 * ultimate：最好的，最终的，最后的
@@ -267,6 +272,7 @@ sidebar: true
 
 ### t
 * think tanks：智库
+* To tackle the aforementioned problems：为了解决上述问题
 
 ### u
 * urban coastal areas：沿海地区
@@ -279,6 +285,8 @@ sidebar: true
 ### 汉译英
 
 进展：progress
+特征分解：Eigendecomposition
+谱分解：Spectral decomposition
 
 
 <ClientOnly>

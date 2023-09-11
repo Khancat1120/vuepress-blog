@@ -1,5 +1,5 @@
 ---
-title: Graph Contrastive Learning
+title: Graph Neural Network
 sidebar: true
 # isShowComments: true
 ---

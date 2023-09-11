@@ -7,16 +7,24 @@ module.exports = [
                 {
                     text: 'Lessons',
                     link:'/knowledge/Lessons/01-CS224W'
-                },{
+                },
+                {
                     text: 'Books',
                     link:'/knowledge/Book/test'
-                },{
+                },
+                {
+                    text: 'Paper',
+                    link:'/knowledge/Paper/01-TextGCN'
+                },
+                {
                     text: 'Survey',
                     link:'/knowledge/Survey/01-Textgraph'
-                },{
+                },
+                {
                     text: 'Interview',
                     link:'/knowledge/Interview/test'
-                },{
+                },
+                {
                     text: 'Weird part',
                     link:'/knowledge/funny/English'
                 },
