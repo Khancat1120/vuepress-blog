@@ -287,6 +287,7 @@ sidebar: true
 进展：progress
 特征分解：Eigendecomposition
 谱分解：Spectral decomposition
+提取：extract
 
 
 <ClientOnly>

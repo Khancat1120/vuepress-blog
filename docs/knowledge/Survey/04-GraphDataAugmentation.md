@@ -82,7 +82,7 @@ By fusing in the feature space, mixed features can be obtained in the feature sp
 
 ## G-Mixup
 
-
+This paper proposed a Mix-up method for graph-level classification. It first generates graphons from different graphs. The dimension of graphon is valued as average node numbers of each graph, and then generate graphs by mix-uped graphons with mix-uped label as well. The mixup-ed sample is fed to model thus improving robustness of model.
 
 ## AutoGCL
 
