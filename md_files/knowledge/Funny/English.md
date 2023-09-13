@@ -99,6 +99,7 @@ sidebar: true
 * forex：外汇
 * ferment：发酵
 * fabulous：绝妙的
+* frustratingly：令人沮丧的
 
 ### g
 * grandiose：浮夸的，华而不实的
@@ -110,6 +111,7 @@ sidebar: true
 * hump：驼峰，背负，性交
 * harness：马具; 挽具; 控制，利用
 * heuristic：启发式的
+* hallucination：幻觉，错觉
 
 ### i
 * initiative：倡议，主动性

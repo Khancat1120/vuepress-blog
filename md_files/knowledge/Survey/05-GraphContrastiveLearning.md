@@ -3,31 +3,12 @@ title: Graph Contrastive Learning
 sidebar: true
 # isShowComments: true
 ---
-# Graph Data Augmentation
+# Graph Contrastive Learning
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
 
-In recent years, data-driven reasoning has significantly improved its generalization ability and model performance with the introduction of data augmentation technology. Data augmentation technology increases the amount of training data by creating reasonable variations of existing data without the need for additional real labels, and has been widely applied in computer vision (CV) and natural language processing (NLP).
 
-With the rapid development of graph machine learning methods such as graph neural networks, people's interest and demand for graph data augmentation (GDA) technology continue to increase. However, due to the irregular and non Euclidean structure of graph data, it is difficult to directly apply the data augmentation technique (DA) used in CV and NLP to the field of graph.
-
-In addition, graph machine learning faces unique challenges, such as:
-
-* Incomplete feature data
-* Sparsity of Structural Data Caused by Power Law Distribution
-* Lack of labeled data due to the high cost of manual annotation
-* Excessive smoothing caused by message passing in GNN.
-
-In order to address these challenges, there are increasing works on graph data augmentation. Similar to data augmentation techniques such as CV and NLP, graph data augmentation **creates data objects through modification or generation**. However, due to the fact that graphs are connected data, unlike images and text, the data objects in graph machine learning are usually non independent and identically distributed. Therefore, whether it is node level, edge level, or graph level tasks, graph data augmentation techniques often make changes to the entire graph dataset.
-
-Base on this，GraphCL（NIPS 2020）provided four most commonly used augmentation strategies，namely:
-* Node dropping,
-* Edge perturbation
-* Attribute masking
-* Subgraph sampling
-
-Although the above attempts to apply data augmentation to Graphs often <font color="red">fail to generate views on the semantics of the original graph or adapt augmentation strategies</font>  to specific graph learning tasks.
 
 ## Contrastive Learning
 
