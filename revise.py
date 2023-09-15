@@ -23,7 +23,7 @@ for file in all_files:
     with open(file) as f:
         result = f.read()
         result = re.sub(pattern_2, r'<div style="text-align: center;"><tex>\1</tex></div>', result, flags=re.DOTALL)
-        result = re.sub(pattern_1, r'<div width="50%" height="50%"><tex>\1</tex></div>', result)
+        result = re.sub(pattern_1, r'<div style="display: inline-block; width: 50%;"><tex>\1</tex></div>', result)
 
     new_file = file.replace("md_files", "docs")
     subprocess.run(['chattr', '-i', new_file])
