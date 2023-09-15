@@ -19,11 +19,11 @@ module.exports = {
             collapsable: true,
             children:getChildren('./docs/knowledge/Survey/')
         },
-        {
-            title: 'Papers',
-            collapsable: true,
-            children:getChildren('./docs/knowledge/Paper/')
-        },
+        // {
+        //     title: 'Papers',
+        //     collapsable: true,
+        //     children:getChildren('./docs/knowledge/Paper/')
+        // },
         {
             title: 'Interview',
             collapsable: true,
@@ -36,6 +36,11 @@ module.exports = {
         },
     ],
     '/technology/':[
+        {
+            title: 'Bugs',
+            collapsable: true,
+            children: getChildren('./docs/technology/bug/')
+        },
         {
             title: 'Algorithms',
             collapsable: true,
@@ -50,11 +55,6 @@ module.exports = {
             title: 'Environments',
             collapsable: true,
             children: getChildren('./docs/technology/environment/')
-        },
-        {
-            title: 'Bugs',
-            collapsable: true,
-            children: getChildren('./docs/technology/bug/')
         },
         {
             title: 'Tools',

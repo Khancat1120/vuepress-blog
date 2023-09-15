@@ -12,10 +12,10 @@ module.exports = [
                     text: 'Books',
                     link:'/knowledge/Book/01-Graphon'
                 },
-                {
-                    text: 'Paper',
-                    link:'/knowledge/Paper/01-TextGCN'
-                },
+                // {
+                //     text: 'Paper',
+                //     link:'/knowledge/Paper/01-TextGCN'
+                // },
                 {
                     text: 'Survey',
                     link:'/knowledge/Survey/01-Textgraph'
