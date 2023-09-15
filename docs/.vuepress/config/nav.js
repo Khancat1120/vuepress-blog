@@ -10,7 +10,7 @@ module.exports = [
                 },
                 {
                     text: 'Books',
-                    link:'/knowledge/Book/test'
+                    link:'/knowledge/Book/01-Graphon'
                 },
                 {
                     text: 'Paper',

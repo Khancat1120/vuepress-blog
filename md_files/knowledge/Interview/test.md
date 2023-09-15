@@ -1,10 +1,10 @@
 ---
-title: 面试记录
+title: Interview
 sidebar: true
 # isShowComments: true
 ---
 
-# 面试记录
+# Interview
 
 <ClientOnly>
 <title-pv/>

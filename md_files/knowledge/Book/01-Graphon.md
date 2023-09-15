@@ -1,10 +1,10 @@
 ---
-title: Interview
+title: Graphon theory
 sidebar: true
 # isShowComments: true
 ---
 
-# Interview
+# Graphon theory
 
 <ClientOnly>
 <title-pv/>

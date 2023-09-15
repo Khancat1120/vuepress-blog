@@ -1,10 +1,10 @@
 ---
-title: 书籍笔记-异质图表示学习与应用
+title: Graphon theory
 sidebar: true
 # isShowComments: true
 ---
 
-# 书籍笔记
+# Graphon theory
 
 <ClientOnly>
 <title-pv/>
