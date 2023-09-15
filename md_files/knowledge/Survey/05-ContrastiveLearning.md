@@ -13,18 +13,20 @@ sidebar: true
 Different campuses within the same university system do not count as the sam The underlying idea of contrastive learning is to bring the distance of related samples closer and push the distance of unrelated samples farther in a certain feature space. Currently, an important issue in comparative learning is how to construct positive and negative sample pairs. In the comparative learning framework of computer vision, SimCLR, an image is expanded in two different ways to obtain a positive sample pair, while the other samples in the batch are used as negative sample pairs. In NLP, algorithms such as CLEAR propose using data augmentation methods such as random deletion, replacement, and order adjustment for data augmentation. However, due to the discreteness of the text, the text obtained through data expansion needs to be discounted in terms of text fluency and grammatical correctness. Some methods also use supervised datasets to obtain positive sample pairs, such as using questions and answers from QA datasets as a pair of positive samples. For a pair of samples $x_i$ and $x_j$, their characteristics are $h_i$ And $h_j$. The training objective of comparative learning can be simplified as equation:
 
 $$
-\mathcal{L}_{CL} = - \frac{e^{s_{i,j} / \tau}}{\sum_{j=1, j \neq i}^{N}e^{s_{i,j} / \tau}
+\mathcal{L}_{CL} = - \frac{e^{s_{i,j} / \tau}}{\sum_{j=1, j \neq i}^{N} e^{s_{i,j} / \tau}}
 $$
 
 Here $s_{i,j}=cosine(h_i,h_j)$, $\tau$ is a coefficient called temperature function. Normally, loss function can written as this norm:
 
 $$
-\mathcal{L}_{simple} = - {s_{i,j}} + \lambda \sum_{j=1, j \neq i}^{N} s_{i,j}}
+\mathcal{L}_{simple} = - {s_{i,j}} + \lambda \sum_{j=1, j \neq i}^{N} s_{i,j}
 $$
 
 The main difference of two formula is that the weight of Simple Loss for each negative sample is $\lambda$ while contrastive learning losses result in higher penalties for negative samples with higher similarity. And temperature function pay attentions to negative samples that are hard to optimize. When $\tau$ tends to zero, it exert more penalties to false predictions of negative samples. Facts prove that smaller coefficient often bring benefits to performances of model.
 
 ### uniformity on the hypersphere
+
+
 
 ### diffences with metric learning 
 
