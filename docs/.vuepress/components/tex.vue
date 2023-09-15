@@ -1,5 +1,5 @@
 <template>
-  <span ref="latex" class="katex" v-html="rawHTML"></span>
+  <span ref="latex" class="katex" v-html="rawHTML style="font-size: 50%;"></span>
 </template>
 
 <script>
