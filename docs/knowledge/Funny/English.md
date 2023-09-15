@@ -94,6 +94,7 @@ sidebar: true
 * empirical：经验主义
 * explicit：显式
 * extroversion：外向的
+* exert：施加
 
 ### f
 * forex：外汇
@@ -125,6 +126,7 @@ sidebar: true
 * inept：无能的
 * invincible：不可战胜的
 * implicit：隐式
+* impose：强制施加
 * introverted：内向的
 * intractable：棘手的
 
@@ -290,6 +292,7 @@ sidebar: true
 特征分解：Eigendecomposition
 谱分解：Spectral decomposition
 提取：extract
+施加：exert，impose
 
 
 <ClientOnly>

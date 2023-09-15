@@ -1,5 +1,5 @@
 ---
-title: Graph Contrastive Learning
+title: Graph Pre-train
 sidebar: true
 # isShowComments: true
 ---
