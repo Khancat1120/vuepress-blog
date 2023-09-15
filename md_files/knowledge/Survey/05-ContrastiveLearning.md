@@ -26,7 +26,24 @@ The main difference of two formula is that the weight of Simple Loss for each ne
 
 ### uniformity on the hypersphere
 
+Wang et al.'s paper discussed the properties of embedded vector distribution, and they believe that an important feature of contrastive learning is its alignment and uniformity in obtaining feature vectors. As shown in Figure 3, alignment refers to similar samples having similar feature vectors, which should remain invariant to irrelevant noise. Uniformity features can store more information, meaning that the features are roughly evenly distributed on the hypersphere. Why can uniformity preserve more features? It can be understood that compared to non-uniform distributions with only a few prominent values, uniformly distributed features have a wider distribution, and each feature retains its own unique information, which can also be combined to form more results through the operation of this information.
 
+<img src="/img/uniform.png" style="margin-bottom: -20px;">
+
+The quantification method of alignment is the expected distance between two positive sample pairs. The quantification indicator of alignment given in paper is the expected distance between positive sample pairs, as shown in equation below:
+
+$$
+\mathcal L_\text{align} = \mathbb E_{(x,x^+) \sim p_\text{pos}} \|f(x) - f(x^+) \| 
+$$
+
+The quantitative indicator of uniformity is the radial basis function kernel (RBF kernel), represented by equation below. Among them $p_{data}$ represents the distribution of data, $t$ is a hyperparameter.
+
+$$
+\mathcal L_\text{uniform} = \log \mathop {\mathbb E} \limits_{ \substack{\text{i.i.d.} \\ x,y\sim p_\text{data}}} e^{-t \|f(x) - f(y)\|^2} 
+$$
+
+
+An extreme counterexample of uniformity is when the feature vectors are mapped to a point near a hypersphere, where the distribution of the feature vectors is extremely uneven. This situation is generally referred to as model collapse. Model collapse is a problem that pre training is very easy to encounter, for example, when we add some pre training tasks, it can easily lead to model collapse.
 
 ### diffences with metric learning 
 
