@@ -76,7 +76,7 @@ Manifold Mixup pointed out that Mixup can be used to regularize GAN. Note that t
 
 In addition, Mixup can also be used for training VAE and GAN hybrid generation models [5], as shown in the following figure. The entire generation model consists of an autoencoder and a discriminator. Among them, the autoencoder maps the input to the feature space and maps it back to the original space through the decoder, using classical reconstruction loss for training, requiring the distance between the pre and post mapping to be as close as possible. The discriminator tries to distinguish the features before and after the mapping, usually trained with a binary loss function. In addition, it is also required that the generated results of the autoencoder can confuse the discriminator. Because autoencoder is generated one-on-one, in order to maximize the discriminator's ability to utilize as many samples as possible, reference [5] proposes that for two features
 
-By fusing in the feature space, mixed features can be obtained in the feature space <div style="display: inline-block; width: 50%;"><tex>h_{mixup}</tex></div>, and then map back to <div style="display: inline-block; width: 50%;"><tex>X_{mixup}</tex></div> in the original space.
+By fusing in the feature space, mixed features can be obtained in the feature space <div style="width: 50%;"><tex>h_{mixup}</tex></div>, and then map back to <div style="width: 50%;"><tex>X_{mixup}</tex></div> in the original space.
 
 <img src="/img/paper-4-3.png" style="margin-bottom: -20px;">
 
