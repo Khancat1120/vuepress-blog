@@ -8,7 +8,15 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
-## Contrastive Learning
+## What's Contrastive Learning
+
+### loss function 
+
+### temperature function 
+
+### uniformity on the hypersphere
+
+### diffences with metric learning 
 
 Contrastive learning and metric learning are both methods in the field of machine learning, used to learn the similarity and distance between data. They have some similarities, but there are also obvious differences:
 

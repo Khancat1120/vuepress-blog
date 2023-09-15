@@ -62,12 +62,12 @@ module.exports = {
             children: getChildren('./docs/technology/tool/')
         },
     ],
-    '/jottings/':[
-        {
-            title: 'Essay',
-            collapsable: true,
-            children: getChildren('./docs/jottings/')
-        },
-    ],
+    // '/jottings/':[
+    //     {
+    //         title: 'Essay',
+    //         collapsable: true,
+    //         children: getChildren('./docs/jottings/')
+    //     },
+    // ],
 
 }
