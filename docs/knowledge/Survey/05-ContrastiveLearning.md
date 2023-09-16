@@ -92,7 +92,7 @@ In self-supervised mode, it generates positive sentence instance by feeding them
 
 <img src="/img/simcse.png" style="margin-bottom: -20px;">
 
-In supervised mode, it works better than bert in many field for it alleviates representation degeneration problem.
+In supervised mode, it works better than bert in many field for contrastive learning greatly alleviates **representation degeneration problem**.
 
 <ClientOnly>
   <leave/>
