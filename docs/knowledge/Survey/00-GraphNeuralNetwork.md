@@ -8,7 +8,7 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
-
+ 
 ## Spatial domain convolution 
 
 

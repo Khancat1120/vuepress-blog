@@ -20,10 +20,10 @@ module.exports = [
                     text: 'Survey',
                     link:'/knowledge/Survey/01-Textgraph'
                 },
-                {
-                    text: 'Interview',
-                    link:'/knowledge/Interview/test'
-                },
+                // {
+                //     text: 'Interview',
+                //     link:'/knowledge/Interview/test'
+                // },
                 {
                     text: 'Weird part',
                     link:'/knowledge/funny/English'
@@ -33,12 +33,12 @@ module.exports = [
     {
         text: 'Technology', 
         items: [
+                // {
+                //     text: 'Algorithms',
+                //     link:'/technology/code/test' 
+                // },
                 {
-                    text: 'Algorithms',
-                    link:'/technology/code/test' 
-                },
-                {
-                    text: 'Models',
+                    text: 'Codes',
                     link:'/technology/model/test'
                 },
                 {

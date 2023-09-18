@@ -24,11 +24,11 @@ module.exports = {
         //     collapsable: true,
         //     children:getChildren('./docs/knowledge/Paper/')
         // },
-        {
-            title: 'Interview',
-            collapsable: true,
-            children:getChildren('./docs/knowledge/Interview/')
-        },
+        // {
+        //     title: 'Interview',
+        //     collapsable: true,
+        //     children:getChildren('./docs/knowledge/Interview/')
+        // },
         {
             title: 'Weird part',
             collapsable: true,
@@ -41,13 +41,13 @@ module.exports = {
             collapsable: true,
             children: getChildren('./docs/technology/bug/')
         },
+        // {
+        //     title: 'Algorithms',
+        //     collapsable: true,
+        //     children: getChildren('./docs/technology/code/')
+        // },
         {
-            title: 'Algorithms',
-            collapsable: true,
-            children: getChildren('./docs/technology/code/')
-        },
-        {
-            title: 'Models',
+            title: 'Codes',
             collapsable: true,
             children: getChildren('./docs/technology/model/')
         },
