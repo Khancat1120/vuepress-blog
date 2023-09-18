@@ -1,5 +1,5 @@
 ---
-title: Graph Neural Network
+title: Graph Neural Network: 
 sidebar: true
 # isShowComments: true
 ---
@@ -9,14 +9,10 @@ sidebar: true
 </ClientOnly>
 
 
-## Contrastive Learning
+## Spatial domain convolution 
 
 
-## 
-
-
-
-## 
+## Spectral domain 
 
 
 

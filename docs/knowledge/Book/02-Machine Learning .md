@@ -1,18 +1,22 @@
 ---
-title: Graph Neural Network: 
+title: Graphon theory
 sidebar: true
 # isShowComments: true
 ---
-# Graph Neural Network
+
+# Graphon theory
+
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
 
 
-## Spatial domain convolution 
 
 
-## Spectral domain 
+
+
+
+
 
 
 
