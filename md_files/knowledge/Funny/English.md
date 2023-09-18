@@ -289,10 +289,14 @@ sidebar: true
 ### 汉译英
 
 进展：progress
-特征分解：Eigendecomposition
+特征分解：Eigen decomposition
 谱分解：Spectral decomposition
 提取：extract
 施加：exert，impose
+时域：Time domain
+频域：Frequency domain
+空域：Spatial domain
+谱域：Spectral domain
 
 
 <ClientOnly>
