@@ -39,11 +39,11 @@ module.exports = [
                 // },
                 {
                     text: 'Codes',
-                    link:'/technology/model/test'
+                    link:'/technology/model/01-GNN'
                 },
                 {
                     text: 'Environments',
-                    link:'/technology/environment/1-install'
+                    link:'/technology/environment/01-install'
                 },
                 {
                     text: 'Tools',
