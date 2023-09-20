@@ -18,7 +18,7 @@ sidebar: false
 
 - Occupation: A PhD student who is a jack of all trades, master of none.
 - Current residence: Shenzhen, Guangdong Province, China.
-- Research directions: Knowledge reasoniong, graph data augmentation.
+- Research directions: Knowledge reasoniong.
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
 ### Publications
