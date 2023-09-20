@@ -1,10 +1,10 @@
 ---
-title: CS224W
+title: Spectral Graph Neural Network
 sidebar: true
 # isShowComments: true
 ---
 
-# CS224W
+# Spectral Graph Neural Network
 
 <ClientOnly>
 <title-pv/>
