@@ -60,6 +60,7 @@ sidebar: true
 * coordinate：坐标
 * curriculum：课程
 * cloze：完形填空
+* conjecture：推测
 
 ### d
 * dismissed：解散
@@ -245,6 +246,9 @@ sidebar: true
 
 ### d
 * Darn it：该死
+
+### f
+* from scratch：从头开始
 
 ### g
 * Give me a favor：帮我个忙
