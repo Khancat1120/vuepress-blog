@@ -297,6 +297,8 @@ sidebar: true
 频域：Frequency domain
 空域：Spatial domain
 谱域：Spectral domain
+补充：supplement
+振幅：amplitude
 
 
 <ClientOnly>
