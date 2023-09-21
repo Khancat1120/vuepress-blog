@@ -23,6 +23,7 @@ sidebar: true
 * abide：遵守; (abide by)接受，遵照（规则，决定，劝告）; 逗留，停留;
 * articulation：关节
 * anonymous：匿名的
+* analogy：类比
 * aplenty：大量的
 * affront：侮辱，冒犯
 * appropriate：占用，盗用，合适的，恰当的
