@@ -8,9 +8,9 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
-<embed src="/pdf/paper.pdf" type="application/pdf" width="100%" height="600px" />
+<!-- <embed src="/pdf/paper.pdf" type="application/pdf" width="100%" height="600px" />
 
-<embed src="/pdf/paper.pdf" width="500" height="375" type="application/pdf">
+<embed src="/pdf/paper.pdf" width="500" height="375" type="application/pdf"> -->
 
 
 
