@@ -26,7 +26,9 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 ## 访问本机用户目录下的.ssh文件夹
 不出意外的话，本机用户目录下的.ssh文件夹下会出现以下几个文件：
+
 <img src="/img/ssh.png" style="margin-bottom: -20px;">
+
 打开其中的id_rsa.pub文件（公钥），将里面的内容复制。
 
 ## 通过ssh访问堡垒机用户目录下的.ssh文件夹
