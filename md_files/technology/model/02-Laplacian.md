@@ -1,10 +1,10 @@
 ---
-title: GNN for node classification in cora dataset
+title: Laplacian Matrix
 sidebar: true
 # isShowComments: true
 ---
 
-# GNN for node classification in cora dataset
+# Laplacian Matrix
 
 <ClientOnly>
 <title-pv/>

@@ -1,10 +1,10 @@
 ---
-title: Laplacian Matrix
+title: GraphSAGE
 sidebar: true
 # isShowComments: true
 ---
 
-# Laplacian Matrix
+# GraphSAGE
 
 <ClientOnly>
 <title-pv/>

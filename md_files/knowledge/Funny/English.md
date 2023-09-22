@@ -165,6 +165,7 @@ sidebar: true
 * octogenarian：耄耋老人
 * onslaught：猛攻
 * outgoing：外向的
+* orthogonal：正交的
 
 ### p
 * presumptuous：专横的；放肆的；冒昧的；自负的
