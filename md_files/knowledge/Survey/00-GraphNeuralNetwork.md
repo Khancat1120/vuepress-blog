@@ -8,11 +8,17 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
- 
-## Spatial domain convolution 
+ ## GNN Introduction
 
 
-## Spectral domain 
+<embed src="/pdf/gnn_week1.pdf" type="application/pdf" width="100%" height="1000px" />
+
+
+## GNN Models
+
+
+<embed src="/pdf/gnn_week2.pdf" type="application/pdf" width="100%" height="1000px" />
+<!-- <embed src="/pdf/paper.pdf" width="500" height="375" type="application/pdf"> -->
 
 
 
