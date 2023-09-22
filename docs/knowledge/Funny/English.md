@@ -62,6 +62,7 @@ sidebar: true
 * curriculum：课程
 * cloze：完形填空
 * conjecture：推测
+* conjugate：共轭
 
 ### d
 * dismissed：解散
@@ -157,6 +158,7 @@ sidebar: true
 ### n
 * nihilism： 虚无主义
 * negotiable：可转让的
+* notoriously：众所周知的，臭名昭著的
 
 ### o
 * obsess：迷恋; 使痴迷; 唠叨; 挂牵; 念念不忘;
@@ -307,6 +309,7 @@ sidebar: true
 补充：supplement
 振幅：amplitude
 利用：leverage
+共轭：conjugate
 
 
 <ClientOnly>
