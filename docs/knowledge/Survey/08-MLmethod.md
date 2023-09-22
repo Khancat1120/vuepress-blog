@@ -1,5 +1,5 @@
 ---
-title: Graphon
+title: ML method
 sidebar: true
 # isShowComments: true
 ---
