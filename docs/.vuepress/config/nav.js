@@ -5,6 +5,10 @@ module.exports = [
         text: 'Knowledge',
         items: [
                 {
+                    text: 'Survey',
+                    link:'/knowledge/Survey/01-Textgraph'
+                },
+                {
                     text: 'Lessons',
                     link:'/knowledge/Lessons/01-CS224W'
                 },
@@ -16,10 +20,6 @@ module.exports = [
                 //     text: 'Paper',
                 //     link:'/knowledge/Paper/01-TextGCN'
                 // },
-                {
-                    text: 'Survey',
-                    link:'/knowledge/Survey/01-Textgraph'
-                },
                 // {
                 //     text: 'Interview',
                 //     link:'/knowledge/Interview/test'
