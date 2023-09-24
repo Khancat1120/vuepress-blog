@@ -40,7 +40,7 @@ module.exports = [
                 {
                     text: 'Codes',
                     link:'/technology/code/01-GNN'
-                // },
+                },
                 // {
                 //     text: 'Environments',
                 //     link:'/technology/environment/01-install'
