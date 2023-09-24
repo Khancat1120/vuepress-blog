@@ -1,5 +1,5 @@
 ---
-title: GraphSAGE
+title: GraphSAGE for LP
 sidebar: true
 # isShowComments: true
 ---
@@ -13,7 +13,7 @@ sidebar: true
 
 ```python
 # -*- coding: utf-8 -*-
-"""Laplacian-2.ipynb"""
+"""GraphSAGE for LP (need negative sample)"""
 
 !pip3 install networkx
 

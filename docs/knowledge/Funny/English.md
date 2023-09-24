@@ -310,6 +310,7 @@ sidebar: true
 振幅：amplitude
 利用：leverage
 共轭：conjugate
+线性相关/无关：Linearly dependent/independent
 
 
 <ClientOnly>
