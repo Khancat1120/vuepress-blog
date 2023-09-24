@@ -11,6 +11,7 @@ sidebar: true
 </ClientOnly>
 
 ```shell
+
 在这里养了一只猫猫 路过的朋友要是不开心的话可以摸摸它 心情会好很多
 　　　　　　 ＿＿
 　　　　　／＞　　フ
@@ -32,6 +33,7 @@ sidebar: true
 　 （ (´＾ヽこつ
 　　 ) )
 　　(ノ
+
 ```
 
 <ClientOnly>
