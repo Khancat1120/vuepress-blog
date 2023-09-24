@@ -10,107 +10,142 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
-DGL（Deep Graph Library）是一个很方便的用于处理图数据和图神经网络（GNN）的开源Python工具库，它提供了用于构建、分析和操作各种类型的图结构的工具和函数，结合numpy，pandas，torch_geometric使用可以事半功倍。不过其中不乏一些鬼才设计，特此写下踩坑记录。
+DGL（Deep Graph Library）是一个很方便的用于处理图数据和图神经网络（GNN）的开源Python工具库，它提供了用于构建、分析和操作各种类型的图结构的工具和函数，结合numpy，pandas，torch_geometric等等使用可以事半功倍。DGL和networkx比较像，但不像networkx那样着重于网络分析。不过其中不乏一些鬼才设计容易让初学者陷入困惑，特此写下踩坑记录。
 
-## 登录
+## 图的创建
+### 同质图
 
-要查看当前登录到 Git 的账号，可以使用以下 Git 命令查看全局配置中的用户信息：
+1. 通过torch张量创建
 
-```bash
-git config --global user.name
-git config --global user.email
+```python
+import dgl
+import numpy as np
+# 使用NumPy数组创建同质图
+graph = dgl.graph((np.array([0, 1, 2, 0]), np.array([1, 2, 3, 0])))
+
+# 创建同质图
+G = dgl.graph(edge_dict)
+# Graph(num_nodes=4, num_edges=4,
+#       ndata_schemes={}
+#       edata_schemes={})
+
 ```
 
-这两个命令将显示当前全局配置中的用户名和电子邮件地址。这些信息通常与Git上的账号相关联。
+需要注意的一些地方是，dgl要求节点必须是连续的，也就是说如果你空降编号999，而4到998都是没定义过边的，也是默认你拥有这些点，如果在图中有没有边链接的点，需要通过graph函数的num_nodes属性指定有多少单点。
 
-::: 注意
-这些命令将显示全局配置中的信息，这意味着它们用于在计算机上的所有 Git 仓库。如果您希望查看特定仓库的配置，请进入该仓库的目录，并使用相同的命令，但不带 --global 标志，
+```python
+# 使用NumPy数组创建同质图
+graph = dgl.graph((np.array([0, 1, 2, 0, 999]), np.array([1, 2, 3, 0, 0])))
+
+# 创建同质图
+G = dgl.graph(edge_dict)
+# Graph(num_nodes=1000, num_edges=5,
+#       ndata_schemes={}
+#       edata_schemes={})
+```
+
+在dgl的图中，所有边都是有向的，如果要创建无向图，需要创建双向边或直接使用无向图创建函数
+
+```python
+src, dst = torch.tensor([0,0,0,1]), torch.tensor([1,2,3,3])
+u = torch.cat((src,dst))
+v = torch.cat((dst,src))
+#或
+bg = dgl.to_bidirected(g)
+```
+
+2. 一条一条创建
+
+添加节点：
+```python
+# 添加一个节点
+graph.add_nodes(1)  # 添加一个节点，节点编号从0开始
+
+# 添加多个节点
+num_nodes = 5
+graph.add_nodes(num_nodes)  # 添加5个节点，节点编号从0到4
+```
+
+添加边：
+```python
+# 添加一条边，连接节点0和节点1
+graph.add_edge(0, 1)
+
+# 添加多条边，可以使用列表指定要连接的边
+src_list = [0, 1, 2]
+dst_list = [3, 4, 0]
+graph.add_edges(src_list, dst_list)
+
+# 添加有向边，使用边的类型
+src_list = [0, 1, 2]
+dst_list = [3, 4, 0]
+graph.add_edges(src_list, dst_list, etype='directed')  # 指定边的类型为'directed'
+```
+### 特征
+
+```python
+"建图"
+g = dgl.graph(([0, 0, 1, 5], [1, 2, 2, 0])) # 6 nodes, 4 edges
+
+"指定特征"
+g.ndata['x'] = torch.ones(g.num_nodes(), 3)
+g.ndata['y'] = torch.randn(g.num_nodes(), 5) # 不同名字可以有不同的特征
+g.edata['x'] = torch.ones(g.num_edges(), dtype=torch.int32)
+
+"查看特征"
+print(g.ndata) # 输出dict  {'x':tensor, 'y':tensor}
+print(g.edata) # {'x': tensor([1, 1, 1, 1], dtype=torch.int32)}
+
+print(g.ndata['x'][1]) # tensor([1., 1., 1.])
+print(g.edata['x'][torch.tensor([0, 3])])  # 查看第0和3号的特征
+# tensor([1, 1], dtype=torch.int32)
+```
+
+::: tip 注意事项
+* 只有数字类型可以做特征（e.g., float, double, and int），特征可以是标量，向量，矩阵或多维张量
+* 点特征之间，边特征之间名字要不同，但点特征与边特征之间名字可以相同
+* 无法给点/边的子集设置特征，特征tensor的最高维必须等于点/边数
+* 特征张量是row-major的，即每一行是一个点/边的特征
 :::
 
-例如：
-```bash
-cd /path/to/your/repository
-git config user.name
-git config user.email
+对于有权图，可将权值作为图的边特征存储
+```python
+# edges 0->1, 0->2, 0->3, 1->3
+edges = th.tensor([0, 0, 0, 1]), th.tensor([1, 2, 3, 3])
+weights = th.tensor([0.1, 0.6, 0.9, 0.7]) # weight of each edge
+g = dgl.graph(edges)
+g.edata['w'] = weights
+print(g)
+# Graph(num_nodes=4, num_edges=4,
+#      ndata_schemes={}
+#      edata_schemes={'w' : Scheme(shape=(,), dtype=torch.float32)})
 ```
 
-在git切换登录账号时，通常会出现用户凭据问题，解决办法：
-```bash
-git credential reject
+
+### 异质图
+
+dgl中，每个关系指定一个图，异质图将由多个关系的图组成，首先，每个关系写成一个三元组(原节点类型，关系类型，目标节点类型），如('drug', 'treats', 'disease')
+该关系称为规范边类型（canonical edge types），接着写出图数据，该数据中每个关系都对应一个图。
+```python
+# 定义一个包含节点类型和边类型信息的字典
+graph_data = {
+    ('user', 'buys', 'item'): ([0, 1, 2], [7, 8, 9]),
+    ('user', 'follows', 'user'): ([0, 1, 2], [3, 4, 555])
+}
+
+# 使用字典初始化异构图
+hg = dgl.heterograph(graph_data)
+
+# Graph(num_nodes={'item': 10, 'user': 556},
+#       num_edges={('user', 'buys', 'item'): 3, ('user', 'follows', 'user'): 3},
+#       metagraph=[('user', 'item', 'buys'), ('user', 'user', 'follows')])
+
 ```
 
-## 分支
 
-在Git中，分支（Branch）是用来管理和跟踪代码开发的一个重要概念。分支实际上是代码库的不同版本或线路的副本，每个分支都可以独立地进行修改和开发，而不会影响其他分支。这允许团队协同开发，同时保持代码的稳定性和版本控制。以下是Git中不同分支的一些常见含义：
+## 图的属性
 
-* 主分支（Main/Branch）：主分支通常被称为main或master，是代码库的默认分支。它包含了项目的稳定版本，通常是生产环境中正在运行的代码。新功能通常不会直接添加到主分支，而是在其他分支上进行开发和测试，然后合并到主分支中。
 
-* 特性分支（Feature Branch）：特性分支是为了开发新功能或修复Bug而创建的分支。每个特性分支通常对应一个特定的任务或问题，开发完成后，可以将特性分支合并回主分支。
-
-* 发布分支（Release Branch）：发布分支用于准备发布新版本的代码。在发布前，可以在发布分支上进行最后的测试、修复bug和文档更新。一旦准备就绪，发布分支通常会合并回主分支，然后发布到生产环境。
-
-* 热修复分支（Hotfix Branch）：热修复分支用于紧急修复生产环境中的严重Bug，而不需要等待下一个正式发布。修复完成后，热修复分支会合并回主分支和适用的发布分支。
-
-### 创建分支：
-
-要创建一个新的分支，可以使用以下命令：
-
-```bash
-git branch <branch-name>
-```
-例如，创建一个名为"feature-xyz"的特性分支：
-```bash
-git branch feature-xyz
-```
-2. 切换分支：
-
-要切换到一个分支，可以使用以下命令：
-
-```bash
-git checkout <branch-name>
-```
-或者使用Git 2.23及更高版本的更现代的切换方式：
-
-```bash
-git switch <branch-name>
-```
-例如，切换到"feature-xyz"分支：
-
-```bash
-git checkout feature-xyz
-```
-或：
-```bash
-git switch feature-xyz
-```
-3. 合并分支：
-
-要将一个分支的更改合并到另一个分支，可以使用以下命令：
-
-```bash
-git merge <branch-name>
-```
-例如，将"feature-xyz"分支的更改合并到主分支：
-
-```bash
-git checkout main  # 切换回主分支
-git merge feature-xyz
-```
-当你要合并两个分支时，如果这两个分支之间存在代码差异，Git会尝试自动合并这些差异。这个过程中可能会发生冲突（conflicts），因为Git无法确定应该保留哪个版本的代码。当出现冲突时，需要手动解决这些冲突。
-
-4. 删除分支：
-
-要删除一个分支，可以使用以下命令：
-
-```bash
-git branch -d <branch-name>
-```
-例如，删除"feature-xyz"分支：
-
-```bash
-git branch -d feature-xyz
-```
-这些是Git分支的基本操作示例。请注意，分支操作可能会影响代码库的历史，因此在执行合并或删除分支操作之前，请确保您了解其影响，并在需要时进行适当的备份和测试。此外，使用合并请求或拉取请求来协作开发，以确保团队成员可以审查和讨论更改。
 
 
 <ClientOnly>

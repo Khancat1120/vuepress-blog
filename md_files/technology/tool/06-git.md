@@ -23,14 +23,15 @@ git config --global user.email
 
 ::: tip 注意
 这些命令将显示全局配置中的信息，这意味着它们用于在计算机上的所有 Git 仓库。如果您希望查看特定仓库的配置，请进入该仓库的目录，并使用相同的命令，但不带 --global 标志。
-:::
-
 例如：
 ```bash
 cd /path/to/your/repository
 git config user.name
 git config user.email
 ```
+:::
+
+
 
 在git切换登录账号时，通常会出现用户凭据问题，解决办法：
 ```bash
