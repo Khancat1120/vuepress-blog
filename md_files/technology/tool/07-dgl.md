@@ -1,14 +1,16 @@
 ---
-title: Git学习笔记
+title: DGL踩坑记录
 sidebar: true
 # isShowComments: true
 ---
 
-# Git学习笔记
+# DGL踩坑记录
 
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
+
+DGL（Deep Graph Library）是一个很方便的用于处理图数据和图神经网络（GNN）的开源Python工具库，它提供了用于构建、分析和操作各种类型的图结构的工具和函数，结合numpy，pandas，torch_geometric使用可以事半功倍。不过其中不乏一些鬼才设计，特此写下踩坑记录。
 
 ## 登录
 
@@ -21,8 +23,8 @@ git config --global user.email
 
 这两个命令将显示当前全局配置中的用户名和电子邮件地址。这些信息通常与Git上的账号相关联。
 
-::: tip 注意
-这些命令将显示全局配置中的信息，这意味着它们用于在计算机上的所有 Git 仓库。如果您希望查看特定仓库的配置，请进入该仓库的目录，并使用相同的命令，但不带 --global 标志。
+::: 注意
+这些命令将显示全局配置中的信息，这意味着它们用于在计算机上的所有 Git 仓库。如果您希望查看特定仓库的配置，请进入该仓库的目录，并使用相同的命令，但不带 --global 标志，
 :::
 
 例如：
