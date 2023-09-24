@@ -39,15 +39,15 @@ module.exports = [
                 // },
                 {
                     text: 'Codes',
-                    link:'/technology/model/01-GNN'
-                },
-                {
-                    text: 'Environments',
-                    link:'/technology/environment/01-install'
-                },
+                    link:'/technology/code/01-GNN'
+                // },
+                // {
+                //     text: 'Environments',
+                //     link:'/technology/environment/01-install'
+                // },
                 {
                     text: 'Tools',
-                    link:'/technology/tool/01-git'
+                    link:'/technology/tool/01-install'
                 },
                 {
                     text: 'Bugs',
