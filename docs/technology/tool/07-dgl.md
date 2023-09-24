@@ -124,7 +124,7 @@ print(g)
 
 ### 异质图
 
-dgl中，每个关系指定一个图，异质图将由多个关系的图组成，首先，每个关系写成一个三元组(原节点类型，关系类型，目标节点类型），如('drug', 'treats', 'disease')
+dgl中，每个关系指定一个图，异质图将由多个关系的图组成，首先，每个关系写成一个三元组<原节点类型，关系类型，目标节点类型>，如('drug', 'treats', 'disease')
 该关系称为规范边类型（canonical edge types），接着写出图数据，该数据中每个关系都对应一个图。
 ```python
 # 定义一个包含节点类型和边类型信息的字典
@@ -145,8 +145,29 @@ hg = dgl.heterograph(graph_data)
 
 ## 图的属性
 
+创建一个图
 
+```python
+u, v = torch.tensor([0, 0, 0, 1, 2]), torch.tensor([1, 2, 3, 3, 1])
+g = dgl.graph((u, v))
+g.ndata['n_fe'] = torch.ones((g.num_nodes(), 3))
+g.ndata['n_fe_matrix'] = torch.rand((g.num_nodes(), 3, 2))
+g.edata['e_fe'] = torch.zeros(g.num_edges(), 5)
 
+# Graph(num_nodes=4, num_edges=5,
+#       ndata_schemes={'n_fe': Scheme(shape=(3,), dtype=torch.float32),
+#                      'n_fe_matrix': Scheme(shape=(3, 2), dtype=torch.float32)}
+#       edata_schemes={'e_fe': Scheme(shape=(5,), dtype=torch.float32)})
+
+```
+
+<img src="/img/dgl_1.png" style="margin-bottom: -20px;">
+
+<img src="/img/dgl_2.png" style="margin-bottom: -20px;">
+
+## 参考链接
+
+[DGL-图属性](https://blog.csdn.net/Iam_Human/article/details/108398115)
 
 <ClientOnly>
   <leave/>
