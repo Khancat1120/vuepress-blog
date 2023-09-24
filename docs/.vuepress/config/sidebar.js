@@ -49,13 +49,13 @@ module.exports = {
         {
             title: 'Codes',
             collapsable: true,
-            children: getChildren('./docs/technology/model/')
+            children: getChildren('./docs/technology/code/')
         },
-        {
-            title: 'Environments',
-            collapsable: true,
-            children: getChildren('./docs/technology/environment/')
-        },
+        // {
+        //     title: 'Environments',
+        //     collapsable: true,
+        //     children: getChildren('./docs/technology/environment/')
+        // },
         {
             title: 'Tools',
             collapsable: true,
