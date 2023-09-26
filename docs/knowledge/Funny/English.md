@@ -311,6 +311,7 @@ sidebar: true
 利用：leverage
 共轭：conjugate
 线性相关/无关：Linearly dependent/independent
+平稳分布：stationary distribution
 
 
 <ClientOnly>
