@@ -28,6 +28,9 @@ sidebar: true
 * affront：侮辱，冒犯
 * appropriate：占用，盗用，合适的，恰当的
 * affinity：密切关系
+* affiliate：
+  * v.	使附属; 与…有关; 加入; 使隶属，使并入(较大的团体、公司、组织); 为…工作;
+  * n.	附属机构; 分支机构; 分公司; 分会
 
 
 ### b

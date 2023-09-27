@@ -159,7 +159,7 @@ edge_type_to_extract = ('user', 'follow', 'user')
 src_nodes, dst_nodes = hetero_graph.edges(etype=edge_type_to_extract)
 ```
 
-若需要提取出多条边
+若需要提取出多条边，使用下面的代码
 ```python
     hetero_graph = dgl.heterograph({
         ('user', 'follow', 'user'): [(0, 1), (1, 2), (2, 0)],

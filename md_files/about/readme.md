@@ -66,7 +66,7 @@ Bullshiting
 
 <i class='iconfont icon-csdn' zico='CSDN'></i>  CSDN：[https://blog.csdn.net/Ma_lunan](https://blog.csdn.net/Ma_lunan) -->
 ### Disclaimer
-All contents appearing in this blog is personal opinions only. It doesn't represent the views of the school, company, or institution in which I am or have been.
+All content appearing in this blog just represents my personal opinions and does not necessarily reflect the views of the school, company, or institution with which I am or have been affiliated.
 
 Due to the continuous updating of viewpoints and resource limitations, I cannot guarantee the information in my article is 100% accurate, complete, timely, practical, or effective. Simultaneously, due to changes in time, different articles in my blog may conflict with each other, which only represents a change in my thoughts and during the process of thinking and writing. Therefore, I can't be responsible for any errors, omissions, or delayed updates, nor am I responsible for any losses or damages caused by the use of this information. I apologize for any inconvenience caused.
 
