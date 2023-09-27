@@ -10,7 +10,7 @@ git commit -m 'code'
 git branch -M main
 git push -f https://github.com/Khancat1120/vuepress-blog.git main
 
-# 生成静态文件， 
+# 生成静态文件
 # npm run docs:build
 rm -rf ../vueDist/dist/*
 

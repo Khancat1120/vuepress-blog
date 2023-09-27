@@ -142,6 +142,39 @@ hg = dgl.heterograph(graph_data)
 
 ```
 
+提取出具有特定关系或具有特定的那些关系的子图，注意，该操作会删掉那些没有在边类型中出现过的边
+
+```python
+# 创建一个异质图，并添加边类型
+hetero_graph = dgl.heterograph({
+    ('user', 'follow', 'user'): [(0, 1), (1, 2), (2, 0)],
+    ('user', 'like', 'post'): [(0, 0), (1, 1), (2, 2)],
+    # 添加更多边...
+})
+
+# 要提取的边类型
+edge_type_to_extract = ('user', 'follow', 'user')
+
+# 使用 edges 方法提取指定边类型的所有源节点和目标节点
+src_nodes, dst_nodes = hetero_graph.edges(etype=edge_type_to_extract)
+```
+
+若需要提取出多条边，使用下面的代码
+```python
+    hetero_graph = dgl.heterograph({
+        ('user', 'follow', 'user'): [(0, 1), (1, 2), (2, 0)],
+        ('user', 'like', 'post'): [(0, 0), (1, 1), (2, 2)],
+        # 添加更多边...
+    })
+
+    # 要提取的不同边类型列表
+    edge_types_to_extract = [('user', 'follow', 'user'), ('user', 'like', 'post')]
+
+    # 提取所有指定边类型的边
+    subgraph = dgl.edge_type_subgraph(hetero_graph, [('user', 'like', 'post')])
+    subgraph = dgl.edge_type_subgraph(hetero_graph, edge_types_to_extract)
+```
+
 
 ## 图的属性
 
