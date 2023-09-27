@@ -301,7 +301,7 @@ sidebar: true
 ### 汉译英
 
 进展：progress
-特征分解：Eigen decomposition
+特征分解：Eigen Decomposition
 谱分解：Spectral decomposition
 提取：extract
 施加：exert，impose
