@@ -71,17 +71,6 @@ All content appearing in this blog just represents my personal opinions and does
 Due to the continuous updating of viewpoints and resource limitations, I cannot guarantee the information in my article is 100% accurate, complete, timely, practical, or effective. Simultaneously, due to changes in time, different articles in my blog may conflict with each other, which only represents a change in my thoughts during the process of thinking and writing. Therefore, I can't be responsible for any errors, omissions, or delayed updates, nor am I responsible for any losses or damages caused by the use of these informations. I apologize for any inconvenience caused.
 
 
-<!-- <i class='iconfont icon-weixin' zico='微信'></i>  微信：记得收藏哦[微信](https://mp.weixin.qq.com/s/3aDaJckgca24fwwbH_sXnA) -->
-
-<!-- ### 赏点狗粮
-
-<img style="border-radius:10%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/wx.png')" alt="MaLUnan-个人博客|IT技术博客" width=260>
-<img style="border-radius:10%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/zfb.jpg')" alt="MaLUnan-个人博客|IT技术博客" width=260> -->
-<!-- 
-### 友情链接 
-
-交换友链、推广请通过电子邮件或Github issue联系我哦~ -->
-
 <style lang="stylus" scoped> 
 .icon.iconfont {
   font-size:28px;
