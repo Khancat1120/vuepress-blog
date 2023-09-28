@@ -5,9 +5,9 @@ sidebar: false
 
 <p align="center"><img style="border-radius:41%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/icon.jpg')" alt="Kehan-个人博客" width=260></p>
 
-### One sentence
+<!-- ### One sentence -->
 
-- The best time to plant a tree was ten years ago, followed by now.
+<!-- - The best time to plant a tree was ten years ago, followed by now. -->
 
 ### About this blog
 

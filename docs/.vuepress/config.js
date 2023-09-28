@@ -4,7 +4,7 @@ const  sidebar =require('./config/sidebar.js');
 
 module.exports = {
     title: 'Kehan\'s Blog',
-    description: 'Stay foolish，stay hungry',
+    description: 'The best time to plant a tree was ten years ago, followed by now',
     base:"/",
     plugins: [
         ['flexsearch'],
