@@ -1,10 +1,10 @@
 ---
-title: Bug-bug退散
+title: BUGS
 sidebar: true
 # isShowComments: true
 ---
 
-# Bug-bug退散
+# BUGS
 
 <ClientOnly>
 <title-pv/>
