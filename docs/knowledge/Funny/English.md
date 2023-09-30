@@ -315,6 +315,8 @@ sidebar: true
 共轭：conjugate
 线性相关/无关：Linearly dependent/independent
 平稳分布：stationary distribution
+自信息：Self-Information
+互信息：Mutual Information
 
 
 <ClientOnly>
