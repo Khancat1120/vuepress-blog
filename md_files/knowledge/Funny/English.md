@@ -111,6 +111,7 @@ sidebar: true
 ### g
 * grandiose：浮夸的，华而不实的
 * gradient：梯度
+* genuine：真正的
 
 ### h
 * hick：乡巴佬
