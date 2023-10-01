@@ -48,6 +48,7 @@ sidebar: true
 * conceive：想出(主意、计划等); 想象; 构想; 设想; 怀孕; 怀(胎);
 * contrastive：对比的
 * conversion：转化
+* combinatorial：组合的
 * complacency：自满的
 * cable：电缆;缆索;绞线;锚索
 * crack：裂纹，使裂开，打败
@@ -235,6 +236,7 @@ sidebar: true
 * versus：比较
 * vest：背心
 * vassal：附属国，附庸国
+* vigor：活力
 
 ### w
 * weird：奇怪的
@@ -323,6 +325,7 @@ sidebar: true
 平稳分布：stationary distribution
 自信息：Self-Information
 互信息：Mutual Information
+与...无关：be irrelevant to / have nothin to do with
 
 
 <ClientOnly>
