@@ -186,6 +186,7 @@ sidebar: true
 * possess：具有，拥有
 * perceptron：感知机
 * progress：进展
+* predominance：优势
 
 ### r
 * ridiculous：荒谬的
@@ -210,6 +211,8 @@ sidebar: true
 * sanction：制裁
 * speculative：投机的
 * substantial：大量的
+* supple：柔软的
+* supply：补助
 * stillborn：夭折的
 * so-called：所谓的，号称的
 * symmetric：对称的
@@ -219,6 +222,8 @@ sidebar: true
 * tempting：诱人的
 * thrived：蓬勃发展
 * tractable：易做的
+* trivialize：轻视
+* temperamental：气质的
 
 ### u
 * ultimate：最好的，最终的，最后的
