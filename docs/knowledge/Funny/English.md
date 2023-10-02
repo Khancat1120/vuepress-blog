@@ -124,6 +124,7 @@ sidebar: true
 
 ### i
 * initiative：倡议，主动性
+* insane：疯狂的
 * intra-class and inter-class：类内与类间
 * implore：恳请
 * intense：强烈的
@@ -326,6 +327,7 @@ sidebar: true
 自信息：Self-Information
 互信息：Mutual Information
 与...无关：be irrelevant to / have nothin to do with
+本征维度：Intrinsic dimension
 
 
 <ClientOnly>
