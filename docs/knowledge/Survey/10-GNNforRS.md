@@ -1,9 +1,9 @@
 ---
-title: The Evolution History of Graph Neural Network 
+title: GNN in Recommend System
 sidebar: true
 # isShowComments: true
 ---
-# The Evolution History of Graph Neural Network 
+# GNN in Recommend System
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

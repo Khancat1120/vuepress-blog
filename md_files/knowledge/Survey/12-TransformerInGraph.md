@@ -1,9 +1,9 @@
 ---
-title: The Evolution History of Graph Neural Network 
+title: Transformer in Graph
 sidebar: true
 # isShowComments: true
 ---
-# The Evolution History of Graph Neural Network 
+# Transformer in Graph
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
