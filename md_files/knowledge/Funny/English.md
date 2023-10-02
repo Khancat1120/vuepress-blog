@@ -67,6 +67,7 @@ sidebar: true
 * cloze：完形填空
 * conjecture：推测
 * conjugate：共轭
+* crave：渴求，恳求
 
 ### d
 * dismissed：解散
@@ -155,6 +156,7 @@ sidebar: true
 * motive：动机
 * mock：愚弄，嘲笑
 * mob：暴民
+* monotonic：单调的
 * metropolises：大城市
 * myopic：短视的
 * malicious：恶意的
@@ -223,9 +225,11 @@ sidebar: true
 * talent：有天赋的
 * tempting：诱人的
 * thrived：蓬勃发展
+* thematic：词干的，题目的，主题的
 * tractable：易做的
 * trivialize：轻视
 * temperamental：气质的
+* tutorial：教学，导师的
 
 ### u
 * ultimate：最好的，最终的，最后的
