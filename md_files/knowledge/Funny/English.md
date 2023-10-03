@@ -74,6 +74,7 @@ sidebar: true
 * decouple：解耦
 * deprecated：不赞成的，反对的
 * density: 密度
+* derive：得到
 * darn：极度地
 * deny：否认
 * dominant：占主导地位
@@ -84,6 +85,7 @@ sidebar: true
 * democracy：民主
 * dumb：愚蠢的
 * devolve：退化
+* duplicate：重复的
 
 ### e
 * embrace：拥抱; 欣然接受，乐意采纳
@@ -230,6 +232,7 @@ sidebar: true
 * trivialize：轻视
 * temperamental：气质的
 * tutorial：教学，导师的
+* tolerance：容忍
 
 ### u
 * ultimate：最好的，最终的，最后的
@@ -314,6 +317,7 @@ sidebar: true
 ### 汉译英
 
 进展：progress
+得到：derive
 特征分解：Eigen Decomposition
 谱分解：Spectral decomposition
 提取：extract
@@ -332,6 +336,8 @@ sidebar: true
 互信息：Mutual Information
 与...无关：be irrelevant to / have nothin to do with
 本征维度：Intrinsic dimension
+冗余：redundant
+重复的：duplicate
 
 
 <ClientOnly>
