@@ -19,6 +19,7 @@ sidebar: true
 * ambiguous：不明确的
 * adhere：遵守
 * adversity：困境，逆境
+* addicted：上瘾的
 * astounding：令人震惊的
 * abide：遵守; (abide by)接受，遵照（规则，决定，劝告）; 逗留，停留;
 * articulation：关节
@@ -79,6 +80,8 @@ sidebar: true
 * deny：否认
 * dominant：占主导地位
 * disparity：不同
+* disgusting：令人讨厌的
+* distraction：分散注意力，消遣
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
 * delinquent：拖欠债务的，有违法倾向的
@@ -105,6 +108,7 @@ sidebar: true
 * explicit：显式
 * extroversion：外向的
 * exert：施加
+* exclusively：独占地，排他地
 
 ### f
 * forex：外汇
@@ -116,6 +120,8 @@ sidebar: true
 * grandiose：浮夸的，华而不实的
 * gradient：梯度
 * genuine：真正的
+* gross：总的，严重的，恶心的
+* gasp：喘息
 
 ### h
 * hick：乡巴佬
@@ -124,6 +130,8 @@ sidebar: true
 * harness：马具; 挽具; 控制，利用
 * heuristic：启发式的
 * hallucination：幻觉，错觉
+* harsh：严厉地
+* hesitant：犹豫的
 
 ### i
 * initiative：倡议，主动性
@@ -178,6 +186,7 @@ sidebar: true
 * onslaught：猛攻
 * outgoing：外向的
 * orthogonal：正交的
+* occasional：偶尔的
 
 ### p
 * presumptuous：专横的；放肆的；冒昧的；自负的
@@ -196,6 +205,7 @@ sidebar: true
 
 ### r
 * ridiculous：荒谬的
+* reluctant：不情愿的，勉强的
 * rhetoric：花言巧语
 * racketeer：诈骗者
 * racketeering：敲诈勒索
@@ -211,6 +221,7 @@ sidebar: true
 * sweater：毛衣
 * scrape：艰难取得
 * scratch：划痕，划
+* sarcastic：讽刺的
 * sophisticated：复杂的
 * simultaneous：同时的
 * satellite：卫星的
@@ -222,6 +233,7 @@ sidebar: true
 * stillborn：夭折的
 * so-called：所谓的，号称的
 * symmetric：对称的
+* snuggle：依偎
 
 ### t
 * talent：有天赋的
@@ -273,6 +285,7 @@ sidebar: true
 
 ### f
 * from scratch：从头开始
+* freak out：大吃一惊，大发雷霆
 
 ### g
 * Give me a favor：帮我个忙
