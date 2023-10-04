@@ -41,6 +41,7 @@ sidebar: true
 * badge：勋章
 * bustling：熙熙攘攘的
 * blowhard：吹牛的
+* boilerplate：文件范例
 
 ### c
 * category：种类
@@ -115,6 +116,7 @@ sidebar: true
 * ferment：发酵
 * fabulous：绝妙的
 * frustratingly：令人沮丧的
+* fidelity：准确率，精确率
 
 ### g
 * grandiose：浮夸的，华而不实的
