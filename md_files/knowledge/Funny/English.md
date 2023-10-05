@@ -353,6 +353,7 @@ sidebar: true
 本征维度：Intrinsic dimension
 冗余：redundant
 重复的：duplicate
+谕示机：Oracle-machine
 
 
 <ClientOnly>

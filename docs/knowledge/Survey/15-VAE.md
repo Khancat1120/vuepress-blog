@@ -1,5 +1,5 @@
 ---
-title: Fine Tune Method
+title: Variable Auto Encoder
 sidebar: true
 # isShowComments: true
 ---
