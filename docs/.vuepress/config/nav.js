@@ -55,6 +55,6 @@ module.exports = [
                 },
             ]
     },
-    // {text: 'Essay', link: '/jottings/1-个人陈述',},
+    {text: 'Essay', link: '/jottings/1-个人陈述',},
     {text: 'About me', link: '/about/',},
 ]
