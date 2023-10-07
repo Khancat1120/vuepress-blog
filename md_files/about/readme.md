@@ -19,9 +19,9 @@ sidebar: false
 - Occupation: A PhD student who is a jack of all trades, master of none.
 - Current residence: Shenzhen, Guangdong Province, China.
 - Research directions: Knowledge reasoniong.
-- Language
-  - English √√ 
-  - Chinese √√√ 
+- Language:
+  - Chinese √√√√ 
+  - English √√√
   - Japanese √
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 

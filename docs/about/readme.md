@@ -20,8 +20,8 @@ sidebar: false
 - Current residence: Shenzhen, Guangdong Province, China.
 - Research directions: Knowledge reasoniong.
 - Language
-  - English √√ 
-  - Chinese √√√ 
+  - Chinese √√√√ 
+  - English √√√
   - Japanese √
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
