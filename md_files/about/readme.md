@@ -19,13 +19,17 @@ sidebar: false
 - Occupation: A PhD student who is a jack of all trades, master of none.
 - Current residence: Shenzhen, Guangdong Province, China.
 - Research directions: Knowledge reasoniong.
+- Language
+  - English √√ 
+  - Chinese √√√ 
+  - Japanese √
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
 ### Publications
 
 ### Contact me
 
-- E-mail：[pummeloaki@gmail.com](mailto:pummeloaki@gmail.com)
+- E-mail：[pangkehan@buaa.edu.cn](mailto:pangkehan@buaa.edu.cn)
 
 - Alternate email：[188962479@qq.com](mailto:188962479@qq.com)
 
