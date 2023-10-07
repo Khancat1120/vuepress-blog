@@ -33,7 +33,7 @@ sidebar: false
 
 - Alternate email：[188962479@qq.com](mailto:188962479@qq.com)
 
-- Github Issue：[launch an issue](https://github.com/Khancat1120/Kehan/issues)
+- Github Issue：[launch an issue](https://github.com/Khancat1120/Khancat1120.github.io/issues)
 
 ### Skill tree
 
