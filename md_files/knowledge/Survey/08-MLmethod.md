@@ -3,7 +3,7 @@ title: ML method
 sidebar: true
 # isShowComments: true
 ---
-# Graph Data Augmentation
+# ML method
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

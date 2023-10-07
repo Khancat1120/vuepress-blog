@@ -3,16 +3,20 @@ title: Frequent Subgraph Mining
 sidebar: true
 # isShowComments: true
 ---
-# 
+# Frequent Subgraph Mining
+
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
 
 
-## TextGCN
+## order embedding
 
 
-## BertGCN
+## Using GNN to order embedding
+
+
+## SPminer
 
 
 

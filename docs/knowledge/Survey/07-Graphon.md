@@ -3,7 +3,7 @@ title: Graphon
 sidebar: true
 # isShowComments: true
 ---
-# Graph Data Augmentation
+# Graphon
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

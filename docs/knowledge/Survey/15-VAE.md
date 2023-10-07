@@ -3,13 +3,10 @@ title: Variable Auto Encoder
 sidebar: true
 # isShowComments: true
 ---
-# Fine Tune Method
+# Variable Auto Encoder
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
-
-
-## LoRA
 
 
 
