@@ -31,7 +31,7 @@ sidebar: false
 
 - E-mail：[pangkehan@buaa.edu.cn](mailto:pangkehan@buaa.edu.cn)
 
-- Alternate email：[188962479@qq.com](mailto:188962479@qq.com)
+- Alternate email：[pummeloaki@gmail.com](mailto:pummeloaki@gmail.com)
 
 - Github Issue：[launch an issue](https://github.com/Khancat1120/Khancat1120.github.io/issues)
 
