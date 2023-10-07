@@ -348,33 +348,33 @@ sidebar: true
 
 ### 汉译英
 
-进展：progress
-得到：derive
-特征分解：Eigen Decomposition
-谱分解：Spectral decomposition
-提取：extract
-施加：exert，impose
-时域：Time domain
-频域：Frequency domain
-空域：Spatial domain
-谱域：Spectral domain
-补充：supplement
-振幅：amplitude
-利用：leverage
-共轭：conjugate
-线性相关/无关：Linearly dependent/independent
-平稳分布：stationary distribution
-自信息：Self-Information
-互信息：Mutual Information
-与...无关：be irrelevant to / have nothin to do with
-本征维度：Intrinsic dimension
-冗余：redundant
-重复的：duplicate
-谕示机：Oracle-machine
-晦涩难懂的：obscure
-扔硬币：toss a coin
-赞成/同意：agreement，authorization，permission，approval，sanction，assent
-语义：semantics
+* 进展：progress
+* 得到：derive
+* 特征分解：Eigen Decomposition
+* 谱分解：Spectral decomposition
+* 提取：extract
+* 施加：exert，impose
+* 时域：Time domain
+* 频域：Frequency domain
+* 空域：Spatial domain
+* 谱域：Spectral domain
+* 补充：supplement
+* 振幅：amplitude
+* 利用：leverage
+* 共轭：conjugate
+* 线性相关/无关：Linearly dependent/independent
+* 平稳分布：stationary distribution
+* 自信息：Self-Information
+* 互信息：Mutual Information
+* 与...无关：be irrelevant to / have nothin to do with
+* 本征维度：Intrinsic dimension
+* 冗余：redundant
+* 重复的：duplicate
+* 谕示机：Oracle-machine
+* 晦涩难懂的：obscure
+* 扔硬币：toss a coin
+* 赞成/同意：agreement，authorization，permission，approval，sanction，assent
+* 语义：semantics
 
 ## 英语对话场景
 
