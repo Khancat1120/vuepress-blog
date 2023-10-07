@@ -376,7 +376,7 @@ sidebar: true
 * 赞成/同意：agreement，authorization，permission，approval，sanction，assent
 * 语义：semantics
 
-## 英语对话场景
+### 英语对话场景
 
 * Q：Can you describe a challenging situation you've faced at work or in your personal life and how you handled it?
 * A：When I was in the 3rd year of my college, I decided to continue to get a master degree. But it's very hard to find a research group which I'm interested in and want to accept me. I spend a lot of time to collect information from network and seek for help from my classmates but these  didn't work because my GPA is so low. I was nearly desperate. But finally I fortunately get a chance to study in a group leaded by an ACM fellower.
