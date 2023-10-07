@@ -249,6 +249,8 @@ sidebar: true
 * so-called：所谓的，号称的
 * symmetric：对称的
 * snuggle：依偎
+* slut：荡妇，懒婆娘
+* seduce：勾引，诱骗，诱奸
 
 ### t
 * talent：有天赋的
@@ -276,6 +278,7 @@ sidebar: true
 * vassal：附属国，附庸国
 * vigor：活力
 * vicious：恶毒的
+* vulgar：粗俗的，下流的
 
 ### w
 * weird：奇怪的
