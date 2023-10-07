@@ -94,6 +94,10 @@ In self-supervised mode, it generates positive sentence instance by feeding them
 
 In supervised mode, it works better than bert in many field for contrastive learning greatly alleviates **representation degeneration problem**.
 
+However, SimCSE still has these shortcomings:
+* The sentences fed into model are identical which are only different in desperate drop-out encoders. So model may think sentences with very same length relate to same semantics.  
+* To overcome this shortage, there are some methods to repete some words in sentences in positive samples but not to change their meanings. And also choice some negative samples whose sentences with same length.
+
 <ClientOnly>
   <leave/>
 </ClientOnly/>

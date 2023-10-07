@@ -374,6 +374,7 @@ sidebar: true
 晦涩难懂的：obscure
 扔硬币：toss a coin
 赞成/同意：agreement，authorization，permission，approval，sanction，assent
+语义：semantics
 
 ## 英语对话场景
 
