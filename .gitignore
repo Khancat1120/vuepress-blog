@@ -1,5 +1,2 @@
-node_modules/
-gb-pages/
-docs/.vuepress/dist/
-.vscode/
-.idea/
+docs/.vuepress/dist
+node_modules

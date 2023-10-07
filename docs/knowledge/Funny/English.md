@@ -36,6 +36,7 @@ sidebar: true
 
 ### b
 * bribe：贿赂
+* brag：吹嘘
 * bluffing：虚张声势的
 * bumper：保险杠
 * badge：勋章
@@ -45,6 +46,7 @@ sidebar: true
 
 ### c
 * category：种类
+* caution：警告
 * compensation：补偿
 * circumstances：条件
 * conceive：想出(主意、计划等); 想象; 构想; 设想; 怀孕; 怀(胎);
@@ -57,10 +59,13 @@ sidebar: true
 * cognition：认知
 * contention：看法
 * conspiracy：阴谋
+* confess：承认
 * collaborate：合作
 * congress：国会
+* confront：对抗; 面对; 处理，解决(问题或困境); 与(某人)对峙; 使…无法回避; 降临于;
 * containment：支配，控制，制裁
 * colonial：殖民的
+* consent：允许，同意
 * coalition：联盟;联合;(两党或多党)联合政府;
 * clueless：无知的，无能的
 * clown：小丑
@@ -83,6 +88,7 @@ sidebar: true
 * disparity：不同
 * disgusting：令人讨厌的
 * distraction：分散注意力，消遣
+* dice：骰子
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
 * delinquent：拖欠债务的，有违法倾向的
@@ -90,6 +96,7 @@ sidebar: true
 * dumb：愚蠢的
 * devolve：退化
 * duplicate：重复的
+* dysfunctional：功能障碍的
 
 ### e
 * embrace：拥抱; 欣然接受，乐意采纳
@@ -151,6 +158,7 @@ sidebar: true
 * impose：强制施加
 * introverted：内向的
 * intractable：棘手的
+* involuntarily：不由自主地
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -169,6 +177,7 @@ sidebar: true
 * mock：愚弄，嘲笑
 * mob：暴民
 * monotonic：单调的
+* moral：道德的
 * metropolises：大城市
 * myopic：短视的
 * malicious：恶意的
@@ -191,6 +200,7 @@ sidebar: true
 * occasional：偶尔的
 
 ### p
+* penetrate：渗透，打入(组织、团体等); 穿透; 穿过; 进入; （以阴茎）插入; 洞察; 看透; 被领悟; 透过…看见;
 * presumptuous：专横的；放肆的；冒昧的；自负的
 * punter：顾客
 * plug-and-play：即插即用
@@ -212,6 +222,7 @@ sidebar: true
 * racketeer：诈骗者
 * racketeering：敲诈勒索
 * referee：裁判员
+* relevant：有意义的，有价值的
 
 ### s
 * squalor：悲惨的，肮脏的
@@ -223,6 +234,8 @@ sidebar: true
 * sweater：毛衣
 * scrape：艰难取得
 * scratch：划痕，划
+* scenario：方案，预想
+* script：剧本
 * sarcastic：讽刺的
 * sophisticated：复杂的
 * simultaneous：同时的
@@ -240,6 +253,8 @@ sidebar: true
 ### t
 * talent：有天赋的
 * tempting：诱人的
+* tension：紧张
+* tense：紧的，密集的
 * thrived：蓬勃发展
 * thematic：词干的，题目的，主题的
 * tractable：易做的
@@ -253,12 +268,14 @@ sidebar: true
 * uninformed：无知的，蒙昧的
 * uphold：维持，确认
 * utilize：利用
+* underneath：在底部，在下面
 
 ### v
 * versus：比较
 * vest：背心
 * vassal：附属国，附庸国
 * vigor：活力
+* vicious：恶毒的
 
 ### w
 * weird：奇怪的
@@ -354,7 +371,22 @@ sidebar: true
 冗余：redundant
 重复的：duplicate
 谕示机：Oracle-machine
+晦涩难懂的：obscure
+扔硬币：toss a coin
+赞成/同意：agreement，authorization，permission，approval，sanction，assent
 
+## 英语对话场景
+
+* Q：Can you describe a challenging situation you've faced at work or in your personal life and how you handled it?
+* A：When I was in the 3rd year of my college, I decided to continue to get a master degree. But it's very hard to find a research group which I'm interested in and want to accept me. I spend a lot of time to collect information from network and seek for help from my classmates but these  didn't work because my GPA is so low. I was nearly desperate. But finally I fortunately get a chance to study in a group leaded by an ACM fellower.
+
+
+* Q：Can you explain a project or task you've worked on where effective communication played a crucial role in its success? Please provide details about the project and your communication strategies.
+* A：Sure. Actually I'm not those who likes to cooperate with each other because I think it's a waste of time communicating with others when do my work. However, when I attended university I find many works, for example, computer theory courses, are too hard for me. But I'm too proud to admit I have to seek for help. At last, many kind friends help me with my study and experiments without wanting any repay. I felt strongly grateful for that. Then I became a person willing to help with each others in many things.
+
+
+* Q：Can you describe a situation where you had to communicate complex technical information to a non-technical audience? How did you ensure they understood the information?
+* A：Yeah, I do have this experience. I have to teach my younger cousin what "maximum likelihood estimation" is, which is very obscure for an art student. But I told her that if you toss an evenly textured coin, it must land facing up or down with a probability of 0.5 for each situation. But if you toss an abnormal coin which faces up with a 0.9 probability, and you try it for 100 times and find that only 10 times it lands facing down. Then you know this is an uneven coins with a probability of 90% to faces up. And this is what maximum likelihood estimations do. It estimates the parameters of random variables based on the experiment results provided by you.
 
 <ClientOnly>
   <leave/>
