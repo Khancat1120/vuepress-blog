@@ -6,45 +6,29 @@ module.exports = [
         items: [
                 {
                     text: 'Survey',
-                    link:'/knowledge/Survey/01-Textgraph'
+                    link: '/knowledge/Survey/01-Textgraph'
                 },
                 {
                     text: 'Lessons',
-                    link:'/knowledge/Lessons/01-CS224W'
+                    link: '/knowledge/Lessons/01-CS224W'
                 },
                 {
                     text: 'Books',
-                    link:'/knowledge/Book/01-Graphon'
+                    link: '/knowledge/Book/01-Graphon'
                 },
-                // {
-                //     text: 'Paper',
-                //     link:'/knowledge/Paper/01-TextGCN'
-                // },
-                // {
-                //     text: 'Interview',
-                //     link:'/knowledge/Interview/test'
-                // },
                 {
-                    text: 'Weird part',
-                    link:'/knowledge/funny/01-English'
+                    text: 'Language',
+                    link: '/knowledge/funny/01-English'
                 },
             ]
     },
     {
         text: 'Technology', 
         items: [
-                // {
-                //     text: 'Algorithms',
-                //     link:'/technology/code/test' 
-                // },
                 {
                     text: 'Codes',
                     link:'/technology/code/01-GNN'
                 },
-                // {
-                //     text: 'Environments',
-                //     link:'/technology/environment/01-install'
-                // },
                 {
                     text: 'Tools',
                     link:'/technology/tool/01-install'

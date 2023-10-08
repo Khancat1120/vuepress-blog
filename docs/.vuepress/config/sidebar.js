@@ -19,18 +19,8 @@ module.exports = {
             collapsable: true,
             children:getChildren('./docs/knowledge/Survey/')
         },
-        // {
-        //     title: 'Papers',
-        //     collapsable: true,
-        //     children:getChildren('./docs/knowledge/Paper/')
-        // },
-        // {
-        //     title: 'Interview',
-        //     collapsable: true,
-        //     children:getChildren('./docs/knowledge/Interview/')
-        // },
         {
-            title: 'Weird part',
+            title: 'Language',
             collapsable: true,
             children:getChildren('./docs/knowledge/Funny/')
         },
@@ -41,21 +31,11 @@ module.exports = {
             collapsable: true,
             children: getChildren('./docs/technology/bug/')
         },
-        // {
-        //     title: 'Algorithms',
-        //     collapsable: true,
-        //     children: getChildren('./docs/technology/code/')
-        // },
         {
             title: 'Codes',
             collapsable: true,
             children: getChildren('./docs/technology/code/')
         },
-        // {
-        //     title: 'Environments',
-        //     collapsable: true,
-        //     children: getChildren('./docs/technology/environment/')
-        // },
         {
             title: 'Tools',
             collapsable: true,
