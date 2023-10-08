@@ -378,6 +378,8 @@ sidebar: true
 * 扔硬币：toss a coin
 * 赞成/同意：agreement，authorization，permission，approval，sanction，assent
 * 语义：semantics
+* 导师：instructor/tutor/supervisor 
+* 研究课题：research topic
 
 ## 英语对话场景
 
@@ -395,6 +397,9 @@ sidebar: true
 
 * Can you tell me about your educational background and any relevant coursework or certifications you have completed?
 * Certainly. I am originally from China.I obtained my bachelor's degree from BUPT and my Ph.D. degree from BUAA, both of which I major in computer science. I have taken many relevant courses such as compiler principles, operating systems, database theory, machine learning, deep learning, etc.. And I achieved success in some mathematics competitions during my undergraduate studies and I authored publications in respected journals such as VLDB, SIGMOD, and TODS.
+
+* Can you please tell me about a challenging project you've worked on in the past and how you approached it?
+* Certainly. One of the most challenging projects I've undertaken was during my undergraduate program. I was tasked with designing an entity alignment system, which involved a pair-wise comparison process in the algorithm. This process was incredibly time-consuming. I experimented with various optimization methods, but they didn't always yield the desired results. Eventually, I sought assistance from my supervisor, who recommended using a blocking method and an inverted index. Implementing these techniques proved to be highly effective, particularly in processing data within a fixed value range. In the end, I successfully completed my research project and achieved remarkable scores
 
 <ClientOnly>
   <leave/>
