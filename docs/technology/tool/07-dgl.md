@@ -141,9 +141,10 @@ hg = dgl.heterograph(graph_data)
 #       metagraph=[('user', 'item', 'buys'), ('user', 'user', 'follows')])
 
 ```
-找到所有不同类型的边：
+找到所有不同类型的边或节点：
 ```python
 hg.canonical_etypes
+hg.ntypes
 ```
 
 
