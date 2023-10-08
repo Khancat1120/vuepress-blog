@@ -141,6 +141,11 @@ hg = dgl.heterograph(graph_data)
 #       metagraph=[('user', 'item', 'buys'), ('user', 'user', 'follows')])
 
 ```
+找到所有不同类型的边：
+```python
+hg.canonical_etypes
+```
+
 
 提取出具有特定关系或具有特定的那些关系的子图，注意，该操作会删掉那些没有在边类型中出现过的边
 
