@@ -14,8 +14,8 @@ sidebar: true
 ## 单词
 
 ### a
-* awfully：极度的
 * auxiliary：辅助的，备用的
+* awfully：极度的
 * ambiguous：不明确的
 * adhere：遵守
 * adversity：困境，逆境
