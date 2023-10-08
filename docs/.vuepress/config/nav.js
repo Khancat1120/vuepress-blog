@@ -18,7 +18,7 @@ module.exports = [
                 },
                 {
                     text: 'Language',
-                    link: '/knowledge/funny/01-English'
+                    link: '/knowledge/Language/01-English'
                 },
             ]
     },

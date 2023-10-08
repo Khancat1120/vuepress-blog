@@ -22,7 +22,7 @@ module.exports = {
         {
             title: 'Language',
             collapsable: true,
-            children:getChildren('./docs/knowledge/Funny/')
+            children:getChildren('./docs/knowledge/Language/')
         },
     ],
     '/technology/':[
