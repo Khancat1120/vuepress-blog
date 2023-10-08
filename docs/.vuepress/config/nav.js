@@ -26,7 +26,7 @@ module.exports = [
                 // },
                 {
                     text: 'Weird part',
-                    link:'/knowledge/funny/English'
+                    link:'/knowledge/funny/01-English'
                 },
             ]
     },
