@@ -32,6 +32,7 @@ sidebar: true
 * affiliate：
   * v.	使附属; 与…有关; 加入; 使隶属，使并入(较大的团体、公司、组织); 为…工作;
   * n.	附属机构; 分支机构; 分公司; 分会
+* apprentice：学徒
 
 
 ### b
@@ -124,6 +125,7 @@ sidebar: true
 * fabulous：绝妙的
 * frustratingly：令人沮丧的
 * fidelity：准确率，精确率
+* fellow：家伙; 同事; 同伴; 会员; 小伙子; （接受奖学金的）研究生; 同类; (某些学院或大学的)董事; 男人; 男孩; 同辈; 哥儿们; 配对物;
 
 ### g
 * grandiose：浮夸的，华而不实的
@@ -304,6 +306,7 @@ sidebar: true
 
 ### d
 * Darn it：该死
+* Don't boss me around：别对我指手画脚
 
 ### f
 * from scratch：从头开始
@@ -322,7 +325,7 @@ sidebar: true
 * In a nutshell：笼统地说
 * It's a lot to take in：一时间难以接受
 * It depends：视情况而定
-* integrity constraint formalisms：一致性约束
+* I'm on your side：我支持你
 
 ### k
 * knowing shit about：对...一无所知
@@ -347,6 +350,9 @@ sidebar: true
 ### w
 * With all due respect：恕我直言，容我冒昧
 * What the heck is wrong with you：你他妈怎么了
+
+### y
+* You are the boss：我听你的
 
 
 ## 汉译英
@@ -380,6 +386,7 @@ sidebar: true
 * 语义：semantics
 * 导师：instructor/tutor/supervisor 
 * 研究课题：research topic
+* 一致性约束：integrity constraint formalisms
 
 ## 英语对话场景
 
@@ -400,6 +407,11 @@ sidebar: true
 
 * Can you please tell me about a challenging project you've worked on in the past and how you approached it?
 * Certainly. One of the most challenging projects I've undertaken was during my undergraduate program. I was tasked with designing an entity alignment system, which involved a pair-wise comparison process in the algorithm. This process was incredibly time-consuming. I experimented with various optimization methods, but they didn't always yield the desired results. Eventually, I sought assistance from my supervisor, who recommended using a blocking method and an inverted index. Implementing these techniques proved to be highly effective, particularly in processing data within a fixed value range. In the end, I successfully completed my research project and achieved remarkable scores
+
+* Can you describe a situation where you had to collaborate with a cross-functional team to solve a complex problem? What challenges did you face, and how did you overcome them?
+* Certainly. I'd like to share an experience when I collaborated on my first conference paper with a senior colleague in our research group. While I specialize in machine learning and deep learning, he focuses on graph and database theory, which meant we had relatively few common areas of expertise.
+
+During our collaboration, there was a situation where he suggested training a model to enhance the prediction of node similarity in a graph. I explained that the model we were using was offline and cannot be adapted in different situations. This led to extensive discussions where we uncovered several misunderstandings in our paper's system design. Ultimately, my colleague decided to trust my judgment and allowed me to design a model that aligned with my insights. The outcomes validated my approach, and since then, we have developed a strong level of trust in each other's work, allowing us to work independently on different sections of our papers.
 
 <ClientOnly>
   <leave/>
