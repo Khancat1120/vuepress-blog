@@ -387,6 +387,8 @@ sidebar: true
 * 导师：instructor/tutor/supervisor 
 * 研究课题：research topic
 * 一致性约束：integrity constraint formalisms
+* 批评/批判/发表意见看法：critic
+
 
 ## 英语对话场景
 
