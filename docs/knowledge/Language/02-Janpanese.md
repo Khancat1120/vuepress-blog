@@ -74,9 +74,177 @@ sidebar: true
 * 钱：お金 (おかね)
 * 工作：お仕事 (おしごと)
 * 商店：お店 (おみせ)
+* 朋友：お友達 (おともだち)
+* 高兴：お楽しみ (おたのしみ)
+* 茶：お茶 (おちゃ)
+* 天气：お天気 (おてんき)
+* 节日"或"祭奠"：お祭り (おまつり)
+* 特产/礼物：お土産 (おみやげ)
+* 白天：お昼 (おひる)
+* 客人大人：お客様 (おきゃくさま)
+* 麻烦您：お忙しい (おいそがしい)
+* 爷爷：お祖父さん (おじいさん)
+* 奶奶：お祖母さん (おばあさん)
+* 停下：とめる
+* 离我远点：离れろ
+* 飞翔：飛翔(はばた) 
+* 天空：空（そら）
+* 今天：今（いま）
+
+### 日期/数字/时间
+#### 星期几
+
+* 周一：月曜日（げつようび）- Getsuyoubi
+* 周二：火曜日（かようび）- Kayoubi
+* 周三：水曜日（すいようび）- Suiyoubi
+* 周四：木曜日（もくようび）- Mokuyoubi
+* 周五：金曜日（きんようび）- Kinyoubi
+* 周六：土曜日（どようび）- Doyoubi
+* 周日：日曜日（にちようび）- Nichiyoubi
+
+#### 月份
+
+* 一月：一月（いちがつ）- Ichigatsu
+* 二月：二月（にがつ）- Nigatsu
+* 三月：三月（さんがつ）- Sangatsu
+* 四月：四月（しがつ）- Shigatsu
+* 五月：五月（ごがつ）- Gogatsu
+* 六月：六月（ろくがつ）- Rokugatsu
+* 七月：七月（しちがつ）- Shichigatsu
+* 八月：八月（はちがつ）- Hachigatsu
+* 九月：九月（くがつ）- Kugatsu
+* 十月：十月（じゅうがつ）- Juugatsu
+* 十一月：十一月（じゅういちがつ）- Juuichigatsu
+* 十二月：十二月（じゅうにがつ）- Juunigatsu
+
+#### 日期
+
+* 一日：一日（ついたち）- Tsuitachi
+* 二日：二日（ふつか）- Futsuka
+* 三日：三日（みっか）- Mikka
+* 四日：四日（よっか）- Yokka
+* 五日：五日（いつか）- Itsuka
+* 六日：六日（むいか）- Muika
+* 七日：七日（なのか）- Nanoka
+* 八日：八日（ようか）- Youka
+* 九日：九日（ここのか）- Kokonoka
+* 十日：十日（とおか）- Tooka
+* 十一日：十一日（じゅういちにち）- Juuichinichi
+* 十二日：十二日（じゅうににち）- Juuninichi
+* 十三日：十三日（じゅうさんにち）- Juusan'nichi
+* 十四日：十四日（じゅうよっか）- Juuyokka
+* 十五日：十五日（じゅうごにち）- Juugonichi
+* 十六日：十六日（じゅうろくにち）- Juurokunichi
+* 十七日：十七日（じゅうしちにち）- Juushichinichi
+* 十八日：十八日（じゅうはちにち）- Juuhachinichi
+* 十九日：十九日（じゅうくにち）- Juukunichi
+* 二十日：二十日（はつか）- Hatsuka
+* 二十一日：二十一日（にじゅういちにち）- Nijuuichinichi
+* 二十二日：二十二日（にじゅうににち）- Nijuuninichi
+* 二十三日：二十三日（にじゅうさんにち）- Nijuusan'nichi
+* 二十四日：二十四日（にじゅうよっか）- Nijuuyokka
+* 二十五日：二十五日（にじゅうごにち）- Nijuugonichi
+* 二十六日：二十六日（にじゅうろくにち）- Nijuurokunichi
+* 二十七日：二十七日（にじゅうしちにち）- Nijuushichinichi
+* 二十八日：二十八日（にじゅうはちにち）- Nijuuhachinichi
+* 二十九日：二十九日（にじゅうくにち）- Nijuukunichi
+* 三十日：三十日（さんじゅうにち）- Sanjuunichi
+* 三十一日：三十一日（さんじゅういちにち）- Sanjuuichinichi
+
+#### 小时
+
+* 一小时：1時間（いちじかん）- Ichijikan
+* 二小时：2時間（にじかん）- Nijikan
+* 三小时：3時間（さんじかん）- Sanjikan
+* 四小时：4時間（しじかん）- Shijikan
+* 五小时：5時間（ごじかん）- Gojikan
+* 六小时：6時間（ろくじかん）- Rokujikan
+* 七小时：7時間（しちじかん）- Shichijikan
+* 八小时：8時間（はちじかん）- Hachijikan
+* 九小时：9時間（くじかん）- Ku-jikan
+* 十小时：10時間（じゅうじかん）- Ju-jikan
+* 十一小时：11時間（じゅういちじかん）- Juuichijikan
+* 十二小时：12時間（じゅうにじかん）- Juunijikan
+* 十三小时：13時間（じゅうさんじかん）- Juusanjikan
+* 十四小时：14時間（じゅうしじかん）- Juushijikan
+* 十五小时：15時間（じゅうごじかん）- Juugojikan
+* 十六小时：16時間（じゅうろくじかん）- Juurokujikan
+* 十七小时：17時間（じゅうしちじかん）- Juushichijikan
+* 十八小时：18時間（じゅうはちじかん）- Juuhachijikan
+* 十九小时：19時間（じゅうくじかん）- Juukujikan
+* 二十小时：20時間（にじゅうじかん）- Nijuujikan
+* 二十一小时：21時間（にじゅういちじかん）- Nijuuijikan
+* 二十二小时：22時間（にじゅうにじかん）- Nijuunijikan
+* 二十三小时：23時間（にじゅうさんじかん）- Nijuusanjikan
+* 二十四小时：24時間（にじゅうしじかん）- Nijuushijikan
+
+#### 分钟
+
+* 一分钟：1分（いっぷん）- Ippun
+* 二分钟：2分（にふん）- Nifun
+* 三分钟：3分（さんぷん）- Sanpun
+* * 四分钟：4分（よんぷん）- Yonpun
+* 五分钟：5分（ごふん）- Gofun
+* 六分钟：6分（ろっぷん）- Roppun
+* 七分钟：7分（ななふん）- Nanafun
+* 八分钟：8分（はっぷん）- Happun
+* 九分钟：9分（きゅうふん）- Kyuufun
+* 十分钟：10分（じゅっぷん）- Juppun
+* 十一分钟：11分（じゅういっぷん）- Juuippun
+* 十二分钟：12分（じゅうにふん）- Juunifun
+* 十三分钟：13分（じゅうさんぷん）- Juusanpun
+* 十四分钟：14分（じゅうよんぷん）- Juuyonpun
+* 十五分钟：15分（じゅうごふん）- Juugofun
+* 十六分钟：16分（じゅうろっぷん）- Juuroppun
+* 十七分钟：17分（じゅうななふん）- Juunanafun
+* 十八分钟：18分（じゅうはっぷん）- Juuhappun
+* 十九分钟：19分（じゅうきゅうふん）- Juukyuufun
+* 二十分钟：20分（にじゅっぷん）- Nijuppun
+* 二十一分钟：21分（にじゅういっぷん）- Nijuuppun
+* 二十二分钟：22分（にじゅうにふん）- Nijuunifun
+* 二十三分钟：23分（にじゅうさんぷん）- Nijuusanpun
+* 二十四分钟：24分（にじゅうよんぷん）- Nijuuyonpun
+* 二十五分钟：25分（にじゅうごふん）- Nijuugofun
+* 二十六分钟：26分（にじゅうろっぷん）- Nijuuroppun
+* 二十七分钟：27分（にじゅうななふん）- Nijuunanafun
+* 二十八分钟：28分（にじゅうはっぷん）- Nijuuhappun
+* 二十九分钟：29分（にじゅうきゅうふん）- Nijuukyuufun
+* 三十分钟：30分（さんじゅっぷん）- Sanjuuppun
+* 三十一分钟：31分（さんじゅういっぷん）- Sanjuuippun
+* 三十二分钟：32分（さんじゅうにふん）- Sanjuunifun
+* 三十三分钟：33分（さんじゅうさんぷん）- Sanjuusanpun
+* 三十四分钟：34分（さんじゅうよんぷん）- Sanjuuyonpun
+* 三十五分钟：35分（さんじゅうごふん）- Sanjuugofun
+* 三十六分钟：36分（さんじゅうろっぷん）- Sanjuuroppun
+* 三十七分钟：37分（さんじゅうななふん）- Sanjuunanafun
+* 三十八分钟：38分（さんじゅうはっぷん）- Sanjuuhappun
+* 三十九分钟：39分（さんじゅうきゅうふん）- Sanjuukyuufun
+* 四十分钟：40分（しじゅっぷん）- Shijuppun
+* 四十一分钟：41分（しじゅういっぷん）- Shijuuippun
+* 四十二分钟：42分（しじゅうにふん）- Shijuunifun
+* 四十三分钟：43分（しじゅうさんぷん）- Shijuusanpun
+* 四十四分钟：44分（しじゅうよんぷん）- Shijuuyonpun
+* 四十五分钟：45分（しじゅうごふん）- Shijuugofun
+* 四十六分钟：46分（しじゅうろっぷん）- Shijuuroppun
+* 四十七分钟：47分（しじゅうななふん）- Shijuunanafun
+* 四十八分钟：48分（しじゅうはっぷん）- Shijuuappun
+* 四十九分钟：49分（しじゅうきゅうふん）- Shijuukyuufun
+* 五十分钟：50分（ごじゅっぷん）- Gojuuppun
+* 五十一分钟：51分（ごじゅういっぷん）- Gojuuippun
+* 五十二分钟：52分（ごじゅうにふん）- Gojuunifun
+* 五十三分钟：53分（ごじゅうさんぷん）- Gojuusanpun
+* 五十四分钟：54分（ごじゅうよんぷん）- Gojuuyonpun
+* 五十五分钟：55分（ごじゅうごふん）- Gojuugofun
+* 五十六分钟：56分（ごじゅうろっぷん）- Gojuuroppun
+* 五十七分钟：57分（ごじゅうななふん）- Gojuunanafun
+* 五十八分钟：58分（ごじゅうはっぷん）- Gojuuhappun
+* 五十九分钟：59分（ごじゅうきゅうふん）- Gojuukyuufun
+* 六十分钟：60分（ろくじゅっぷん）- Rokujuuppun
 
 ## 句子
 
+* 不要靠近我：私に近づかないでください
+* 今天是星期几：今日は何曜日ですか
 
 ## 汉字
 
