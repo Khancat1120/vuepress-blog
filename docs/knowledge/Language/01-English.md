@@ -325,7 +325,6 @@ sidebar: true
 * In a nutshell：笼统地说
 * It's a lot to take in：一时间难以接受
 * It depends：视情况而定
-* integrity constraint formalisms：一致性约束
 * I'm on your side：我支持你
 
 ### k
@@ -387,6 +386,7 @@ sidebar: true
 * 语义：semantics
 * 导师：instructor/tutor/supervisor 
 * 研究课题：research topic
+* 一致性约束：integrity constraint formalisms
 
 ## 英语对话场景
 
