@@ -76,6 +76,7 @@ sidebar: true
 * conjecture：推测
 * conjugate：共轭
 * crave：渴求，恳求
+* crap：废话; 屎; 拉屎; 胡扯; 胡说; 批评; 蹩脚货; 非难; 不公正的待遇; 质量差的东西
 
 ### d
 * dismissed：解散
@@ -255,6 +256,7 @@ sidebar: true
 * slut：荡妇，懒婆娘
 * seduce：勾引，诱骗，诱奸
 * surpass：超过
+* siblings：兄弟姐妹
 
 ### t
 * talent：有天赋的
