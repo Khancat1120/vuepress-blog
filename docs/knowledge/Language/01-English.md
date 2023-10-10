@@ -193,6 +193,7 @@ sidebar: true
 
 ### o
 * obsess：迷恋; 使痴迷; 唠叨; 挂牵; 念念不忘;
+* oblivious：忘却的，未察觉的
 * overlap：重叠
 * oppressed：压迫，欺压
 * octogenarian：耄耋老人
@@ -253,6 +254,7 @@ sidebar: true
 * snuggle：依偎
 * slut：荡妇，懒婆娘
 * seduce：勾引，诱骗，诱奸
+* surpass：超过
 
 ### t
 * talent：有天赋的
@@ -388,6 +390,11 @@ sidebar: true
 * 研究课题：research topic
 * 一致性约束：integrity constraint formalisms
 * 批评/批判/发表意见看法：critic
+* 全集：Universal Set
+* 交集：Intersection
+* 并集：Union
+* 差集：Set Difference
+* 补集：Complement
 
 
 ## 英语对话场景
