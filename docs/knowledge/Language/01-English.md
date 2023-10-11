@@ -119,6 +119,7 @@ sidebar: true
 * extroversion：外向的
 * exert：施加
 * exclusively：独占地，排他地
+* encountere：遭遇
 
 ### f
 * forex：外汇
@@ -399,6 +400,7 @@ sidebar: true
 * 并集：Union
 * 差集：Set Difference
 * 补集：Complement
+* 解决问题：address this issue
 
 
 ## 英语对话场景
@@ -425,6 +427,12 @@ sidebar: true
 * Certainly. I'd like to share an experience when I collaborated on my first conference paper with a senior colleague in our research group. While I specialize in machine learning and deep learning, he focuses on graph and database theory, which meant we had relatively few common areas of expertise.
 
 During our collaboration, there was a situation where he suggested training a model to enhance the prediction of node similarity in a graph. I explained that the model we were using was offline and cannot be adapted in different situations. This led to extensive discussions where we uncovered several misunderstandings in our paper's system design. Ultimately, my colleague decided to trust my judgment and allowed me to design a model that aligned with my insights. The outcomes validated my approach, and since then, we have developed a strong level of trust in each other's work, allowing us to work independently on different sections of our papers.
+
+
+* Could you describe a situation where you had to adapt to a rapidly changing technology or project requirement? How did you handle the changes, and what was the outcome?
+* Certainly. I encountered a situation during my undergraduate years when I was deeply involved in working with a QQ bot, a popular tool similar to Telegram at that time. While there were several open-source frameworks available for use, they were not always well-developed or maintained.
+
+One day, after a software update, I discovered that I couldn't access my bot due to bugs introduced in the HTTPS communication plugins. To address this issue, I initiated a brief technical discussion with the developers to gain a better understanding of the problem and to find a solution.
 
 <ClientOnly>
   <leave/>
