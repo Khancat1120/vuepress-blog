@@ -347,9 +347,11 @@ sidebar: true
 ### t
 * think tanks：智库
 * To tackle the aforementioned problems：为了解决上述问题
+* This is essentially what ... do：这本质上就是...在做的
 
 ### u
 * urban coastal areas：沿海地区
+* used a simple analogy：用一个简单的类比
 
 ### w
 * With all due respect：恕我直言，容我冒昧
