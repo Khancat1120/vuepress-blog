@@ -412,7 +412,7 @@ sidebar: true
 
 
 * Q：Can you describe a situation where you had to communicate complex technical information to a non-technical audience? How did you ensure they understood the information?
-* A：Yeah, I do have this experience. I have to teach my younger cousin what "maximum likelihood estimation" is, which is very obscure for an art student. But I told her that if you toss an evenly textured coin, it must land facing up or down with a probability of 0.5 for each situation. But if you toss an abnormal coin which faces up with a 0.9 probability, and you try it for 100 times and find that only 10 times it lands facing down. Then you know this is an uneven coins with a probability of 90% to faces up. And this is what maximum likelihood estimations do. It estimates the parameters of random variables based on the experiment results provided by you.
+* A：Yeah, I do have this experience. I have to teach my younger cousin what "maximum likelihood estimation" is, which is very obscure for an art student. So I made a simple analogy. I told her that if you toss an evenly textured coin, it must land facing up or down with a probability of 0.5 for each situation. But if you toss an abnormal coin which faces up with a 0.9 probability, and you try it for 100 times and find that only 10 times it lands facing down. Then you know this is an uneven coins with a probability of 90% to faces up. And this is what maximum likelihood estimations do. It estimates the parameters of random variables based on the experiment results provided by you.
 
 
 * Can you tell me about your educational background and any relevant coursework or certifications you have completed?
