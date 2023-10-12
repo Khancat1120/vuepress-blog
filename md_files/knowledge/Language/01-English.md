@@ -435,6 +435,13 @@ During our collaboration, there was a situation where he suggested training a mo
 
 One day, after a software update, I discovered that I couldn't access my bot due to bugs introduced in the HTTPS communication plugins. To address this issue, I initiated a brief technical discussion with the developers to gain a better understanding of the problem and to find a solution.
 
+
+* Can you share an example of a time when you had to work under a tight deadline? How did you manage your time and resources to meet the deadline, and what was the outcome?
+* Certainly. I have a particularly memorable experience from April 2023, during the run-up to the SIGMOD 2023 deadline. I found myself faced with a daunting challenge: I had to complete numerous experiments and implement new algorithms within just one month. This was especially stressful for me as a relatively new researcher.
+
+Fortunately, with the invaluable support of my senior colleagues and mentors, I was able to overcome numerous obstacles and submit our paper just two minutes before the deadline. I am immensely grateful to my tutor and senior colleagues for their guidance and assistance throughout this process.
+
+
 <ClientOnly>
   <leave/>
 </ClientOnly/>
