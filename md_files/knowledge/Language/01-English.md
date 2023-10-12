@@ -98,6 +98,7 @@ sidebar: true
 * dumb：愚蠢的
 * devolve：退化
 * duplicate：重复的
+* daunting：令人生畏的
 * dysfunctional：功能障碍的
 
 ### e
