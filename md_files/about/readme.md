@@ -3,7 +3,7 @@ title: About me
 sidebar: false
 ---
 
-<p align="center"><img style="border-radius:41%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/icon.jpg')" alt="Kehan-个人博客" width=260></p>
+<p align="center"><img style="border-radius:41%;pointer-events:none;transform: scale(0.9);" :src="$withBase('/luffy.jpg')" alt="Kehan-个人博客" width=260></p>
 
 <!-- ### One sentence -->
 

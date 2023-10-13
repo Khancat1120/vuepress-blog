@@ -24,7 +24,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: `/icon.jpg`
+            href: `/luffy.jpg`
         }],
         ['link', {
             rel: 'stylesheet',
@@ -71,7 +71,7 @@ module.exports = {
     // },
     // 导航菜单
     themeConfig: {
-        logo:'/icon.jpg',
+        logo:'/luffy.jpg',
         nav,
         sidebar,
         //左侧菜单栏

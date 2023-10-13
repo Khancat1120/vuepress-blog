@@ -3,7 +3,7 @@
     <ul v-if="dataList">
            <li v-for="(item,index) in dataList.allparent" :key="index">
                <div class="cont-box">
-                    <img src="/icon.jpg" alt="">
+                    <img src="/luffy.jpg" alt="">
                     <div class="text-box">
                         <p class="title-text">
                             <span>{{item.username}}</span>
@@ -19,7 +19,7 @@
                         <ul class="ul-box" v-if="dataList.allblog">
                             <li  v-for="(str,ind) in dataList.allblog[item.id]" :key="ind">
                                 <div class="cont-box">
-                                    <img src="/icon.jpg" alt="">
+                                    <img src="/luffy.jpg" alt="">
                                     <div class="text-box">
                                         <p class="title-text">
                                                 <span>{{str.username}}</span>
