@@ -404,6 +404,9 @@ sidebar: true
 * 差集：Set Difference
 * 补集：Complement
 * 解决问题：address this issue
+* 解决方案：solution
+* 折中方案：A compromise solution
+* 兼顾：Balancing
 
 
 ## 英语对话场景
@@ -442,6 +445,10 @@ One day, after a software update, I discovered that I couldn't access my bot due
 * Certainly. I have a particularly memorable experience from April 2023, during the run-up to the SIGMOD 2023 deadline. I found myself faced with a daunting challenge: I had to complete numerous experiments and implement new algorithms within just one month. This was especially stressful for me as a relatively new researcher.
 
 Fortunately, with the invaluable support of my senior colleagues and mentors, I was able to overcome numerous obstacles and submit our paper just two minutes before the deadline. I am immensely grateful to my tutor and senior colleagues for their guidance and assistance throughout this process.
+
+
+* Can you describe a situation where you had to resolve a conflict or disagreement within a team or with a colleague? How did you approach the situation, and what was the outcome?
+* Certainly. One time I cooperate with my classmates to finish our 《Software Engineer》 project. But we have a strong conflict in design of communication form of our system. I prefered a solution that are easier to conduct while they prefer to a scalable but time-consuming solution. We had a long discussion about this but come up with nothing. At last we decided to adopt a compromise solution that balancing system complexity and performances.  
 
 
 <ClientOnly>
