@@ -1,10 +1,10 @@
 ---
-title: Graphon theory
+title: Machine Learning
 sidebar: true
 # isShowComments: true
 ---
 
-# Graphon theory
+# Machine Learning
 
 <ClientOnly>
 <title-pv/>

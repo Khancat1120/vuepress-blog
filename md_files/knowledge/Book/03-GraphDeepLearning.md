@@ -1,10 +1,10 @@
 ---
-title: Machine Learning
+title: GraphDeepLearning
 sidebar: true
 # isShowComments: true
 ---
 
-# Machine Learning
+# GraphDeepLearning
 
 <ClientOnly>
 <title-pv/>
