@@ -3,7 +3,7 @@ const  sidebar =require('./config/sidebar.js');
 
 
 module.exports = {
-    title: 'Kehan\'s Blog',
+    title: 'Kehan\'s BLOG',
     description: 'The best time to plant a tree was ten years ago, followed by now.',
     base:"/",
     plugins: [
@@ -32,7 +32,7 @@ module.exports = {
         }],
         ['meta', {
             name: 'keywords',
-            content: 'Personal Blog'
+            content: 'Personal BLOG'
         }],
         ['meta', {
             name: 'baidu-site-verification',
