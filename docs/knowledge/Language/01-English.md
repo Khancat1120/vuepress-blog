@@ -254,6 +254,7 @@ sidebar: true
 * satellite：卫星的
 * sanction：制裁
 * speculative：投机的
+* specimen：样品
 * substantial：大量的
 * supple：柔软的
 * supply：补助
@@ -278,6 +279,7 @@ sidebar: true
 * temperamental：气质的
 * tutorial：教学，导师的
 * tolerance：容忍
+* trial：实验，试验
 
 ### u
 * ultimate：最好的，最终的，最后的
