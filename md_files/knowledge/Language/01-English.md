@@ -110,6 +110,7 @@ sidebar: true
 * evolution：进化
 * eliminate：排除
 * elude：逃避，拒绝
+* elaborated：精心制作
 * emphasis：强调
 * eligibility：资格
 * essential：基本的，本质的，重要的
@@ -407,6 +408,7 @@ sidebar: true
 * 解决方案：solution
 * 折中方案：A compromise solution
 * 兼顾：Balancing
+* 部分：portion
 
 
 ## 英语对话场景
