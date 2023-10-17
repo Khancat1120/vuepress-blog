@@ -191,6 +191,8 @@ sidebar: true
 * malicious：恶意的
 * marginal：边缘的; 小的; 微不足道的; 贫瘠的（因而盈利有限）; 不重要的; 写在页边空白处的; 以相差无几的票数获胜(或失败)的; 非主体的
 * mechanism：机制
+* moderated：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致);
+
 
 ### n
 * nihilism： 虚无主义
@@ -223,6 +225,7 @@ sidebar: true
 * perceptron：感知机
 * progress：进展
 * predominance：优势
+* pervasive：普遍的
 
 ### r
 * ridiculous：荒谬的
