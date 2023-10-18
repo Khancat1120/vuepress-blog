@@ -169,6 +169,7 @@ sidebar: true
 * involuntarily：不由自主地
 * inevitable：不可避免的
 * illicit：非法的
+* indulge：沉溺于，沉浸于，放纵
 
 ### k
 * kaleidoscopic：万花筒般的
