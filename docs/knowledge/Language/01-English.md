@@ -167,6 +167,7 @@ sidebar: true
 * introverted：内向的
 * intractable：棘手的
 * involuntarily：不由自主地
+* inevitable：不可避免的
 
 ### k
 * kaleidoscopic：万花筒般的
