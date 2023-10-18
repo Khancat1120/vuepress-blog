@@ -224,6 +224,7 @@ sidebar: true
 * possess：具有，拥有
 * perceptron：感知机
 * progress：进展
+* prone：易于遭受的
 * predominance：优势
 * pervasive：普遍的
 
@@ -321,6 +322,9 @@ sidebar: true
 ### d
 * Darn it：该死
 * Don't boss me around：别对我指手画脚
+
+### e
+* emergency department：急诊科
 
 ### f
 * from scratch：从头开始
