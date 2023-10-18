@@ -168,6 +168,7 @@ sidebar: true
 * intractable：棘手的
 * involuntarily：不由自主地
 * inevitable：不可避免的
+* illicit：非法的
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -192,7 +193,8 @@ sidebar: true
 * malicious：恶意的
 * marginal：边缘的; 小的; 微不足道的; 贫瘠的（因而盈利有限）; 不重要的; 写在页边空白处的; 以相差无几的票数获胜(或失败)的; 非主体的
 * mechanism：机制
-* moderated：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致);
+* moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的
+* moderately：适中地
 
 
 ### n
@@ -226,6 +228,8 @@ sidebar: true
 * perceptron：感知机
 * progress：进展
 * prone：易于遭受的
+* prune：消减，削减
+* proportion：比例
 * predominance：优势
 * pervasive：普遍的
 
@@ -257,7 +261,7 @@ sidebar: true
 * sanction：制裁
 * speculative：投机的
 * specimen：样品
-* substantial：大量的
+* substantial：大量的 +
 * supple：柔软的
 * supply：补助
 * stillborn：夭折的
@@ -282,6 +286,7 @@ sidebar: true
 * tutorial：教学，导师的
 * tolerance：容忍
 * trial：实验，试验
+* transmit：传输，传播
 
 ### u
 * ultimate：最好的，最终的，最后的
@@ -297,6 +302,7 @@ sidebar: true
 * vigor：活力
 * vicious：恶毒的
 * vulgar：粗俗的，下流的
+* violate：违反，违背
 
 ### w
 * weird：奇怪的
@@ -420,6 +426,7 @@ sidebar: true
 * 折中方案：A compromise solution
 * 兼顾：Balancing
 * 部分：portion
+* 大量比例：a substantial proportion of
 
 
 ## 英语对话场景
