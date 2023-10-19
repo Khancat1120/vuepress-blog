@@ -95,6 +95,7 @@ sidebar: true
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
 * delinquent：拖欠债务的，有违法倾向的
+* deviant：变态的，不正常的人
 * democracy：民主
 * dumb：愚蠢的
 * devolve：退化
