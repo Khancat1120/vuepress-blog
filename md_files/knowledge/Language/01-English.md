@@ -180,7 +180,8 @@ sidebar: true
 
 ### l
 * liquor：酒精
-* leverage：举债收购，利用
+* leverage：举债收购，利用 ++
+
 
 ### m
 * migrate：迁徙，移民
@@ -399,7 +400,7 @@ sidebar: true
 * 谱域：Spectral domain
 * 补充：supplement
 * 振幅：amplitude
-* 利用：leverage +
+* 利用：leverage ++
 * 共轭：conjugate
 * 线性相关/无关：Linearly dependent/independent
 * 平稳分布：stationary distribution
