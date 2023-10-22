@@ -9,13 +9,13 @@ module.exports = [
                     link: '/knowledge/Survey/01-Textgraph'
                 },
                 {
-                    text: 'Lessons',
-                    link: '/knowledge/Lessons/01-CS224W'
+                    text: 'Lectures',
+                    link: '/knowledge/Lectures/01-CS224W'
                 },
-                {
-                    text: 'Books',
-                    link: '/knowledge/Book/01-Graphon'
-                },
+                // {
+                //     text: 'Books',
+                //     link: '/knowledge/Book/01-Graphon'
+                // },
                 {
                     text: 'Language',
                     link: '/knowledge/Language/01-English'

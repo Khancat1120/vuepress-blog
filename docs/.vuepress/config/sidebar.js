@@ -5,15 +5,15 @@ const {getChildren} = require("vuepress-sidebar-atuo")
 module.exports = {
     '/knowledge/': [
         {
-            title: 'Lessons',
+            title: 'Lectures',
             collapsable: true,
-            children: getChildren('./docs/knowledge/Lessons/')
+            children: getChildren('./docs/knowledge/Lectures/')
         },
-        {
-            title: 'Books',
-            collapsable: true,
-            children: getChildren('./docs/knowledge/Book/')
-        }, 
+        // {
+        //     title: 'Books',
+        //     collapsable: true,
+        //     children: getChildren('./docs/knowledge/Book/')
+        // }, 
         {
             title: 'Survey',
             collapsable: true,
