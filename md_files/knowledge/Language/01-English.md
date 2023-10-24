@@ -430,6 +430,7 @@ sidebar: true
 * 兼顾：Balancing
 * 部分：portion
 * 大量比例：a substantial proportion of
+* 虚张声势：only a bluff
 
 
 ## 英语对话场景
