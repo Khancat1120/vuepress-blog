@@ -1,9 +1,9 @@
 ---
-title: Graphon
+title: KG & LLM
 sidebar: true
 # isShowComments: true
 ---
-# Graphon
+# KG & LLM
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

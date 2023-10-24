@@ -88,8 +88,15 @@ This paper proposed a Mix-up method for graph-level classification. It first gen
 
 ## GCL
 
-**Title**: Graph Contrastive Learning with Augmentations
+**Title**: Graph Contrastive Learning with Augmentations.
 
+This paper Introduces 4 basic methods for graph data augmentation.
+
+<img src="/img/gcl_type.png" style="margin-bottom: -20px;">
+
+This paper demonstrates the feasibility of four different approaches through experiments and the outcomes of their combined use. The experiments reveal that for social networks and molecular graphs, distinct data augmentation and contrastive learning strategies should be employed to achieve better results; otherwise, the opposite effect may occur. For instance, in the recognition of benzene ring structures, breaking chemical bonds and treating them as positive samples can lead to a deterioration in the effectiveness of contrastive learning.
+
+<img src="/img/gcl_mt.png" style="margin-bottom: -20px;">
 
 
 ## AutoGCL
