@@ -99,8 +99,17 @@ This paper demonstrates the feasibility of four different approaches through exp
 <img src="/img/gcl_mt.png" style="margin-bottom: -20px;">
 
 
+## DGCL
+
+
+
 ## AutoGCL
 
+This paper considers all previous graph data augmentation strategies and uses a sharpened softmax to enable the model to autonomously learn which augmentation strategy to employ. The paper employs two graph view networks, with each sample being processed separately through these two networks, and the loss derived from the two views is minimized. 
+
+<img src="/img/autogcl.png" style="margin-bottom: -20px;">
+
+Furthermore, the paper also points out that excessive use of contrastive learning during the pre-training process may potentially impact the model's effectiveness. This is because relying solely on the intrinsic features for feature modeling can easily lead to learning all samples near the decision boundary, thereby affecting the performance of subsequent classifiers.
 
 
 ## MEGA
