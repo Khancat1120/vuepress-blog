@@ -275,6 +275,7 @@ sidebar: true
 * seduce：勾引，诱骗，诱奸
 * surpass：超过
 * siblings：兄弟姐妹
+* speculate：推测
 
 ### t
 * talent：有天赋的
