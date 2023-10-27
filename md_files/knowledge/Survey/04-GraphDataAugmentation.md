@@ -99,13 +99,11 @@ This paper demonstrates the feasibility of four different approaches through exp
 <img src="/img/gcl_mt.png" style="margin-bottom: -20px;">
 
 
-## DGCL
+## DGCL/AutoGCL
 
+DGCL considers two graph corruptions: removing edges for topology and masking features for node attributes for a node, and generate this node's embedding in different views (parameters weight matrix), aimming to minimize the distance between node embedding in different views. One of the most important contribution of DGCL is proving the low boundary of its MI (Mutual Information) is not more than InfoNCE loss.
 
-
-## AutoGCL
-
-This paper considers all previous graph data augmentation strategies and uses a sharpened softmax to enable the model to autonomously learn which augmentation strategy to employ. The paper employs two graph view networks, with each sample being processed separately through these two networks, and the loss derived from the two views is minimized. 
+AutoGCL considers all previous graph data augmentation strategies and uses a sharpened softmax to enable the model to autonomously learn which augmentation strategy to employ. The paper employs two graph view networks, with each sample being processed separately through these two networks, and the loss derived from the two views is minimized. 
 
 <img src="/img/autogcl.png" style="margin-bottom: -20px;">
 
