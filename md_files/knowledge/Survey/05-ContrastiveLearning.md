@@ -24,7 +24,13 @@ $$
 
 The main difference of two formula is that the weight of Simple Loss for each negative sample is $\lambda$ while contrastive learning losses result in higher penalties for negative samples with higher similarity. And temperature function pay attentions to negative samples that are hard to optimize. When $\tau$ tends to zero, it exert more penalties to false predictions of negative samples. Facts prove that smaller coefficient often bring benefits to performances of model.
 
-### uniformity on the hypersphere
+## Mutual information
+
+In self-supervised learning, we can utilize unlabeled information in the data to train a model and learn the underlying structure and feature representations of the data. One approach involves creating auxiliary tasks by predicting certain properties of the data or by transforming the data, and then maximizing the mutual information between the predicted target and the original data. Let's consider an example where we have a dataset containing various features of houses, such as the size of the house, the number of bedrooms, the number of bathrooms, garage capacity, and their corresponding house prices. We aim to train a model that can predict house prices based on these features. We can use mutual information maximization to select the most relevant features to provide more accurate information when predicting house prices.
+
+Assuming we have a dataset containing various features of houses, such as the size of the house, the number of bedrooms, the number of bathrooms, garage capacity, and their corresponding house prices, we want to train a model to predict house prices based on these features. We can use mutual information maximization to select the most relevant features to provide more accurate information when predicting house prices. In this specific example, we can compute the mutual information between price and size to measure their correlation. If the mutual information is high, it indicates a strong correlation between price and size, meaning that observing the price can help predict the size more accurately, or observing the size can help predict the price more accurately. The maximum mutual information is reached when there is a perfect one-to-one relationship between price and size. In other words, if we know the value of the price, the value of the size is entirely determined, and vice versa. In this case, mutual information reaches its maximum value.
+
+### Uniformity on the hypersphere
 
 Wang et al.'s paper discussed the properties of embedded vector distribution, and they believe that an important feature of contrastive learning is its alignment and uniformity in obtaining feature vectors. As shown in Figure 3, alignment refers to similar samples having similar feature vectors, which should remain invariant to irrelevant noise. Uniformity features can store more information, meaning that the features are roughly evenly distributed on the hypersphere. Why can uniformity preserve more features? It can be understood that compared to non-uniform distributions with only a few prominent values, uniformly distributed features have a wider distribution, and each feature retains its own unique information, which can also be combined to form more results through the operation of this information.
 
@@ -45,7 +51,7 @@ $$
 
 An extreme counterexample of uniformity is when the feature vectors are mapped to a point near a hypersphere, where the distribution of the feature vectors is extremely uneven. This situation is generally referred to as model collapse. Model collapse is a problem that pre training is very easy to encounter, for example, when we add some pre training tasks, it can easily lead to model collapse.
 
-### diffences with metric learning 
+### Diffences with metric learning 
 
 Contrastive learning and metric learning are both methods in the field of machine learning, used to learn the similarity and distance between data. They have some similarities, but there are also obvious differences:
 
