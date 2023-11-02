@@ -42,6 +42,7 @@ The authors provide a specific example of the attribute graph generation process
 ## When to and when not to train.
 
 
+The paper discusses from the perspective of Graphons when pretraining is necessary and when it is not. In other words, when the Graphon of the pretrained graph is similar to the Graphon of the target graph, pretraining will yield positive results, whereas it may be detrimental to downstream tasks when they are dissimilar. Generally speaking, knowledge is not readily transferable between different networks. A typical example is that a triangular structure represents instability in molecules, while in social networks, it often signifies stability.
 
 
 <ClientOnly>
