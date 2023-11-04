@@ -37,9 +37,20 @@ The authors provide a specific example of the attribute graph generation process
 
 ## GCC
 
+Paper title: GCC: Graph Contrastive Coding for Graph Neural Network Pre-Training
+
+This paper employed contrastive learning and pre-training paradigms in graph learning.
+
+The core idea is to use a subgraph sample of a single node with anonymous, restartable, random walks as q, and samples on the current graph and on other graphs as k to compute an InfoNSE loss. The encoders for q and k are implemented using two different neural networks. Subsequently, this encoder is tested for downstream task performance.
+
+However, it's important to note that having a large number of k can consume significant storage and computational resources. The paper proposes two solutions: the first is to reduce the size of k using minibatch, and the second is to update only the parameters of q and use them to progressively update k. In other words, only q is updated using backpropagation, and k is updated using q.
+
+Additionally, the paper presents two different training strategies, namely freezing parameters and fine-tuning mode.
 
 
 ## When to and when not to train.
+
+Paper title: When to Pre-Train Graph Neural Networks? From Data Generation Perspective!
 
 The paper discusses from the perspective of Graphons when pretraining is necessary and when it is not. In other words, when the Graphon of the pretrained graph is similar to the Graphon of the target graph, pretraining will yield positive results, whereas it may be detrimental to downstream tasks when they are dissimilar. Generally speaking, knowledge is not readily transferable between different networks. A typical example is that a triangular structure represents instability in molecules, while in social networks, it often signifies stability.
 
