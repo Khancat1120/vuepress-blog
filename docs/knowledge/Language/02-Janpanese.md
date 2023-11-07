@@ -402,6 +402,11 @@ sidebar: true
 * を和が的区别：前者强调动作，后者强调宾语，也就是说，我喝咖啡这个短语，前者强调我是在喝咖啡不是在吃咖啡，后者强调想喝的是咖啡而不是果汁
 * に和へ的区別：https://zhuanlan.zhihu.com/p/65770835
 * に和で的区别：https://zhuanlan.zhihu.com/p/67191991
+* は和が的区别：
+  * https://www.zhihu.com/tardis/bd/art/596482131?source_id=1001
+  * https://baijiahao.baidu.com/s?id=1769675954958263923&wfr=spider&for=pc
+  * https://baijiahao.baidu.com/s?id=1716471797256076809&wfr=spider&for=pc
+  * https://jingyan.baidu.com/article/380abd0a2671b75c91192c6e.html
 
 ## 句子
 
@@ -424,6 +429,10 @@ sidebar: true
 * 你说呢？：おまえがいうか？
 
 
+
+## 语法
+
+* 数词：https://jp.hjenglish.com/waijiao/p1357135/
 <!-- ## 汉字
 
 
