@@ -409,6 +409,7 @@ sidebar: true
   * https://baijiahao.baidu.com/s?id=1769675954958263923&wfr=spider&for=pc
   * https://baijiahao.baidu.com/s?id=1716471797256076809&wfr=spider&for=pc
   * https://jingyan.baidu.com/article/380abd0a2671b75c91192c6e.html
+* くせに和のに的区别：https://zhuanlan.zhihu.com/p/45449871
 
 
 ## 动词活用
