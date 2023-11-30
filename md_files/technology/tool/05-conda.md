@@ -63,6 +63,10 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+示例：安装pytorch
+```shell
+python -m pip install torch torchvision torchaudio -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 <ClientOnly>
   <leave/>
