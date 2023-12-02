@@ -23,7 +23,7 @@ sidebar: false
 - Language:
   - 中文 √√√√√
   - English √√√
-  - 日本語 √
+  - にほんご √
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
 ### Publications
