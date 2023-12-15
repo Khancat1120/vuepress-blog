@@ -18,7 +18,7 @@ sidebar: false
 
 - Occupation: A PhD student who is a jack of all trades, master of none.
 - Current residence: Shenzhen, Guangdong Province, China.
-- Research directions: Knowledge reasoniong.
+- Research directions: Knowledge reasoniong, Data Mining, Data Management.
 - MBTI：INTP.
 - Language:
   - 中文 √√√√√
