@@ -3,7 +3,7 @@ module.exports = [
     {text: 'Home page', link: '/index.html'},
     {text: 'About me', link: '/about/',},
     {
-        text: 'Knowledge',
+        text: 'Surv.',
         items: [
                 {
                     text: 'Survey',
@@ -24,7 +24,7 @@ module.exports = [
             ]
     },
     {
-        text: 'Technology', 
+        text: 'Tech.', 
         items: [
                 {
                     text: 'Codes',
