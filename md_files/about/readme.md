@@ -33,7 +33,9 @@ sidebar: false
 #### 2024
 
 1. **_Linking Entities across Relations and Graphs._**
+
   *ACM Transactions on Database Systems (TODS), 2024.*
+  
   Wenfei Fan, Ping Lu, Kehan Pang, Ruochun Jin, and Wenyuan Yu
 
 ### Contact me
