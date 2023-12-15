@@ -27,8 +27,11 @@ sidebar: false
 - Hobbies: sleeping, slacking off, procrastinating online, ACGN.
 
 ### Publications
-**（All primary contributors to the papers are listed alphabetically.）**
+
+**(All primary contributors to the papers are listed alphabetically)**
+
 #### 2024
+
 1. **_Linking Entities across Relations and Graphs._**<br>
   *ACM Transactions on Database Systems (TODS), 2024.*<br>
   Wenfei Fan, Ping Lu, Kehan Pang, Ruochun Jin, and Wenyuan Yu<br>
