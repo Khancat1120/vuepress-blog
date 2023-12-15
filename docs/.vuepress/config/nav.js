@@ -1,6 +1,7 @@
 //导航栏
 module.exports = [
     {text: 'Home page', link: '/index.html'},
+    {text: 'About me', link: '/about/',},
     {
         text: 'Knowledge',
         items: [
@@ -40,5 +41,5 @@ module.exports = [
             ]
     },
     {text: 'Essay', link: '/jottings/01-自传',},
-    {text: 'About me', link: '/about/',},
+
 ]
