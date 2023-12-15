@@ -28,6 +28,8 @@ sidebar: false
 
 ### Publications
 
+**All primary contributors to the papers are listed alphabetically.**
+
 #### 2024
 
 1. **_Linking Entities across Relations and Graphs._**
