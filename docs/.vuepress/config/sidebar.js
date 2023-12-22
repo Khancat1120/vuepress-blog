@@ -9,11 +9,11 @@ module.exports = {
             collapsable: true,
             children:getChildren('./docs/knowledge/Survey/')
         },
-        {
-            title: 'Lectures',
-            collapsable: true,
-            children: getChildren('./docs/knowledge/Lectures/')
-        },
+        // {
+        //     title: 'Lectures',
+        //     collapsable: true,
+        //     children: getChildren('./docs/knowledge/Lectures/')
+        // },
         {
             title: 'Language',
             collapsable: true,
