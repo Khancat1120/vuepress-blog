@@ -16,17 +16,17 @@ sidebar: true
 * Example:
   * Causing Autonomous Vehicles to Misidentify Road Signs:In the original stop sign image (left), the stop sign can be successfully detected. In the middle image, with small disturbances added throughout the entire image, the stop sign cannot be detected. In the last image, with small disturbances added to the symbol area of the stop sign rather than the entire image, the stop sign is detected as a vase.
   <div style="text-align: center;">
-  <img src="/img/traffic.png" style="margin-bottom: -20px;" width="50%" height="50%">
+  <img src="/img/traffic.png" style="margin-bottom: -20px;" width="90%" height="90%">
   </div>
 
   * Deceiving Facial Recognition Systems: In a paper from CMU, wearing specially designed glasses can trick even the most advanced facial recognition software. These glasses not only make the wearer disappear from artificial intelligence recognition systems but also cause AI to mistake the wearer for someone else. Considering the widespread application of facial recognition systems today, the consequences could be dire if this method is maliciously exploited.
   <div style="text-align: center;">
-  <img src="/img/face.png" style="margin-bottom: -20px;" width="50%" height="50%">
+  <img src="/img/face.png" style="margin-bottom: -20px;" width="90%" height="90%">
   </div>
 
   * Attacking Speech Recognition Systems: Generating audio commands that create confusion by reverse engineering normal commands (such as a segment of noise indistinguishable by humans), causing them to be correctly recognized as corresponding voice commands on Samsung Galaxy S4 and iPhone 6. This manipulation leads to actions like switching the phone to flight mode or dialing emergency services.
   <div style="text-align: center;">
-  <img src="/img/radio.png" style="margin-bottom: -20px;" width="50%" height="50%">
+  <img src="/img/radio.png" style="margin-bottom: -20px;" width="90%" height="90%">
   </div>
 
 ### Backdoor Attack:
