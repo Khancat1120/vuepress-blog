@@ -1,9 +1,9 @@
 ---
-title: Hyperbolic Graph Neural Networks
+title: Information Leakage
 sidebar: true
 # isShowComments: true
 ---
-# Hyperbolic Graph Neural Networks
+# Information Leakage
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

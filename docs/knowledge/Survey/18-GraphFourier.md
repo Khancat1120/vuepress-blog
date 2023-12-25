@@ -1,9 +1,9 @@
 ---
-title: Hyperbolic Graph Neural Networks
+title: Spectral Graph Neural Network
 sidebar: true
 # isShowComments: true
 ---
-# Hyperbolic Graph Neural Networks
+# Spectral Graph Neural Network
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

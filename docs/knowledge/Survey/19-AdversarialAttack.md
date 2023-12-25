@@ -1,9 +1,9 @@
 ---
-title: Hyperbolic Graph Neural Networks
+title: Adversarial Attack on Graph Neural Networks
 sidebar: true
 # isShowComments: true
 ---
-# Hyperbolic Graph Neural Networks
+# Adversarial Attack on Graph Neural Networks
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
