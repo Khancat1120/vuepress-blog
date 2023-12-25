@@ -1,9 +1,9 @@
 ---
-title: The Evolution History of Graph Neural Network 
+title: Graph diffusion model
 sidebar: true
 # isShowComments: true
 ---
-# The Evolution History of Graph Neural Network 
+# Graph diffusion model
 <ClientOnly>
 <title-pv/>
 </ClientOnly>

@@ -1,15 +1,12 @@
 ---
-title: Graph diffusion model
+title: Hypergraph
 sidebar: true
 # isShowComments: true
 ---
-# Graph diffusion model
+# Hypergraph
 <ClientOnly>
 <title-pv/>
 </ClientOnly>
-
-
-
 
 
 
