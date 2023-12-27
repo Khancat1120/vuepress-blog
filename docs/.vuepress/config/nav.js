@@ -17,10 +17,10 @@ module.exports = [
                 //     text: 'Books',
                 //     link: '/knowledge/Book/01-Graphon'
                 // },
-                {
-                    text: 'Language',
-                    link: '/knowledge/Language/01-English'
-                },
+                // {
+                //     text: 'Language',
+                //     link: '/knowledge/Language/01-English'
+                // },
             ]
     },
     {

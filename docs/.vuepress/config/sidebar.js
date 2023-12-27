@@ -14,11 +14,11 @@ module.exports = {
         //     collapsable: true,
         //     children: getChildren('./docs/knowledge/Lectures/')
         // },
-        {
-            title: 'Language',
-            collapsable: true,
-            children:getChildren('./docs/knowledge/Language/')
-        },
+        // {
+        //     title: 'Language',
+        //     collapsable: true,
+        //     children:getChildren('./docs/knowledge/Language/')
+        // },
     ],
     '/technology/':[
         {
