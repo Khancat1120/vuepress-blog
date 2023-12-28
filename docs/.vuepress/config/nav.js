@@ -2,27 +2,28 @@
 module.exports = [
     {text: 'Home page', link: '/index.html'},
     {text: 'About me', link: '/about/',},
-    {
-        text: 'Surv.',
-        items: [
-                {
-                    text: 'Survey',
-                    link: '/knowledge/Survey/01-Textgraph'
-                },
-                // {
-                //     text: 'Lectures',
-                //     link: '/knowledge/Lectures/01-CS224W'
-                // },
-                // {
-                //     text: 'Books',
-                //     link: '/knowledge/Book/01-Graphon'
-                // },
-                // {
-                //     text: 'Language',
-                //     link: '/knowledge/Language/01-English'
-                // },
-            ]
-    },
+    {text: 'Essay', link: '/knowledge/Survey/00-GraphNeuralNetwork',},
+    // {
+    //     text: 'Surv.',
+    //     items: [
+    //             {
+    //                 text: 'Survey',
+    //                 link: '/knowledge/Survey/01-Textgraph'
+    //             },
+    //             {
+    //                 text: 'Lectures',
+    //                 link: '/knowledge/Lectures/01-CS224W'
+    //             },
+    //             {
+    //                 text: 'Books',
+    //                 link: '/knowledge/Book/01-Graphon'
+    //             },
+    //             {
+    //                 text: 'Language',
+    //                 link: '/knowledge/Language/01-English'
+    //             },
+    //         ]
+    // },
     {
         text: 'Tech.', 
         items: [
