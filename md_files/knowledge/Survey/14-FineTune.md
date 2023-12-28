@@ -42,7 +42,6 @@ The implementation process of LoRA is as follows:
 * The input and output dimensions of the model remain unchanged, and at the output, the BA is added to the parameters of the PLM.
 * Initialize $A$ with a random Gaussian distribution and initialize $B$ with a zero matrix, ensuring that the bypass matrix remains a zero matrix at the beginning of the training.
 
-
 <div style="text-align: center;">
   <img src="/img/lora.png" style="margin-bottom: -20px;" width="90%" height="90%">
 </div>
@@ -64,11 +63,66 @@ In the inference process, there is no delay as the change is simply reintegrated
 
 If you wish to switch tasks, during the task-switching process, you subtract $BA$ and then replace it with $BA￥ that has been trained for another task.
 
+### Intuition
+
+Large models possess the concept of intrinsic dimensionality, which means that only a small number of parameters need to be adjusted to achieve good performance on downstream tasks.
+
+For a model with a parameter count of $D$, training it implies searching for an effective solution within a $D$-dimensional space. However, $D$ might be redundant, and it may be possible to find an effective solution by optimizing only $d$ parameters out of the total, where $d$ is less than $D$.
+
+<div style="text-align: center;">
+  <img src="/img/lora.png" style="margin-bottom: -20px;" width="90%" height="90%">
+</div>
+
 In summary, leveraging the intrinsic low-rank nature of large models, LoRA adds a bypass matrix to simulate full fine-tuning, making it a simple and effective solution for lightweight fine-tuning. This technology has been widely applied in the fine-tuning of large models, such as Alpaca, stable diffusion with LoRA, and it can be effectively combined with other parameter-efficient fine-tuning methods, such as State-of-the-art Parameter-Efficient Fine-Tuning (PEFT).
 
 ### QLoRA
 
+LoRA is already quite impressive, but fine-tuning large models like LLaMA-65b can still be quite challenging, as loading a 65 billion-parameter model into the GPU is no small feat. QLoRA introduces a series of measures to further reduce GPU memory consumption, the most significant of which is quantizing the base model during the fine-tuning process, which further reduces the GPU memory usage caused by the number of parameters. The paper also found that the errors introduced by quantization can be eliminated during the fine-tuning process. As a result, QLoRA has become the most efficient fine-tuning solution for large language models (LLMs) to date.
+
+<div style="text-align: center;">
+  <img src="/img/LoRA2.png" style="margin-bottom: -20px;" width="90%" height="90%">
+</div>
+
+QLoRA (Quantized Low-Rank Adaptation) is an adaptation of the LoRA (Low-Rank Adaptation) technique, which is designed to fine-tune large language models (LLMs) efficiently. QLoRA introduces quantization to the low-rank matrices used in LoRA, aiming to further reduce computational costs and memory usage while maintaining performance. Here are the key implementation details and technical aspects of QLoRA:
+
+* Quantization: QLoRA applies quantization to the low-rank matrices that are injected into the model. This process reduces the precision of the model's parameters, which can lead to smaller model sizes and faster training times. Quantization is typically done to a lower bit-width, such as 8-bit or 16-bit, compared to the standard 32-bit floating-point precision.
+
+* Adaptation Process: Similar to LoRA, QLoRA adapts the pre-trained model's weights by adding low-rank matrices that are applied to the model's layers. These matrices are trained to adjust the model's behavior for the target task, while the majority of the model's weights remain frozen.
+
+* Memory and Computational Efficiency: By using quantized low-rank matrices, QLoRA reduces the memory footprint and computational complexity of the fine-tuning process. This is particularly beneficial for models with billions of parameters, where full fine-tuning can be prohibitively expensive.
+
+* Training: The quantized low-rank matrices are trained alongside the pre-trained model, with the goal of minimizing the difference between the adapted model's output and the target task's desired output. The training process is typically done using gradient descent with backpropagation, just like in standard fine-tuning.
+
+* Main Differences from LoRA: The primary distinction between QLoRA and LoRA is the use of quantization. While LoRA uses full-precision floating-point numbers for the low-rank matrices, QLoRA uses lower precision, which can lead to faster training and inference times, albeit with a potential trade-off in model accuracy.
+
+* Performance: QLoRA aims to achieve performance comparable to full fine-tuning while using significantly fewer parameters. This makes it an attractive option for tasks where full fine-tuning is not feasible due to computational constraints.
+
+
 ### QALoRA
+
+QA-LoRA aims to achieve two objectives. First, during the fine-tuning stage, the pre-trained weights $W$ are quantized to a low-bit representation, enabling LLMs to be fine-tuned on as few GPUs as possible. Second, after the fine-tuning stage, the weights $W$ that have been fine-tuned and merged remain in a quantized form, allowing LLMs to be deployed with computational efficiency.
+
+<div style="text-align: center;">
+  <img src="/img/QALoRA.png" style="margin-bottom: -20px;" width="90%" height="90%">
+</div>
+
+#### The main objective is twofold:
+
+* During fine-tuning, the pretrained weights $W$ are converted to a low-bit format to allow LLMs to be fine-tuned using minimal GPUs.
+* Post fine-tuning, the adjusted and combined weights $W'$ remain in a quantized format for efficient LLM deployment.
+
+QLoRA, a recent LoRA variant, achieved the first goal by quantizing W from FP16 to NF4 during fine-tuning. This joint optimization of quantization and adaptation is feasible as the accuracy difference between $W$ and $W~$ is offset by the low-rank weights $s * AB$. However, after fine-tuning, the side weights $s * AB$ are reintegrated to W~, reverting the final weights W' to FP16. Post-training quantization on W' can lead to notable accuracy loss, especially with a low bit width. Moreover, there’s no current optimization for NF4, hindering acceleration during fine-tuning and inference. Thus, QLoRA’s primary advantage is reducing memory usage during fine-tuning.
+
+#### Solution: group-wise quantization with low-rank adaptation
+
+<div style="text-align: center;">
+  <img src="/img/AlgQALoRA.png" style="margin-bottom: -20px;" width="90%" height="90%">
+</div>
+
+The primary objective is to merge the quantized $W~$ and $s * AB$ without resorting to high-precision numbers like FP16. In the original setting, this is unattainable due to the column-wise quantization of W and the unconstrained nature of matrices A and B. The first idea of the authors requires all row vectors of A to be identical. However, this approach results in a significant accuracy drop since it limits the rank of AB to 1, affecting the fine-tuning ability.
+
+To address this, the constraints for both quantization and adaptation are relaxed. W is partitioned into L groups, and individual scaling and zero factors are used for quantization within each group. This also requires row vectors of A within the same group to be identical. The approach requires with minimal code changes. Compared to LoRA and QLoRA, QA-LoRA offers time and memory benefits. It requires extra storage for scaling and zero factors but reduces the parameters of A.
+
 
 ## Adapter
 
