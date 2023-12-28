@@ -2,7 +2,7 @@
 module.exports = [
     {text: 'Home page', link: '/index.html'},
     {text: 'About me', link: '/about/',},
-    {text: 'Essay', link: '/knowledge/Survey/00-GraphNeuralNetwork',},
+    {text: 'Surv.', link: '/knowledge/Survey/00-GraphNeuralNetwork',},
     // {
     //     text: 'Surv.',
     //     items: [
