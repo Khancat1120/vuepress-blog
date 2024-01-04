@@ -38,10 +38,10 @@ sidebar: true
 * Definition: Backdoor attacks involve the insertion of a hidden pattern or trigger into a machine learning model during the training phase. This trigger, known as a "backdoor," can be exploited to produce specific outputs when a particular, often rare, input pattern is present.
 * Objective: Backdoor attacks aim to compromise the model's behavior in a targeted manner, usually without affecting its overall performance on regular data.
 
-## Subtype of attack
+<!-- ## Subtype of attack
 
 ## Instances
-
+ -->
 
 <ClientOnly>
   <leave/>
