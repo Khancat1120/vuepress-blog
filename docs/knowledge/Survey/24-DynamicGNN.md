@@ -37,9 +37,8 @@ On temporal graphs, several types of tasks are commonly perform:
 * Low-dimensional Embedding:Learn to map nodes or graphs into a low-dimensional space for visualization, similarity analysis, or further machine learning tasks.
 * Graph Generation:Generate new temporal graphs, either as extensions of existing graph structures or as entirely new graph structures.
 * Temporal Graph Analysis:Analyze the dynamic characteristics of temporal graphs, such as the evolution patterns of nodes and edges, and the changes in community structures.
-* Temporal Graph Visualization:
+* Temporal Graph Visualization:Display the structure and temporal changes of temporal graphs using visualization techniques.
 
-Display the structure and temporal changes of temporal graphs using visualization techniques.
 These tasks can be applied across various domains, such as social network analysis, traffic flow prediction, disease spread modeling, recommendation systems, and more. Temporal graph learning tasks typically require consideration of the temporal dimension, which presents additional challenges for model design and training.
 
 
