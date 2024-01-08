@@ -28,16 +28,16 @@ Each interpretation has its strengths and limitations, and the choice of which m
 
 On temporal graphs, several types of tasks are commonly perform:
 
-* Node Classification:Predict the category labels for each node in the graph. This can involve predicting future states of nodes (future prediction) or inferring past states of nodes (past prediction).
-* Link Prediction:Predict the presence of future edges (edge prediction) or recovering past edges (edge recovery) in the graph.
-* Graph Classification:Classify the entire graph into different categories, such as healthy networks versus disease networks.
-* Event Time Prediction:Predict the time at which specific events (such as node insertions or deletions) occur in the graph.
-* Node Clustering:Group nodes in the graph based on their attributes and/or interactions over time.
-* Graph Clustering:Group a collection of temporal graphs based on their structural and/or content features.
-* Low-dimensional Embedding:Learn to map nodes or graphs into a low-dimensional space for visualization, similarity analysis, or further machine learning tasks.
-* Graph Generation:Generate new temporal graphs, either as extensions of existing graph structures or as entirely new graph structures.
-* Temporal Graph Analysis:Analyze the dynamic characteristics of temporal graphs, such as the evolution patterns of nodes and edges, and the changes in community structures.
-* Temporal Graph Visualization:Display the structure and temporal changes of temporal graphs using visualization techniques.
+* Node Classification: Predict the category labels for each node in the graph. This can involve predicting future states of nodes (future prediction) or inferring past states of nodes (past prediction).
+* Link Prediction: Predict the presence of future edges (edge prediction) or recovering past edges (edge recovery) in the graph.
+* Graph Classification: Classify the entire graph into different categories, such as healthy networks versus disease networks.
+* Event Time Prediction: Predict the time at which specific events (such as node insertions or deletions) occur in the graph.
+* Node Clustering: Group nodes in the graph based on their attributes and/or interactions over time.
+* Graph Clustering: Group a collection of temporal graphs based on their structural and/or content features.
+* Low-dimensional Embedding: Learn to map nodes or graphs into a low-dimensional space for visualization, similarity analysis, or further machine learning tasks.
+* Graph Generation: Generate new temporal graphs, either as extensions of existing graph structures or as entirely new graph structures.
+* Temporal Graph Analysis: Analyze the dynamic characteristics of temporal graphs, such as the evolution patterns of nodes and edges, and the changes in community structures.
+* Temporal Graph Visualization: Display the structure and temporal changes of temporal graphs using visualization techniques.
 
 These tasks can be applied across various domains, such as social network analysis, traffic flow prediction, disease spread modeling, recommendation systems, and more. Temporal graph learning tasks typically require consideration of the temporal dimension, which presents additional challenges for model design and training.
 

@@ -52,6 +52,33 @@ Variational Inference: VAEs use a variational approach to approximate complex po
 VAEs are a powerful tool in the field of generative models, and their simplicity and interpretability make them a popular choice for many applications. However, they are still an active area of research, with ongoing work to improve their performance and applicability.
 
 
+## Differences with AE
+
+AE (Autoencoder) and VAE (Variational Autoencoder) are both neural network models used for unsupervised learning in deep learning, and their primary goal is to learn useful feature representations from data. Although they are structurally similar, they have significant differences in their training objectives and the representation of the latent space.
+
+
+* Objective Function:
+  * AE: Autoencoders are typically trained by minimizing the reconstruction error, which is the difference between the input data and the output of the decoder. This is usually achieved by minimizing mean squared error (MSE).
+  * VAE: Variational Autoencoders, in addition to minimizing the reconstruction error, introduce a regularization term that encourages the latent space distribution to be close to a standard normal distribution. This regularization term is based on the Kullback-Leibler divergence, which measures the difference between the latent space distribution and a prior distribution (typically a standard normal distribution).
+
+* Latent Space:
+  * AE: The latent space of an autoencoder may not conform to any specific distribution, which could result in an optimal, continuous representation of the latent space.
+  * VAE: The latent space of a variational autoencoder is usually enforced to be a continuous Gaussian distribution, which allows the model to generate more diverse and coherent data samples.
+
+* Generation Capability:
+  * AE: The generation capability of autoencoders may be limited because they do not enforce a distribution on the latent space.
+  * VAE: Due to the regularization of the latent space, VAEs typically have better performance in generating a variety of coherent data samples. VAEs can be considered a generative model because they can generate new data points by sampling from the latent space.
+
+* Training Process:
+  * AE: The training process of an autoencoder is relatively straightforward, as it only needs to minimize the reconstruction error.
+  * VAE: The training process of a variational autoencoder is more complex, as it requires optimizing the reconstruction error and the regularization term simultaneously, which usually involves using gradient descent to optimize these two objectives.
+
+* Application Scenarios:
+  * AE: Autoencoders are commonly used for dimensionality reduction, feature learning, and denoising.
+  * VAE: In addition to the above applications, variational autoencoders are widely used in image generation, style transfer, data interpolation, and other areas.
+
+In summary, VAE is an extension of AE that improves the representation of the latent space by introducing the concept of variational inference, resulting in better performance in generative tasks.
+
 <ClientOnly>
   <leave/>
 </ClientOnly/>
