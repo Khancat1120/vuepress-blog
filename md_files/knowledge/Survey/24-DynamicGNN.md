@@ -42,6 +42,10 @@ On temporal graphs, several types of tasks are commonly perform:
 These tasks can be applied across various domains, such as social network analysis, traffic flow prediction, disease spread modeling, recommendation systems, and more. Temporal graph learning tasks typically require consideration of the temporal dimension, which presents additional challenges for model design and training.
 
 
+<div style="text-align: center;">
+  <img src="/img/dmt.png" style="margin-bottom: -20px;" width="90%" height="90%">
+</div>
+
 ## Method
 
 Temporal graphs, which describe graph structures that evolve over time, can be interpreted in several ways, and each interpretation comes with its own set of tasks and corresponding solutions:
