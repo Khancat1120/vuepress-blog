@@ -77,7 +77,7 @@ Each type of temporal graph presents its own challenges, such as handling large-
 ## Learning Method
 
 <div style="text-align: center;">
-  <img src="/img/TGNN.png" style="margin-bottom: -20px;" width="90%" height="90%">
+  <img src="/img/TransInPastFuture.png" style="margin-bottom: -20px;" width="90%" height="90%">
 </div>
 
 In the context of past prediction and future prediction, the differences between Transductive (Inductive) Learning and Inductive (Deductive) Learning are primarily reflected in the model's access to training and testing data.
