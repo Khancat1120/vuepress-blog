@@ -46,8 +46,6 @@ For instance, in node-level FSL, Meta-GNN (Meta-Graph Neural Networks) is the fi
 * Metric-based Methods: These methods focus on computing the distance between graph class prototypes and query graphs to predict labels of query graphs. For example, SuperClass uses graph-level GNNs (such as GIN) to learn graph embeddings and clusters graphs into different super-classes based on their spectral properties.
 * Optimization-based Methods: These methods also utilize MAML to optimize few-shot graph classification models. For example, AS-MAML generates graph embeddings by concatenating mean and max-pooling of all node embeddings encoded by GNNs and further leverages a reinforcement learning-based controller to adaptively control MAML for model optimization.
 
-## Conclusion
-
 
 <ClientOnly>
   <leave/>
