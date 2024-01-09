@@ -93,9 +93,39 @@ In the context of past prediction and future prediction, the differences between
   * Transductive Learning: In the setting of future prediction, transductive learning means that the model has access to all nodes and edges in the training set, and these nodes and edges are also visible at test time. The model uses this information to predict the state of nodes or the properties of the graph at future time points.
   * Inductive Learning: In the setting of future prediction, inductive learning means that the model can only access a subset of nodes and edges during training, and the nodes and edges at test time are unknown at training time. The model must learn to make predictions from data it has never seen before, which typically involves predicting the state of nodes or the properties of the graph at unobserved future time points.
 
-In summary, transductive learning generally allows the model to access the complete training dataset, including nodes and edges at test time, while inductive learning restricts the model to only a subset of the data that is visible at training time. In the context of temporal graphs, these learning settings help us understand how models handle temporal dynamics and how to design models that can adapt to future changes.
+## Time Feature
+
+### Explicit Time Learning:
+
+Explicit time learning algorithms use time as an independent feature input to the model. This means that the model is directly provided with information about the timestamps or time intervals associated with the graph data.
+These algorithms are capable of recognizing temporal patterns, such as periodicity and vector clocks, which are phenomena related to the timing of events in the graph.
+Explicit time learning allows for tasks like time prediction, where the model predicts when a specific event will occur in the future. This is not possible with implicit time learning methods.
+Examples of explicit time learning algorithms include Temporal Graph Attention Network (TGAT) and Temporal Graph Neural Network (TGN), which use Time2Vec encoding to represent time as a vector and incorporate it into the learning process.
 
 
+### Implicit Time Learning:
+
+Implicit time learning algorithms do not explicitly use time as an input feature. Instead, they rely on the ordering of the graph snapshots or the sequential nature of the data to infer temporal information.
+These models learn temporal patterns indirectly through the sequence of graph snapshots or updates, without the need for explicit time stamps.
+Implicit time learning is less capable of capturing complex temporal dynamics compared to explicit time learning, as it does not directly model the time dimension.
+Examples of implicit time learning include methods that use Recurrent Neural Networks (RNNs) or Long Short-Term Memory (LSTM) networks as decoders to learn temporal correlations from the sequence of graph snapshots.
+
+##  Discrete Time Dynamic Graphs (DTDG) and Continuous Time Dynamic Graphs (CTDG)
+
+
+### Discrete Time Dynamic Graphs (DTDG)
+
+DTDG models represent a dynamic graph as a series of snapshots taken at discrete time intervals. Each snapshot captures the state of the graph at a specific point in time.
+These models are suitable for scenarios where the graph evolves in a predictable and regular manner, and the frequency of updates is consistent.
+DTDGs are typically stored as a list of graph observations, each associated with a timestamp, and they can lose some temporal information if the observation frequency is not set appropriately.
+Learning algorithms for DTDGs often use static graph encoders to generate embeddings for each snapshot and then pass these embeddings to a sequential decoder for inference.
+
+### Continuous Time Dynamic Graphs (CTDG)
+
+CTDG models represent a dynamic graph as a stream of graph updating events, capturing all changes and their timestamps as they occur.
+These models are more memory-efficient for graphs with frequent updates and can capture all temporal information, making them suitable for graphs with complex and irregular update patterns.
+CTDGs are stored as a collection of timestamped graph updating events, which can include node updates, edge updates, or both.
+Learning algorithms for CTDGs typically use dynamic graph encoders that process the stream of events and generate node-wise embeddings that capture the temporal evolution of the graph.
 
 
 <ClientOnly>
