@@ -1,5 +1,5 @@
 ---
-title: Graph Generation Model
+title: Graph Out-Of-Distribution Generalization
 sidebar: true
 # isShowComments: true
 ---
