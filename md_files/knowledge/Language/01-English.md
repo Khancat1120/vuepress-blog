@@ -33,6 +33,7 @@ sidebar: true
   * v.	使附属; 与…有关; 加入; 使隶属，使并入(较大的团体、公司、组织); 为…工作;
   * n.	附属机构; 分支机构; 分公司; 分会
 * apprentice：学徒
+* agriculture：农业
 
 
 ### b
@@ -78,6 +79,7 @@ sidebar: true
 * crave：渴求，恳求
 * crap：废话; 屎; 拉屎; 胡扯; 胡说; 批评; 蹩脚货; 非难; 不公正的待遇; 质量差的东西
 * cryptocurrency：加密货币
+* cybersecurity：网络安全
 
 ### d
 * dismissed：解散
@@ -102,6 +104,7 @@ sidebar: true
 * duplicate：重复的
 * daunting：令人生畏的
 * dysfunctional：功能障碍的
+* democratization：民主化
 
 ### e
 * embrace：拥抱; 欣然接受，乐意采纳
@@ -145,7 +148,7 @@ sidebar: true
 * hick：乡巴佬
 * handwaving：纸上谈兵
 * hump：驼峰，背负，性交
-* harness：马具; 挽具; 控制，利用
+* harness：马具; 挽具; 控制，利用 +
 * heuristic：启发式的
 * hallucination：幻觉，错觉
 * harsh：严厉地
@@ -198,6 +201,7 @@ sidebar: true
 * mechanism：机制
 * moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的
 * moderately：适中地
+* mitigate：缓和，减缓
 
 
 ### n
@@ -276,6 +280,7 @@ sidebar: true
 * surpass：超过
 * siblings：兄弟姐妹
 * speculate：推测
+* sector：部门，领域
 
 ### t
 * talent：有天赋的
@@ -307,6 +312,7 @@ sidebar: true
 * vicious：恶毒的
 * vulgar：粗俗的，下流的
 * violate：违反，违背
+* vibrant：生机勃勃的
 
 ### w
 * weird：奇怪的
