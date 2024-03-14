@@ -349,6 +349,7 @@ sidebar: true
 * from scratch：从头开始
 * freak out：大吃一惊，大发雷霆
 * friends with benefits：炮友
+* fall short of：缺乏
 
 ### g
 * Give me a favor：帮我个忙
