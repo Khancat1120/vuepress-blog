@@ -175,6 +175,7 @@ sidebar: true
 * inevitable：不可避免的
 * illicit：非法的
 * indulge：沉溺于，沉浸于，放纵
+* intervention：干预
 
 ### k
 * kaleidoscopic：万花筒般的
