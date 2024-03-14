@@ -34,6 +34,7 @@ sidebar: true
   * n.	附属机构; 分支机构; 分公司; 分会
 * apprentice：学徒
 * agriculture：农业
+* adherence：坚持
 
 
 ### b
@@ -239,6 +240,7 @@ sidebar: true
 * proportion：比例
 * predominance：优势
 * pervasive：普遍的
+* prosperity：繁荣，昌盛
 
 ### r
 * ridiculous：荒谬的
