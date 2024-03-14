@@ -68,7 +68,8 @@ sidebar: true
 * confront：对抗; 面对; 处理，解决(问题或困境); 与(某人)对峙; 使…无法回避; 降临于;
 * containment：支配，控制，制裁
 * colonial：殖民的
-* consent：允许，同意
+* consent：允许，同意 +
+* consensus：共识
 * coalition：联盟;联合;(两党或多党)联合政府;
 * clueless：无知的，无能的
 * clown：小丑
