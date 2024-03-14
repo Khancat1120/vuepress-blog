@@ -35,6 +35,9 @@ sidebar: true
 * apprentice：学徒
 * agriculture：农业
 * adherence：坚持
+* assure：保证
+* abruptly：突然间
+* appreciably：明显地，可观地
 
 
 ### b
@@ -48,6 +51,7 @@ sidebar: true
 * boilerplate：文件范例
 
 ### c
+* constitute：组成，和contain不一样的地方在于，这个词用于描述比例，contain用于描述组成成分
 * category：种类
 * caution：警告
 * compensation：补偿
@@ -78,10 +82,12 @@ sidebar: true
 * cloze：完形填空
 * conjecture：推测
 * conjugate：共轭
+* cosmetic：整形治疗
 * crave：渴求，恳求
 * crap：废话; 屎; 拉屎; 胡扯; 胡说; 批评; 蹩脚货; 非难; 不公正的待遇; 质量差的东西
 * cryptocurrency：加密货币
 * cybersecurity：网络安全
+* cohort：队列
 
 ### d
 * dismissed：解散
@@ -107,6 +113,8 @@ sidebar: true
 * daunting：令人生畏的
 * dysfunctional：功能障碍的
 * democratization：民主化
+* depict：绘画
+* deviation：偏离，差异
 
 ### e
 * embrace：拥抱; 欣然接受，乐意采纳
@@ -130,6 +138,7 @@ sidebar: true
 * exclusively：独占地，排他地
 * encountere：遭遇
 * enterprise：企业
+* exploit：利用，开发
 
 ### f
 * forex：外汇
@@ -138,6 +147,7 @@ sidebar: true
 * frustratingly：令人沮丧的
 * fidelity：准确率，精确率
 * fellow：家伙; 同事; 同伴; 会员; 小伙子; （接受奖学金的）研究生; 同类; (某些学院或大学的)董事; 男人; 男孩; 同辈; 哥儿们; 配对物;
+* formulate：制定
 
 ### g
 * grandiose：浮夸的，华而不实的
@@ -177,6 +187,8 @@ sidebar: true
 * illicit：非法的
 * indulge：沉溺于，沉浸于，放纵
 * intervention：干预
+* integrity：完整性
+* intensity：强度，强烈
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -205,6 +217,7 @@ sidebar: true
 * moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的
 * moderately：适中地
 * mitigate：缓和，减缓
+* nutritional：营养
 
 
 ### n
@@ -243,6 +256,9 @@ sidebar: true
 * predominance：优势
 * pervasive：普遍的
 * prosperity：繁荣，昌盛
+* perceive：感知
+* prevalence：流行
+* resentment：怨恨，愤恨
 
 ### r
 * ridiculous：荒谬的
@@ -263,7 +279,7 @@ sidebar: true
 * sweater：毛衣
 * scrape：艰难取得
 * scratch：划痕，划
-* scenario：方案，预想
+* scenario：方案，预想 +
 * script：剧本
 * sarcastic：讽刺的
 * sophisticated：复杂的
@@ -285,6 +301,7 @@ sidebar: true
 * siblings：兄弟姐妹
 * speculate：推测
 * sector：部门，领域
+* synchronize：同步
 
 ### t
 * talent：有天赋的
@@ -336,6 +353,7 @@ sidebar: true
 * brush sb off：对某人不屑一顾
 * be better off doing：最好做某事
 * be stingy with：对...吝啬
+* be subject to：受……影响
 
 ### c
 * chart the course：指定路线
@@ -385,6 +403,7 @@ sidebar: true
 * think tanks：智库
 * To tackle the aforementioned problems：为了解决上述问题
 * This is essentially what ... do：这本质上就是...在做的
+* There is still no consensus on
 
 ### u
 * urban coastal areas：沿海地区
@@ -412,7 +431,7 @@ sidebar: true
 * 谱域：Spectral domain
 * 补充：supplement
 * 振幅：amplitude
-* 利用：leverage ++
+* 利用：leverage utilize exploit ++
 * 共轭：conjugate
 * 线性相关/无关：Linearly dependent/independent
 * 平稳分布：stationary distribution
