@@ -14,6 +14,8 @@ sidebar: true
 ## 单词
 
 ### a
+* autonomy：自治权
+* assessment：评估
 * auxiliary：辅助的，备用的
 * awfully：极度的
 * ambiguous：不明确的
@@ -35,9 +37,10 @@ sidebar: true
 * apprentice：学徒
 * agriculture：农业
 * adherence：坚持
-* assure：保证
+* assure：保证 +
 * abruptly：突然间
 * appreciably：明显地，可观地
+* actualization：自我实现
 
 
 ### b
@@ -51,6 +54,10 @@ sidebar: true
 * boilerplate：文件范例
 
 ### c
+* confound：使困惑惊讶;击败，战胜(敌人);使惊疑;证明…有错;
+* concur：一致、同意
+* coaching：训练，培养
+* curricula：课程
 * constitute：组成，和contain不一样的地方在于，这个词用于描述比例，contain用于描述组成成分
 * category：种类
 * caution：警告
@@ -88,19 +95,25 @@ sidebar: true
 * cryptocurrency：加密货币
 * cybersecurity：网络安全
 * cohort：队列
+* continuum：连续体
 
 ### d
+* destine：注定
+* doctrin：学说，教义
 * dismissed：解散
 * decouple：解耦
 * deprecated：不赞成的，反对的
 * density: 密度
-* derive：得到
+* derive：得到 +
 * darn：极度地
 * deny：否认
-* dominant：占主导地位
+* dominant：占主导地位 +
+* dominance：支配地位 +
 * disparity：不同
 * disgusting：令人讨厌的
 * distraction：分散注意力，消遣
+* disclose：揭开
+* disrupt：扰乱，妨害
 * dice：骰子
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
@@ -115,14 +128,19 @@ sidebar: true
 * democratization：民主化
 * depict：绘画
 * deviation：偏离，差异
+* domestic：国内的。佣人;家佣;家庭纠纷;家庭矛盾;
 
 ### e
+* exemption：豁免
+* erode：侵蚀;削弱;腐蚀;损害;风化;逐渐毁坏
+* endow：天生赋予;(向学校等机构)捐钱，捐赠，资助;
+* expedien：权益之计
 * embrace：拥抱; 欣然接受，乐意采纳
 * eternity：永恒
 * evasion：逃避
 * evolve：进化
 * evolution：进化
-* eliminate：排除
+* eliminate：排除 ++
 * elude：逃避，拒绝
 * elaborated：精心制作
 * emphasis：强调
@@ -130,6 +148,7 @@ sidebar: true
 * essential：基本的，本质的，重要的
 * elicit：引起
 * endured：坚持，忍受
+* endorsements：赞同，支持
 * efficacy：功效
 * empirical：经验主义
 * explicit：显式
@@ -139,6 +158,7 @@ sidebar: true
 * encountere：遭遇
 * enterprise：企业
 * exploit：利用，开发
+* expertise：专业知识，专门知识
 
 ### f
 * forex：外汇
@@ -148,6 +168,7 @@ sidebar: true
 * fidelity：准确率，精确率
 * fellow：家伙; 同事; 同伴; 会员; 小伙子; （接受奖学金的）研究生; 同类; (某些学院或大学的)董事; 男人; 男孩; 同辈; 哥儿们; 配对物;
 * formulate：制定
+* facilitate：促进;使便利;促使;
 
 ### g
 * grandiose：浮夸的，华而不实的
@@ -165,18 +186,26 @@ sidebar: true
 * hallucination：幻觉，错觉
 * harsh：严厉地
 * hesitant：犹豫的
+* heritage：遗产
+* holistic：整体的;全面的;功能整体性的
 
 ### i
+* impairment：缺陷，损伤
 * initiative：倡议，主动性
 * insane：疯狂的
+* induce：诱导;引起;导致;诱使;引产;劝说;催生
+* inflation：通货膨胀
 * intra-class and inter-class：类内与类间
+* incur：招致;引起;遭受;
 * implore：恳请
 * intense：强烈的
-* impede：妨碍
+* impede：妨碍 +
+* implicate：牵涉，涉及(某人);牵连;表明(或意指)…是起因
 * inherent：固有的，内在的，遗传的，天生的
 * inherits：继承
 * inhouse：内部的，自身的
 * inept：无能的
+* infant：婴儿的
 * invincible：不可战胜的
 * implicit：隐式
 * impose：强制施加
@@ -189,6 +218,7 @@ sidebar: true
 * intervention：干预
 * integrity：完整性
 * intensity：强度，强烈
+* irrespective：无关的
 
 ### k
 * kaleidoscopic：万花筒般的
@@ -202,6 +232,7 @@ sidebar: true
 
 
 ### m
+* manufacturers：生产商;制造者;生产者;
 * migrate：迁徙，移民
 * motif：动机
 * motive：动机
@@ -224,6 +255,8 @@ sidebar: true
 * nihilism： 虚无主义
 * negotiable：可转让的
 * notoriously：众所周知的，臭名昭著的
+* negate：否定
+* negligible：微不足道的
 
 ### o
 * obsess：迷恋; 使痴迷; 唠叨; 挂牵; 念念不忘;
@@ -235,8 +268,14 @@ sidebar: true
 * outgoing：外向的
 * orthogonal：正交的
 * occasional：偶尔的
+* orientation：方向
 
 ### p
+* persuade：说服;劝说;使相信;使信服;
+* precariously：危险地;不稳定地;不稳固的;不安全地;不确定
+* presumably：很可能;大概;想必是;
+* predominantly：主要地;多数情况下;
+* perception：感知
 * penetrate：渗透，打入(组织、团体等); 穿透; 穿过; 进入; （以阴茎）插入; 洞察; 看透; 被领悟; 透过…看见;
 * presumptuous：专横的；放肆的；冒昧的；自负的
 * punter：顾客
@@ -258,9 +297,11 @@ sidebar: true
 * prosperity：繁荣，昌盛
 * perceive：感知
 * prevalence：流行
-* resentment：怨恨，愤恨
+* panel：面板
+
 
 ### r
+* resentment：怨恨，愤恨
 * ridiculous：荒谬的
 * reluctant：不情愿的，勉强的
 * rhetoric：花言巧语
@@ -268,6 +309,8 @@ sidebar: true
 * racketeering：敲诈勒索
 * referee：裁判员
 * relevant：有意义的，有价值的
+* reveal：揭露，揭示
+* resume：简历/重新开始;(中断后)继续;恢复席位
 
 ### s
 * squalor：悲惨的，肮脏的
@@ -289,6 +332,7 @@ sidebar: true
 * speculative：投机的
 * specimen：样品
 * substantial：大量的 +
+* subsequent：后继的，后续的
 * supple：柔软的
 * supply：补助
 * stillborn：夭折的
@@ -324,6 +368,7 @@ sidebar: true
 * uphold：维持，确认
 * utilize：利用
 * underneath：在底部，在下面
+* underlie：构成…的基础;作为…的原因;
 
 ### v
 * versus：比较
@@ -334,6 +379,7 @@ sidebar: true
 * vulgar：粗俗的，下流的
 * violate：违反，违背
 * vibrant：生机勃勃的
+* vocational：职业的
 
 ### w
 * weird：奇怪的
@@ -343,6 +389,15 @@ sidebar: true
 * warrant：保证; 执行令; 授权令
 * warrior：战士
 * wantonly；肆意的
+
+### x
+
+### y
+* yield：产生，出产
+
+### z
+
+
 
 ## 短语
 
