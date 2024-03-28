@@ -54,6 +54,7 @@ sidebar: true
 * boilerplate：文件范例
 
 ### c
+* concatenates：连接起来
 * confound：使困惑惊讶;击败，战胜(敌人);使惊疑;证明…有错;
 * concur：一致、同意
 * coaching：训练，培养
@@ -181,7 +182,7 @@ sidebar: true
 * hick：乡巴佬
 * handwaving：纸上谈兵
 * hump：驼峰，背负，性交
-* harness：马具; 挽具; 控制，利用 +
+* harness：马具; 挽具; 控制，利用 ++
 * heuristic：启发式的
 * hallucination：幻觉，错觉
 * harsh：严厉地
@@ -275,6 +276,7 @@ sidebar: true
 * precariously：危险地;不稳定地;不稳固的;不安全地;不确定
 * presumably：很可能;大概;想必是;
 * predominantly：主要地;多数情况下;
+* prevalent：普遍存在的
 * perception：感知
 * penetrate：渗透，打入(组织、团体等); 穿透; 穿过; 进入; （以阴茎）插入; 洞察; 看透; 被领悟; 透过…看见;
 * presumptuous：专横的；放肆的；冒昧的；自负的
