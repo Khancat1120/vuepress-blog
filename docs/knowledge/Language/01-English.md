@@ -272,6 +272,7 @@ sidebar: true
 * orientation：方向
 
 ### p
+* pursuit：追求
 * persuade：说服;劝说;使相信;使信服;
 * precariously：危险地;不稳定地;不稳固的;不安全地;不确定
 * presumably：很可能;大概;想必是;
