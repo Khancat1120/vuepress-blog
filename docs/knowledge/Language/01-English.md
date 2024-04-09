@@ -244,12 +244,13 @@ sidebar: true
 * metropolises：大城市
 * myopic：短视的
 * malicious：恶意的
+* margin：边界（safety margins）
 * marginal：边缘的; 小的; 微不足道的; 贫瘠的（因而盈利有限）; 不重要的; 写在页边空白处的; 以相差无几的票数获胜(或失败)的; 非主体的
 * mechanism：机制
 * moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的
 * moderately：适中地
 * mitigate：缓和，减缓
-* nutritional：营养
+* meticulously：一丝不苟地
 
 
 ### n
@@ -258,6 +259,7 @@ sidebar: true
 * notoriously：众所周知的，臭名昭著的
 * negate：否定
 * negligible：微不足道的
+* nutritional：营养
 
 ### o
 * obsess：迷恋; 使痴迷; 唠叨; 挂牵; 念念不忘;
