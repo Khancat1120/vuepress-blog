@@ -202,7 +202,7 @@ sidebar: true
 * intense：强烈的
 * impede：妨碍 +
 * implicate：牵涉，涉及(某人);牵连;表明(或意指)…是起因
-* inherent：固有的，内在的，遗传的，天生的
+* inherent：固有的，内在的，遗传的，天生的 +
 * inherits：继承
 * inhouse：内部的，自身的
 * inept：无能的
