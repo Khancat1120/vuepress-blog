@@ -115,6 +115,7 @@ sidebar: true
 * distraction：分散注意力，消遣
 * disclose：揭开
 * disrupt：扰乱，妨害
+* discern：辨别
 * dice：骰子
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
