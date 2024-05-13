@@ -172,7 +172,7 @@ sidebar: true
 * fidelity：准确率，精确率
 * fellow：家伙; 同事; 同伴; 会员; 小伙子; （接受奖学金的）研究生; 同类; (某些学院或大学的)董事; 男人; 男孩; 同辈; 哥儿们; 配对物;
 * formulate：制定
-* facilitate：促进;使便利;促使;
+* facilitate：促进;使便利;促使; ++
 
 ### g
 * grandiose：浮夸的，华而不实的
