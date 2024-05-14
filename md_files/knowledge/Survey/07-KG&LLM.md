@@ -8,6 +8,7 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
+<img src="/img/LLM&&KG.png" style="margin-bottom: -20px;">
 
 <ClientOnly>
   <leave/>
