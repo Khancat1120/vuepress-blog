@@ -280,7 +280,7 @@ sidebar: true
 * pursuit：追求
 * persuade：说服;劝说;使相信;使信服;
 * precariously：危险地;不稳定地;不稳固的;不安全地;不确定
-* presumably：很可能;大概;想必是;
+* presumably：很可能;大概;想必是; ++
 * predominantly：主要地;多数情况下;
 * prevalent：普遍存在的
 * perception：感知
@@ -309,6 +309,7 @@ sidebar: true
 
 
 ### r
+* replicate：复制
 * resentment：怨恨，愤恨
 * ridiculous：荒谬的
 * reluctant：不情愿的，勉强的
