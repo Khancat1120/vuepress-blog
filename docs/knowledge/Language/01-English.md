@@ -250,7 +250,7 @@ sidebar: true
 * margin：边界（safety margins）
 * marginal：边缘的; 小的; 微不足道的; 贫瘠的（因而盈利有限）; 不重要的; 写在页边空白处的; 以相差无几的票数获胜(或失败)的; 非主体的
 * mechanism：机制
-* moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的
+* moderate：使适中; 缓和; 主持(讨论、辩论等); 审核评分(查看不同阅卷人所打分数是否公平一致); 适中的 ++
 * moderately：适中地
 * mitigate：缓和，减缓
 * meticulously：一丝不苟地
