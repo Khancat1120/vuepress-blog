@@ -342,7 +342,7 @@ sidebar: true
 * sanction：制裁
 * speculative：投机的
 * specimen：样品
-* substantial：大量的 +
+* substantial：大量的 ++
 * subsequent：后继的，后续的
 * supple：柔软的
 * supply：补助
