@@ -40,12 +40,15 @@ sidebar: true
 * assure：保证 +
 * abruptly：突然间
 * appreciably：明显地，可观地
+* aphorism：格言
 * actualization：自我实现
+* assets：资产
+* accolades：荣誉
 
 
 ### b
 * bribe：贿赂
-* brag：吹嘘
+* brag：吹嘘 +
 * bluffing：虚张声势的
 * bumper：保险杠
 * badge：勋章
@@ -55,12 +58,14 @@ sidebar: true
 * banner：条幅
 
 ### c
+* catastrophic：灾难性的
 * concatenates：连接起来
 * confound：使困惑惊讶;击败，战胜(敌人);使惊疑;证明…有错;
 * concur：一致、同意
 * coaching：训练，培养
 * curricula：课程
 * constitute：组成，和contain不一样的地方在于，这个词用于描述比例，contain用于描述组成成分
+* conscious：意识
 * category：种类
 * caution：警告
 * compensation：补偿
@@ -68,6 +73,8 @@ sidebar: true
 * conceive：想出(主意、计划等); 想象; 构想; 设想; 怀孕; 怀(胎);
 * contrastive：对比的
 * conversion：转化
+* convey：传达，传送
+* convert：转换
 * combinatorial：组合的
 * complacency：自满的
 * cable：电缆;缆索;绞线;锚索
@@ -95,9 +102,11 @@ sidebar: true
 * crave：渴求，恳求
 * crap：废话; 屎; 拉屎; 胡扯; 胡说; 批评; 蹩脚货; 非难; 不公正的待遇; 质量差的东西
 * cryptocurrency：加密货币
+* cyber：网络
 * cybersecurity：网络安全
 * cohort：队列
 * continuum：连续体
+* crime：犯罪
 
 ### d
 * destine：注定
@@ -107,7 +116,10 @@ sidebar: true
 * deprecated：不赞成的，反对的
 * density: 密度
 * derive：得到 +
+* deploy：部署
+* demolish：拆除
 * darn：极度地
+* debate：讨论
 * deny：否认
 * dominant：占主导地位 +
 * dominance：支配地位 +
@@ -117,6 +129,7 @@ sidebar: true
 * disclose：揭开
 * disrupt：扰乱，妨害
 * discern：辨别
+* disproportion：不平衡
 * dice：骰子
 * durability：耐久度
 * demonstrated：证明;演示;示范;论证;
@@ -132,6 +145,7 @@ sidebar: true
 * depict：绘画
 * deviation：偏离，差异
 * domestic：国内的。佣人;家佣;家庭纠纷;家庭矛盾;
+* dubious：可疑的
 
 ### e
 * exemption：豁免
@@ -161,7 +175,7 @@ sidebar: true
 * exclusively：独占地，排他地
 * encountere：遭遇
 * enterprise：企业
-* exploit：利用，开发
+* exploit：利用，开发 +++
 * expertise：专业知识，专门知识
 
 ### f
@@ -183,6 +197,7 @@ sidebar: true
 
 ### h
 * hick：乡巴佬
+* hinder：阻碍
 * handwaving：纸上谈兵
 * hump：驼峰，背负，性交
 * harness：马具; 挽具; 控制，利用 ++
@@ -198,7 +213,7 @@ sidebar: true
 * initiative：倡议，主动性
 * insane：疯狂的
 * induce：诱导;引起;导致;诱使;引产;劝说;催生
-* inflation：通货膨胀
+* inflation：通货膨胀 ++
 * intra-class and inter-class：类内与类间
 * incur：招致;引起;遭受;
 * implore：恳请
@@ -221,6 +236,7 @@ sidebar: true
 * illicit：非法的
 * indulge：沉溺于，沉浸于，放纵
 * intervention：干预
+* intervene：干预
 * integrity：完整性
 * intensity：强度，强烈
 * irrespective：无关的
@@ -245,9 +261,10 @@ sidebar: true
 * mob：暴民
 * monotonic：单调的
 * moral：道德的
+* mortgage：抵押贷款
 * metropolises：大城市
 * myopic：短视的
-* malicious：恶意的
+* malicious：恶意的 +
 * margin：边界（safety margins）
 * marginal：边缘的; 小的; 微不足道的; 贫瘠的（因而盈利有限）; 不重要的; 写在页边空白处的; 以相差无几的票数获胜(或失败)的; 非主体的
 * mechanism：机制
@@ -261,6 +278,7 @@ sidebar: true
 * nihilism： 虚无主义
 * negotiable：可转让的
 * notoriously：众所周知的，臭名昭著的
+* notoriety：臭名
 * negate：否定
 * negligible：微不足道的
 * nutritional：营养
@@ -269,7 +287,7 @@ sidebar: true
 * obsess：迷恋; 使痴迷; 唠叨; 挂牵; 念念不忘;
 * oblivious：忘却的，未察觉的
 * overlap：重叠
-* oppressed：压迫，欺压
+* oppress：压迫，欺压 +
 * octogenarian：耄耋老人
 * onslaught：猛攻
 * outgoing：外向的
@@ -278,7 +296,9 @@ sidebar: true
 * orientation：方向
 
 ### p
+* passive：被动
 * precipitate：加速
+* predatory：掠夺性
 * pursuit：追求
 * persuade：说服;劝说;使相信;使信服;
 * precariously：危险地;不稳定地;不稳固的;不安全地;不确定
@@ -304,6 +324,7 @@ sidebar: true
 * proportion：比例
 * predominance：优势
 * pervasive：普遍的
+* perpetually：永远
 * prosperity：繁荣，昌盛
 * perceive：感知
 * prevalence：流行
@@ -311,7 +332,9 @@ sidebar: true
 
 
 ### r
+* reputation：名誉
 * replicate：复制
+* replenish：补充
 * resentment：怨恨，愤恨
 * ridiculous：荒谬的
 * reluctant：不情愿的，勉强的
@@ -336,16 +359,18 @@ sidebar: true
 * scenario：方案，预想 +
 * script：剧本
 * sarcastic：讽刺的
-* sophisticated：复杂的
+* sophisticated：复杂的 ++
 * simultaneous：同时的
 * satellite：卫星的
 * sanction：制裁
 * speculative：投机的
 * specimen：样品
+* speculation：疑问
 * substantial：大量的 ++
 * subsequent：后继的，后续的
 * supple：柔软的
 * supply：补助
+* sustain：维持，提供食物或生计，养家
 * stillborn：夭折的
 * so-called：所谓的，号称的
 * symmetric：对称的
@@ -357,6 +382,7 @@ sidebar: true
 * speculate：推测
 * sector：部门，领域
 * synchronize：同步
+* seamless：无缝的
 
 ### t
 * talent：有天赋的
@@ -385,6 +411,7 @@ sidebar: true
 * versus：比较
 * vest：背心
 * vassal：附属国，附庸国
+* vanish：消失，使消失
 * vigor：活力
 * vicious：恶毒的
 * vulgar：粗俗的，下流的
@@ -393,6 +420,7 @@ sidebar: true
 * vocational：职业的
 
 ### w
+* wage：薪水
 * weird：奇怪的
 * wire：金属丝，导线；wired：联网的
 * worrywart：爱操心的人
@@ -451,6 +479,7 @@ sidebar: true
 * It's a lot to take in：一时间难以接受
 * It depends：视情况而定
 * I'm on your side：我支持你
+* in accordance with：按照
 
 ### k
 * knowing shit about：对...一无所知
@@ -497,7 +526,7 @@ sidebar: true
 * 谱域：Spectral domain
 * 补充：supplement
 * 振幅：amplitude
-* 利用：leverage utilize exploit ++
+* 利用：leverage utilize exploit +++
 * 共轭：conjugate
 * 线性相关/无关：Linearly dependent/independent
 * 平稳分布：stationary distribution
@@ -528,6 +557,7 @@ sidebar: true
 * 部分：portion
 * 大量比例：a substantial proportion of
 * 虚张声势：only a bluff
+
 
 
 ## 英语对话场景
