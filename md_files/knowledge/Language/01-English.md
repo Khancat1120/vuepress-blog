@@ -58,6 +58,7 @@ sidebar: true
 * banner：条幅
 
 ### c
+* competency：能力
 * catastrophic：灾难性的
 * concatenates：连接起来
 * confound：使困惑惊讶;击败，战胜(敌人);使惊疑;证明…有错;
@@ -209,6 +210,7 @@ sidebar: true
 * holistic：整体的;全面的;功能整体性的
 
 ### i
+* intriguing：有趣的
 * impairment：缺陷，损伤
 * initiative：倡议，主动性
 * insane：疯狂的
@@ -226,6 +228,7 @@ sidebar: true
 * inhouse：内部的，自身的
 * inept：无能的
 * infant：婴儿的
+* infallible：无懈可击的
 * invincible：不可战胜的
 * implicit：隐式
 * impose：强制施加
@@ -296,6 +299,7 @@ sidebar: true
 * orientation：方向
 
 ### p
+* prestigious：有名望的
 * passive：被动
 * precipitate：加速
 * predatory：掠夺性
@@ -311,6 +315,7 @@ sidebar: true
 * punter：顾客
 * plug-and-play：即插即用
 * prosecuted：起诉
+* proficient：熟练
 * plate：盘子，号码牌
 * prentend：假装，假装的
 * proactively：积极主动地
