@@ -10,6 +10,11 @@ sidebar: true
 <title-pv/>
 </ClientOnly>
 
+## 环境备忘录
+
+北航服务器：LLM虚拟环境 source LLM/bin/activate
+51.10：conda环境 
+51.11：conda环境 llama_factory 
 
 ## 参数字典
 
