@@ -13,7 +13,7 @@ sidebar: true
 ## 环境备忘录
 
 北航服务器：LLM虚拟环境 source LLM/bin/activate
-51.10：conda环境 
+51.10：conda环境 hence（但是该服务器并未部署llm模型）
 51.11：conda环境 llama_factory 
 
 ## 参数字典
