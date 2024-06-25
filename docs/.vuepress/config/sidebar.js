@@ -31,11 +31,11 @@ module.exports = {
             collapsable: true,
             children: getChildren('./docs/technology/code/')
         },
-        {
-            title: 'Tools',
-            collapsable: true,
-            children: getChildren('./docs/technology/tool/')
-        },
+        // {
+        //     title: 'Tools',
+        //     collapsable: true,
+        //     children: getChildren('./docs/technology/tool/')
+        // },
     ],
     '/jottings/':[
         {
