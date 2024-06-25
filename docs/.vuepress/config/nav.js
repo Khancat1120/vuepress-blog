@@ -31,10 +31,10 @@ module.exports = [
                     text: 'Codes',
                     link:'/technology/code/01-GNN'
                 },
-                {
-                    text: 'Tools',
-                    link:'/technology/tool/01-install'
-                },
+                // {
+                //     text: 'Tools',
+                //     link:'/technology/tool/01-install'
+                // },
                 {
                     text: 'Bugs',
                     link:'/technology/bug/bug'
