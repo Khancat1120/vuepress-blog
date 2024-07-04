@@ -109,7 +109,53 @@ git branch -d <branch-name>
 ```bash
 git branch -d feature-xyz
 ```
-这些是Git分支的基本操作示例。请注意，分支操作可能会影响代码库的历史，因此在执行合并或删除分支操作之前，请确保您了解其影响，并在需要时进行适当的备份和测试。此外，使用合并请求或拉取请求来协作开发，以确保团队成员可以审查和讨论更改。
+
+
+## 自建gitlab服务器
+
+### 切换到 git 用户
+
+```bash
+sudo adduser git
+sudo su - git
+```
+
+### 创建一个仓库
+
+
+```bash
+mkdir project.git
+cd project.git
+git init --bare
+```
+
+
+### SSH
+
+在客户端生成ssh秘钥，将公钥（默认是 ~/.ssh/id_rsa.pub）添加到服务器上 git 用户的 ~/.ssh/authorized_keys 文件中
+
+
+### 使用git服务器同步代码
+
+```bash
+git remote add origin git@your-server-ip:project.git
+git push -u origin master
+git clone git@your-server-ip:project.git
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <ClientOnly>
