@@ -337,6 +337,7 @@ sidebar: true
 
 
 ### r
+* recite：背诵
 * reputation：名誉
 * replicate：复制
 * replenish：补充
