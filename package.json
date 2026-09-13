@@ -1,15 +1,19 @@
 {
-  "name": "vuepress-demo",
+  "name": "kehan-pang-academic-homepage",
   "version": "1.0.0",
-  "description": "",
+  "description": "Multilingual academic homepage for Kehan Pang",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "dev": "vuepress dev docs --temp .vuepress-temp --cache .vuepress-cache",
+    "build:cv": "bash scripts/build-cv.sh",
+    "build": "npm run build:cv && vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js",
+    "validate": "node scripts/validate-build.js",
+    "sync:dist": "bash scripts/sync-dist.sh",
+    "docs:dev": "npm run dev",
+    "docs:build": "npm run build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kehan Pang",
   "license": "ISC",
   "dependencies": {
     "@form-create/element-ui": "^1.0.19",

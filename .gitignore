@@ -1,2 +1,6 @@
 docs/.vuepress/dist
 node_modules
+.vuepress-temp
+.vuepress-cache
+__pycache__/
+*.py[cod]

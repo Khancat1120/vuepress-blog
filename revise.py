@@ -1,32 +1,27 @@
-import os
-import re
-import subprocess
+"""Compatibility check for the retired blog conversion command.
 
-prefix_l_1 = "md_files/"
+The former script copied every legacy article into VuePress and changed file
+attributes with chattr. The academic homepage now has three explicit source
+pages, so running this file must never restore retired blog routes.
+"""
 
-def find_files_in_directory(directory):
-    file_list = []
+from pathlib import Path
 
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            file_path = os.path.join(root, file)
-            file_list.append(file_path)
 
-    return file_list
+project_root = Path(__file__).resolve().parent
+required_pages = [
+    project_root / "docs" / "README.md",
+    project_root / "docs" / "zh" / "README.md",
+    project_root / "docs" / "ja" / "README.md",
+]
+legacy_routes = ["jottings", "novels", "technology", "knowledge", "about"]
 
-all_files = find_files_in_directory(prefix_l_1)
+missing = [str(page.relative_to(project_root)) for page in required_pages if not page.is_file()]
+present_legacy = [route for route in legacy_routes if (project_root / "docs" / route).exists()]
 
-for file in all_files:
-    pattern_1 = r'\$(.*?)\$'
-    pattern_2 = r'\$\$(.*?)\$\$'
-    result = ""
-    with open(file) as f:
-        result = f.read()
-        result = re.sub(pattern_2, r'<div style="text-align: center;"><tex>\1</tex></div>', result, flags=re.DOTALL)
-        result = re.sub(pattern_1, r'<smalltex>\1</smalltex>', result)
+if missing:
+    raise SystemExit(f"Missing academic homepage sources: {', '.join(missing)}")
+if present_legacy:
+    raise SystemExit(f"Legacy routes unexpectedly present in docs/: {', '.join(present_legacy)}")
 
-    new_file = file.replace("md_files", "docs")
-    subprocess.run(['chattr', '-i', new_file])
-    with open(new_file, "w") as f:
-        f.write(result)
-    subprocess.run(['chattr', '+i', new_file])
+print("Academic homepage sources are ready; no legacy articles were generated.")

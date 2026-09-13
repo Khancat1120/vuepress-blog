@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.25cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\pagestyle{empty}
+\setmainfont{TeX Gyre Heros}
+\setCJKmainfont{Droid Sans Fallback}
+\definecolor{navy}{HTML}{0B1930}
+\definecolor{blue}{HTML}{0E7490}
+\definecolor{muted}{HTML}{536176}
+\titleformat{\section}{\normalsize\bfseries\color{navy}}{}{0pt}{}[\vspace{-0.35em}\color{blue}\titlerule]
+\titlespacing*{\section}{0pt}{0.7em}{0.3em}
+\setlist[itemize]{leftmargin=1.25em,itemsep=0.05em,topsep=0.1em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.08em}
+\hypersetup{pdftitle={Kehan Pang — Curriculum Vitae},pdfauthor={Kehan Pang},pdfsubject={Academic curriculum vitae}}
+\newcommand{\entry}[2]{\textbf{#1}\hfill\textcolor{muted}{#2}\\}
+\newcommand{\paper}[4]{#1. \href{https://doi.org/#4}{\textbf{#2}}. \textit{#3}. \href{https://doi.org/#4}{doi:#4}}
+
+\begin{document}
+\fontsize{9}{10.2}\selectfont
+\begin{center}
+  {\fontsize{21}{24}\selectfont\bfseries\color{navy} Kehan Pang}\\[0.15em]
+  {\normalsize 庞可涵}\\[0.25em]
+  Ph.D. Student, School of Computer Science and Engineering, Beihang University\\[0.25em]
+  \href{mailto:pangkehan@buaa.edu.cn}{pangkehan@buaa.edu.cn}\quad
+  \href{https://github.com/KehanPang}{github.com/KehanPang}\quad
+  \href{https://scholar.google.com/citations?user=b3XVG_oAAAAJ}{Google Scholar}
+\end{center}
+
+\section*{Research Interests}
+Graph Data Mining; Large Language Models. Particular interests include graph data quality, graph neural networks, and data-centric AI.
+
+\section*{Education}
+\entry{Beihang University}{Sep. 2022 -- Apr. 2027 (Expected)}
+Ph.D. Student in Software Engineering, School of Computer Science and Engineering\\
+Advisors: Prof. Wenfei Fan and Associate Prof. Ping Lu
+
+\entry{Beijing University of Posts and Telecommunications}{Sep. 2018 -- Jul. 2022}
+B.Eng. in Computer Science and Technology\\
+GPA: 3.7/4.0; Rank: 30/396 (Top 7.6\%)
+
+\section*{Publications}
+\begin{enumerate}[leftmargin=1.6em,itemsep=0.18em,topsep=0.1em]
+  \item \paper{\textbf{Kehan Pang}, Wenfei Fan, Min Xie, and Dandan Lin}{Explaining GNN Negatives Globally and Locally}{IEEE ICDE 2026, pp. 1603--1616}{10.1109/ICDE65706.2026.00123}.
+  \item \paper{Mengyi Yan, Yaoshu Wang, Guangyi Zhang, \textbf{Kehan Pang}, and Haoyi Zhou}{Accelerating Influence Function Estimation for Large Language Models: A Practical Design}{ACM SIGKDD 2026, pp. 5927--5938}{10.1145/3770855.3817953}.
+  \item \paper{Wenfei Fan, \textbf{Kehan Pang}, and Chao Tian}{Imputing Sparse and Noisy Labels for GNNs}{IEEE ICDE 2025, pp. 2295--2308}{10.1109/ICDE65448.2025.00174}.
+  \item \paper{Wenchao Bai, Wenfei Fan, Shuhao Liu, \textbf{Kehan Pang}, Xiaoke Zhu, and Jiahui Jin}{Rule-Based Graph Cleaning with GPUs on a Single Machine}{Proc. ACM Manag. Data 3(3), Article 166, 2025}{10.1145/3725303}.
+  \item \paper{Wenfei Fan, \textbf{Kehan Pang}, Ping Lu, and Chao Tian}{Making It Tractable to Detect and Correct Errors in Graphs}{ACM Trans. Database Syst. 49(4), Article 16, 2024}{10.1145/3702315}.
+  \item \paper{Mengyi Yan, Yaoshu Wang, \textbf{Kehan Pang}, Min Xie, and Jianxin Li}{Efficient Mixture of Experts based on Large Language Models for Low-Resource Data Preprocessing}{ACM SIGKDD 2024, pp. 3690--3701}{10.1145/3637528.3671873}.
+  \item \paper{Wenfei Fan, Ping Lu, \textbf{Kehan Pang}, Ruochun Jin, and Wenyuan Yu}{Linking Entities across Relations and Graphs}{ACM Trans. Database Syst. 49(1), Article 2, 2024}{10.1145/3639363}.
+\end{enumerate}
+
+\section*{Manuscripts}
+\begin{itemize}
+  \item Wenfei Fan, \textbf{Kehan Pang}, and Dandan Lin. \textbf{OpenMind: Query-Time Diversification via Logical Rules}. Under Revision.
+  \item \textbf{Kehan Pang} and Dandan Lin. \textbf{ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network}. Under Review.
+\end{itemize}
+
+\section*{Research and Industry Experience}
+\entry{Meituan --- Algorithm Research Intern, Core Local Commerce / M17}{Sep. 2024 -- Jan. 2025}
+\begin{itemize}
+  \item Evaluated and cleaned web data for foundation-model pre-training; deployed and fully fine-tuned a local 7B model.
+  \item The fine-tuned model reached approximately 96\% of the GPT-4 baseline ROUGE-L on the web-cleaning task.
+\end{itemize}
+
+\entry{Shenzhen Institute of Computing Sciences --- Research Intern}{Jul. 2023 -- Jan. 2024}
+\begin{itemize}
+  \item Worked on graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.
+\end{itemize}
+
+\section*{Honors and Awards}
+\begin{itemize}
+  \item First Prize, Beijing Undergraduate Mathematics Competition, 2019 and 2020.
+  \item First Prize, Chinese Mathematics Competitions, 2019 and 2020.
+  \item Undergraduate Scholarship, Beijing University of Posts and Telecommunications, 2019--2021.
+  \item Academic Scholarship, School of Computer Science, Beihang University, 2022--2025.
+  \item Honorable Mention, Mathematical Contest in Modeling, 2020.
+  \item Beijing municipal-level Undergraduate Innovation and Entrepreneurship Training Program award, 2020.
+\end{itemize}
+
+\section*{Academic Service and Patent}
+\textbf{External Reviewer:} IEEE ICDE, 2024--2026.\\
+\textbf{Patent application:} 一种图数据增强方法、装置、设备及介质. Chinese invention patent application, 2025.
+
+\end{document}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kehanpang.github.io/sitemap.xml
