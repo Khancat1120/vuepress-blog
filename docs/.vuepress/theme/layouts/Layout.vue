@@ -38,14 +38,13 @@
       </div>
     </header>
 
-    <div class="page-frame">
-    <main id="main-content">
-      <section id="top" class="profile-introduction content-width" aria-labelledby="profile-title">
+    <div id="top" class="page-frame anchor-target">
+      <aside class="profile-rail" :aria-label="copy.railLinksLabel">
         <figure class="profile-photo">
           <img src="/portrait.webp" :alt="copy.photoAlt" width="720" height="900" fetchpriority="high">
         </figure>
 
-        <div class="profile-copy">
+        <div class="profile-identity">
           <h1 id="profile-title">
             <span>{{ copy.heroPrimary }}</span>
             <small>{{ copy.heroSecondary }}</small>
@@ -55,8 +54,28 @@
             <span>{{ copy.affiliation }}</span>
             <span>{{ copy.university }}</span>
           </p>
+        </div>
 
-          <div id="about" class="profile-about anchor-target" :aria-labelledby="'about-title'">
+        <nav class="rail-links" :aria-label="copy.railLinksLabel">
+          <a
+            v-for="item in profileLinks"
+            :key="item.key"
+            :href="item.href"
+            :target="item.newTab ? '_blank' : null"
+            :rel="item.newTab ? 'noopener noreferrer' : null"
+            :title="item.title || item.label"
+          >
+            <svg class="rail-link__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path v-for="path in profileIconPaths[item.key]" :key="path" :d="path"></path>
+            </svg>
+            <span>{{ item.label }}</span>
+          </a>
+        </nav>
+      </aside>
+
+      <main id="main-content">
+        <section class="profile-introduction" aria-labelledby="about-title">
+          <div id="about" class="profile-about anchor-target">
             <h2 id="about-title">{{ copy.sections.about }}</h2>
             <div class="prose">
               <p v-for="paragraph in copy.about" :key="paragraph" v-html="paragraph"></p>
@@ -85,99 +104,120 @@
               </dd>
             </div>
           </dl>
-        </div>
-      </section>
+        </section>
 
-      <section id="publications" class="page-section content-width anchor-target" aria-labelledby="publications-title">
-        <header class="section-header">
-          <h2 id="publications-title">{{ copy.sections.publications }}</h2>
-          <p class="section-note">{{ copy.publicationNote }}</p>
-        </header>
+        <section id="timeline" class="page-section anchor-target" aria-labelledby="timeline-title">
+          <header class="section-header">
+            <h2 id="timeline-title">{{ copy.sections.timeline }}</h2>
+          </header>
 
-        <div v-for="group in publicationGroups" :key="group.year" class="publication-year">
-          <h3>{{ group.year }}</h3>
-          <ol>
-            <li v-for="publication in group.items" :key="publication.title" class="publication">
-              <div class="publication__heading">
-                <div class="publication__labels">
-                  <span class="venue-badge">{{ publication.venue }}</span>
-                  <span class="ccf-badge">{{ copy.ccf[publication.ccfType] }}</span>
+          <div class="career-timeline">
+            <p class="timeline-band-label">{{ copy.timelineLabels.education }}</p>
+            <div class="education-track">
+              <article
+                v-for="item in copy.education"
+                :key="item.institution"
+                class="education-span"
+                :class="`tone-${item.tone}`"
+              >
+                <div class="education-span__topline">
+                  <h3>{{ item.institution }} <small>{{ item.shortName }}</small></h3>
+                  <time>{{ item.period }}</time>
                 </div>
-                <a :href="publication.href" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
-              </div>
-              <p class="authors">
-                <template v-for="(author, index) in publication.authors">
-                  <strong v-if="author === 'Kehan Pang'" :key="author">{{ author }}</strong><span v-else :key="author">{{ author }}</span><span v-if="index < publication.authors.length - 1" :key="`${author}-comma`">, </span>
-                </template>
-              </p>
-              <p class="publication__details">{{ publication.details }}</p>
-              <a class="doi-link" :href="publication.href" target="_blank" rel="noopener noreferrer">{{ copy.doiLabel }}: {{ publication.doi }}</a>
-            </li>
-          </ol>
-        </div>
-
-        <div class="manuscripts" aria-labelledby="manuscripts-title">
-          <h3 id="manuscripts-title">{{ copy.sections.manuscripts }}</h3>
-          <ul>
-            <li v-for="manuscript in copy.manuscripts" :key="manuscript.title">
-              <span class="status-badge">{{ manuscript.status }}</span>
-              <div>
-                <h4>{{ manuscript.title }}</h4>
-                <p class="authors">
-                  <template v-for="(author, index) in manuscript.authors">
-                    <strong v-if="author === 'Kehan Pang'" :key="author">{{ author }}</strong><span v-else :key="author">{{ author }}</span><span v-if="index < manuscript.authors.length - 1" :key="`${author}-comma`">, </span>
+                <p class="education-span__summary">
+                  <strong>{{ item.degree }}</strong>
+                  <template v-for="detail in item.details"><span :key="detail"> · {{ detail }}</span></template>
+                  <template v-if="item.advisors">
+                    <span> · {{ item.advisorsLabel }} </span>
+                    <template v-for="(advisor, index) in item.advisors">
+                      <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">, </span>
+                    </template>
                   </template>
                 </p>
+                <p v-if="item.unit" class="education-span__unit">{{ item.unit }}</p>
+              </article>
+            </div>
+
+            <p class="timeline-band-label timeline-band-label--milestones">{{ copy.timelineLabels.milestones }}</p>
+            <div class="milestone-scroll" tabindex="0">
+              <div class="milestone-track" :aria-label="copy.timelineLabels.milestones">
+                <span class="timeline-endpoint timeline-endpoint--start">2018</span>
+                <span class="timeline-endpoint timeline-endpoint--end">2027</span>
+                <a
+                  v-for="(milestone, index) in copy.milestones"
+                  :key="`${milestone.year}-${index}`"
+                  class="milestone"
+                  :class="[`milestone--${milestone.level}`, `tone-${milestone.tone}`]"
+                  :style="{ left: `${milestone.position}%` }"
+                  :href="milestone.target"
+                >
+                  <span class="milestone__year">{{ milestone.year }}</span>
+                  <span v-for="line in milestone.lines" :key="line" class="milestone__line">{{ line }}</span>
+                </a>
               </div>
+            </div>
+
+            <p class="timeline-band-label timeline-band-label--work">{{ copy.timelineLabels.work }}</p>
+            <div class="work-track">
+              <article v-for="item in copy.experience" :key="item.organization" class="work-entry" :class="`tone-${item.tone}`">
+                <div class="work-entry__topline">
+                  <h3>{{ item.organization }}</h3>
+                  <time>{{ item.period }}</time>
+                </div>
+                <p class="work-entry__role">{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
+                <p class="work-entry__summary">{{ item.summary }}</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="publications" class="page-section anchor-target" aria-labelledby="publications-title">
+          <header class="section-header">
+            <h2 id="publications-title">{{ copy.sections.publications }}</h2>
+            <p class="section-note">{{ copy.publicationNote }}</p>
+          </header>
+
+          <div v-for="group in publicationGroups" :key="group.year" class="publication-year">
+            <h3>{{ group.year }}</h3>
+            <ol>
+              <li v-for="publication in group.items" :key="publication.title" class="publication">
+                <div class="publication__heading">
+                  <div class="publication__labels">
+                    <span class="venue-badge">{{ publication.venue }}</span>
+                    <span class="ccf-badge">{{ copy.ccf[publication.ccfType] }}</span>
+                  </div>
+                  <a :href="publication.href" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
+                </div>
+                <p class="authors">
+                  <template v-for="(author, index) in publication.authors">
+                    <strong v-if="author === 'Kehan Pang'" :key="author">{{ author }}</strong><span v-else :key="author">{{ author }}</span><span v-if="index < publication.authors.length - 1" :key="`${author}-comma`">, </span>
+                  </template>
+                </p>
+                <p class="publication__details">{{ publication.details }}</p>
+                <a class="doi-link" :href="publication.href" target="_blank" rel="noopener noreferrer">{{ copy.doiLabel }}: {{ publication.doi }}</a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="manuscripts" aria-labelledby="manuscripts-title">
+            <h3 id="manuscripts-title">{{ copy.sections.manuscripts }}</h3>
+            <ul>
+              <li v-for="manuscript in copy.manuscripts" :key="manuscript.title">
+                <span class="status-badge">{{ manuscript.status }}</span>
+                <div>
+                  <h4>{{ manuscript.title }}</h4>
+                  <p class="authors">
+                    <template v-for="(author, index) in manuscript.authors">
+                      <strong v-if="author === 'Kehan Pang'" :key="author">{{ author }}</strong><span v-else :key="author">{{ author }}</span><span v-if="index < manuscript.authors.length - 1" :key="`${author}-comma`">, </span>
+                    </template>
+                  </p>
+                </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="education" class="page-section content-width anchor-target" aria-labelledby="education-title">
-        <header class="section-header">
-          <h2 id="education-title">{{ copy.sections.education }}</h2>
-        </header>
-        <div class="timeline">
-          <article v-for="item in copy.education" :key="item.institution" class="timeline-item">
-            <p class="timeline-item__period">{{ item.period }}</p>
-            <h3>{{ item.institution }}</h3>
-            <p class="timeline-item__role">{{ item.degree }}</p>
-            <p v-if="item.unit" class="timeline-item__unit">{{ item.unit }}</p>
-            <p v-if="item.advisors" class="advisor-line">
-              <span>{{ item.advisorsLabel }}</span>
-              <template v-for="(advisor, index) in item.advisors">
-                <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">; </span>
-              </template>
-            </p>
-            <ul v-if="item.notes.length" class="compact-list">
-              <li v-for="note in item.notes" :key="note">{{ note }}</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="page-section content-width anchor-target" aria-labelledby="experience-title">
-        <header class="section-header">
-          <h2 id="experience-title">{{ copy.sections.experience }}</h2>
-        </header>
-        <div class="experience-list">
-          <article v-for="item in copy.experience" :key="item.organization" class="experience-item">
-            <div class="experience-item__topline">
-              <div>
-                <h3>{{ item.organization }}</h3>
-                <p>{{ item.role }}</p>
-              </div>
-              <time>{{ item.period }}</time>
-            </div>
-            <ul class="compact-list">
-              <li v-for="bullet in item.bullets" :key="bullet">{{ bullet }}</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="honors" class="page-section content-width anchor-target" aria-labelledby="awards-title">
+      <section id="honors" class="page-section anchor-target" aria-labelledby="awards-title">
         <header class="section-header">
           <h2 id="awards-title">{{ copy.sections.awards }}</h2>
         </header>
@@ -199,7 +239,7 @@
         </div>
       </section>
 
-      <section id="contact" class="page-section contact-section content-width anchor-target" aria-labelledby="contact-title">
+      <section id="contact" class="page-section contact-section anchor-target" aria-labelledby="contact-title">
         <header class="section-header">
           <h2 id="contact-title">{{ copy.sections.contact }}</h2>
         </header>
@@ -207,10 +247,13 @@
         <div class="contact-emails">
           <p><span>{{ copy.emailLabel }}{{ copy.labelSeparator }}</span> <a class="email-link" href="mailto:pangkehan@buaa.edu.cn">pangkehan@buaa.edu.cn</a></p>
           <p><span>{{ copy.alternativeEmailLabel }}{{ copy.labelSeparator }}</span> <a class="email-link" href="mailto:k3hanpang@gmail.com">k3hanpang@gmail.com</a></p>
-          <p class="address-line"><span>{{ copy.addressLabel }}{{ copy.labelSeparator }}</span> {{ copy.address }}</p>
+          <p class="address-line">
+            <span>{{ copy.addressLabel }}{{ copy.labelSeparator }}</span>
+            <span class="address-value"><template v-for="line in copy.addressLines"><span :key="line">{{ line }}</span></template></span>
+          </p>
         </div>
       </section>
-    </main>
+      </main>
 
     <aside class="page-toc" :aria-label="copy.tocLabel">
       <p>{{ copy.tocLabel }}</p>
@@ -267,6 +310,24 @@ export default {
     cvLink () {
       return this.locale === 'zh' ? links.cvZh : links.cvEn
     },
+    profileLinks () {
+      return [
+        { key: 'email', label: this.copy.railLinks.email, href: 'mailto:pangkehan@buaa.edu.cn', newTab: false },
+        { key: 'cv', label: this.copy.railLinks.cv, href: this.cvLink, newTab: true },
+        { key: 'scholar', label: this.copy.railLinks.scholar, href: links.scholar, newTab: true },
+        { key: 'orcid', label: this.copy.railLinks.orcid, href: links.orcid, title: 'ORCID 0009-0006-4086-1421', newTab: true },
+        { key: 'github', label: this.copy.railLinks.github, href: links.github, newTab: true }
+      ]
+    },
+    profileIconPaths () {
+      return {
+        email: ['M3 5h18v14H3z', 'M3 5l9 7 9-7'],
+        cv: ['M6 2h9l4 4v16H6z', 'M14 2v5h5', 'M9 12h6', 'M9 16h6'],
+        scholar: ['m2 9 10-5 10 5-10 5z', 'M6 11v5c3 2 9 2 12 0v-5', 'M22 9v6'],
+        orcid: ['M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z', 'M8 10v6', 'M8 7.5v.1', 'M11.5 10H13a3 3 0 0 1 0 6h-1.5z'],
+        github: ['M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3 1S18.2.6 15 2.5a13.4 13.4 0 0 0-7 0C4.8.6 3.7 1 3.7 1A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.4 3.5 6.6 6.8 7-.5.6-.9 1.5-1 2.5V22', 'M8 19c-3 .9-3-1.5-4-2']
+      }
+    },
     publicationGroups () {
       return ['2026', '2025', '2024'].map(year => ({
         year,
@@ -277,9 +338,8 @@ export default {
       return [
         { id: 'about', label: this.copy.sections.about },
         { id: 'research-interests', label: this.copy.researchLabel },
+        { id: 'timeline', label: this.copy.sections.timeline },
         { id: 'publications', label: this.copy.sections.publications },
-        { id: 'education', label: this.copy.sections.education },
-        { id: 'experience', label: this.copy.sections.experience },
         { id: 'honors', label: this.copy.sections.awards },
         { id: 'academic-service', label: this.copy.sections.service },
         { id: 'contact', label: this.copy.sections.contact }
@@ -319,7 +379,7 @@ export default {
     },
     updateThemeColor () {
       const meta = document.querySelector('meta[name="theme-color"]')
-      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f2f3f4')
+      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f1f2f3')
     },
     handleSectionScroll () {
       if (this.scrollFrame) return

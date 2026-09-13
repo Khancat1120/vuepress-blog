@@ -3,7 +3,8 @@ export const links = {
   cvZh: '/cv/kehan-pang-cv-zh.pdf',
   cvAlias: '/kehan-pang-cv.pdf',
   github: 'https://github.com/KehanPang',
-  scholar: 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ'
+  scholar: 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ',
+  orcid: 'https://orcid.org/0009-0006-4086-1421'
 }
 
 export const languages = [
@@ -101,15 +102,16 @@ export const content = {
     university: 'Beihang University',
     tagline: 'Research in graph data mining, graph data quality, and graph knowledge reasoning.',
     photoAlt: 'Portrait of Kehan Pang',
+    railLinksLabel: 'Academic profile links',
+    railLinks: { email: 'Email', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
       about: 'About Me', publications: 'Publications', manuscripts: 'Manuscripts / Under Review',
-      education: 'Education', experience: 'Experience', awards: 'Honors & Awards',
+      timeline: 'Education & Experience', awards: 'Honors & Awards',
       service: 'Academic Service', patent: 'Patent', contact: 'Contact'
     },
     about: [
-      'I am a Ph.D. student in the School of Computer Science and Engineering at Beihang University (September 2022 – April 2027, expected). I am advised by <a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Prof. Wenfei Fan</a> (CAS Academician) and <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Assoc. Prof. Ping Lu</a>.',
-      'My research focuses on <strong>Graph Data Mining</strong>, <strong>Graph Data Quality</strong>, <strong>Graph Data Cleaning</strong>, <strong>Graph Knowledge Reasoning</strong>, and <strong>Data-centric AI</strong>. Related work also involves GNN explainability and large language models for data processing.',
-      'Before joining Beihang, I received my B.Eng. in Computer Science and Technology from Beijing University of Posts and Telecommunications in July 2022.'
+      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University. I am advised by <a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Prof. Wenfei Fan</a> (CAS Academician) and <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Assoc. Prof. Ping Lu</a>.',
+      'My research centers on <strong>Data-centric AI</strong>, with a primary focus on <strong>Graph Data Mining</strong>, <strong>Graph Data Quality</strong>, and <strong>Graph Knowledge Reasoning</strong>. I also study <strong>GNN Explainability</strong> and applications of <strong>Large Language Models to Data Processing</strong>.'
     ],
     researchLabel: 'Research Interests',
     research: ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning'],
@@ -124,24 +126,45 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: 'Under Revision' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: 'Under Review' }
     ],
+    timelineLabels: { education: 'Education', milestones: 'Selected Milestones', work: 'Research & Internship' },
     education: [
       {
+        institution: 'Beijing University of Posts and Telecommunications',
+        shortName: 'BUPT',
+        degree: 'B.Eng. in Computer Science and Technology',
+        unit: '',
+        period: 'Sep. 2018 – Jul. 2022',
+        details: ['GPA: 3.7 / 4.0', 'Rank: 30 / 396 (Top 7.6%)'],
+        tone: 'blue'
+      },
+      {
         institution: 'Beihang University',
+        shortName: 'Beihang',
         degree: 'Ph.D. Student in Software Engineering',
         unit: 'School of Computer Science and Engineering',
         period: 'Sep. 2022 – Apr. 2027 (Expected)',
-        notes: [],
+        details: [],
+        tone: 'wine',
         advisorsLabel: 'Advisors:',
         advisors: [
           { name: 'Prof. Wenfei Fan (CAS Academician)', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
           { name: 'Assoc. Prof. Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
-      },
-      { institution: 'Beijing University of Posts and Telecommunications', degree: 'B.Eng. in Computer Science and Technology', unit: '', period: 'Sep. 2018 – Jul. 2022', notes: ['GPA: 3.7 / 4.0', 'Rank: 30 / 396 (Top 7.6%)'] }
+      }
+    ],
+    milestones: [
+      { year: '2019', lines: ['Math Competition', 'First Prizes'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['Math Competition', 'First Prizes'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
+      { year: '2022', lines: ['B.Eng., BUPT', 'Started Ph.D., Beihang'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
+      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
+      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
+      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
+      { year: '2027', lines: ['Expected Ph.D.'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
     ],
     experience: [
-      { organization: 'Meituan', role: 'Algorithm Research Intern · Core Local Commerce / M17', period: 'Sep. 2024 – Jan. 2025', bullets: ['Evaluated and cleaned web data for foundation-model pre-training.', 'Deployed a local 7B model and conducted full-parameter fine-tuning.', 'The fine-tuned model reached approximately 96% of the GPT-4 baseline ROUGE-L on the web-cleaning task.'] },
-      { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', bullets: ['Worked on graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.'] }
+      { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue' },
+      { organization: 'Meituan', role: 'Algorithm Research Intern', unit: 'Core Local Commerce / M17', period: 'Sep. 2024 – Jan. 2025', summary: 'Foundation-model pre-training data cleaning and quality evaluation; local 7B deployment and full-parameter fine-tuning, reaching approximately 96% of the GPT-4 baseline ROUGE-L.', tone: 'red' }
     ],
     awards: [
       'First Prize, Beijing Undergraduate Mathematics Competition, 2019 & 2020',
@@ -159,6 +182,7 @@ export const content = {
     alternativeEmailLabel: 'Alternative',
     addressLabel: 'Address',
     address: 'Beihang University, No. 37 Xueyuan Road, Haidian District, Beijing, China',
+    addressLines: ['Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     labelSeparator: ':',
     updated: 'Last updated: 2026'
   },
@@ -177,14 +201,15 @@ export const content = {
     university: '北京航空航天大学',
     tagline: '研究图数据挖掘、图数据质量与图知识推理。',
     photoAlt: '庞可涵的个人照片',
+    railLinksLabel: '学术资料链接',
+    railLinks: { email: '邮箱', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
-      about: '关于我', publications: '学术成果', manuscripts: '在审稿件', education: '教育经历',
-      experience: '科研与工作经历', awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
+      about: '关于我', publications: '学术成果', manuscripts: '在审稿件', timeline: '教育与经历',
+      awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
     },
     about: [
-      '我现为北京航空航天大学计算机学院软件工程专业博士研究生（2022 年 9 月入学，预计 2027 年 4 月毕业），导师为<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">樊文飞院士</a>和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平副教授</a>。',
-      '我的研究主要关注<strong>图数据挖掘</strong>、<strong>图数据质量</strong>、<strong>图数据清洗</strong>、<strong>图知识推理</strong>和<strong>Data-centric AI</strong>。相关工作也涉及 GNN 可解释性以及大语言模型在数据处理中的应用。',
-      '本科就读于北京邮电大学计算机科学与技术专业，于 2022 年 7 月获得工学学士学位。'
+      '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">樊文飞院士</a>和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平副教授</a>。',
+      '我的研究聚焦于<strong>以数据为中心的人工智能</strong>，主要围绕<strong>图数据挖掘</strong>、<strong>图数据质量</strong>和<strong>图知识推理</strong>展开，关注复杂数据环境下的数据质量保障、知识发现与模型可靠性；同时研究 <strong>GNN 可解释性</strong>，并探索<strong>大语言模型在数据处理中的应用</strong>。'
     ],
     researchLabel: '研究方向',
     research: ['图数据挖掘', '图数据质量', '图知识推理'],
@@ -199,24 +224,40 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '修改中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '审稿中' }
     ],
+    timelineLabels: { education: '教育经历', milestones: '重要节点', work: '科研与实习' },
     education: [
       {
+        institution: '北京邮电大学', shortName: 'BUPT', degree: '计算机科学与技术 工学学士', unit: '',
+        period: '2018.09 – 2022.07', details: ['GPA：3.7 / 4.0', '专业排名：30 / 396（前 7.6%）'], tone: 'blue'
+      },
+      {
         institution: '北京航空航天大学',
+        shortName: 'Beihang',
         degree: '软件工程专业 博士研究生',
         unit: '计算机学院',
         period: '2022.09 – 2027.04（预计）',
-        notes: [],
+        details: [],
+        tone: 'wine',
         advisorsLabel: '导师：',
         advisors: [
           { name: '樊文飞院士', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
           { name: '陆平副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
-      },
-      { institution: '北京邮电大学', degree: '计算机科学与技术 工学学士', unit: '', period: '2018.09 – 2022.07', notes: ['GPA：3.7 / 4.0', '专业排名：30 / 396（前 7.6%）'] }
+      }
+    ],
+    milestones: [
+      { year: '2019', lines: ['数学竞赛', '一等奖'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['数学竞赛', '一等奖'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
+      { year: '2022', lines: ['北邮本科毕业', '进入北航博士阶段'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
+      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
+      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
+      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
+      { year: '2027', lines: ['预计博士毕业'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
     ],
     experience: [
-      { organization: '美团', role: '算法研究实习生 · 核心本地商业 / M17', period: '2024.09 – 2025.01', bullets: ['参与 foundation model 预训练所需网页数据的清洗与质量评估。', '完成本地 7B 模型部署和全参数 fine-tuning。', '微调模型在网页清洗任务上的 ROUGE-L 达到 GPT-4 基线的约 96%。'] },
-      { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', bullets: ['研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。'] }
+      { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue' },
+      { organization: '美团', role: '算法研究实习生', unit: '核心本地商业 / M17', period: '2024.09 – 2025.01', summary: '参与 foundation model 预训练网页数据的清洗与质量评估；完成本地 7B 模型部署和全参数 fine-tuning，微调模型达到 GPT-4 基线约 96% 的 ROUGE-L。', tone: 'red' }
     ],
     awards: [
       '北京市大学生数学竞赛一等奖，2019、2020',
@@ -234,6 +275,7 @@ export const content = {
     alternativeEmailLabel: '备用邮箱',
     addressLabel: '地址',
     address: '北京市海淀区学院路37号 北京航空航天大学',
+    addressLines: ['北京市海淀区学院路37号', '北京航空航天大学'],
     labelSeparator: '：',
     updated: '最后更新：2026'
   },
@@ -252,14 +294,15 @@ export const content = {
     university: '北京航空航天大学',
     tagline: 'グラフデータマイニング、グラフデータ品質、グラフ知識推論を研究しています。',
     photoAlt: 'Kehan Pang のポートレート',
+    railLinksLabel: '研究者プロフィールへのリンク',
+    railLinks: { email: 'メール', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
-      about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', education: '学歴',
-      experience: '研究・職務経験', awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
+      about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', timeline: '学歴・経歴',
+      awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
     },
     about: [
-      '北京航空航天大学（Beihang University）School of Computer Science and Engineering の博士課程に在籍しています（2022年9月入学、2027年4月修了予定）。指導教員は<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Wenfei Fan 教授</a>（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu 准教授</a>です。',
-      '主な研究対象は、<strong>グラフデータマイニング</strong>、<strong>グラフデータ品質</strong>、<strong>グラフデータクリーニング</strong>、<strong>グラフ知識推論</strong>、および<strong>Data-centric AI</strong>です。関連して、GNNの説明可能性や大規模言語モデルを用いたデータ処理にも取り組んでいます。',
-      '北京郵電大学（Beijing University of Posts and Telecommunications）コンピュータサイエンス・技術専攻を卒業し、2022年7月に工学学士号を取得しました。'
+      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Wenfei Fan 教授</a>（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu 准教授</a>です。',
+      '研究の中心は<strong>データ中心型AI（Data-centric AI）</strong>で、特に<strong>グラフデータマイニング</strong>、<strong>グラフデータ品質</strong>、<strong>グラフ知識推論</strong>に取り組んでいます。さらに、<strong>GNNの説明可能性</strong>と<strong>大規模言語モデルを用いたデータ処理</strong>も研究しています。'
     ],
     researchLabel: '研究分野',
     research: ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論'],
@@ -274,24 +317,40 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '改訂中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '査読中' }
     ],
+    timelineLabels: { education: '学歴', milestones: '主な歩み', work: '研究・インターン経験' },
     education: [
       {
+        institution: '北京郵電大学', shortName: 'BUPT', degree: 'コンピュータサイエンス・技術専攻 工学学士', unit: '',
+        period: '2018年9月 – 2022年7月', details: ['GPA：3.7 / 4.0', '順位：30 / 396（上位7.6%）'], tone: 'blue'
+      },
+      {
         institution: '北京航空航天大学',
+        shortName: 'Beihang',
         degree: 'ソフトウェア工学専攻 博士課程',
         unit: 'School of Computer Science and Engineering',
         period: '2022年9月 – 2027年4月（修了予定）',
-        notes: [],
+        details: [],
+        tone: 'wine',
         advisorsLabel: '指導教員：',
         advisors: [
           { name: 'Wenfei Fan 教授（中国科学院院士）', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
           { name: 'Ping Lu 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
-      },
-      { institution: '北京郵電大学', degree: 'コンピュータサイエンス・技術専攻 工学学士', unit: '', period: '2018年9月 – 2022年7月', notes: ['GPA：3.7 / 4.0', '順位：30 / 396（上位 7.6%）'] }
+      }
+    ],
+    milestones: [
+      { year: '2019', lines: ['数学コンテスト', '一等賞'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['数学コンテスト', '一等賞'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
+      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
+      { year: '2022', lines: ['BUPT 卒業', 'Beihang 博士課程入学'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
+      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
+      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
+      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
+      { year: '2027', lines: ['博士課程 修了予定'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
     ],
     experience: [
-      { organization: 'Meituan（美団）', role: 'アルゴリズム研究インターン · Core Local Commerce / M17', period: '2024年9月 – 2025年1月', bullets: ['基盤モデルの事前学習に用いるWebデータのクリーニングと品質評価に従事。', 'ローカル環境に7Bモデルを導入し、全パラメータ・ファインチューニングを実施。', 'Webデータクリーニング課題において、ファインチューニング後のモデルはGPT-4ベースラインの約96%に相当するROUGE-Lを達成。'] },
-      { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', bullets: ['グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究に従事。'] }
+      { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue' },
+      { organization: 'Meituan（美団）', role: 'アルゴリズム研究インターン', unit: 'Core Local Commerce / M17', period: '2024年9月 – 2025年1月', summary: '基盤モデルの事前学習用Webデータのクリーニングと品質評価、ローカル7Bモデルの導入・全パラメータファインチューニングに従事。GPT-4ベースラインの約96%に相当するROUGE-Lを達成。', tone: 'red' }
     ],
     awards: [
       '北京市大学生数学コンテスト 一等賞（2019、2020年）',
@@ -309,6 +368,7 @@ export const content = {
     alternativeEmailLabel: '予備メール',
     addressLabel: '所在地',
     address: '中国北京市海淀区学院路37号 北京航空航天大学',
+    addressLines: ['中国北京市海淀区学院路37号', '北京航空航天大学'],
     labelSeparator: '：',
     updated: '最終更新：2026'
   }

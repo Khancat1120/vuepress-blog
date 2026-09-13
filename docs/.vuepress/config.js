@@ -25,16 +25,16 @@ module.exports = {
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' }],
     ['script', {}, "(function(){try{var saved=localStorage.getItem('theme');var theme=saved==='light'||saved==='dark'?saved:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',theme);document.documentElement.style.colorScheme=theme;}catch(e){document.documentElement.setAttribute('data-theme','light');}})();"],
-    ['meta', { id: 'theme-color', name: 'theme-color', content: '#f2f3f4' }],
+    ['meta', { id: 'theme-color', name: 'theme-color', content: '#f1f2f3' }],
     ['meta', { name: 'author', content: 'Kehan Pang' }],
     ['meta', { property: 'og:type', content: 'profile' }],
     ['meta', { property: 'og:image', content: 'https://kehanpang.github.io/portrait.webp' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-kehan-image-v4.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-kehan-image-v4-32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-kehan-image-v4-16.png' }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-kehan-image-v4-192.png' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon-v4.png' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon-kehan-v5.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-kehan-v5-32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-kehan-v5-16.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-kehan-v5-192.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon-v5.png' }]
   ],
   plugins: [],
   shouldPrefetch: () => false
