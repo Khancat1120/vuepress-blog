@@ -1,5 +1,7 @@
 export const links = {
-  cv: '/kehan-pang-cv.pdf',
+  cvEn: '/cv/kehan-pang-cv-en.pdf',
+  cvZh: '/cv/kehan-pang-cv-zh.pdf',
+  cvAlias: '/kehan-pang-cv.pdf',
   github: 'https://github.com/KehanPang',
   scholar: 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ'
 }
@@ -14,6 +16,7 @@ export const publications = [
   {
     year: '2026',
     venue: 'ICDE 2026',
+    ccfType: 'conference',
     title: 'Explaining GNN Negatives Globally and Locally',
     authors: ['Kehan Pang', 'Wenfei Fan', 'Min Xie', 'Dandan Lin'],
     details: '2026 IEEE 42nd International Conference on Data Engineering, pp. 1603–1616.',
@@ -23,6 +26,7 @@ export const publications = [
   {
     year: '2026',
     venue: 'KDD 2026',
+    ccfType: 'conference',
     title: 'Accelerating Influence Function Estimation for Large Language Models: A Practical Design',
     authors: ['Mengyi Yan', 'Yaoshu Wang', 'Guangyi Zhang', 'Kehan Pang', 'Haoyi Zhou'],
     details: 'Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Vol. 2, pp. 5927–5938.',
@@ -32,6 +36,7 @@ export const publications = [
   {
     year: '2025',
     venue: 'ICDE 2025',
+    ccfType: 'conference',
     title: 'Imputing Sparse and Noisy Labels for GNNs',
     authors: ['Wenfei Fan', 'Kehan Pang', 'Chao Tian'],
     details: '2025 IEEE 41st International Conference on Data Engineering, pp. 2295–2308.',
@@ -41,6 +46,7 @@ export const publications = [
   {
     year: '2025',
     venue: 'SIGMOD 2025',
+    ccfType: 'conference',
     title: 'Rule-Based Graph Cleaning with GPUs on a Single Machine',
     authors: ['Wenchao Bai', 'Wenfei Fan', 'Shuhao Liu', 'Kehan Pang', 'Xiaoke Zhu', 'Jiahui Jin'],
     details: 'Proceedings of the ACM on Management of Data 3(3), Article 166, pp. 166:1–166:27.',
@@ -50,6 +56,7 @@ export const publications = [
   {
     year: '2024',
     venue: 'ACM TODS',
+    ccfType: 'journal',
     title: 'Making It Tractable to Detect and Correct Errors in Graphs',
     authors: ['Wenfei Fan', 'Kehan Pang', 'Ping Lu', 'Chao Tian'],
     details: 'ACM Transactions on Database Systems 49(4), Article 16, pp. 16:1–16:75.',
@@ -59,6 +66,7 @@ export const publications = [
   {
     year: '2024',
     venue: 'KDD 2024',
+    ccfType: 'conference',
     title: 'Efficient Mixture of Experts based on Large Language Models for Low-Resource Data Preprocessing',
     authors: ['Mengyi Yan', 'Yaoshu Wang', 'Kehan Pang', 'Min Xie', 'Jianxin Li'],
     details: 'Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, pp. 3690–3701.',
@@ -68,6 +76,7 @@ export const publications = [
   {
     year: '2024',
     venue: 'ACM TODS',
+    ccfType: 'journal',
     title: 'Linking Entities across Relations and Graphs',
     authors: ['Wenfei Fan', 'Ping Lu', 'Kehan Pang', 'Ruochun Jin', 'Wenyuan Yu'],
     details: 'ACM Transactions on Database Systems 49(1), Article 2, pp. 2:1–2:50.',
@@ -82,12 +91,15 @@ export const content = {
     skip: 'Skip to main content',
     navLabel: 'Profile links',
     languageLabel: 'Language',
+    themeToDark: 'Switch to dark mode',
+    themeToLight: 'Switch to light mode',
+    tocLabel: 'On this page',
     heroPrimary: 'Kehan Pang',
     heroSecondary: '庞可涵',
     role: 'Ph.D. Student',
     affiliation: 'School of Computer Science and Engineering',
     university: 'Beihang University',
-    tagline: 'Graph data mining and large language models, with an interest in data quality and data-centric AI.',
+    tagline: 'Research in graph data mining, graph data quality, graph knowledge reasoning, and large language models.',
     photoAlt: 'Portrait of Kehan Pang',
     sections: {
       about: 'About Me', publications: 'Publications', manuscripts: 'Manuscripts / Under Review',
@@ -95,22 +107,34 @@ export const content = {
       service: 'Academic Service', patent: 'Patent', contact: 'Contact'
     },
     about: [
-      'I am a Ph.D. student in the School of Computer Science and Engineering at Beihang University (September 2022 – April 2027, expected), advised by Prof. Wenfei Fan and Associate Prof. Ping Lu.',
-      'My research focuses on graph data mining and large language models. I am particularly interested in graph data quality, graph neural networks, and data-centric AI.',
+      'I am a Ph.D. student in the School of Computer Science and Engineering at Beihang University (September 2022 – April 2027, expected), advised by Prof. Wenfei Fan and Assoc. Prof. Ping Lu.',
+      'My research focuses on graph data mining and graph data quality, with further interests in graph knowledge reasoning and large language models. My work also involves graph data cleaning, GNN explainability, and data-centric machine learning.',
       'Before joining Beihang, I received my B.Eng. in Computer Science and Technology from Beijing University of Posts and Telecommunications in July 2022.'
     ],
     researchLabel: 'Research Interests',
-    research: ['Graph Data Mining', 'Large Language Models'],
+    research: ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning', 'Large Language Models'],
     profileLabel: 'Beyond Research',
     profile: ['MBTI: INTP', 'Sleeping', 'Guitar', 'Writing'],
     publicationNote: 'Peer-reviewed and formally published or accepted work. Entries follow the official bibliographic record.',
     doiLabel: 'DOI',
+    ccf: { conference: 'CCF-A Conference', journal: 'CCF-A Journal' },
     manuscripts: [
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: 'Under Revision' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: 'Under Review' }
     ],
     education: [
-      { institution: 'Beihang University', degree: 'Ph.D. Student in Software Engineering', unit: 'School of Computer Science and Engineering', period: 'Sep. 2022 – Apr. 2027 (Expected)', notes: ['Advisors: Prof. Wenfei Fan; Associate Prof. Ping Lu'] },
+      {
+        institution: 'Beihang University',
+        degree: 'Ph.D. Student in Software Engineering',
+        unit: 'School of Computer Science and Engineering',
+        period: 'Sep. 2022 – Apr. 2027 (Expected)',
+        notes: [],
+        advisorsLabel: 'Advisors:',
+        advisors: [
+          { name: 'Prof. Wenfei Fan (Foreign Member of CAS)', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: 'Assoc. Prof. Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+        ]
+      },
       { institution: 'Beijing University of Posts and Telecommunications', degree: 'B.Eng. in Computer Science and Technology', unit: '', period: 'Sep. 2018 – Jul. 2022', notes: ['GPA: 3.7 / 4.0', 'Rank: 30 / 396 (Top 7.6%)'] }
     ],
     experience: [
@@ -130,6 +154,7 @@ export const content = {
     patentStatus: 'Chinese invention patent application, 2025',
     contactLead: 'For research discussions and professional opportunities, please get in touch by email.',
     emailLabel: 'Email',
+    alternativeEmailLabel: 'Alternative',
     updated: 'Last updated: 2026'
   },
   zh: {
@@ -137,38 +162,53 @@ export const content = {
     skip: '跳转到主要内容',
     navLabel: '个人资料链接',
     languageLabel: '语言',
+    themeToDark: '切换到深色模式',
+    themeToLight: '切换到浅色模式',
+    tocLabel: '本页目录',
     heroPrimary: '庞可涵',
     heroSecondary: 'Kehan Pang',
     role: '博士研究生',
     affiliation: '计算机学院',
     university: '北京航空航天大学',
-    tagline: '研究图数据挖掘与大语言模型，关注图数据质量和数据中心人工智能。',
+    tagline: '研究图数据挖掘、图数据质量、图知识推理与大语言模型。',
     photoAlt: '庞可涵的个人照片',
     sections: {
       about: '关于我', publications: '学术成果', manuscripts: '在审稿件', education: '教育经历',
       experience: '科研与工作经历', awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
     },
     about: [
-      '我现为北京航空航天大学计算机学院软件工程专业博士研究生（2022 年 9 月入学，预计 2027 年 4 月毕业），导师为 Wenfei Fan 教授和 Ping Lu 副教授。',
-      '我的研究方向是图数据挖掘与大语言模型，具体关注图数据质量、图神经网络和数据中心人工智能。',
+      '我现为北京航空航天大学计算机学院软件工程专业博士研究生（2022 年 9 月入学，预计 2027 年 4 月毕业），导师为樊文飞院士和陆平副教授。',
+      '我的研究主要关注图数据挖掘与图数据质量，并进一步探索图知识推理以及大语言模型在复杂数据环境中的应用。相关工作也涉及图数据清洗、GNN 可解释性和 data-centric 机器学习。',
       '本科就读于北京邮电大学计算机科学与技术专业，于 2022 年 7 月获得工学学士学位。'
     ],
     researchLabel: '研究方向',
-    research: ['图数据挖掘', '大语言模型'],
+    research: ['图数据挖掘', '图数据质量', '图知识推理', '大语言模型'],
     profileLabel: '研究之外',
     profile: ['MBTI：INTP', '睡觉', '吉他', '写作'],
     publicationNote: '以下仅列出已经正式发表或录用的同行评审成果，书目信息以正式记录为准。',
     doiLabel: 'DOI',
+    ccf: { conference: 'CCF-A 类会议', journal: 'CCF-A 类期刊' },
     manuscripts: [
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '修改中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '审稿中' }
     ],
     education: [
-      { institution: '北京航空航天大学', degree: '软件工程专业 博士研究生', unit: '计算机学院', period: '2022.09 – 2027.04（预计）', notes: ['导师：Wenfei Fan 教授、Ping Lu 副教授'] },
+      {
+        institution: '北京航空航天大学',
+        degree: '软件工程专业 博士研究生',
+        unit: '计算机学院',
+        period: '2022.09 – 2027.04（预计）',
+        notes: [],
+        advisorsLabel: '导师：',
+        advisors: [
+          { name: '樊文飞 院士', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: '陆平 副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+        ]
+      },
       { institution: '北京邮电大学', degree: '计算机科学与技术 工学学士', unit: '', period: '2018.09 – 2022.07', notes: ['GPA：3.7 / 4.0', '专业排名：30 / 396（前 7.6%）'] }
     ],
     experience: [
-      { organization: '美团', role: '算法研究实习生 · 核心本地商业 / M17', period: '2024.09 – 2025.01', bullets: ['参与基础大模型预训练网页数据的清洗与质量评估。', '完成本地 7B 模型部署和全参数微调。', '微调模型在网页清洗任务上的 ROUGE-L 达到 GPT-4 基线的约 96%。'] },
+      { organization: '美团', role: '算法研究实习生 · 核心本地商业 / M17', period: '2024.09 – 2025.01', bullets: ['参与 foundation model 预训练所需网页数据的清洗与质量评估。', '完成本地 7B 模型部署和全参数 fine-tuning。', '微调模型在网页清洗任务上的 ROUGE-L 达到 GPT-4 基线的约 96%。'] },
       { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', bullets: ['研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。'] }
     ],
     awards: [
@@ -184,6 +224,7 @@ export const content = {
     patentStatus: '中国发明专利申请，2025',
     contactLead: '欢迎通过邮件联系科研交流或职业合作事宜。',
     emailLabel: '邮箱',
+    alternativeEmailLabel: '备用邮箱',
     updated: '最后更新：2026'
   },
   ja: {
@@ -191,12 +232,15 @@ export const content = {
     skip: '本文へ移動',
     navLabel: 'プロフィールへのリンク',
     languageLabel: '言語',
+    themeToDark: 'ダークモードに切り替える',
+    themeToLight: 'ライトモードに切り替える',
+    tocLabel: '目次',
     heroPrimary: 'Kehan Pang',
     heroSecondary: '庞可涵',
     role: '博士課程学生',
     affiliation: 'School of Computer Science and Engineering',
     university: '北京航空航天大学',
-    tagline: 'グラフデータマイニングと大規模言語モデルを中心に、データ品質とデータ中心AIを研究しています。',
+    tagline: 'グラフデータマイニング、グラフデータ品質、グラフ知識推論、大規模言語モデルを研究しています。',
     photoAlt: 'Kehan Pang のポートレート',
     sections: {
       about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', education: '学歴',
@@ -204,21 +248,33 @@ export const content = {
     },
     about: [
       '北京航空航天大学 School of Computer Science and Engineering の博士課程に在籍しています（2022年9月入学、2027年4月修了予定）。Wenfei Fan 教授および Ping Lu 准教授の指導を受けています。',
-      '主な研究分野はグラフデータマイニングと大規模言語モデルです。特に、グラフデータ品質、グラフニューラルネットワーク、データ中心AIに関心があります。',
+      'グラフデータマイニングとグラフデータ品質を中心に、グラフ知識推論および大規模言語モデルの複雑なデータ環境への応用を研究しています。グラフデータクリーニング、GNNの説明可能性、data-centric な機械学習にも取り組んでいます。',
       '2022年7月に北京郵電大学コンピュータ科学・技術専攻を卒業し、工学学士号を取得しました。'
     ],
     researchLabel: '研究分野',
-    research: ['グラフデータマイニング', '大規模言語モデル'],
+    research: ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論', '大規模言語モデル'],
     profileLabel: '研究以外',
     profile: ['MBTI：INTP', '睡眠', 'ギター', '執筆'],
     publicationNote: '査読を経て正式に発表または採択された成果のみを掲載しています。書誌情報は正式記録に基づきます。',
     doiLabel: 'DOI',
+    ccf: { conference: 'CCF-A 会議', journal: 'CCF-A ジャーナル' },
     manuscripts: [
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '改訂中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '査読中' }
     ],
     education: [
-      { institution: '北京航空航天大学', degree: 'ソフトウェア工学専攻 博士課程', unit: 'School of Computer Science and Engineering', period: '2022年9月 – 2027年4月（修了予定）', notes: ['指導教員：Wenfei Fan 教授、Ping Lu 准教授'] },
+      {
+        institution: '北京航空航天大学',
+        degree: 'ソフトウェア工学専攻 博士課程',
+        unit: 'School of Computer Science and Engineering',
+        period: '2022年9月 – 2027年4月（修了予定）',
+        notes: [],
+        advisorsLabel: '指導教員：',
+        advisors: [
+          { name: 'Wenfei Fan 教授（中国科学院外国人会員）', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: 'Ping Lu 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+        ]
+      },
       { institution: '北京郵電大学', degree: 'コンピュータ科学・技術専攻 工学学士', unit: '', period: '2018年9月 – 2022年7月', notes: ['GPA：3.7 / 4.0', '順位：30 / 396（上位 7.6%）'] }
     ],
     experience: [
@@ -237,7 +293,8 @@ export const content = {
     patentTitle: 'A Method, Apparatus, Device, and Medium for Graph Data Augmentation',
     patentStatus: '中国発明特許出願，2025',
     contactLead: '研究交流や採用に関するお問い合わせは、メールでご連絡ください。',
-    emailLabel: 'メール',
+    emailLabel: 'Email',
+    alternativeEmailLabel: '予備メール',
     updated: '最終更新：2026'
   }
 }

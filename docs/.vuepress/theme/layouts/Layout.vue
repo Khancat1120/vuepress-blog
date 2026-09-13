@@ -8,9 +8,11 @@
 
         <div class="header-actions">
           <nav class="profile-nav" :aria-label="copy.navLabel">
-            <a :href="links.cv" target="_blank" rel="noopener">CV</a>
+            <a :href="cvLink" target="_blank" rel="noopener noreferrer">CV</a>
             <a :href="links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a :href="links.scholar" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a :href="links.scholar" target="_blank" rel="noopener noreferrer">
+              <span class="scholar-long">Google Scholar</span><span class="scholar-short">Scholar</span>
+            </a>
           </nav>
 
           <nav class="language-switch" :aria-label="copy.languageLabel">
@@ -24,10 +26,19 @@
               @click="switchLanguage($event, language.path)"
             >{{ language.label }}</a>
           </nav>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            :aria-label="themeToggleLabel"
+            :title="themeToggleLabel"
+            @click="toggleTheme"
+          ><span aria-hidden="true">{{ theme === 'dark' ? '☀' : '☾' }}</span></button>
         </div>
       </div>
     </header>
 
+    <div class="page-frame">
     <main id="main-content">
       <section id="top" class="profile-introduction content-width" aria-labelledby="profile-title">
         <figure class="profile-photo">
@@ -45,7 +56,7 @@
             <span>{{ copy.university }}</span>
           </p>
 
-          <div id="about" class="profile-about" :aria-labelledby="'about-title'">
+          <div id="about" class="profile-about anchor-target" :aria-labelledby="'about-title'">
             <h2 id="about-title">{{ copy.sections.about }}</h2>
             <div class="prose">
               <p v-for="paragraph in copy.about" :key="paragraph">{{ paragraph }}</p>
@@ -53,7 +64,7 @@
           </div>
 
           <dl class="profile-details">
-            <div>
+            <div id="research-interests" class="anchor-target">
               <dt>{{ copy.researchLabel }}</dt>
               <dd>
                 <span v-for="(item, index) in copy.research" :key="item">
@@ -73,7 +84,7 @@
         </div>
       </section>
 
-      <section id="publications" class="page-section content-width" aria-labelledby="publications-title">
+      <section id="publications" class="page-section content-width anchor-target" aria-labelledby="publications-title">
         <header class="section-header">
           <h2 id="publications-title">{{ copy.sections.publications }}</h2>
           <p class="section-note">{{ copy.publicationNote }}</p>
@@ -84,7 +95,10 @@
           <ol>
             <li v-for="publication in group.items" :key="publication.title" class="publication">
               <div class="publication__heading">
-                <span class="venue-badge">{{ publication.venue }}</span>
+                <div class="publication__labels">
+                  <span class="venue-badge">{{ publication.venue }}</span>
+                  <span class="ccf-badge">{{ copy.ccf[publication.ccfType] }}</span>
+                </div>
                 <a :href="publication.href" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
               </div>
               <p class="authors">
@@ -116,7 +130,7 @@
         </div>
       </section>
 
-      <section id="education" class="page-section content-width" aria-labelledby="education-title">
+      <section id="education" class="page-section content-width anchor-target" aria-labelledby="education-title">
         <header class="section-header">
           <h2 id="education-title">{{ copy.sections.education }}</h2>
         </header>
@@ -126,6 +140,12 @@
             <h3>{{ item.institution }}</h3>
             <p class="timeline-item__role">{{ item.degree }}</p>
             <p v-if="item.unit" class="timeline-item__unit">{{ item.unit }}</p>
+            <p v-if="item.advisors" class="advisor-line">
+              <span>{{ item.advisorsLabel }}</span>
+              <template v-for="(advisor, index) in item.advisors">
+                <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">; </span>
+              </template>
+            </p>
             <ul v-if="item.notes.length" class="compact-list">
               <li v-for="note in item.notes" :key="note">{{ note }}</li>
             </ul>
@@ -133,7 +153,7 @@
         </div>
       </section>
 
-      <section id="experience" class="page-section content-width" aria-labelledby="experience-title">
+      <section id="experience" class="page-section content-width anchor-target" aria-labelledby="experience-title">
         <header class="section-header">
           <h2 id="experience-title">{{ copy.sections.experience }}</h2>
         </header>
@@ -153,7 +173,7 @@
         </div>
       </section>
 
-      <section id="honors" class="page-section content-width" aria-labelledby="awards-title">
+      <section id="honors" class="page-section content-width anchor-target" aria-labelledby="awards-title">
         <header class="section-header">
           <h2 id="awards-title">{{ copy.sections.awards }}</h2>
         </header>
@@ -162,7 +182,7 @@
             <li v-for="award in copy.awards" :key="award">{{ award }}</li>
           </ul>
           <div class="service-column">
-            <div>
+            <div id="academic-service" class="anchor-target">
               <h3>{{ copy.sections.service }}</h3>
               <p v-for="item in copy.service" :key="item">{{ item }}</p>
             </div>
@@ -175,21 +195,39 @@
         </div>
       </section>
 
-      <section id="contact" class="page-section contact-section content-width" aria-labelledby="contact-title">
+      <section id="contact" class="page-section contact-section content-width anchor-target" aria-labelledby="contact-title">
         <header class="section-header">
           <h2 id="contact-title">{{ copy.sections.contact }}</h2>
         </header>
         <p>{{ copy.contactLead }}</p>
-        <a class="email-link" href="mailto:pangkehan@buaa.edu.cn">pangkehan@buaa.edu.cn</a>
+        <div class="contact-emails">
+          <p><span>{{ copy.emailLabel }}:</span> <a class="email-link" href="mailto:pangkehan@buaa.edu.cn">pangkehan@buaa.edu.cn</a></p>
+          <p><span>{{ copy.alternativeEmailLabel }}:</span> <a class="email-link" href="mailto:k3hanpang@gmail.com">k3hanpang@gmail.com</a></p>
+        </div>
       </section>
     </main>
+
+    <aside class="page-toc" :aria-label="copy.tocLabel">
+      <p>{{ copy.tocLabel }}</p>
+      <nav>
+        <a
+          v-for="item in tocItems"
+          :key="item.id"
+          :href="`#${item.id}`"
+          :class="{ active: activeSection === item.id }"
+          :aria-current="activeSection === item.id ? 'location' : null"
+          @click="activeSection = item.id"
+        >{{ item.label }}</a>
+      </nav>
+    </aside>
+    </div>
 
     <footer class="site-footer">
       <div class="content-width">
         <span>© {{ currentYear }} Kehan Pang</span>
         <span class="footer-notes" aria-hidden="true"><i></i><i></i><i></i></span>
         <span>{{ copy.updated }}</span>
-        <!-- three quiet notes -->
+        <!-- a blue note, a wine-red chord, and one warm beat -->
       </div>
     </footer>
   </div>
@@ -200,6 +238,13 @@ import { content, languages, links, publications } from '../data/content'
 
 export default {
   name: 'AcademicHomepage',
+  data () {
+    return {
+      activeSection: 'about',
+      observer: null,
+      theme: 'light'
+    }
+  },
   computed: {
     locale () {
       return this.$page.frontmatter.locale || 'en'
@@ -213,21 +258,76 @@ export default {
     links () {
       return links
     },
+    cvLink () {
+      return this.locale === 'zh' ? links.cvZh : links.cvEn
+    },
     publicationGroups () {
       return ['2026', '2025', '2024'].map(year => ({
         year,
         items: publications.filter(publication => publication.year === year)
       }))
     },
+    tocItems () {
+      return [
+        { id: 'about', label: this.copy.sections.about },
+        { id: 'research-interests', label: this.copy.researchLabel },
+        { id: 'publications', label: this.copy.sections.publications },
+        { id: 'education', label: this.copy.sections.education },
+        { id: 'experience', label: this.copy.sections.experience },
+        { id: 'honors', label: this.copy.sections.awards },
+        { id: 'academic-service', label: this.copy.sections.service },
+        { id: 'contact', label: this.copy.sections.contact }
+      ]
+    },
+    themeToggleLabel () {
+      return this.theme === 'dark' ? this.copy.themeToLight : this.copy.themeToDark
+    },
     currentYear () {
       return 2026
     }
+  },
+  mounted () {
+    const root = document.documentElement
+    this.theme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+    this.updateThemeColor()
+    this.setupSectionObserver()
+  },
+  beforeDestroy () {
+    if (this.observer) this.observer.disconnect()
   },
   methods: {
     switchLanguage (event, path) {
       if (typeof window === 'undefined') return
       event.preventDefault()
       window.location.assign(`${path}${window.location.hash}`)
+    },
+    toggleTheme () {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('data-theme', this.theme)
+      document.documentElement.style.colorScheme = this.theme
+      window.localStorage.setItem('theme', this.theme)
+      this.updateThemeColor()
+    },
+    updateThemeColor () {
+      const meta = document.querySelector('meta[name="theme-color"]')
+      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f5f6f7')
+    },
+    setupSectionObserver () {
+      if (!('IntersectionObserver' in window)) return
+      this.$nextTick(() => {
+        const targets = this.tocItems
+          .map(item => document.getElementById(item.id))
+          .filter(Boolean)
+        this.observer = new IntersectionObserver(() => {
+          const offset = 82
+          const reached = targets.filter(target => target.getBoundingClientRect().top <= offset)
+          this.activeSection = (reached[reached.length - 1] || targets[0]).id
+        }, {
+          rootMargin: '-78px 0px -65% 0px',
+          threshold: [0, 0.01, 0.25]
+        })
+        targets.forEach(target => this.observer.observe(target))
+      })
     }
   }
 }
