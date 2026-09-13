@@ -34,7 +34,23 @@ for (const [filename, phrases] of Object.entries(expected)) {
   assert(html.includes('rel="canonical"'), `${filename} is missing a canonical URL`)
   assert(html.includes('hreflang="'), `${filename} is missing alternate-language metadata`)
   assert(html.indexOf('id="contact"') > html.indexOf('id="honors"'), `${filename} does not place Contact last`)
+  assert(html.includes('class="profile-introduction content-width"'), `${filename} is missing the compact profile introduction`)
+  assert(html.includes('class="profile-photo"'), `${filename} is missing the small profile photo`)
+  assert(!html.includes('Academic Homepage'), `${filename} still contains the old hero eyebrow`)
+  assert(!html.includes('class="hero'), `${filename} still contains the old hero`)
+  assert(!html.includes('section-index'), `${filename} still contains section numbers`)
+
+  const occurrences = link => html.split(link).length - 1
+  assert.strictEqual(occurrences('href="/kehan-pang-cv.pdf"'), 1, `${filename} repeats the CV link`)
+  assert.strictEqual(occurrences('href="https://github.com/KehanPang"'), 1, `${filename} repeats the GitHub link`)
+  assert.strictEqual(occurrences('href="https://scholar.google.com/citations?user=b3XVG_oAAAAJ"'), 1, `${filename} repeats the Scholar link`)
 }
+
+const notFound = fs.readFileSync(path.join(dist, '404.html'), 'utf8')
+for (const phrase of ['Wrong stage.', 'Back to homepage', 'not-found-illustration', 'rebel-title']) {
+  assert(notFound.includes(phrase), `404.html is missing ${phrase}`)
+}
+assert(notFound.includes('<svg'), '404.html is missing the original inline illustration')
 
 for (const legacyPath of ['jottings/', 'novels/', 'technology/', 'knowledge/', 'about/']) {
   assert(!relativeFiles.some(filename => filename.startsWith(legacyPath)), `legacy output remains: ${legacyPath}`)
@@ -45,8 +61,16 @@ const searchable = files
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
 
-for (const forbidden of ['127.0.0.1:3000', 'ClustrMaps', 'titlePv', 'Skill Tree', 'vuepress-plugin-cat']) {
+for (const forbidden of ['127.0.0.1:3000', 'ClustrMaps', 'titlePv', 'Skill Tree', 'vuepress-plugin-cat', 'section-index', 'hero__actions']) {
   assert(!searchable.includes(forbidden), `forbidden legacy string remains: ${forbidden}`)
+}
+
+const css = files
+  .filter(filename => filename.endsWith('.css'))
+  .map(filename => fs.readFileSync(filename, 'utf8'))
+  .join('\n')
+for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
+  assert(!css.includes(forbidden), `the refined site still contains ${forbidden}`)
 }
 
 const sitemap = fs.readFileSync(path.join(dist, 'sitemap.xml'), 'utf8')
@@ -56,6 +80,13 @@ for (const legacyPath of ['/jottings/', '/novels/', '/technology/', '/knowledge/
 
 const cv = fs.readFileSync(path.join(dist, 'kehan-pang-cv.pdf'))
 assert.strictEqual(cv.subarray(0, 5).toString(), '%PDF-', 'CV is not a valid PDF')
+const cvText = fs.readFileSync(path.resolve(__dirname, '../cv/kehan-pang-cv.tex'), 'utf8')
+for (const section of ['Education', 'Work Experience', 'Research Experience', 'Awards and Academic Service', 'Research and Technical Expertise', 'Publications', 'Manuscripts']) {
+  assert(cvText.includes(section), `CV is missing ${section}`)
+}
+assert(!/[\u3400-\u9fff]/.test(cvText), 'English CV contains Chinese text')
+assert(cvText.includes('\\usepackage{fontawesome5}'), 'CV does not use FontAwesome section icons')
+assert(cvText.includes('\\newpage'), 'CV source does not define its intentional second page')
 assert(fs.statSync(path.join(dist, 'portrait.webp')).size > 10000, 'portrait asset is missing or unexpectedly small')
 
-console.log(`Validated ${htmlFiles.length} HTML pages, three locales, public assets, SEO metadata, and legacy-route removal.`)
+console.log(`Validated ${htmlFiles.length} HTML pages, compact academic layout, custom 404, two-page CV, three locales, and legacy-route removal.`)

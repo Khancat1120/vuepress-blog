@@ -126,7 +126,7 @@ export const content = {
       'Beijing municipal-level Undergraduate Innovation and Entrepreneurship Training Program award, 2020'
     ],
     service: ['External Reviewer, IEEE ICDE, 2024–2026'],
-    patentTitle: '一种图数据增强方法、装置、设备及介质',
+    patentTitle: 'A Method, Apparatus, Device, and Medium for Graph Data Augmentation',
     patentStatus: 'Chinese invention patent application, 2025',
     contactLead: 'For research discussions and professional opportunities, please get in touch by email.',
     emailLabel: 'Email',
@@ -234,7 +234,7 @@ export const content = {
       '北京市大学生イノベーション・起業訓練プログラム 表彰，2020'
     ],
     service: ['IEEE ICDE 外部査読者，2024–2026'],
-    patentTitle: '一种图数据增强方法、装置、设备及介质',
+    patentTitle: 'A Method, Apparatus, Device, and Medium for Graph Data Augmentation',
     patentStatus: '中国発明特許出願，2025',
     contactLead: '研究交流や採用に関するお問い合わせは、メールでご連絡ください。',
     emailLabel: 'メール',
