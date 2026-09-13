@@ -126,7 +126,7 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: 'Under Revision' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: 'Under Review' }
     ],
-    timelineLabels: { education: 'Education', milestones: 'Selected Milestones', work: 'Research & Internship' },
+    timelineLabels: { education: 'Education', news: 'News', work: 'Experience' },
     education: [
       {
         institution: 'Beijing University of Posts and Telecommunications',
@@ -135,7 +135,9 @@ export const content = {
         unit: '',
         period: 'Sep. 2018 – Jul. 2022',
         details: ['GPA: 3.7 / 4.0', 'Rank: 30 / 396 (Top 7.6%)'],
-        tone: 'blue'
+        tone: 'blue',
+        start: 0,
+        end: 44.7
       },
       {
         institution: 'Beihang University',
@@ -145,6 +147,8 @@ export const content = {
         period: 'Sep. 2022 – Apr. 2027 (Expected)',
         details: [],
         tone: 'wine',
+        start: 46.6,
+        end: 100,
         advisorsLabel: 'Advisors:',
         advisors: [
           { name: 'Prof. Wenfei Fan (CAS Academician)', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
@@ -152,19 +156,18 @@ export const content = {
         ]
       }
     ],
-    milestones: [
-      { year: '2019', lines: ['Math Competition', 'First Prizes'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['Math Competition', 'First Prizes'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
-      { year: '2022', lines: ['B.Eng., BUPT', 'Started Ph.D., Beihang'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
-      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
-      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
-      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
-      { year: '2027', lines: ['Expected Ph.D.'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
+    news: [
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
+      { date: '2024.08', event: 'KDD Paper Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2024.12', event: 'TODS Paper Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2025.05', event: 'ICDE Paper Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
+      { date: '2025.06', event: 'SIGMOD Paper Published', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2026.05', event: 'ICDE Paper Published', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2026.08', event: 'KDD Paper Published', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
     ],
     experience: [
-      { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue' },
-      { organization: 'Meituan', role: 'Algorithm Research Intern', unit: 'Core Local Commerce / M17', period: 'Sep. 2024 – Jan. 2025', summary: 'Foundation-model pre-training data cleaning and quality evaluation; local 7B deployment and full-parameter fine-tuning, reaching approximately 96% of the GPT-4 baseline ROUGE-L.', tone: 'red' }
+      { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
+      { organization: 'Meituan', role: 'Algorithm Research Intern', unit: 'Core Local Commerce / M17', period: 'Sep. 2024 – Jan. 2025', summary: 'Foundation-model pre-training data cleaning and quality evaluation; local 7B deployment and full-parameter fine-tuning, reaching approximately 96% of the GPT-4 baseline ROUGE-L.', tone: 'red', start: 69.9, end: 73.8, row: 1 }
     ],
     awards: [
       'First Prize, Beijing Undergraduate Mathematics Competition, 2019 & 2020',
@@ -224,11 +227,11 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '修改中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '审稿中' }
     ],
-    timelineLabels: { education: '教育经历', milestones: '重要节点', work: '科研与实习' },
+    timelineLabels: { education: '教育', news: 'News', work: '科研与实习' },
     education: [
       {
         institution: '北京邮电大学', shortName: 'BUPT', degree: '计算机科学与技术 工学学士', unit: '',
-        period: '2018.09 – 2022.07', details: ['GPA：3.7 / 4.0', '专业排名：30 / 396（前 7.6%）'], tone: 'blue'
+        period: '2018.09 – 2022.07', details: ['GPA：3.7 / 4.0', '专业排名：30 / 396（前 7.6%）'], tone: 'blue', start: 0, end: 44.7
       },
       {
         institution: '北京航空航天大学',
@@ -238,6 +241,8 @@ export const content = {
         period: '2022.09 – 2027.04（预计）',
         details: [],
         tone: 'wine',
+        start: 46.6,
+        end: 100,
         advisorsLabel: '导师：',
         advisors: [
           { name: '樊文飞院士', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
@@ -245,19 +250,18 @@ export const content = {
         ]
       }
     ],
-    milestones: [
-      { year: '2019', lines: ['数学竞赛', '一等奖'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['数学竞赛', '一等奖'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
-      { year: '2022', lines: ['北邮本科毕业', '进入北航博士阶段'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
-      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
-      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
-      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
-      { year: '2027', lines: ['预计博士毕业'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
+    news: [
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
+      { date: '2024.08', event: 'KDD 论文发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2024.12', event: 'TODS 论文发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2025.05', event: 'ICDE 论文发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
+      { date: '2025.06', event: 'SIGMOD 论文发表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2026.05', event: 'ICDE 论文发表', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2026.08', event: 'KDD 论文发表', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
     ],
     experience: [
-      { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue' },
-      { organization: '美团', role: '算法研究实习生', unit: '核心本地商业 / M17', period: '2024.09 – 2025.01', summary: '参与 foundation model 预训练网页数据的清洗与质量评估；完成本地 7B 模型部署和全参数 fine-tuning，微调模型达到 GPT-4 基线约 96% 的 ROUGE-L。', tone: 'red' }
+      { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
+      { organization: '美团', role: '算法研究实习生', unit: '核心本地商业 / M17', period: '2024.09 – 2025.01', summary: '参与 foundation model 预训练网页数据的清洗与质量评估；完成本地 7B 模型部署和全参数 fine-tuning，微调模型达到 GPT-4 基线约 96% 的 ROUGE-L。', tone: 'red', start: 69.9, end: 73.8, row: 1 }
     ],
     awards: [
       '北京市大学生数学竞赛一等奖，2019、2020',
@@ -317,11 +321,11 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '改訂中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '査読中' }
     ],
-    timelineLabels: { education: '学歴', milestones: '主な歩み', work: '研究・インターン経験' },
+    timelineLabels: { education: '学歴', news: 'News', work: '研究・インターン経験' },
     education: [
       {
         institution: '北京郵電大学', shortName: 'BUPT', degree: 'コンピュータサイエンス・技術専攻 工学学士', unit: '',
-        period: '2018年9月 – 2022年7月', details: ['GPA：3.7 / 4.0', '順位：30 / 396（上位7.6%）'], tone: 'blue'
+        period: '2018年9月 – 2022年7月', details: ['GPA：3.7 / 4.0', '順位：30 / 396（上位7.6%）'], tone: 'blue', start: 0, end: 44.7
       },
       {
         institution: '北京航空航天大学',
@@ -331,6 +335,8 @@ export const content = {
         period: '2022年9月 – 2027年4月（修了予定）',
         details: [],
         tone: 'wine',
+        start: 46.6,
+        end: 100,
         advisorsLabel: '指導教員：',
         advisors: [
           { name: 'Wenfei Fan 教授（中国科学院院士）', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
@@ -338,19 +344,18 @@ export const content = {
         ]
       }
     ],
-    milestones: [
-      { year: '2019', lines: ['数学コンテスト', '一等賞'], position: 7, level: 'upper', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['数学コンテスト', '一等賞'], position: 18, level: 'lower', target: '#honors', tone: 'blue' },
-      { year: '2020', lines: ['MCM', 'Honorable Mention'], position: 29, level: 'upper', target: '#honors', tone: 'red' },
-      { year: '2022', lines: ['BUPT 卒業', 'Beihang 博士課程入学'], position: 43, level: 'lower', target: '#timeline', tone: 'wine' },
-      { year: '2024', lines: ['KDD · TODS'], position: 61, level: 'upper', target: '#publications', tone: 'wine' },
-      { year: '2025', lines: ['ICDE · SIGMOD · TODS'], position: 75, level: 'lower', target: '#publications', tone: 'red' },
-      { year: '2026', lines: ['ICDE · KDD'], position: 88, level: 'upper', target: '#publications', tone: 'blue' },
-      { year: '2027', lines: ['博士課程 修了予定'], position: 97, level: 'lower', target: '#timeline', tone: 'wine' }
+    news: [
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
+      { date: '2024.08', event: 'KDD 論文発表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2024.12', event: 'TODS 論文発表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2025.05', event: 'ICDE 論文発表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
+      { date: '2025.06', event: 'SIGMOD 論文発表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
+      { date: '2026.05', event: 'ICDE 論文発表', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
+      { date: '2026.08', event: 'KDD 論文発表', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
     ],
     experience: [
-      { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue' },
-      { organization: 'Meituan（美団）', role: 'アルゴリズム研究インターン', unit: 'Core Local Commerce / M17', period: '2024年9月 – 2025年1月', summary: '基盤モデルの事前学習用Webデータのクリーニングと品質評価、ローカル7Bモデルの導入・全パラメータファインチューニングに従事。GPT-4ベースラインの約96%に相当するROUGE-Lを達成。', tone: 'red' }
+      { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
+      { organization: 'Meituan（美団）', role: 'アルゴリズム研究インターン', unit: 'Core Local Commerce / M17', period: '2024年9月 – 2025年1月', summary: '基盤モデルの事前学習用Webデータのクリーニングと品質評価、ローカル7Bモデルの導入・全パラメータファインチューニングに従事。GPT-4ベースラインの約96%に相当するROUGE-Lを達成。', tone: 'red', start: 69.9, end: 73.8, row: 1 }
     ],
     awards: [
       '北京市大学生数学コンテスト 一等賞（2019、2020年）',

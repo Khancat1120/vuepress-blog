@@ -30,17 +30,17 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Education &amp; Experience', 'Selected Milestones', 'Research &amp; Internship', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2024.08', 'KDD Paper Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv/kehan-pang-cv-en.pdf',
     advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '研究方向', '教育与经历', '重要节点', '科研与实习', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '研究方向', '教育与经历', 'News', '科研与实习', '2024.08', 'KDD 论文发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-zh.pdf',
     advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '学歴・経歴', '主な歩み', '研究・インターン経験', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2024.08', 'KDD 論文発表', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-en.pdf',
     advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
@@ -106,9 +106,14 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert(html.includes('id="timeline"'), `${filename} is missing the integrated timeline`)
   assert(!html.includes('id="education"'), `${filename} still contains the separate Education section`)
   assert(!html.includes('id="experience"'), `${filename} still contains the separate Experience section`)
-  assert.strictEqual((html.match(/class="education-span /g) || []).length, 2, `${filename} does not contain exactly two education spans`)
-  assert.strictEqual((html.match(/class="milestone /g) || []).length, 8, `${filename} does not contain exactly eight milestones`)
-  assert.strictEqual((html.match(/class="work-entry /g) || []).length, 2, `${filename} does not contain exactly two work entries`)
+  assert.strictEqual((html.match(/class="education-range /g) || []).length, 2, `${filename} does not contain exactly two education ranges`)
+  assert.strictEqual((html.match(/class="news-event /g) || []).length, 7, `${filename} does not contain exactly seven News events`)
+  assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
+  assert.strictEqual((html.match(/class="unified-timeline__axis"/g) || []).length, 1, `${filename} does not contain exactly one main timeline axis`)
+  assert(!html.includes('milestone-track'), `${filename} still contains the retired milestone timeline`)
+  assert(!html.includes('education-track'), `${filename} still contains the retired education timeline`)
+  assert(!html.includes('work-track'), `${filename} still contains the retired work timeline`)
+  assert(!html.includes('Important Milestones') && !html.includes('重要节点') && !html.includes('主な歩み'), `${filename} still labels a separate milestone band`)
   assert(!html.includes('Academic Homepage'), `${filename} still contains the old hero eyebrow`)
   assert(!html.includes('class="hero'), `${filename} still contains the old hero`)
   assert(!html.includes('section-index'), `${filename} still contains section numbers`)
@@ -146,7 +151,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.milestone-track', 'overflow-x:auto', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
@@ -209,4 +214,4 @@ for (const required of ['メール', '予備メール', 'コンピュータサ�
   assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
 }
 
-console.log(`Validated ${htmlFiles.length} HTML pages, three profile rails, integrated timelines with eight milestones, source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
+console.log(`Validated ${htmlFiles.length} HTML pages, three profile rails, one shared time axis with seven dated News events, source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)

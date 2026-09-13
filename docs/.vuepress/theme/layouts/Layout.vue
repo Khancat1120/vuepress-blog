@@ -112,61 +112,76 @@
           </header>
 
           <div class="career-timeline">
-            <p class="timeline-band-label">{{ copy.timelineLabels.education }}</p>
-            <div class="education-track">
-              <article
-                v-for="item in copy.education"
-                :key="item.institution"
-                class="education-span"
-                :class="`tone-${item.tone}`"
-              >
-                <div class="education-span__topline">
-                  <h3>{{ item.institution }} <small>{{ item.shortName }}</small></h3>
-                  <time>{{ item.period }}</time>
-                </div>
-                <p class="education-span__summary">
-                  <strong>{{ item.degree }}</strong>
-                  <template v-for="detail in item.details"><span :key="detail"> · {{ detail }}</span></template>
-                  <template v-if="item.advisors">
-                    <span> · {{ item.advisorsLabel }} </span>
-                    <template v-for="(advisor, index) in item.advisors">
-                      <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">, </span>
-                    </template>
-                  </template>
-                </p>
-                <p v-if="item.unit" class="education-span__unit">{{ item.unit }}</p>
-              </article>
-            </div>
-
-            <p class="timeline-band-label timeline-band-label--milestones">{{ copy.timelineLabels.milestones }}</p>
-            <div class="milestone-scroll" tabindex="0">
-              <div class="milestone-track" :aria-label="copy.timelineLabels.milestones">
-                <span class="timeline-endpoint timeline-endpoint--start">2018</span>
-                <span class="timeline-endpoint timeline-endpoint--end">2027</span>
-                <a
-                  v-for="(milestone, index) in copy.milestones"
-                  :key="`${milestone.year}-${index}`"
-                  class="milestone"
-                  :class="[`milestone--${milestone.level}`, `tone-${milestone.tone}`]"
-                  :style="{ left: `${milestone.position}%` }"
-                  :href="milestone.target"
+            <div class="unified-timeline-scroll" tabindex="0" :aria-label="copy.sections.timeline">
+              <div class="unified-timeline">
+                <p class="timeline-layer-label timeline-layer-label--education">{{ copy.timelineLabels.education }}</p>
+                <article
+                  v-for="item in copy.education"
+                  :key="item.institution"
+                  class="education-range"
+                  :class="`tone-${item.tone}`"
+                  :style="{ left: `${item.start}%`, width: `${item.end - item.start}%` }"
                 >
-                  <span class="milestone__year">{{ milestone.year }}</span>
-                  <span v-for="line in milestone.lines" :key="line" class="milestone__line">{{ line }}</span>
-                </a>
-              </div>
-            </div>
+                  <div class="education-range__content">
+                    <div class="education-range__topline">
+                      <h3>{{ item.institution }} <small>{{ item.shortName }}</small></h3>
+                      <time>{{ item.period }}</time>
+                    </div>
+                    <p class="education-range__summary">
+                      <strong>{{ item.degree }}</strong>
+                      <template v-for="detail in item.details"><span :key="detail"> · {{ detail }}</span></template>
+                      <template v-if="item.advisors">
+                        <span> · {{ item.advisorsLabel }} </span>
+                        <template v-for="(advisor, index) in item.advisors">
+                          <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">, </span>
+                        </template>
+                      </template>
+                    </p>
+                    <p v-if="item.unit" class="education-range__unit">{{ item.unit }}</p>
+                  </div>
+                  <span class="timeline-range-bar" aria-hidden="true"></span>
+                </article>
 
-            <p class="timeline-band-label timeline-band-label--work">{{ copy.timelineLabels.work }}</p>
-            <div class="work-track">
-              <article v-for="item in copy.experience" :key="item.organization" class="work-entry" :class="`tone-${item.tone}`">
-                <div class="work-entry__topline">
-                  <h3>{{ item.organization }}</h3>
-                  <time>{{ item.period }}</time>
+                <p class="timeline-layer-label timeline-layer-label--news">{{ copy.timelineLabels.news }}</p>
+                <div class="unified-timeline__axis" aria-hidden="true">
+                  <time class="timeline-endpoint timeline-endpoint--start">2018.09</time>
+                  <time class="timeline-endpoint timeline-endpoint--end">2027.04</time>
                 </div>
-                <p class="work-entry__role">{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
-                <p class="work-entry__summary">{{ item.summary }}</p>
-              </article>
+                <a
+                  v-for="item in copy.news"
+                  :key="`${item.date}-${item.event}`"
+                  class="news-event"
+                  :class="[
+                    `news-event--${item.side}`,
+                    `news-event--lane-${item.lane}`,
+                    `tone-${item.tone}`,
+                    { 'news-event--align-end': item.align === 'end' }
+                  ]"
+                  :style="{ left: `${item.position}%` }"
+                  :href="item.target"
+                >
+                  <span class="news-event__connector" aria-hidden="true"></span>
+                  <span class="news-event__label"><time>{{ item.date }}</time><span> · {{ item.event }}</span></span>
+                </a>
+
+                <p class="timeline-layer-label timeline-layer-label--experience">{{ copy.timelineLabels.work }}</p>
+                <article
+                  v-for="item in copy.experience"
+                  :key="item.organization"
+                  class="experience-range"
+                  :class="[`experience-range--row-${item.row}`, `tone-${item.tone}`]"
+                  :style="{ left: `${item.start}%`, width: `${item.end - item.start}%` }"
+                >
+                  <span class="timeline-range-bar" aria-hidden="true"></span>
+                  <div class="experience-range__content">
+                    <div class="experience-range__topline">
+                      <h3>{{ item.organization }}</h3>
+                      <time>{{ item.period }}</time>
+                    </div>
+                    <p>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </section>
