@@ -94,7 +94,7 @@ export default {
     },
     updateThemeColor () {
       const meta = document.querySelector('meta[name="theme-color"]')
-      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f5f6f7')
+      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f2f3f4')
     }
   }
 }

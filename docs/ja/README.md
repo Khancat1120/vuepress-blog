@@ -2,7 +2,7 @@
 locale: ja
 meta:
   - name: description
-    content: 北京航空航天大学でグラフデータマイニング、グラフデータ品質、グラフ知識推論、大規模言語モデルを研究する Kehan Pang の研究者ホームページです。
+    content: 北京航空航天大学でグラフデータマイニング、グラフデータ品質、グラフ知識推論を研究する Kehan Pang の研究者ホームページです。
   - property: og:title
     content: Kehan Pang | 北京航空航天大学 博士課程
   - property: og:description

@@ -3,12 +3,12 @@ html[data-theme="light"] {
   color-scheme: light;
   --ink: #25272a;
   --ink-strong: #17191c;
-  --ink-soft: #686d73;
-  --paper: #f5f6f7;
-  --surface: #fafafa;
-  --header-bg: #f5f6f7;
-  --line: #dedfe2;
-  --line-soft: #e7e8ea;
+  --ink-soft: #656a70;
+  --paper: #f2f3f4;
+  --surface: #f7f7f8;
+  --header-bg: #f2f3f4;
+  --line: #d9dbde;
+  --line-soft: #e2e4e6;
   --mygo-blue: #557d98;
   --mujica-wine: #704653;
   --gbc-red: #a25b52;
@@ -17,7 +17,7 @@ html[data-theme="light"] {
   --badge-border: #cdd7de;
   --badge-ink: #42677c;
   --status-border: #dacbd0;
-  --footer-bg: #eef0f2;
+  --footer-bg: #e9ecee;
   --max-width: 900px;
   --header-height: 56px;
 }
@@ -337,6 +337,11 @@ button:focus-visible {
 
 .prose p:last-child {
   margin-bottom: 0;
+}
+
+.prose strong {
+  color: var(--ink-strong);
+  font-weight: 680;
 }
 
 .profile-details {

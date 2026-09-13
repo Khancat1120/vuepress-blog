@@ -30,31 +30,44 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal'],
+    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University, No. 37 Xueyuan Road, Haidian District, Beijing, China'],
     cv: '/cv/kehan-pang-cv-en.pdf',
-    advisor: 'Prof. Wenfei Fan (Foreign Member of CAS)'
+    advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '研究方向', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞 院士'],
+    phrases: ['庞可涵', '关于我', '研究方向', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号 北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-zh.pdf',
-    advisor: '樊文飞 院士'
+    advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル'],
+    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '研究業績', '研究・職務経験', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号 北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-en.pdf',
-    advisor: 'Wenfei Fan 教授（中国科学院外国人会員）'
+    advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
 }
 
 const interests = {
-  'index.html': ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning', 'Large Language Models'],
-  'zh/index.html': ['图数据挖掘', '图数据质量', '图知识推理', '大语言模型'],
-  'ja/index.html': ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論', '大規模言語モデル']
+  'index.html': ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning'],
+  'zh/index.html': ['图数据挖掘', '图数据质量', '图知识推理'],
+  'ja/index.html': ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論']
+}
+
+const removedInterests = {
+  'index.html': 'Large Language Models',
+  'zh/index.html': '大语言模型',
+  'ja/index.html': '大規模言語モデル'
+}
+
+const boldResearchTerms = {
+  'index.html': ['Graph Data Mining', 'Graph Data Quality', 'Graph Data Cleaning', 'Graph Knowledge Reasoning', 'Data-centric AI'],
+  'zh/index.html': ['图数据挖掘', '图数据质量', '图数据清洗', '图知识推理', 'Data-centric AI'],
+  'ja/index.html': ['グラフデータマイニング', 'グラフデータ品質', 'グラフデータクリーニング', 'グラフ知識推論', 'Data-centric AI']
 }
 
 for (const [filename, expected] of Object.entries(expectedPages)) {
   const html = fs.readFileSync(path.join(dist, filename), 'utf8')
   for (const phrase of expected.phrases) assert(html.includes(phrase), `${filename} is missing ${phrase}`)
+  assert(html.includes(expected.advisor), `${filename} is missing the expected advisor title`)
   for (const link of [expected.cv, 'https://github.com/KehanPang', 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ']) {
     assert(html.includes(link), `${filename} is missing ${link}`)
   }
@@ -67,6 +80,13 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   for (const interest of interests[filename]) assert(html.includes(interest), `${filename} is missing ${interest}`)
   const positions = interests[filename].map(interest => html.indexOf(interest))
   assert(positions.every((position, index) => index === 0 || position > positions[index - 1]), `${filename} has the wrong research-interest order`)
+  const researchBlock = html.slice(html.indexOf('id="research-interests"'), html.indexOf('</dd>', html.indexOf('id="research-interests"')))
+  assert(!researchBlock.includes(removedInterests[filename]), `${filename} still lists ${removedInterests[filename]} as a research interest`)
+  const aboutBlock = html.slice(html.indexOf('id="about"'), html.indexOf('class="profile-details"'))
+  for (const term of boldResearchTerms[filename]) assert(aboutBlock.includes(`<strong>${term}</strong>`), `${filename} does not emphasize ${term}`)
+  for (const advisorUrl of ['https://cs.pku.edu.cn/info/1008/2707.htm', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
+    assert(aboutBlock.includes(`href="${advisorUrl}" target="_blank" rel="noopener noreferrer"`), `${filename} does not link the advisor name in About`)
+  }
   assert(html.includes('href="mailto:pangkehan@buaa.edu.cn"'), `${filename} is missing the primary email`)
   assert(html.includes('href="mailto:k3hanpang@gmail.com"'), `${filename} is missing the alternative email`)
   assert(html.includes('class="page-toc"'), `${filename} is missing the page table of contents`)
@@ -111,7 +131,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f5f6f7', '--paper:#181a1e', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f2f3f4', '--paper:#181a1e', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
@@ -131,15 +151,13 @@ for (const filename of [englishCv, chineseCv, aliasCv]) {
   assert.strictEqual(pdfPages(filename), 2, `${filename} is not a two-page PDF`)
 }
 assert.strictEqual(digest(englishCv), digest(aliasCv), 'the legacy CV alias differs from the English CV')
+assert.strictEqual(digest(englishCv), digest(path.resolve(projectRoot, "../KehanPang's Resume-202608.pdf")), 'the published English CV differs from the user-provided canonical source')
 assert.strictEqual(digest(chineseCv), digest(path.resolve(projectRoot, '../庞可涵的个人简历-202608.pdf')), 'the published Chinese CV differs from its selected source')
 
-const cvText = fs.readFileSync(path.join(projectRoot, 'cv/kehan-pang-cv.tex'), 'utf8')
-for (const section of ['Education', 'Work Experience', 'Research Experience', 'Awards and Academic Service', 'Research and Technical Expertise', 'Publications', 'Manuscripts']) {
-  assert(cvText.includes(section), `English CV is missing ${section}`)
-}
-assert(!/[\u3400-\u9fff]/.test(cvText), 'English CV contains Chinese text')
-assert(cvText.includes('\\usepackage{fontawesome5}'), 'English CV does not use FontAwesome section icons')
-assert(cvText.includes('\\newpage'), 'English CV source does not define its intentional second page')
+const packageJson = fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8')
+const cvSyncScript = fs.readFileSync(path.join(projectRoot, 'scripts/sync-cv.sh'), 'utf8')
+assert(!packageJson.includes('latexmk'), 'package scripts still invoke LaTeX')
+assert(!cvSyncScript.includes('latexmk'), 'CV synchronization still invokes LaTeX')
 
 const gifSource = path.resolve(projectRoot, '../nina-iseri-girls-band-cry.gif')
 const gifPublic = path.join(dist, 'nina-iseri-girls-band-cry.gif')
@@ -147,21 +165,33 @@ assert.strictEqual(digest(gifPublic), digest(gifSource), 'the public 404 GIF dif
 
 for (const asset of [
   'portrait.webp',
-  'favicon-kehan-portrait-v3-512.png',
-  'favicon-kehan-portrait-v3-192.png',
-  'favicon-kehan-portrait-v3-32.png',
-  'favicon-kehan-portrait-v3-16.png',
-  'apple-touch-icon-kehan-v3.png'
+  'favicon-kehan-image-v4.png',
+  'favicon-kehan-image-v4-192.png',
+  'favicon-kehan-image-v4-32.png',
+  'favicon-kehan-image-v4-16.png',
+  'apple-touch-icon-v4.png'
 ]) {
   assert(fs.statSync(path.join(dist, asset)).size > 100, `${asset} is missing or unexpectedly small`)
+}
+assert.strictEqual(digest(path.join(dist, 'favicon-kehan-image-v4.png')), digest(path.resolve(projectRoot, '../image.png')), 'the primary favicon differs from image.png')
+for (const retired of ['favicon-kehan-portrait-v3-512.png', 'favicon-kehan-portrait-v3-192.png', 'favicon-kehan-portrait-v3-32.png', 'favicon-kehan-portrait-v3-16.png', 'apple-touch-icon-kehan-v3.png', 'favicon.svg']) {
+  assert(!relativeFiles.includes(retired), `retired favicon remains: ${retired}`)
 }
 
 for (const filename of ['index.html', 'zh/index.html', 'ja/index.html', '404.html']) {
   const html = fs.readFileSync(path.join(dist, filename), 'utf8')
-  for (const icon of ['/favicon-kehan-portrait-v3-32.png', '/favicon-kehan-portrait-v3-16.png', '/apple-touch-icon-kehan-v3.png']) {
+  for (const icon of ['/favicon-kehan-image-v4.png', '/favicon-kehan-image-v4-32.png', '/favicon-kehan-image-v4-16.png', '/apple-touch-icon-v4.png']) {
     assert(html.includes(icon), `${filename} does not reference ${icon}`)
   }
   assert(html.includes("localStorage.getItem('theme')"), `${filename} lacks the early theme initializer`)
 }
 
-console.log(`Validated ${htmlFiles.length} HTML pages, locale-aware CVs, portrait favicons, animated 404, light/dark themes, page TOC, external links, and legacy-route removal.`)
+const japaneseHtml = fs.readFileSync(path.join(dist, 'ja/index.html'), 'utf8')
+for (const forbidden of ['计算机', 'コンピューター', 'データ中心', 'データセンター', '>Email<', '執筆']) {
+  assert(!japaneseHtml.includes(forbidden), `Japanese page contains inconsistent wording: ${forbidden}`)
+}
+for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'Data-centric AI', '数学コンテスト', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
+  assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
+}
+
+console.log(`Validated ${htmlFiles.length} HTML pages, source-identical CVs, image.png favicons, localized profile content, animated 404, themes, page TOC, and legacy-route removal.`)

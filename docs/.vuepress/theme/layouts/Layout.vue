@@ -59,7 +59,7 @@
           <div id="about" class="profile-about anchor-target" :aria-labelledby="'about-title'">
             <h2 id="about-title">{{ copy.sections.about }}</h2>
             <div class="prose">
-              <p v-for="paragraph in copy.about" :key="paragraph">{{ paragraph }}</p>
+              <p v-for="paragraph in copy.about" :key="paragraph" v-html="paragraph"></p>
             </div>
           </div>
 
@@ -73,10 +73,14 @@
               </dd>
             </div>
             <div>
-              <dt>{{ copy.profileLabel }}</dt>
+              <dt>{{ copy.mbtiLabel }}</dt>
+              <dd>{{ copy.mbti }}</dd>
+            </div>
+            <div>
+              <dt>{{ copy.hobbiesLabel }}</dt>
               <dd>
-                <span v-for="(item, index) in copy.profile" :key="item">
-                  {{ item }}<template v-if="index < copy.profile.length - 1"> · </template>
+                <span v-for="(item, index) in copy.hobbies" :key="item">
+                  {{ item }}<template v-if="index < copy.hobbies.length - 1"> · </template>
                 </span>
               </dd>
             </div>
@@ -201,8 +205,9 @@
         </header>
         <p>{{ copy.contactLead }}</p>
         <div class="contact-emails">
-          <p><span>{{ copy.emailLabel }}:</span> <a class="email-link" href="mailto:pangkehan@buaa.edu.cn">pangkehan@buaa.edu.cn</a></p>
-          <p><span>{{ copy.alternativeEmailLabel }}:</span> <a class="email-link" href="mailto:k3hanpang@gmail.com">k3hanpang@gmail.com</a></p>
+          <p><span>{{ copy.emailLabel }}{{ copy.labelSeparator }}</span> <a class="email-link" href="mailto:pangkehan@buaa.edu.cn">pangkehan@buaa.edu.cn</a></p>
+          <p><span>{{ copy.alternativeEmailLabel }}{{ copy.labelSeparator }}</span> <a class="email-link" href="mailto:k3hanpang@gmail.com">k3hanpang@gmail.com</a></p>
+          <p class="address-line"><span>{{ copy.addressLabel }}{{ copy.labelSeparator }}</span> {{ copy.address }}</p>
         </div>
       </section>
     </main>
@@ -242,6 +247,7 @@ export default {
     return {
       activeSection: 'about',
       observer: null,
+      scrollFrame: null,
       theme: 'light'
     }
   },
@@ -291,9 +297,12 @@ export default {
     this.theme = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
     this.updateThemeColor()
     this.setupSectionObserver()
+    window.addEventListener('scroll', this.handleSectionScroll, { passive: true })
   },
   beforeDestroy () {
     if (this.observer) this.observer.disconnect()
+    window.removeEventListener('scroll', this.handleSectionScroll)
+    if (this.scrollFrame) window.cancelAnimationFrame(this.scrollFrame)
   },
   methods: {
     switchLanguage (event, path) {
@@ -310,7 +319,28 @@ export default {
     },
     updateThemeColor () {
       const meta = document.querySelector('meta[name="theme-color"]')
-      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f5f6f7')
+      if (meta) meta.setAttribute('content', this.theme === 'dark' ? '#181a1e' : '#f2f3f4')
+    },
+    handleSectionScroll () {
+      if (this.scrollFrame) return
+      this.scrollFrame = window.requestAnimationFrame(() => {
+        this.scrollFrame = null
+        this.updateActiveSection()
+      })
+    },
+    updateActiveSection () {
+      const targets = this.tocItems
+        .map(item => document.getElementById(item.id))
+        .filter(Boolean)
+      if (!targets.length) return
+      const atPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+      if (atPageEnd) {
+        this.activeSection = targets[targets.length - 1].id
+        return
+      }
+      const offset = 82
+      const reached = targets.filter(target => target.getBoundingClientRect().top <= offset)
+      this.activeSection = (reached[reached.length - 1] || targets[0]).id
     },
     setupSectionObserver () {
       if (!('IntersectionObserver' in window)) return
@@ -319,9 +349,7 @@ export default {
           .map(item => document.getElementById(item.id))
           .filter(Boolean)
         this.observer = new IntersectionObserver(() => {
-          const offset = 82
-          const reached = targets.filter(target => target.getBoundingClientRect().top <= offset)
-          this.activeSection = (reached[reached.length - 1] || targets[0]).id
+          this.updateActiveSection()
         }, {
           rootMargin: '-78px 0px -65% 0px',
           threshold: [0, 0.01, 0.25]

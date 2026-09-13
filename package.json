@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs --temp .vuepress-temp --cache .vuepress-cache",
-    "build:cv": "bash scripts/build-cv.sh",
-    "build": "npm run build:cv && vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js",
+    "sync:cv": "bash scripts/sync-cv.sh",
+    "build": "npm run sync:cv && vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js",
     "validate": "node scripts/validate-build.js",
     "sync:dist": "bash scripts/sync-dist.sh",
     "docs:dev": "npm run dev",
