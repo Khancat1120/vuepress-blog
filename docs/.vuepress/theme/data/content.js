@@ -180,7 +180,7 @@ export const content = {
         role: 'Research Intern',
         period: 'Jul. 2023 – Jan. 2024',
         detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.',
-        tone: 'blue', start: 56.3, end: 62.1, row: 0
+        tone: 'blue', start: 56.3, end: 62.1, layoutStart: 54, row: 0
       },
       {
         organization: 'Meituan',
@@ -188,7 +188,7 @@ export const content = {
         unit: 'Core Local Commerce / M17',
         period: 'Sep. 2024 – Jan. 2025',
         detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.',
-        tone: 'yellow', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, layoutStart: 68, row: 1
       }
     ],
     awards: [
@@ -298,7 +298,7 @@ export const content = {
         role: '实习研究员',
         period: '2023.07 – 2024.01',
         detail: '参与图数据治理与增强、图神经网络可解释性、图计算系统，以及大规模数据场景下大语言模型的低资源适配等方向的研究。期间产出多篇学术论文，发表于 TODS、ICDE 等 CCF-A 类期刊与会议。',
-        tone: 'blue', start: 56.3, end: 62.1, row: 0
+        tone: 'blue', start: 56.3, end: 62.1, layoutStart: 54, row: 0
       },
       {
         organization: '美团',
@@ -306,7 +306,7 @@ export const content = {
         unit: '核心本地商业 / M17',
         period: '2024.09 – 2025.01',
         detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。',
-        tone: 'yellow', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, layoutStart: 68, row: 1
       }
     ],
     awards: [
@@ -415,7 +415,7 @@ export const content = {
         role: '研究インターン',
         period: '2023年7月 – 2024年1月',
         detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。',
-        tone: 'blue', start: 56.3, end: 62.1, row: 0
+        tone: 'blue', start: 56.3, end: 62.1, layoutStart: 54, row: 0
       },
       {
         organization: 'Meituan（美団）',
@@ -423,7 +423,7 @@ export const content = {
         unit: 'Core Local Commerce / M17',
         period: '2024年9月 – 2025年1月',
         detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。',
-        tone: 'yellow', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, layoutStart: 68, row: 1
       }
     ],
     awards: [

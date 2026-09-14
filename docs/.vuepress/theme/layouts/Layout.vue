@@ -83,9 +83,9 @@
           </div>
 
           <dl class="profile-details">
-            <div id="research-interests" class="anchor-target">
-              <dt>{{ copy.researchLabel }}</dt>
-              <dd>
+            <div id="research-interests" class="profile-meta-row anchor-target">
+              <dt class="profile-meta-label">{{ copy.researchLabel }}</dt>
+              <dd class="profile-meta-value">
                 <span v-for="(item, index) in copy.research" :key="item">
                   {{ item }}<template v-if="index < copy.research.length - 1"> · </template>
                 </span>
@@ -101,7 +101,10 @@
                   :aria-pressed="personalRevealed ? 'true' : 'false'"
                   @click="togglePersonal"
                 >
-                  <span class="personal-secret" :class="{ 'is-revealed': personalRevealed }">{{ copy.personalLabel }}{{ copy.labelSeparator }}{{ copy.personalInfo }}</span>
+                  <span class="personal-secret profile-meta-row" :class="{ 'is-revealed': personalRevealed }">
+                    <span class="profile-meta-label">{{ copy.personalLabel }}</span>
+                    <span class="profile-meta-value">{{ copy.personalInfo }}</span>
+                  </span>
                 </button>
               </dd>
             </div>
@@ -180,22 +183,22 @@
                     :key="item.organization"
                     class="experience-disclosure"
                     :class="[`tone-${item.tone}`, `experience-disclosure--row-${item.row}`]"
+                    :style="experienceItemStyle(item)"
                   >
                     <summary class="experience-summary">
                       <span
                         class="experience-range"
-                        :class="`experience-range--row-${item.row}`"
-                        :style="{ left: `${item.start}%`, width: `${item.end - item.start}%` }"
+                        :style="experienceRangeStyle(item)"
                       >
                         <span class="timeline-range-bar" aria-hidden="true"></span>
-                        <span class="experience-range__content">
-                          <span class="experience-disclosure__marker" aria-hidden="true"></span>
-                          <span class="experience-range__topline">
-                            <strong class="experience-range__name">{{ item.organization }}</strong>
-                            <time>{{ item.period }}</time>
-                          </span>
-                          <span class="experience-range__role"><span v-if="item.department">{{ item.department }} · </span>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></span>
+                      </span>
+                      <span class="experience-range__content">
+                        <span class="experience-disclosure__marker" aria-hidden="true"></span>
+                        <span class="experience-range__topline">
+                          <strong class="experience-range__name">{{ item.organization }}</strong>
+                          <time>{{ item.period }}</time>
                         </span>
+                        <span class="experience-range__role"><span v-if="item.department">{{ item.department }} · </span>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></span>
                       </span>
                     </summary>
                     <div class="experience-detail">
@@ -425,6 +428,19 @@ export default {
     },
     togglePersonal () {
       this.personalRevealed = !this.personalRevealed
+    },
+    experienceItemStyle (item) {
+      return {
+        marginLeft: `${item.layoutStart}%`,
+        width: `${100 - item.layoutStart}%`
+      }
+    },
+    experienceRangeStyle (item) {
+      const itemWidth = 100 - item.layoutStart
+      return {
+        left: `${((item.start - item.layoutStart) / itemWidth) * 100}%`,
+        width: `${((item.end - item.start) / itemWidth) * 100}%`
+      }
     },
     scrollToTimelineTarget (event, target) {
       if (typeof window === 'undefined' || !target || !target.startsWith('#')) return

@@ -99,15 +99,15 @@ const experienceDetails = {
 
 const personalDetails = {
   'index.html': {
-    label: 'Beyond Research:', info: 'INTP / Scorpio / Guitar / ACGN', reveal: 'Reveal personal interests',
+    label: 'Beyond Research', info: 'INTP / Scorpio / Guitar / ACGN', reveal: 'Reveal personal interests',
     retired: ['>MBTI<', '>Hobbies<', 'Sleeping', 'Fiction Writing']
   },
   'zh/index.html': {
-    label: '研究之外：', info: 'INTP / 天蝎座 / 吉他 / ACGN', reveal: '显示研究之外的信息',
+    label: '研究之外', info: 'INTP / 天蝎座 / 吉他 / ACGN', reveal: '显示研究之外的信息',
     retired: ['>MBTI<', '>兴趣爱好<', '睡觉', '创作', '小说与同人创作']
   },
   'ja/index.html': {
-    label: '研究以外：', info: 'INTP / さそり座 / ギター / ACGN', reveal: '研究以外の情報を表示',
+    label: '研究以外', info: 'INTP / さそり座 / ギター / ACGN', reveal: '研究以外の情報を表示',
     retired: ['>MBTI<', '>趣味<', '睡眠', '小説・二次創作']
   }
 }
@@ -174,6 +174,9 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   const personal = personalDetails[filename]
   const profileDetailsHtml = html.slice(html.indexOf('class="profile-details"'), html.indexOf('</dl>', html.indexOf('class="profile-details"')))
   assert.strictEqual((profileDetailsHtml.match(/<dt/g) || []).length, 2, `${filename} still contains separate MBTI or Hobbies rows`)
+  assert.strictEqual((profileDetailsHtml.match(/profile-meta-row/g) || []).length, 2, `${filename} does not share one typography grid across both profile metadata rows`)
+  assert.strictEqual((profileDetailsHtml.match(/profile-meta-label/g) || []).length, 2, `${filename} does not share the Research Interests label typography`)
+  assert.strictEqual((profileDetailsHtml.match(/profile-meta-value/g) || []).length, 2, `${filename} does not share the Research Interests value typography`)
   assert(profileDetailsHtml.includes(personal.label), `${filename} is missing the localized personal-information label`)
   const personalButton = profileDetailsHtml.match(/<button[^>]*class="personal-reveal"[^>]*>/)
   assert(personalButton, `${filename} is missing the personal-information reveal button`)
@@ -181,7 +184,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
     assert(personalButton[0].includes(attribute), `${filename} is missing ${attribute} on the personal-information reveal button`)
   }
   const personalButtonHtml = profileDetailsHtml.slice(profileDetailsHtml.indexOf('<button'), profileDetailsHtml.indexOf('</button>') + 9)
-  assert(personalButtonHtml.includes('class="personal-secret"'), `${filename} does not mask the complete personal-information line`)
+  assert(personalButtonHtml.includes('class="personal-secret profile-meta-row"'), `${filename} does not mask the complete personal-information line`)
   assert(personalButtonHtml.includes(personal.label), `${filename} leaves the personal-information label outside the mask`)
   assert(personalButtonHtml.includes(personal.info), `${filename} is missing the masked personal information`)
   for (const retired of personal.retired) assert(!html.includes(retired), `${filename} still exposes retired personal-information text: ${retired}`)
@@ -189,7 +192,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 11, `${filename} does not render every News date on its own line`)
   assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 11, `${filename} does not render every News event on its own line`)
   assert.strictEqual((html.match(/class="news-event__status"/g) || []).length, 11, `${filename} does not render every News status on its own line`)
-  assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
+  assert.strictEqual((html.match(/class="experience-range"/g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
   assert.strictEqual((html.match(/<details class="experience-disclosure /g) || []).length, 2, `${filename} does not contain two native Experience disclosures`)
   assert.strictEqual((html.match(/class="experience-summary"/g) || []).length, 2, `${filename} does not contain two Experience summaries`)
   assert.strictEqual((html.match(/class="experience-detail"/g) || []).length, 2, `${filename} does not contain two Experience detail regions`)
@@ -273,7 +276,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '--sics-blue:', '--meituan-gold:', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event__status', '.news-event--award-subtle', '.publication-anchor', '.experience-disclosure.tone-yellow', 'margin:0 0 14px 54%', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '--sics-blue:', '--meituan-gold:', '.profile-rail', '.profile-meta-row', '.unified-timeline__axis', '.news-event__label', '.news-event__status', '.news-event--award-subtle', '.publication-anchor', '.experience-disclosure+.experience-disclosure', '.experience-disclosure.tone-yellow', '.experience-detail{position:relative;width:100%', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
