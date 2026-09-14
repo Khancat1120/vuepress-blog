@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 *.swp
 *.swo
+/cv.pdf
+/简历.pdf

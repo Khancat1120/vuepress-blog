@@ -1,8 +1,6 @@
-const versionedPdf = (pathname, version) => `${pathname}?v=${version}`
-
 export const links = {
-  cvEn: versionedPdf('/cv.pdf', __CV_VERSION__),
-  cvZh: versionedPdf('/简历.pdf', __ZH_CV_VERSION__),
+  cvEn: '/cv.pdf',
+  cvZh: '/简历.pdf',
   github: 'https://github.com/KehanPang',
   scholar: 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ',
   orcid: 'https://orcid.org/0009-0006-4086-1421'

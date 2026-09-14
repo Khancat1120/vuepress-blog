@@ -2,8 +2,9 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-ENGLISH_CV_SOURCE="$PROJECT_ROOT/cv.pdf"
-CHINESE_CV_SOURCE="$PROJECT_ROOT/简历.pdf"
+WORKSPACE_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
+ENGLISH_CV_SOURCE="$WORKSPACE_ROOT/cv.pdf"
+CHINESE_CV_SOURCE="$WORKSPACE_ROOT/简历.pdf"
 DIST_DIR="$PROJECT_ROOT/docs/.vuepress/dist"
 ENGLISH_CV_TARGET="$DIST_DIR/cv.pdf"
 CHINESE_CV_TARGET="$DIST_DIR/简历.pdf"
