@@ -85,16 +85,16 @@ const advisorNames = {
 
 const experienceDetails = {
   'index.html': [
-    { roleParts: ['Research Intern'], detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.' },
-    { roleParts: ['Algorithm Research Intern', ' · Core Local Commerce / M17'], detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.' }
+    { roleParts: ['Research Intern'], detail: 'Conducted research on graph data governance and enhancement, GNN explainability, graph computing systems, and low-resource adaptation of LLMs in large-scale data settings. This work resulted in multiple publications at CCF-A venues, including ACM TODS and IEEE ICDE.' },
+    { roleParts: ['Algorithm Research Intern', ' · Core Local Commerce / M17'], detail: 'Contributed to web-data cleaning and quality assessment for foundation-model pretraining; deployed a local 7B model and performed full-parameter SFT. The fine-tuned model achieved approximately 96% of the GPT-4 baseline in ROUGE-L and outperformed conventional methods by approximately 6%.' }
   ],
   'zh/index.html': [
-    { roleParts: ['基础研究部 · ', '实习研究员'], detail: '参与图数据治理与增强、图神经网络可解释性、图计算系统，以及大规模数据场景下大语言模型的低资源适配等方向的研究。期间产出多篇学术论文，发表于 TODS、ICDE 等 CCF-A 类期刊与会议。' },
-    { roleParts: ['算法研究实习生', ' · 核心本地商业 / M17'], detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。' }
+    { roleParts: ['基础研究部 · ', '实习研究员'], detail: '参与图数据治理与增强、图神经网络可解释性、图计算系统，以及大规模数据场景下大语言模型的低资源适配等方向的研究。期间成功产出多篇学术论文，发表于 TODS、ICDE 等 CCF A 类期刊与会议。' },
+    { roleParts: ['算法研究实习生', ' · 核心本地商业 / M17'], detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%，较传统方法提升约 6%。' }
   ],
   'ja/index.html': [
-    { roleParts: ['研究インターン'], detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。' },
-    { roleParts: ['アルゴリズム研究インターン', ' · Core Local Commerce / M17'], detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。' }
+    { roleParts: ['研究インターン'], detail: 'グラフデータガバナンスとデータ強化、GNNの説明可能性、グラフコンピューティングシステム、および大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。これらの研究成果として、ACM TODSやIEEE ICDEなどのCCF-Aランクのジャーナル・国際会議で複数の論文を発表しました。' },
+    { roleParts: ['アルゴリズム研究インターン', ' · Core Local Commerce / M17'], detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価に携わり、ローカル7BモデルのデプロイおよびフルパラメータSFTを実施しました。ファインチューニング後のモデルは、WebデータクリーニングタスクにおいてROUGE-LでGPT-4ベースラインの約96%を達成し、従来手法を約6%上回りました。' }
   ]
 }
 
