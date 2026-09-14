@@ -1,6 +1,10 @@
-docs/.vuepress/dist
-node_modules
-.vuepress-temp
-.vuepress-cache
+node_modules/
+docs/.vuepress/dist/
+.vuepress-temp/
+.vuepress-cache/
 __pycache__/
 *.py[cod]
+*.log
+.DS_Store
+*.swp
+*.swo

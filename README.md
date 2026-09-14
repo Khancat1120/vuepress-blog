@@ -1,29 +1,17 @@
 # Kehan Pang — Academic Homepage
 
-A multilingual academic homepage built with VuePress 1.x. English is served at
-`/`, Chinese at `/zh/`, and Japanese at `/ja/`.
+VuePress 1.x source for the multilingual academic homepage. English is served
+at `/`, Chinese at `/zh/`, and Japanese at `/ja/`.
 
-## Local workflow
+The canonical CV files are `cv.pdf` and `简历.pdf`. `npm run build` copies them
+unchanged to the generated site, then `npm run validate` verifies the pages and
+file checksums.
 
-```bash
-npm run dev
-npm run build
-npm run validate
-```
-
-`npm run build` also regenerates `kehan-pang-cv.pdf` from `cv/kehan-pang-cv.tex`
-and adds canonical and `hreflang` metadata to the built pages.
-
-To mirror a validated build into the local GitHub Pages working tree, run:
+Use the workspace-level deployment command from `/home/kehan/Blog`:
 
 ```bash
-npm run sync:dist
+./run.sh "update site"
 ```
 
-The sync uses deletion-aware `rsync` while explicitly protecting the Pages
-repository's `.git` directory. It never commits or pushes. `run.sh` performs the
-build, validation, and local sync in sequence and likewise performs no Git write
-to a remote.
-
-The former blog sources and assets are retained outside this public repository
-at `/home/kehan/Blog/legacy-blog-archive`.
+Historical blog writing is stored outside this public source repository in
+`/home/kehan/Blog/legacy-blog-archive/md_files` and is not part of the build.

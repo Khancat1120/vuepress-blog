@@ -325,6 +325,24 @@ assert(cvSyncScript.includes('$PROJECT_ROOT/简历.pdf'), 'CV synchronization do
 assert(cvSyncScript.includes('$DIST_DIR/cv.pdf'), 'CV synchronization does not publish /cv.pdf')
 assert(cvSyncScript.includes('$DIST_DIR/简历.pdf'), 'CV synchronization does not publish /简历.pdf')
 
+const packageMetadata = JSON.parse(packageJson)
+assert.deepStrictEqual(Object.keys(packageMetadata.dependencies).sort(), ['vue', 'vue-server-renderer'], 'package.json still contains retired runtime dependencies')
+assert.deepStrictEqual(Object.keys(packageMetadata.devDependencies).sort(), ['vuepress'], 'package.json still contains retired build plugins')
+for (const retiredSource of [
+  'revise.py',
+  'run.sh',
+  'yarn.lock',
+  '.gitattributes',
+  'cv/kehan-pang-cv.tex',
+  'docs/.vuepress/components',
+  'docs/.vuepress/config',
+  'docs/.vuepress/enhanceApp.js',
+  'docs/.vuepress/plugins',
+  'docs/.vuepress/styles'
+]) {
+  assert(!fs.existsSync(path.join(projectRoot, retiredSource)), `retired blog source remains: ${retiredSource}`)
+}
+
 const gifSource = path.resolve(projectRoot, '../nina-iseri-girls-band-cry.gif')
 const gifPublic = path.join(dist, 'nina-iseri-girls-band-cry.gif')
 assert.strictEqual(digest(gifPublic), digest(gifSource), 'the public 404 GIF differs from the user-provided source')

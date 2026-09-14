@@ -8,40 +8,16 @@
     "sync:cv": "bash scripts/sync-cv.sh",
     "build": "vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js && npm run sync:cv",
     "validate": "node scripts/validate-build.js",
-    "sync:dist": "bash scripts/sync-dist.sh",
-    "docs:dev": "npm run dev",
-    "docs:build": "npm run build"
+    "sync:dist": "bash scripts/sync-dist.sh"
   },
   "keywords": [],
   "author": "Kehan Pang",
   "license": "ISC",
   "dependencies": {
-    "@form-create/element-ui": "^1.0.19",
-    "@mdit/plugin-katex": "^0.4.8",
-    "axios": "^0.20.0",
-    "element-ui": "^2.13.2",
-    "form-create": "^1.6.6",
-    "markdown-it-texmath": "^1.0.0",
-    "mathjax": "^3.2.2",
-    "sass": "^1.26.10",
-    "sass-loader": "^10.0.1",
     "vue": "^2.7.14",
-    "vue-server-renderer": "^2.7.14",
-    "vuepress-plugin-cat": "^1.0.3",
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-sidebar-atuo": "^1.0.0"
+    "vue-server-renderer": "^2.7.14"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.10",
-    "katex": "^0.16.8",
-    "markdown-it-katex": "^2.0.3",
-    "vuepress": "^1.9.10",
-    "vuepress-plugin-anchor-right": "^0.0.1-beta.18",
-    "vuepress-plugin-anchor-toc": "^0.0.3",
-    "vuepress-plugin-flexsearch": "^0.3.0",
-    "vuepress-plugin-mathjax": "^1.2.8",
-    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
-    "vuepress-plugin-right-anchor": "^2.1.0-rc.2",
-    "vuepress-plugin-sakura": "^1.2.1"
+    "vuepress": "^1.9.10"
   }
 }
