@@ -8,7 +8,7 @@
 
         <div class="header-actions">
           <nav class="profile-nav" :aria-label="copy.navLabel">
-            <a :href="cvLink" target="_blank" rel="noopener noreferrer">CV</a>
+            <a :href="cvLink" target="_blank" rel="noopener noreferrer">C.V.</a>
             <a :href="links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a :href="links.scholar" target="_blank" rel="noopener noreferrer">
               <span class="scholar-long">Google Scholar</span><span class="scholar-short">Scholar</span>
@@ -92,7 +92,7 @@
               </dd>
             </div>
             <div class="personal-detail">
-              <dt class="personal-label">{{ copy.personalLabel }}{{ copy.labelSeparator }}</dt>
+              <dt class="visually-hidden">{{ copy.personalLabel }}</dt>
               <dd>
                 <button
                   class="personal-reveal"
@@ -101,7 +101,7 @@
                   :aria-pressed="personalRevealed ? 'true' : 'false'"
                   @click="togglePersonal"
                 >
-                  <span class="personal-secret" :class="{ 'is-revealed': personalRevealed }">{{ copy.personalInfo }}</span>
+                  <span class="personal-secret" :class="{ 'is-revealed': personalRevealed }">{{ copy.personalLabel }}{{ copy.labelSeparator }}{{ copy.personalInfo }}</span>
                 </button>
               </dd>
             </div>
@@ -163,6 +163,7 @@
                   ]"
                   :style="{ left: `${item.position}%` }"
                   :href="item.target"
+                  @click="scrollToTimelineTarget($event, item.target)"
                 >
                   <span class="news-event__connector" aria-hidden="true"></span>
                   <span class="news-event__label">
@@ -178,7 +179,7 @@
                     v-for="item in copy.experience"
                     :key="item.organization"
                     class="experience-disclosure"
-                    :class="`tone-${item.tone}`"
+                    :class="[`tone-${item.tone}`, `experience-disclosure--row-${item.row}`]"
                   >
                     <summary class="experience-summary">
                       <span
@@ -424,6 +425,17 @@ export default {
     },
     togglePersonal () {
       this.personalRevealed = !this.personalRevealed
+    },
+    scrollToTimelineTarget (event, target) {
+      if (typeof window === 'undefined' || !target || !target.startsWith('#')) return
+      const destination = document.querySelector(target)
+      if (!destination) return
+      event.preventDefault()
+      window.history.pushState(null, '', target)
+      destination.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'start'
+      })
     },
     updateThemeColor () {
       const meta = document.querySelector('meta[name="theme-color"]')

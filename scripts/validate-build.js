@@ -64,7 +64,7 @@ const aboutEducationTerms = {
 const educationEntries = {
   'index.html': [
     { institution: 'Beijing University of Posts and Telecommunications', period: 'Sep. 2018 – Jul. 2022', secondary: 'School of Computer Science · Computer Science and Technology · B.Eng.', meta: 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)' },
-    { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Research: Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning' }
+    { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Advisors: ', research: 'Research: Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning' }
   ],
   'zh/index.html': [
     { institution: '北京邮电大学', period: '2018.09 – 2022.07', secondary: '计算机学院 · 计算机科学与技术 · 工学学士', meta: 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）' },
@@ -84,7 +84,7 @@ const advisorNames = {
 
 const experienceDetails = {
   'index.html': [
-    { roleParts: ['Fundamental Research Department · ', 'Research Intern'], detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.' },
+    { roleParts: ['Research Intern'], detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.' },
     { roleParts: ['Algorithm Research Intern', ' · Core Local Commerce / M17'], detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.' }
   ],
   'zh/index.html': [
@@ -92,7 +92,7 @@ const experienceDetails = {
     { roleParts: ['算法研究实习生', ' · 核心本地商业 / M17'], detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。' }
   ],
   'ja/index.html': [
-    { roleParts: ['基礎研究部 · ', '研究インターン'], detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。' },
+    { roleParts: ['研究インターン'], detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。' },
     { roleParts: ['アルゴリズム研究インターン', ' · Core Local Commerce / M17'], detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。' }
   ]
 }
@@ -152,7 +152,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="education-range__topline"/g) || []).length, 2, `${filename} does not keep both school names and dates on the first line`)
   assert.strictEqual((html.match(/class="education-range__secondary"/g) || []).length, 2, `${filename} does not render both Education second lines`)
   assert.strictEqual((html.match(/class="education-range__meta"/g) || []).length, 2, `${filename} does not render both Education third lines`)
-  assert.strictEqual((html.match(/class="education-range__research"/g) || []).length, filename === 'index.html' ? 0 : 1, `${filename} has an incorrect number of separate Education research lines`)
+  assert.strictEqual((html.match(/class="education-range__research"/g) || []).length, 1, `${filename} does not render Research on its own Education line`)
   const timelineHtml = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
   assert(!timelineHtml.includes('<small>') && !timelineHtml.includes('education-range__unit'), `${filename} still renders detached school abbreviations or units`)
   for (const { institution, period, secondary, meta, research } of educationEntries[filename]) {
@@ -169,6 +169,8 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   if (filename === 'ja/index.html') {
     for (const retired of ['北京郵電大学（', '北京航空航天大学（', 'Beijing University of Posts and Telecommunications', 'Beihang University']) assert(!timelineHtml.includes(retired), `Japanese Education still includes ${retired}`)
   }
+  if (filename === 'index.html') assert(!timelineHtml.includes('Fundamental Research Department'), 'English SICS metadata still names the department')
+  if (filename === 'ja/index.html') assert(!timelineHtml.includes('基礎研究部'), 'Japanese SICS metadata still names the department')
   const personal = personalDetails[filename]
   const profileDetailsHtml = html.slice(html.indexOf('class="profile-details"'), html.indexOf('</dl>', html.indexOf('class="profile-details"')))
   assert.strictEqual((profileDetailsHtml.match(/<dt/g) || []).length, 2, `${filename} still contains separate MBTI or Hobbies rows`)
@@ -178,7 +180,10 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   for (const attribute of ['type="button"', `aria-label="${personal.reveal}"`, 'aria-pressed="false"']) {
     assert(personalButton[0].includes(attribute), `${filename} is missing ${attribute} on the personal-information reveal button`)
   }
-  assert(profileDetailsHtml.includes(`<span class="personal-secret">${personal.info}</span>`), `${filename} is missing the blurred personal information`)
+  const personalButtonHtml = profileDetailsHtml.slice(profileDetailsHtml.indexOf('<button'), profileDetailsHtml.indexOf('</button>') + 9)
+  assert(personalButtonHtml.includes('class="personal-secret"'), `${filename} does not mask the complete personal-information line`)
+  assert(personalButtonHtml.includes(personal.label), `${filename} leaves the personal-information label outside the mask`)
+  assert(personalButtonHtml.includes(personal.info), `${filename} is missing the masked personal information`)
   for (const retired of personal.retired) assert(!html.includes(retired), `${filename} still exposes retired personal-information text: ${retired}`)
   assert.strictEqual((html.match(/class="news-event /g) || []).length, 11, `${filename} does not contain exactly eleven News events`)
   assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 11, `${filename} does not render every News date on its own line`)
@@ -188,6 +193,9 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/<details class="experience-disclosure /g) || []).length, 2, `${filename} does not contain two native Experience disclosures`)
   assert.strictEqual((html.match(/class="experience-summary"/g) || []).length, 2, `${filename} does not contain two Experience summaries`)
   assert.strictEqual((html.match(/class="experience-detail"/g) || []).length, 2, `${filename} does not contain two Experience detail regions`)
+  assert.strictEqual((html.match(/experience-disclosure--row-/g) || []).length, 2, `${filename} does not keep both Experience summaries above the shared detail area`)
+  assert.strictEqual((timelineHtml.match(/experience-disclosure tone-blue/g) || []).length, 1, `${filename} does not use the SICS blue Experience treatment`)
+  assert.strictEqual((timelineHtml.match(/experience-disclosure tone-yellow/g) || []).length, 1, `${filename} does not use the Meituan yellow Experience treatment`)
   assert(!timelineHtml.includes('<details open'), `${filename} opens an Experience disclosure by default`)
   for (const { roleParts, detail } of experienceDetails[filename]) {
     for (const rolePart of roleParts) assert(timelineHtml.includes(rolePart), `${filename} is missing the current CV role metadata ${rolePart}`)
@@ -205,6 +213,8 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
 
   const occurrences = value => html.split(value).length - 1
   assert.strictEqual(occurrences(`href="${expected.cv}"`), 2, `${filename} does not route both CV links correctly`)
+  assert(html.includes(`href="${expected.cv}" target="_blank" rel="noopener noreferrer">C.V.</a>`), `${filename} does not label the header CV link as C.V.`)
+  assert(html.includes('<span>C.V.</span>'), `${filename} does not label the profile-rail CV link as C.V.`)
   assert.strictEqual(occurrences('href="https://github.com/KehanPang"'), 2, `${filename} does not include GitHub in both header and rail`)
   assert.strictEqual(occurrences('href="https://scholar.google.com/citations?user=b3XVG_oAAAAJ"'), 2, `${filename} does not include Scholar in both header and rail`)
   assert.strictEqual(occurrences('href="https://orcid.org/0009-0006-4086-1421"'), 1, `${filename} has an incorrect ORCID link`)
@@ -263,7 +273,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event__status', '.news-event--award-subtle', '.publication-anchor', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '--sics-blue:', '--meituan-gold:', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event__status', '.news-event--award-subtle', '.publication-anchor', '.experience-disclosure.tone-yellow', 'margin:0 0 14px 54%', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {

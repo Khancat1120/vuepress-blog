@@ -109,7 +109,7 @@ export const content = {
     tagline: 'Research in graph data mining, graph data quality, and graph knowledge reasoning.',
     photoAlt: 'Portrait of Kehan Pang',
     railLinksLabel: 'Academic profile links',
-    railLinks: { email: 'Email', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
+    railLinks: { email: 'Email', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
       about: 'About Me', publications: 'Publications', manuscripts: 'Manuscripts / Under Review',
       timeline: 'Education & Experience', awards: 'Honors & Awards',
@@ -153,11 +153,12 @@ export const content = {
         advisorsLabel: 'Advisors: ',
         advisorSeparator: ', ',
         advisors: [
-          { prefix: 'Prof. ', name: 'Wenfei Fan', suffix: ' (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { prefix: 'Assoc. Prof. ', name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: 'Wenfei Fan', suffix: ' (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: 'Research: ',
-        research: 'Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning'
+        research: 'Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning',
+        separateResearch: true
       }
     ],
     news: [
@@ -176,7 +177,6 @@ export const content = {
     experience: [
       {
         organization: 'Shenzhen Institute of Computing Sciences',
-        department: 'Fundamental Research Department',
         role: 'Research Intern',
         period: 'Jul. 2023 – Jan. 2024',
         detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.',
@@ -188,7 +188,7 @@ export const content = {
         unit: 'Core Local Commerce / M17',
         period: 'Sep. 2024 – Jan. 2025',
         detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.',
-        tone: 'red', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, row: 1
       }
     ],
     awards: [
@@ -208,7 +208,7 @@ export const content = {
     addressLabel: 'Address',
     address: 'Beihang University, No. 37 Xueyuan Road, Haidian District, Beijing, China',
     addressLines: ['Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
-    labelSeparator: ':',
+    labelSeparator: ': ',
     updated: 'Last updated: 2026'
   },
   zh: {
@@ -227,7 +227,7 @@ export const content = {
     tagline: '研究图数据挖掘、图数据质量与图知识推理。',
     photoAlt: '庞可涵的个人照片',
     railLinksLabel: '学术资料链接',
-    railLinks: { email: '邮箱', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
+    railLinks: { email: '邮箱', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
       about: '关于我', publications: '学术成果', manuscripts: '在审稿件', timeline: '教育与经历',
       awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
@@ -306,7 +306,7 @@ export const content = {
         unit: '核心本地商业 / M17',
         period: '2024.09 – 2025.01',
         detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。',
-        tone: 'red', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, row: 1
       }
     ],
     awards: [
@@ -345,7 +345,7 @@ export const content = {
     tagline: 'グラフデータマイニング、グラフデータ品質、グラフ知識推論を研究しています。',
     photoAlt: 'Kehan Pang のポートレート',
     railLinksLabel: '研究者プロフィールへのリンク',
-    railLinks: { email: 'メール', cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
+    railLinks: { email: 'メール', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
       about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', timeline: '学歴・経歴',
       awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
@@ -388,8 +388,8 @@ export const content = {
         advisorsLabel: '指導教員：',
         advisorSeparator: '、',
         advisors: [
-          { name: 'Wenfei Fan', suffix: ' 教授（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: 'Ping Lu', suffix: ' 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: 'Wenfei Fan', suffix: '（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究分野：',
         research: 'グラフデータマイニング · グラフデータ品質 · グラフ知識推論',
@@ -412,7 +412,6 @@ export const content = {
     experience: [
       {
         organization: 'Shenzhen Institute of Computing Sciences',
-        department: '基礎研究部',
         role: '研究インターン',
         period: '2023年7月 – 2024年1月',
         detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。',
@@ -424,7 +423,7 @@ export const content = {
         unit: 'Core Local Commerce / M17',
         period: '2024年9月 – 2025年1月',
         detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。',
-        tone: 'red', start: 69.9, end: 73.8, row: 1
+        tone: 'yellow', start: 69.9, end: 73.8, row: 1
       }
     ],
     awards: [
