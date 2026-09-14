@@ -1,4 +1,23 @@
+const crypto = require('crypto')
+const fs = require('fs')
 const path = require('path')
+const webpack = require('webpack')
+
+function cvVersion (filename, environmentName) {
+  const digest = crypto
+    .createHash('sha256')
+    .update(fs.readFileSync(path.resolve(__dirname, '../..', filename)))
+    .digest('hex')
+    .slice(0, 12)
+  const supplied = process.env[environmentName]
+  if (supplied && supplied !== digest) {
+    throw new Error(`${environmentName} does not match ${filename}`)
+  }
+  return supplied || digest
+}
+
+const englishCvVersion = cvVersion('cv.pdf', 'CV_VERSION')
+const chineseCvVersion = cvVersion('简历.pdf', 'ZH_CV_VERSION')
 
 module.exports = {
   base: '/',
@@ -38,6 +57,12 @@ module.exports = {
   ],
   plugins: [],
   configureWebpack: {
+    plugins: [
+      new webpack.DefinePlugin({
+        __CV_VERSION__: JSON.stringify(englishCvVersion),
+        __ZH_CV_VERSION__: JSON.stringify(chineseCvVersion)
+      })
+    ],
     optimization: {
       namedChunks: true,
       namedModules: true

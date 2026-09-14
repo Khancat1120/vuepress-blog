@@ -17,6 +17,9 @@ function digest (filename) {
   return crypto.createHash('sha256').update(fs.readFileSync(filename)).digest('hex')
 }
 
+const englishCvVersion = digest(path.join(projectRoot, 'cv.pdf')).slice(0, 12)
+const chineseCvVersion = digest(path.join(projectRoot, '简历.pdf')).slice(0, 12)
+
 const files = walk(dist)
 const relativeFiles = files.map(filename => path.relative(dist, filename).replace(/\\/g, '/'))
 const htmlFiles = relativeFiles.filter(filename => filename.endsWith('.html')).sort()
@@ -25,15 +28,15 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 const expectedPages = {
   'index.html': {
     phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality', 'Knowledge Discovery', 'Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Work Experience', 'Education', 'News', 'Work Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
-    cv: '/cv.pdf'
+    cv: `/cv.pdf?v=${englishCvVersion}`
   },
   'zh/index.html': {
     phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量', '知识发现', '模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与工作经历', '教育经历', 'News', '工作经历', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
-    cv: '/简历.pdf'
+    cv: `/简历.pdf?v=${chineseCvVersion}`
   },
   'ja/index.html': {
     phrases: ['Kehan Pang', 'プロフィール', 'データセントリックAI', 'データ品質', '知識発見', 'モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・職歴', '学歴', 'News', '職歴', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
-    cv: '/cv.pdf'
+    cv: `/cv.pdf?v=${englishCvVersion}`
   }
 }
 
@@ -236,7 +239,9 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual(occurrences('href="https://github.com/KehanPang"'), 2, `${filename} does not include GitHub in both header and rail`)
   assert.strictEqual(occurrences('href="https://scholar.google.com/citations?user=b3XVG_oAAAAJ"'), 2, `${filename} does not include Scholar in both header and rail`)
   assert.strictEqual(occurrences('href="https://orcid.org/0009-0006-4086-1421"'), 1, `${filename} has an incorrect ORCID link`)
-  assert(!html.includes(expected.cv === '/cv.pdf' ? 'href="/简历.pdf"' : 'href="/cv.pdf"'), `${filename} contains the wrong locale CV`)
+  const wrongCvPrefix = expected.cv.startsWith('/cv.pdf?') ? '/简历.pdf?v=' : '/cv.pdf?v='
+  assert(!html.includes(`href="${wrongCvPrefix}`), `${filename} contains the wrong locale CV`)
+  assert(!html.includes('href="/cv.pdf"') && !html.includes('href="/简历.pdf"'), `${filename} contains an unversioned CV link`)
 
   for (const publicationId of ['pub-tods-2024-entity-linking', 'pub-kdd-2024-meld', 'pub-tods-2024-graph-errors', 'pub-icde-2025-label-imputation', 'pub-sigmod-2025-gpu-graph-cleaning', 'pub-icde-2026-gnn-negatives', 'pub-kdd-2026-influence-functions']) {
     assert(html.includes(`id="${publicationId}"`), `${filename} is missing publication anchor ${publicationId}`)
@@ -268,7 +273,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
 }
 
 const notFound = fs.readFileSync(path.join(dist, '404.html'), 'utf8')
-for (const phrase of ['Wrong stage.', 'Back to homepage', '/nina-iseri-girls-band-cry.gif', 'class="not-found-gif"', 'class="theme-toggle"']) {
+for (const phrase of ['Wrong stage.', 'Back to homepage', '/nina-iseri-girls-band-cry.gif', `/cv.pdf?v=${englishCvVersion}`, 'class="not-found-gif"', 'class="theme-toggle"']) {
   assert(notFound.includes(phrase), `404.html is missing ${phrase}`)
 }
 assert(!notFound.includes('<svg'), '404.html still contains the retired SVG illustration')
