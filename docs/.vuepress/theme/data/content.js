@@ -167,6 +167,7 @@ export const content = {
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
       { date: '2020', event: 'CMC', status: 'First Prize', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: 'Innovation Program', status: 'Municipal Project Award', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2023.12', event: 'TODS · J.', status: 'Accepted', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.08', event: 'KDD · Conf.', status: 'Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
       { date: '2024.12', event: 'TODS · J.', status: 'Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
       { date: '2025.05', event: 'ICDE · Conf.', status: 'Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },
@@ -260,10 +261,11 @@ export const content = {
       }
     ],
     news: [
-      { date: '2019', event: 'CMC', status: '一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2019', event: '全国大学生数学竞赛', status: '一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: 'CMC', status: '一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020', event: '全国大学生数学竞赛', status: '一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: '创新创业训练计划', status: '市级项目奖', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2023.12', event: 'TODS · 期刊', status: '接收', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.08', event: 'KDD · 会议', status: '发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
       { date: '2024.12', event: 'TODS · 期刊', status: '发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
       { date: '2025.05', event: 'ICDE · 会议', status: '发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },
@@ -357,10 +359,11 @@ export const content = {
       }
     ],
     news: [
-      { date: '2019', event: 'CMC', status: '一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2019', event: '全国大学生数学競技会', status: '一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: 'CMC', status: '一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020', event: '全国大学生数学競技会', status: '一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: 'イノベーションプログラム', status: '市級プロジェクト賞', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2023.12', event: 'TODS · J.', status: '採択', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.08', event: 'KDD · 会議', status: '掲載', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
       { date: '2024.12', event: 'TODS · J.', status: '掲載', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
       { date: '2025.05', event: 'ICDE · 会議', status: '掲載', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },

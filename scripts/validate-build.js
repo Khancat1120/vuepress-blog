@@ -24,17 +24,17 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2024.08', 'KDD · Conf.', 'Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', 'TODS · J.', 'Accepted', '2024.12', 'Published', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf',
     advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', 'CMC', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2024.08', 'KDD · 会议', '发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', 'TODS · 期刊', '接收', '2024.12', '发表', '2024.08', 'KDD · 会议', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/简历.pdf',
     advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', 'CMC', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2024.08', 'KDD · 会議', '掲載', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', 'TODS · J.', '採択', '2024.12', '掲載', '2024.08', 'KDD · 会議', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv.pdf',
     advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
@@ -101,10 +101,10 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert(!html.includes('id="education"'), `${filename} still contains the separate Education section`)
   assert(!html.includes('id="experience"'), `${filename} still contains the separate Experience section`)
   assert.strictEqual((html.match(/class="education-range /g) || []).length, 2, `${filename} does not contain exactly two education ranges`)
-  assert.strictEqual((html.match(/class="news-event /g) || []).length, 10, `${filename} does not contain exactly ten News events`)
-  assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 10, `${filename} does not render every News date on its own line`)
-  assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 10, `${filename} does not render every News event on its own line`)
-  assert.strictEqual((html.match(/class="news-event__status"/g) || []).length, 10, `${filename} does not render every News status on its own line`)
+  assert.strictEqual((html.match(/class="news-event /g) || []).length, 11, `${filename} does not contain exactly eleven News events`)
+  assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 11, `${filename} does not render every News date on its own line`)
+  assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 11, `${filename} does not render every News event on its own line`)
+  assert.strictEqual((html.match(/class="news-event__status"/g) || []).length, 11, `${filename} does not render every News status on its own line`)
   assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
   assert.strictEqual((html.match(/class="unified-timeline__axis"/g) || []).length, 1, `${filename} does not contain exactly one main timeline axis`)
   assert(!html.includes('milestone-track'), `${filename} still contains the retired milestone timeline`)
@@ -123,10 +123,17 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual(occurrences('href="https://orcid.org/0009-0006-4086-1421"'), 1, `${filename} has an incorrect ORCID link`)
   assert(!html.includes(expected.cv === '/cv.pdf' ? 'href="/简历.pdf"' : 'href="/cv.pdf"'), `${filename} contains the wrong locale CV`)
 
-  for (const publicationId of ['pub-kdd-2024-meld', 'pub-tods-2024-graph-errors', 'pub-icde-2025-label-imputation', 'pub-sigmod-2025-gpu-graph-cleaning', 'pub-icde-2026-gnn-negatives', 'pub-kdd-2026-influence-functions']) {
+  for (const publicationId of ['pub-tods-2024-entity-linking', 'pub-kdd-2024-meld', 'pub-tods-2024-graph-errors', 'pub-icde-2025-label-imputation', 'pub-sigmod-2025-gpu-graph-cleaning', 'pub-icde-2026-gnn-negatives', 'pub-kdd-2026-influence-functions']) {
     assert(html.includes(`id="${publicationId}"`), `${filename} is missing publication anchor ${publicationId}`)
     assert(html.includes(`href="#${publicationId}"`), `${filename} does not link Timeline News to ${publicationId}`)
   }
+
+  const timelineBlock = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
+  assert(timelineBlock.includes('href="#pub-tods-2024-entity-linking"') && timelineBlock.includes('2023.12'), `${filename} does not link the accepted TODS News to Linking Entities`)
+  assert(timelineBlock.includes('href="#pub-tods-2024-graph-errors"') && timelineBlock.includes('2024.12'), `${filename} does not link the published TODS News to Making It Tractable`)
+  if (filename === 'index.html') assert(!timelineBlock.includes('Math Competition'), 'English Timeline does not use CMC exclusively')
+  if (filename === 'zh/index.html') assert(!timelineBlock.includes('>CMC<') && !timelineBlock.includes('>数学竞赛<'), 'Chinese Timeline abbreviates the national competition')
+  if (filename === 'ja/index.html') assert(!timelineBlock.includes('>CMC<') && !timelineBlock.includes('数学コンテスト') && !timelineBlock.includes('中国大学生数学コンテスト'), 'Japanese Timeline does not use the requested competition name')
 }
 
 const notFound = fs.readFileSync(path.join(dist, '404.html'), 'utf8')
@@ -218,8 +225,8 @@ const japaneseHtml = fs.readFileSync(path.join(dist, 'ja/index.html'), 'utf8')
 for (const forbidden of ['计算机', 'コンピューター', 'データセンター', '>Email<', '執筆']) {
   assert(!japaneseHtml.includes(forbidden), `Japanese page contains inconsistent wording: ${forbidden}`)
 }
-for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データ中心型AI（Data-Centric AI）', 'CMC', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
+for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データ中心型AI（Data-Centric AI）', '全国大学生数学競技会', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
   assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
 }
 
-console.log(`Validated ${htmlFiles.length} HTML pages, three localized About sections, one shared time axis with ten three-line News events and six publication anchors, root-routed source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
+console.log(`Validated ${htmlFiles.length} HTML pages, three localized About sections, one shared time axis with eleven three-line News events and seven publication anchors including two distinct TODS links, root-routed source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
