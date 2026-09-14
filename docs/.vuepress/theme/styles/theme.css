@@ -724,8 +724,7 @@ button:focus-visible {
   min-width: 0;
 }
 
-.education-range__topline,
-.experience-range__topline {
+.education-range__topline {
   display: flex;
   min-width: 0;
   align-items: flex-start;
@@ -744,10 +743,11 @@ button:focus-visible {
 }
 
 .education-range time,
-.experience-range time {
+.experience-range__topline time {
   flex: 0 0 auto;
   color: var(--ink-soft);
   font-size: 9.5px;
+  font-weight: 400;
   line-height: 1.35;
   white-space: nowrap;
 }
@@ -762,6 +762,7 @@ button:focus-visible {
 }
 
 .education-range__meta,
+.education-range__rank,
 .education-range__research {
   margin: 2px 0 0;
   color: var(--ink-soft);
@@ -771,6 +772,10 @@ button:focus-visible {
 }
 
 .education-range__research {
+  margin-top: 0;
+}
+
+.education-range__rank {
   margin-top: 0;
 }
 
@@ -1134,6 +1139,10 @@ button:focus-visible {
 }
 
 .experience-range__topline {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 8px;
   align-items: flex-start;
 }
 

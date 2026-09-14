@@ -24,15 +24,15 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Experience', 'News', 'Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Work Experience', 'Education', 'News', 'Work Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与经历', 'News', '科研与实习', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与工作经历', '教育经历', 'News', '工作经历', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/简历.pdf'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・経歴', 'News', '研究・インターン経験', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・職歴', '学歴', 'News', '職歴', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv.pdf'
   }
 }
@@ -63,15 +63,15 @@ const aboutEducationTerms = {
 
 const educationEntries = {
   'index.html': [
-    { institution: 'Beijing University of Posts and Telecommunications', period: 'Sep. 2018 – Jul. 2022', secondary: 'School of Computer Science · Computer Science and Technology · B.Eng.', meta: 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)' },
+    { institution: 'Beijing University of Posts and Telecommunications', period: 'Sep. 2018 – Jul. 2022', secondary: 'School of Computer Science · Computer Science and Technology · B.Eng.', meta: 'GPA: 3.7 / 4.0', rank: 'Rank: 30 / 396 (Top 7.6%)' },
     { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Advisors: ', research: 'Research: Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning' }
   ],
   'zh/index.html': [
-    { institution: '北京邮电大学', period: '2018.09 – 2022.07', secondary: '计算机学院 · 计算机科学与技术 · 工学学士', meta: 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）' },
+    { institution: '北京邮电大学', period: '2018.09 – 2022.07', secondary: '计算机学院 · 计算机科学与技术 · 工学学士', meta: 'GPA：3.7 / 4.0', rank: '专业排名：30 / 396（前 7.6%）' },
     { institution: '北京航空航天大学', period: '2022.09 – 2027.04（预计）', secondary: '计算机学院 · 软件工程 · 博士研究生', meta: '导师：', research: '研究方向：图数据挖掘 · 图数据质量 · 图知识推理' }
   ],
   'ja/index.html': [
-    { institution: '北京郵電大学', period: '2018.09 – 2022.07', secondary: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', meta: 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）' },
+    { institution: '北京郵電大学', period: '2018.09 – 2022.07', secondary: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', meta: 'GPA：3.7 / 4.0', rank: '専攻順位：30 / 396（上位 7.6%）' },
     { institution: '北京航空航天大学', period: '2022.09 – 2027.04（予定）', secondary: 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', meta: '指導教員：', research: '研究分野：グラフデータマイニング · グラフデータ品質 · グラフ知識推論' }
   ]
 }
@@ -152,13 +152,15 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="education-range__topline"/g) || []).length, 2, `${filename} does not keep both school names and dates on the first line`)
   assert.strictEqual((html.match(/class="education-range__secondary"/g) || []).length, 2, `${filename} does not render both Education second lines`)
   assert.strictEqual((html.match(/class="education-range__meta"/g) || []).length, 2, `${filename} does not render both Education third lines`)
+  assert.strictEqual((html.match(/class="education-range__rank"/g) || []).length, 1, `${filename} does not render the BUPT Rank on its own fourth line`)
   assert.strictEqual((html.match(/class="education-range__research"/g) || []).length, 1, `${filename} does not render Research on its own Education line`)
   const timelineHtml = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
   assert(!timelineHtml.includes('<small>') && !timelineHtml.includes('education-range__unit'), `${filename} still renders detached school abbreviations or units`)
-  for (const { institution, period, secondary, meta, research } of educationEntries[filename]) {
+  for (const { institution, period, secondary, meta, rank, research } of educationEntries[filename]) {
     assert(timelineHtml.includes(`<h3>${institution}</h3> <time>${period}</time>`), `${filename} does not keep ${institution} and its date together`)
     assert(timelineHtml.includes(secondary), `${filename} is missing the second Education line for ${institution}`)
     assert(timelineHtml.includes(meta), `${filename} is missing the third Education line for ${institution}`)
+    if (rank) assert(timelineHtml.includes(`<p class="education-range__rank">${rank}</p>`), `${filename} is missing the separate Rank line for ${institution}`)
     if (research) assert(timelineHtml.includes(`<p class="education-range__research">${research}</p>`), `${filename} is missing the separate research line for ${institution}`)
   }
   if (filename === 'zh/index.html') {
@@ -171,6 +173,19 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   }
   if (filename === 'index.html') assert(!timelineHtml.includes('Fundamental Research Department'), 'English SICS metadata still names the department')
   if (filename === 'ja/index.html') assert(!timelineHtml.includes('基礎研究部'), 'Japanese SICS metadata still names the department')
+  if (filename === 'index.html') {
+    assert(!html.includes('CAS Academician'), 'English advisor text still includes CAS Academician')
+    assert(html.includes('Prof. <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a>'), 'English Wenfei Fan title is incorrect')
+    assert(html.includes('Assoc. Prof. <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a>'), 'English Ping Lu title is incorrect')
+  }
+  if (filename === 'zh/index.html') {
+    assert(aboutBlock.includes('樊文飞</a>院士') && aboutBlock.includes('陆平</a>副教授'), 'Chinese About advisor titles changed unexpectedly')
+    assert(timelineHtml.includes('樊文飞</a><span> 院士</span>') && timelineHtml.includes('陆平</a><span> 副教授</span>'), 'Chinese Education advisor titles changed unexpectedly')
+  }
+  if (filename === 'ja/index.html') {
+    assert(!html.includes('中国科学院院士'), 'Japanese advisor text still includes Chinese Academy of Sciences Academician')
+    assert(html.includes('Wenfei Fan</a> 教授') && html.includes('Ping Lu</a> 准教授'), 'Japanese advisor titles are incorrect')
+  }
   const personal = personalDetails[filename]
   const profileDetailsHtml = html.slice(html.indexOf('class="profile-details"'), html.indexOf('</dl>', html.indexOf('class="profile-details"')))
   assert.strictEqual((profileDetailsHtml.match(/<dt/g) || []).length, 2, `${filename} still contains separate MBTI or Hobbies rows`)

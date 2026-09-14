@@ -112,11 +112,11 @@ export const content = {
     railLinks: { email: 'Email', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
       about: 'About Me', publications: 'Publications', manuscripts: 'Manuscripts / Under Review',
-      timeline: 'Education & Experience', awards: 'Honors & Awards',
+      timeline: 'Education & Work Experience', awards: 'Honors & Awards',
       service: 'Academic Service', patent: 'Patent', contact: 'Contact'
     },
     about: [
-      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by Prof. <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> (CAS Academician) and Assoc. Prof. <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a>.',
+      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by Prof. <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> and Assoc. Prof. <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a>.',
       'My research centers on <strong>Data-Centric AI</strong>, with a focus on <strong>Data Quality, Knowledge Discovery, and Model Reliability</strong> in graph learning. My work spans entity alignment, data augmentation, graph association rule mining, and GNN explainability, while also exploring the use of LLMs for data processing and knowledge discovery.'
     ],
     researchLabel: 'Research Interests',
@@ -132,13 +132,14 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: 'Under Revision' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: 'Under Review' }
     ],
-    timelineLabels: { education: 'Education', news: 'News', work: 'Experience' },
+    timelineLabels: { education: 'Education', news: 'News', work: 'Work Experience' },
     education: [
       {
         institution: 'Beijing University of Posts and Telecommunications',
         period: 'Sep. 2018 – Jul. 2022',
         program: 'School of Computer Science · Computer Science and Technology · B.Eng.',
-        meta: 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)',
+        meta: 'GPA: 3.7 / 4.0',
+        rank: 'Rank: 30 / 396 (Top 7.6%)',
         tone: 'blue',
         start: 0,
         end: 44.7
@@ -153,8 +154,8 @@ export const content = {
         advisorsLabel: 'Advisors: ',
         advisorSeparator: ', ',
         advisors: [
-          { name: 'Wenfei Fan', suffix: ' (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: 'Wenfei Fan', prefix: 'Prof. ', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: 'Ping Lu', prefix: 'Assoc. Prof. ', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: 'Research: ',
         research: 'Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning',
@@ -229,7 +230,7 @@ export const content = {
     railLinksLabel: '学术资料链接',
     railLinks: { email: '邮箱', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
-      about: '关于我', publications: '学术成果', manuscripts: '在审稿件', timeline: '教育与经历',
+      about: '关于我', publications: '学术成果', manuscripts: '在审稿件', timeline: '教育与工作经历',
       awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
     },
     about: [
@@ -249,13 +250,14 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '修改中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '审稿中' }
     ],
-    timelineLabels: { education: '教育', news: 'News', work: '科研与实习' },
+    timelineLabels: { education: '教育经历', news: 'News', work: '工作经历' },
     education: [
       {
         institution: '北京邮电大学',
         period: '2018.09 – 2022.07',
         program: '计算机学院 · 计算机科学与技术 · 工学学士',
-        meta: 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）',
+        meta: 'GPA：3.7 / 4.0',
+        rank: '专业排名：30 / 396（前 7.6%）',
         tone: 'blue',
         start: 0,
         end: 44.7
@@ -347,11 +349,11 @@ export const content = {
     railLinksLabel: '研究者プロフィールへのリンク',
     railLinks: { email: 'メール', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
     sections: {
-      about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', timeline: '学歴・経歴',
+      about: 'プロフィール', publications: '研究業績', manuscripts: '投稿中・改訂中の原稿', timeline: '学歴・職歴',
       awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
     },
     about: [
-      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> 教授（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a> 准教授です。',
+      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> 教授と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a> 准教授です。',
       '私の研究は<strong>データ中心型AI（Data-Centric AI）</strong>を軸とし、グラフ学習における<strong>データ品質・知識発見・モデル信頼性</strong>に関する課題に取り組んでいます。主な研究テーマは、エンティティアライメント、データ拡張、グラフアソシエーションルールマイニング、GNNの説明可能性であり、LLMを用いたデータ処理と知識発見についても研究しています。'
     ],
     researchLabel: '研究分野',
@@ -367,13 +369,14 @@ export const content = {
       { title: 'OpenMind: Query-Time Diversification via Logical Rules', authors: ['Wenfei Fan', 'Kehan Pang', 'Dandan Lin'], status: '改訂中' },
       { title: 'ComCE: Community-Aware Counterfactual Explanations for Graph Neural Network', authors: ['Kehan Pang', 'Dandan Lin'], status: '査読中' }
     ],
-    timelineLabels: { education: '学歴', news: 'News', work: '研究・インターン経験' },
+    timelineLabels: { education: '学歴', news: 'News', work: '職歴' },
     education: [
       {
         institution: '北京郵電大学',
         period: '2018.09 – 2022.07',
         program: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士',
-        meta: 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）',
+        meta: 'GPA：3.7 / 4.0',
+        rank: '専攻順位：30 / 396（上位 7.6%）',
         tone: 'blue',
         start: 0,
         end: 44.7
@@ -388,8 +391,8 @@ export const content = {
         advisorsLabel: '指導教員：',
         advisorSeparator: '、',
         advisors: [
-          { name: 'Wenfei Fan', suffix: '（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: 'Wenfei Fan', suffix: ' 教授', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: 'Ping Lu', suffix: ' 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究分野：',
         research: 'グラフデータマイニング · グラフデータ品質 · グラフ知識推論',

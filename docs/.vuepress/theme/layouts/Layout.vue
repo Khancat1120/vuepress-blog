@@ -143,6 +143,7 @@
                         <span v-if="!item.separateResearch"> · {{ item.researchLabel }}{{ item.research }}</span>
                       </template>
                     </p>
+                    <p v-if="item.rank" class="education-range__rank">{{ item.rank }}</p>
                     <p v-if="item.separateResearch" class="education-range__research">{{ item.researchLabel }}{{ item.research }}</p>
                   </div>
                   <span class="timeline-range-bar" aria-hidden="true"></span>
