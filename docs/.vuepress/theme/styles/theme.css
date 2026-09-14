@@ -696,12 +696,17 @@ button:focus-visible {
   overflow-wrap: anywhere;
 }
 
-.education-range__meta {
+.education-range__meta,
+.education-range__research {
   margin: 2px 0 0;
   color: var(--ink-soft);
   font-size: 9.25px;
   line-height: 1.45;
   overflow-wrap: anywhere;
+}
+
+.education-range__research {
+  margin-top: 0;
 }
 
 .timeline-range-bar {

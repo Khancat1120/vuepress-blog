@@ -25,18 +25,15 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 const expectedPages = {
   'index.html': {
     phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
-    cv: '/cv.pdf',
-    advisor: 'Prof. Wenfei Fan (CAS Academician)'
+    cv: '/cv.pdf'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '创作', '北京市海淀区学院路37号', '北京航空航天大学 Beihang University'],
-    cv: '/简历.pdf',
-    advisor: '樊文飞院士'
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    cv: '/简历.pdf'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学（Beihang University）'],
-    cv: '/cv.pdf',
-    advisor: 'Wenfei Fan 教授（中国科学院院士）'
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    cv: '/cv.pdf'
   }
 }
 
@@ -61,22 +58,28 @@ const boldResearchTerms = {
 const aboutEducationTerms = {
   'index.html': 'Before joining Beihang',
   'zh/index.html': '本科就读于北京邮电大学',
-  'ja/index.html': '北京郵電大学（Beijing University of Posts and Telecommunications）'
+  'ja/index.html': '北京郵電大学'
 }
 
 const educationEntries = {
   'index.html': [
-    ['Beijing University of Posts and Telecommunications', 'Sep. 2018 – Jul. 2022', 'School of Computer Science · Computer Science and Technology · B.Eng.', 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)'],
-    ['Beihang University', 'Sep. 2022 – Apr. 2027 (Expected)', 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', 'Research: Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning']
+    { institution: 'Beijing University of Posts and Telecommunications', period: 'Sep. 2018 – Jul. 2022', secondary: 'School of Computer Science · Computer Science and Technology · B.Eng.', meta: 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)' },
+    { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Research: Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning' }
   ],
   'zh/index.html': [
-    ['北京邮电大学 Beijing University of Posts and Telecommunications', '2018.09 – 2022.07', '计算机学院 · 计算机科学与技术 · 工学学士', 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）'],
-    ['北京航空航天大学 Beihang University', '2022.09 – 2027.04（预计）', '计算机学院 · 软件工程 · 博士研究生', '研究方向：以数据为中心的人工智能、图数据挖掘、图数据质量与图知识推理']
+    { institution: '北京邮电大学', period: '2018.09 – 2022.07', secondary: '计算机学院 · 计算机科学与技术 · 工学学士', meta: 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）' },
+    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（预计）', secondary: '计算机学院 · 软件工程 · 博士研究生', meta: '导师：', research: '研究方向：图数据挖掘 · 图数据质量 · 图知识推理' }
   ],
   'ja/index.html': [
-    ['北京郵電大学（Beijing University of Posts and Telecommunications）', '2018.09 – 2022.07', 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）'],
-    ['北京航空航天大学（Beihang University）', '2022.09 – 2027.04（予定）', 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', '研究分野：データ中心型AI、グラフデータマイニング、グラフデータ品質、グラフ知識推論']
+    { institution: '北京郵電大学', period: '2018.09 – 2022.07', secondary: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', meta: 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）' },
+    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（予定）', secondary: 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', meta: '指導教員：', research: '研究分野：グラフデータマイニング · グラフデータ品質 · グラフ知識推論' }
   ]
+}
+
+const advisorNames = {
+  'index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', 'Wenfei Fan'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', 'Ping Lu']],
+  'zh/index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', '樊文飞'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', '陆平']],
+  'ja/index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', 'Wenfei Fan'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', 'Ping Lu']]
 }
 
 const hobbies = {
@@ -88,15 +91,15 @@ const hobbies = {
 for (const [filename, expected] of Object.entries(expectedPages)) {
   const html = fs.readFileSync(path.join(dist, filename), 'utf8')
   for (const phrase of expected.phrases) assert(html.includes(phrase), `${filename} is missing ${phrase}`)
-  assert(html.includes(expected.advisor), `${filename} is missing the expected advisor title`)
   for (const link of [expected.cv, 'https://github.com/KehanPang', 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ', 'https://orcid.org/0009-0006-4086-1421']) {
     assert(html.includes(link), `${filename} is missing ${link}`)
   }
   for (const languagePath of ['href="/"', 'href="/zh/"', 'href="/ja/"']) {
     assert(html.includes(languagePath), `${filename} is missing language link ${languagePath}`)
   }
-  for (const advisorUrl of ['https://homepages.inf.ed.ac.uk/wenfei/', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
-    assert(html.includes(`href="${advisorUrl}" target="_blank" rel="noopener noreferrer"`), `${filename} has an unsafe or missing advisor link`)
+  for (const [advisorUrl, advisorName] of advisorNames[filename]) {
+    const advisorLink = `<a href="${advisorUrl}" target="_blank" rel="noopener noreferrer">${advisorName}</a>`
+    assert.strictEqual(html.split(advisorLink).length - 1, 2, `${filename} does not link only the advisor name in About and Education`)
   }
   for (const interest of interests[filename]) assert(html.includes(interest), `${filename} is missing ${interest}`)
   const positions = interests[filename].map(interest => html.indexOf(interest))
@@ -106,8 +109,8 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   const aboutBlock = html.slice(html.indexOf('id="about"'), html.indexOf('class="profile-details"'))
   for (const term of boldResearchTerms[filename]) assert(aboutBlock.includes(`<strong>${term}</strong>`), `${filename} does not emphasize ${term}`)
   assert(!aboutBlock.includes(aboutEducationTerms[filename]), `${filename} repeats the undergraduate history in About`)
-  for (const advisorUrl of ['https://homepages.inf.ed.ac.uk/wenfei/', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
-    assert(aboutBlock.includes(`href="${advisorUrl}" target="_blank" rel="noopener noreferrer"`), `${filename} does not link the advisor name in About`)
+  for (const [advisorUrl, advisorName] of advisorNames[filename]) {
+    assert(aboutBlock.includes(`<a href="${advisorUrl}" target="_blank" rel="noopener noreferrer">${advisorName}</a>`), `${filename} does not link only the advisor name in About`)
   }
   assert.strictEqual((html.match(/href="mailto:pangkehan@buaa.edu.cn"/g) || []).length, 2, `${filename} does not link the primary email in both the rail and Contact`)
   assert(html.includes('href="mailto:k3hanpang@gmail.com"'), `${filename} is missing the alternative email`)
@@ -125,12 +128,22 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="education-range__topline"/g) || []).length, 2, `${filename} does not keep both school names and dates on the first line`)
   assert.strictEqual((html.match(/class="education-range__secondary"/g) || []).length, 2, `${filename} does not render both Education second lines`)
   assert.strictEqual((html.match(/class="education-range__meta"/g) || []).length, 2, `${filename} does not render both Education third lines`)
+  assert.strictEqual((html.match(/class="education-range__research"/g) || []).length, filename === 'index.html' ? 0 : 1, `${filename} has an incorrect number of separate Education research lines`)
   const timelineHtml = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
   assert(!timelineHtml.includes('<small>') && !timelineHtml.includes('education-range__unit'), `${filename} still renders detached school abbreviations or units`)
-  for (const [institution, period, secondary, meta] of educationEntries[filename]) {
+  for (const { institution, period, secondary, meta, research } of educationEntries[filename]) {
     assert(timelineHtml.includes(`<h3>${institution}</h3> <time>${period}</time>`), `${filename} does not keep ${institution} and its date together`)
     assert(timelineHtml.includes(secondary), `${filename} is missing the second Education line for ${institution}`)
     assert(timelineHtml.includes(meta), `${filename} is missing the third Education line for ${institution}`)
+    if (research) assert(timelineHtml.includes(`<p class="education-range__research">${research}</p>`), `${filename} is missing the separate research line for ${institution}`)
+  }
+  if (filename === 'zh/index.html') {
+    for (const retired of ['北京邮电大学 Beijing', '北京航空航天大学 Beihang', '>BUPT<', '>Beihang<']) assert(!timelineHtml.includes(retired), `Chinese Education still includes ${retired}`)
+    assert(timelineHtml.includes('<span>基础研究部 · </span>实习研究员'), 'Chinese SICS experience has the wrong department or role')
+    assert(!timelineHtml.includes('科研实习生'), 'Chinese SICS experience still uses the old role')
+  }
+  if (filename === 'ja/index.html') {
+    for (const retired of ['北京郵電大学（', '北京航空航天大学（', 'Beijing University of Posts and Telecommunications', 'Beihang University']) assert(!timelineHtml.includes(retired), `Japanese Education still includes ${retired}`)
   }
   for (const hobby of hobbies[filename]) assert(html.includes(hobby), `${filename} is missing hobby ${hobby}`)
   if (filename === 'zh/index.html') assert(!html.includes('小说与同人创作'), 'Chinese page still contains the retired hobby wording')

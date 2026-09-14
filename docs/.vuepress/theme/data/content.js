@@ -116,7 +116,7 @@ export const content = {
       service: 'Academic Service', patent: 'Patent', contact: 'Contact'
     },
     about: [
-      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Prof. Wenfei Fan</a> (CAS Academician) and <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Assoc. Prof. Ping Lu</a>.',
+      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by Prof. <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> (CAS Academician) and Assoc. Prof. <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a>.',
       'My research centers on <strong>Data-Centric AI</strong>, with a focus on <strong>Data Quality, Knowledge Discovery, and Model Reliability</strong> in graph learning. My work spans entity alignment, data augmentation, graph association rule mining, and GNN explainability, while also exploring the use of LLMs for data processing and knowledge discovery.'
     ],
     researchLabel: 'Research Interests',
@@ -153,8 +153,8 @@ export const content = {
         advisorsLabel: 'Advisors: ',
         advisorSeparator: ', ',
         advisors: [
-          { name: 'Prof. Wenfei Fan (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: 'Assoc. Prof. Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { prefix: 'Prof. ', name: 'Wenfei Fan', suffix: ' (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { prefix: 'Assoc. Prof. ', name: 'Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: 'Research: ',
         research: 'Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning'
@@ -219,7 +219,7 @@ export const content = {
       awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
     },
     about: [
-      '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">樊文飞院士</a>和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平副教授</a>。',
+      '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">樊文飞</a>院士和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平</a>副教授。',
       '我的研究围绕<strong>以数据为中心的人工智能</strong>展开，关注图学习中的<strong>数据质量、知识发现与模型可靠性</strong>问题，主要涉及实体对齐、数据增强、图关联规则挖掘与 GNN 可解释性，并探索 LLM 在数据处理与知识发现中的应用。'
     ],
     researchLabel: '研究方向',
@@ -238,7 +238,7 @@ export const content = {
     timelineLabels: { education: '教育', news: 'News', work: '科研与实习' },
     education: [
       {
-        institution: '北京邮电大学 Beijing University of Posts and Telecommunications',
+        institution: '北京邮电大学',
         period: '2018.09 – 2022.07',
         program: '计算机学院 · 计算机科学与技术 · 工学学士',
         meta: 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）',
@@ -247,7 +247,7 @@ export const content = {
         end: 44.7
       },
       {
-        institution: '北京航空航天大学 Beihang University',
+        institution: '北京航空航天大学',
         period: '2022.09 – 2027.04（预计）',
         program: '计算机学院 · 软件工程 · 博士研究生',
         tone: 'wine',
@@ -256,11 +256,12 @@ export const content = {
         advisorsLabel: '导师：',
         advisorSeparator: '、',
         advisors: [
-          { name: '樊文飞院士', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: '陆平副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: '樊文飞', suffix: ' 院士', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: '陆平', suffix: ' 副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究方向：',
-        research: '以数据为中心的人工智能、图数据挖掘、图数据质量与图知识推理'
+        research: '图数据挖掘 · 图数据质量 · 图知识推理',
+        separateResearch: true
       }
     ],
     news: [
@@ -277,7 +278,7 @@ export const content = {
       { date: '2026.08', event: 'KDD · Conf.', status: 'Accepted', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
-      { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
+      { organization: '深圳计算科学研究院', department: '基础研究部', role: '实习研究员', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
       { organization: '美团', role: '算法研究实习生', unit: '核心本地商业 / M17', period: '2024.09 – 2025.01', summary: '参与 foundation model 预训练网页数据的清洗与质量评估；完成本地 7B 模型部署和全参数 fine-tuning，微调模型达到 GPT-4 基线约 96% 的 ROUGE-L。', tone: 'red', start: 69.9, end: 73.8, row: 1 }
     ],
     awards: [
@@ -322,7 +323,7 @@ export const content = {
       awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
     },
     about: [
-      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan 教授</a>（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu 准教授</a>です。',
+      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> 教授（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a> 准教授です。',
       '私の研究は<strong>データ中心型AI（Data-Centric AI）</strong>を軸とし、グラフ学習における<strong>データ品質・知識発見・モデル信頼性</strong>に関する課題に取り組んでいます。主な研究テーマは、エンティティアライメント、データ拡張、グラフアソシエーションルールマイニング、GNNの説明可能性であり、LLMを用いたデータ処理と知識発見についても研究しています。'
     ],
     researchLabel: '研究分野',
@@ -341,7 +342,7 @@ export const content = {
     timelineLabels: { education: '学歴', news: 'News', work: '研究・インターン経験' },
     education: [
       {
-        institution: '北京郵電大学（Beijing University of Posts and Telecommunications）',
+        institution: '北京郵電大学',
         period: '2018.09 – 2022.07',
         program: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士',
         meta: 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）',
@@ -350,7 +351,7 @@ export const content = {
         end: 44.7
       },
       {
-        institution: '北京航空航天大学（Beihang University）',
+        institution: '北京航空航天大学',
         period: '2022.09 – 2027.04（予定）',
         program: 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程',
         tone: 'wine',
@@ -359,11 +360,12 @@ export const content = {
         advisorsLabel: '指導教員：',
         advisorSeparator: '、',
         advisors: [
-          { name: 'Wenfei Fan 教授（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
-          { name: 'Ping Lu 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
+          { name: 'Wenfei Fan', suffix: ' 教授（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
+          { name: 'Ping Lu', suffix: ' 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究分野：',
-        research: 'データ中心型AI、グラフデータマイニング、グラフデータ品質、グラフ知識推論'
+        research: 'グラフデータマイニング · グラフデータ品質 · グラフ知識推論',
+        separateResearch: true
       }
     ],
     news: [

@@ -133,11 +133,12 @@
                       <template v-if="item.advisors">
                         <span>{{ item.advisorsLabel }}</span>
                         <template v-for="(advisor, index) in item.advisors">
-                          <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">{{ item.advisorSeparator }}</span>
+                          <span v-if="advisor.prefix" :key="`${advisor.name}-prefix`">{{ advisor.prefix }}</span><a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="advisor.suffix" :key="`${advisor.name}-suffix`">{{ advisor.suffix }}</span><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">{{ item.advisorSeparator }}</span>
                         </template>
-                        <span> · {{ item.researchLabel }}{{ item.research }}</span>
+                        <span v-if="!item.separateResearch"> · {{ item.researchLabel }}{{ item.research }}</span>
                       </template>
                     </p>
+                    <p v-if="item.separateResearch" class="education-range__research">{{ item.researchLabel }}{{ item.research }}</p>
                   </div>
                   <span class="timeline-range-bar" aria-hidden="true"></span>
                 </article>
@@ -183,7 +184,7 @@
                       <h3>{{ item.organization }}</h3>
                       <time>{{ item.period }}</time>
                     </div>
-                    <p>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
+                    <p><span v-if="item.department">{{ item.department }} · </span>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
                   </div>
                 </article>
               </div>
