@@ -154,6 +154,7 @@
                   :class="[
                     `news-event--${item.side}`,
                     `news-event--lane-${item.lane}`,
+                    `news-event--${item.kind}`,
                     `tone-${item.tone}`,
                     { 'news-event--align-end': item.align === 'end' }
                   ]"
@@ -161,7 +162,10 @@
                   :href="item.target"
                 >
                   <span class="news-event__connector" aria-hidden="true"></span>
-                  <span class="news-event__label"><time>{{ item.date }}</time><span> · {{ item.event }}</span></span>
+                  <span class="news-event__label">
+                    <time class="news-event__date">{{ item.date }}</time>
+                    <span class="news-event__text">{{ item.event }}</span>
+                  </span>
                 </a>
 
                 <p class="timeline-layer-label timeline-layer-label--experience">{{ copy.timelineLabels.work }}</p>

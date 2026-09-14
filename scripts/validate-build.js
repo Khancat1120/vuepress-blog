@@ -30,17 +30,17 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2024.08', 'KDD Paper Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'Math Competition First Prizes', '2020.09', 'Beijing Innovation Program Award', '2024.08', 'KDD Paper Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv/kehan-pang-cv-en.pdf',
     advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '研究方向', '教育与经历', 'News', '科研与实习', '2024.08', 'KDD 论文发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '数学竞赛一等奖', '2020.09', '创新创业训练项目表彰', '2024.08', 'KDD 论文发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-zh.pdf',
     advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2024.08', 'KDD 論文発表', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '数学コンテスト 一等賞', '2020.09', '北京市イノベーション プログラム表彰', '2024.08', 'KDD 論文掲載', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv/kehan-pang-cv-en.pdf',
     advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
@@ -107,7 +107,9 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert(!html.includes('id="education"'), `${filename} still contains the separate Education section`)
   assert(!html.includes('id="experience"'), `${filename} still contains the separate Experience section`)
   assert.strictEqual((html.match(/class="education-range /g) || []).length, 2, `${filename} does not contain exactly two education ranges`)
-  assert.strictEqual((html.match(/class="news-event /g) || []).length, 7, `${filename} does not contain exactly seven News events`)
+  assert.strictEqual((html.match(/class="news-event /g) || []).length, 10, `${filename} does not contain exactly ten News events`)
+  assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 10, `${filename} does not render every News date on its own line`)
+  assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 10, `${filename} does not render every News event on its own line`)
   assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
   assert.strictEqual((html.match(/class="unified-timeline__axis"/g) || []).length, 1, `${filename} does not contain exactly one main timeline axis`)
   assert(!html.includes('milestone-track'), `${filename} still contains the retired milestone timeline`)
@@ -151,7 +153,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event--award-subtle', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
@@ -214,4 +216,4 @@ for (const required of ['メール', '予備メール', 'コンピュータサ�
   assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
 }
 
-console.log(`Validated ${htmlFiles.length} HTML pages, three profile rails, one shared time axis with seven dated News events, source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
+console.log(`Validated ${htmlFiles.length} HTML pages, three profile rails, one shared time axis with ten two-line News events, source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)

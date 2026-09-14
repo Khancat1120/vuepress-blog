@@ -157,13 +157,16 @@ export const content = {
       }
     ],
     news: [
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
-      { date: '2024.08', event: 'KDD Paper Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2024.12', event: 'TODS Paper Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2025.05', event: 'ICDE Paper Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
-      { date: '2025.06', event: 'SIGMOD Paper Published', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2026.05', event: 'ICDE Paper Published', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2026.08', event: 'KDD Paper Published', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
+      { date: '2019', event: 'Math Competition First Prizes', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: 'Math Competition First Prizes', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: 'Beijing Innovation Program Award', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD Paper Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS Paper Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE Paper Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD Paper Published', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE Paper Published', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD Paper Published', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
@@ -251,13 +254,16 @@ export const content = {
       }
     ],
     news: [
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
-      { date: '2024.08', event: 'KDD 论文发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2024.12', event: 'TODS 论文发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2025.05', event: 'ICDE 论文发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
-      { date: '2025.06', event: 'SIGMOD 论文发表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2026.05', event: 'ICDE 论文发表', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2026.08', event: 'KDD 论文发表', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
+      { date: '2019', event: '数学竞赛一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: '数学竞赛一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: '创新创业训练项目表彰', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD 论文发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS 论文发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE 论文发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD 论文发表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE 论文发表', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD 论文发表', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
@@ -345,13 +351,16 @@ export const content = {
       }
     ],
     news: [
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, target: '#honors', tone: 'red' },
-      { date: '2024.08', event: 'KDD 論文発表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2024.12', event: 'TODS 論文発表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2025.05', event: 'ICDE 論文発表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red' },
-      { date: '2025.06', event: 'SIGMOD 論文発表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue' },
-      { date: '2026.05', event: 'ICDE 論文発表', position: 89.3, side: 'upper', lane: 2, align: 'end', target: '#publications', tone: 'wine' },
-      { date: '2026.08', event: 'KDD 論文発表', position: 92.2, side: 'lower', lane: 2, align: 'end', target: '#publications', tone: 'red' }
+      { date: '2019', event: '数学コンテスト 一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: '数学コンテスト 一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: '北京市イノベーション プログラム表彰', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD 論文掲載', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS 論文掲載', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE 論文掲載', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD 論文掲載', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE 論文掲載', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD 論文掲載', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
