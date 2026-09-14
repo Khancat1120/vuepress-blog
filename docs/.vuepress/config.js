@@ -9,17 +9,17 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'Kehan Pang | Ph.D. Student at Beihang University',
-      description: 'Academic homepage of Kehan Pang, a Ph.D. student at Beihang University working on graph data mining, graph data quality, and graph knowledge reasoning.'
+      description: 'Academic homepage of Kehan Pang, a Ph.D. student at Beihang University working on graph data quality, graph data mining, and graph model reliability.'
     },
     '/zh/': {
       lang: 'zh-CN',
       title: '庞可涵 | 北京航空航天大学博士研究生',
-      description: '庞可涵的学术主页：北京航空航天大学计算机学院博士研究生，研究方向为图数据挖掘、图数据质量与图知识推理。'
+      description: '庞可涵的学术主页：北京航空航天大学计算机学院博士研究生，研究方向为图数据质量、图数据挖掘与图模型可靠性。'
     },
     '/ja/': {
       lang: 'ja-JP',
       title: 'Kehan Pang | 北京航空航天大学 博士課程',
-      description: '北京航空航天大学でグラフデータマイニング、グラフデータ品質、グラフ知識推論を研究する Kehan Pang の研究者ホームページです。'
+      description: '北京航空航天大学でグラフデータ品質、グラフデータマイニング、グラフモデル信頼性を研究する Kehan Pang の研究者ホームページです。'
     }
   },
   head: [

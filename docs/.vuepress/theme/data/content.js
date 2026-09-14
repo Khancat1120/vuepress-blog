@@ -106,7 +106,7 @@ export const content = {
     role: 'Ph.D. Student',
     affiliation: 'School of Computer Science and Engineering',
     university: 'Beihang University',
-    tagline: 'Research in graph data mining, graph data quality, and graph knowledge reasoning.',
+    tagline: 'Research in graph data quality, graph data mining, and graph model reliability.',
     photoAlt: 'Portrait of Kehan Pang',
     railLinksLabel: 'Academic profile links',
     railLinks: { email: 'Email', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
@@ -117,10 +117,10 @@ export const content = {
     },
     about: [
       'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by Prof. <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> and Assoc. Prof. <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a>.',
-      'My research centers on <strong>Data-Centric AI</strong>, with a focus on <strong>Data Quality, Knowledge Discovery, and Model Reliability</strong> in graph learning. My work spans entity alignment, data augmentation, graph association rule mining, and GNN explainability, while also exploring the use of LLMs for data processing and knowledge discovery.'
+      'My research primarily centers on <strong>Data-Centric AI</strong>, with a focus on <strong>Data Quality</strong>, <strong>Knowledge Discovery</strong>, and <strong>Model Reliability</strong> in graph learning. My work includes LLM-assisted feature extraction and ranking, graph data quality enhancement, graph data mining, and GNN explainability.'
     ],
     researchLabel: 'Research Interests',
-    research: ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning'],
+    research: ['Graph Data Quality', 'Graph Data Mining', 'Graph Model Reliability'],
     personalLabel: 'Beyond Research',
     personalInfo: 'INTP / Scorpio / Guitar / ACGN',
     personalRevealLabel: 'Reveal personal interests',
@@ -158,7 +158,7 @@ export const content = {
           { name: 'Ping Lu', prefix: 'Assoc. Prof. ', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: 'Research: ',
-        research: 'Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning',
+        research: 'Graph Data Quality · Graph Data Mining · Graph Model Reliability',
         separateResearch: true
       }
     ],
@@ -225,7 +225,7 @@ export const content = {
     role: '博士研究生',
     affiliation: '计算机学院',
     university: '北京航空航天大学',
-    tagline: '研究图数据挖掘、图数据质量与图知识推理。',
+    tagline: '研究图数据质量、图数据挖掘与图模型可靠性。',
     photoAlt: '庞可涵的个人照片',
     railLinksLabel: '学术资料链接',
     railLinks: { email: '邮箱', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
@@ -235,10 +235,10 @@ export const content = {
     },
     about: [
       '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">樊文飞</a>院士和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平</a>副教授。',
-      '我的研究围绕<strong>以数据为中心的人工智能</strong>展开，关注图学习中的<strong>数据质量、知识发现与模型可靠性</strong>问题，主要涉及实体对齐、数据增强、图关联规则挖掘与 GNN 可解释性，并探索 LLM 在数据处理与知识发现中的应用。'
+      '本人的研究主要围绕<strong>以数据为中心的人工智能</strong>展开，关注图学习中的<strong>数据质量</strong>、<strong>知识发现</strong>与<strong>模型可靠性</strong>问题，具体工作包括 LLM 辅助的特征抽取与排序、图数据质量增强、图数据挖掘及 GNN 可解释性等。'
     ],
     researchLabel: '研究方向',
-    research: ['图数据挖掘', '图数据质量', '图知识推理'],
+    research: ['图数据质量', '图数据挖掘', '图模型可靠性'],
     personalLabel: '研究之外',
     personalInfo: 'INTP / 天蝎座 / 吉他 / ACGN',
     personalRevealLabel: '显示研究之外的信息',
@@ -276,7 +276,7 @@ export const content = {
           { name: '陆平', suffix: ' 副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究方向：',
-        research: '图数据挖掘 · 图数据质量 · 图知识推理',
+        research: '图数据质量 · 图数据挖掘 · 图模型可靠性',
         separateResearch: true
       }
     ],
@@ -344,7 +344,7 @@ export const content = {
     role: '博士課程',
     affiliation: 'School of Computer Science and Engineering',
     university: '北京航空航天大学',
-    tagline: 'グラフデータマイニング、グラフデータ品質、グラフ知識推論を研究しています。',
+    tagline: 'グラフデータ品質、グラフデータマイニング、グラフモデル信頼性を研究しています。',
     photoAlt: 'Kehan Pang のポートレート',
     railLinksLabel: '研究者プロフィールへのリンク',
     railLinks: { email: 'メール', cv: 'C.V.', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub' },
@@ -354,10 +354,10 @@ export const content = {
     },
     about: [
       '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan</a> 教授と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu</a> 准教授です。',
-      '私の研究は<strong>データ中心型AI（Data-Centric AI）</strong>を軸とし、グラフ学習における<strong>データ品質・知識発見・モデル信頼性</strong>に関する課題に取り組んでいます。主な研究テーマは、エンティティアライメント、データ拡張、グラフアソシエーションルールマイニング、GNNの説明可能性であり、LLMを用いたデータ処理と知識発見についても研究しています。'
+      '私の研究は主に<strong>データセントリックAI</strong>を中心に、グラフ学習における<strong>データ品質</strong>、<strong>知識発見</strong>、<strong>モデル信頼性</strong>の課題に取り組んでいます。具体的には、LLMを用いた特徴抽出・ランキング、グラフデータ品質向上、グラフデータマイニング、GNNの説明可能性などに取り組んでいます。'
     ],
     researchLabel: '研究分野',
-    research: ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論'],
+    research: ['グラフデータ品質', 'グラフデータマイニング', 'グラフモデル信頼性'],
     personalLabel: '研究以外',
     personalInfo: 'INTP / さそり座 / ギター / ACGN',
     personalRevealLabel: '研究以外の情報を表示',
@@ -395,7 +395,7 @@ export const content = {
           { name: 'Ping Lu', suffix: ' 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ],
         researchLabel: '研究分野：',
-        research: 'グラフデータマイニング · グラフデータ品質 · グラフ知識推論',
+        research: 'グラフデータ品質 · グラフデータマイニング · グラフモデル信頼性',
         separateResearch: true
       }
     ],

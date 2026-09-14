@@ -24,35 +24,35 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Work Experience', 'Education', 'News', 'Work Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality', 'Knowledge Discovery', 'Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Work Experience', 'Education', 'News', 'Work Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与工作经历', '教育经历', 'News', '工作经历', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量', '知识发现', '模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与工作经历', '教育经历', 'News', '工作经历', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/简历.pdf'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・職歴', '学歴', 'News', '職歴', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データセントリックAI', 'データ品質', '知識発見', 'モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・職歴', '学歴', 'News', '職歴', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv.pdf'
   }
 }
 
 const interests = {
-  'index.html': ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning'],
-  'zh/index.html': ['图数据挖掘', '图数据质量', '图知识推理'],
-  'ja/index.html': ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論']
+  'index.html': ['Graph Data Quality', 'Graph Data Mining', 'Graph Model Reliability'],
+  'zh/index.html': ['图数据质量', '图数据挖掘', '图模型可靠性'],
+  'ja/index.html': ['グラフデータ品質', 'グラフデータマイニング', 'グラフモデル信頼性']
 }
 
 const removedInterests = {
-  'index.html': 'Large Language Models',
-  'zh/index.html': '大语言模型',
-  'ja/index.html': '大規模言語モデル'
+  'index.html': ['Graph Knowledge Reasoning', 'Large Language Models', 'Graph Data Cleaning'],
+  'zh/index.html': ['图知识推理', '大语言模型', '图数据清洗'],
+  'ja/index.html': ['グラフ知識推論', '大規模言語モデル', 'グラフデータクリーニング']
 }
 
 const boldResearchTerms = {
-  'index.html': ['Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability'],
-  'zh/index.html': ['以数据为中心的人工智能', '数据质量、知识发现与模型可靠性'],
-  'ja/index.html': ['データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性']
+  'index.html': ['Data-Centric AI', 'Data Quality', 'Knowledge Discovery', 'Model Reliability'],
+  'zh/index.html': ['以数据为中心的人工智能', '数据质量', '知识发现', '模型可靠性'],
+  'ja/index.html': ['データセントリックAI', 'データ品質', '知識発見', 'モデル信頼性']
 }
 
 const aboutEducationTerms = {
@@ -64,15 +64,15 @@ const aboutEducationTerms = {
 const educationEntries = {
   'index.html': [
     { institution: 'Beijing University of Posts and Telecommunications', period: 'Sep. 2018 – Jul. 2022', secondary: 'School of Computer Science · Computer Science and Technology · B.Eng.', meta: 'GPA: 3.7 / 4.0', rank: 'Rank: 30 / 396 (Top 7.6%)' },
-    { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Advisors: ', research: 'Research: Graph Data Mining · Graph Data Quality · Graph Knowledge Reasoning' }
+    { institution: 'Beihang University', period: 'Sep. 2022 – Apr. 2027 (Expected)', secondary: 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', meta: 'Advisors: ', research: 'Research: Graph Data Quality · Graph Data Mining · Graph Model Reliability' }
   ],
   'zh/index.html': [
     { institution: '北京邮电大学', period: '2018.09 – 2022.07', secondary: '计算机学院 · 计算机科学与技术 · 工学学士', meta: 'GPA：3.7 / 4.0', rank: '专业排名：30 / 396（前 7.6%）' },
-    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（预计）', secondary: '计算机学院 · 软件工程 · 博士研究生', meta: '导师：', research: '研究方向：图数据挖掘 · 图数据质量 · 图知识推理' }
+    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（预计）', secondary: '计算机学院 · 软件工程 · 博士研究生', meta: '导师：', research: '研究方向：图数据质量 · 图数据挖掘 · 图模型可靠性' }
   ],
   'ja/index.html': [
     { institution: '北京郵電大学', period: '2018.09 – 2022.07', secondary: 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', meta: 'GPA：3.7 / 4.0', rank: '専攻順位：30 / 396（上位 7.6%）' },
-    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（予定）', secondary: 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', meta: '指導教員：', research: '研究分野：グラフデータマイニング · グラフデータ品質 · グラフ知識推論' }
+    { institution: '北京航空航天大学', period: '2022.09 – 2027.04（予定）', secondary: 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', meta: '指導教員：', research: '研究分野：グラフデータ品質 · グラフデータマイニング · グラフモデル信頼性' }
   ]
 }
 
@@ -125,11 +125,11 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
     const advisorLink = `<a href="${advisorUrl}" target="_blank" rel="noopener noreferrer">${advisorName}</a>`
     assert.strictEqual(html.split(advisorLink).length - 1, 2, `${filename} does not link only the advisor name in About and Education`)
   }
-  for (const interest of interests[filename]) assert(html.includes(interest), `${filename} is missing ${interest}`)
-  const positions = interests[filename].map(interest => html.indexOf(interest))
-  assert(positions.every((position, index) => index === 0 || position > positions[index - 1]), `${filename} has the wrong research-interest order`)
   const researchBlock = html.slice(html.indexOf('id="research-interests"'), html.indexOf('</dd>', html.indexOf('id="research-interests"')))
-  assert(!researchBlock.includes(removedInterests[filename]), `${filename} still lists ${removedInterests[filename]} as a research interest`)
+  for (const interest of interests[filename]) assert(researchBlock.includes(interest), `${filename} is missing ${interest}`)
+  const positions = interests[filename].map(interest => researchBlock.indexOf(interest))
+  assert(positions.every((position, index) => index === 0 || position > positions[index - 1]), `${filename} has the wrong research-interest order`)
+  for (const removedInterest of removedInterests[filename]) assert(!researchBlock.includes(removedInterest), `${filename} still lists ${removedInterest} as a research interest`)
   const aboutBlock = html.slice(html.indexOf('id="about"'), html.indexOf('class="profile-details"'))
   for (const term of boldResearchTerms[filename]) assert(aboutBlock.includes(`<strong>${term}</strong>`), `${filename} does not emphasize ${term}`)
   assert(!aboutBlock.includes(aboutEducationTerms[filename]), `${filename} repeats the undergraduate history in About`)
@@ -376,7 +376,7 @@ const japaneseHtml = fs.readFileSync(path.join(dist, 'ja/index.html'), 'utf8')
 for (const forbidden of ['计算机', 'コンピューター', 'データセンター', '>Email<', '執筆']) {
   assert(!japaneseHtml.includes(forbidden), `Japanese page contains inconsistent wording: ${forbidden}`)
 }
-for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データ中心型AI（Data-Centric AI）', '全国大学生数学競技会', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
+for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データセントリックAI', '全国大学生数学競技会', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
   assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
 }
 
