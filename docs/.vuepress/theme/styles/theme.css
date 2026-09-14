@@ -416,6 +416,38 @@ button:focus-visible {
   font-size: 14px;
 }
 
+.personal-reveal {
+  appearance: none;
+  margin: 0;
+  padding: 0 2px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.personal-secret {
+  display: inline-block;
+  opacity: 0.8;
+  border-bottom: 1px dashed transparent;
+  filter: blur(4px);
+  transition: color 140ms ease, filter 140ms ease, opacity 140ms ease, border-color 140ms ease;
+}
+
+.personal-reveal:hover .personal-secret:not(.is-revealed) {
+  opacity: 0.85;
+  border-bottom-color: var(--line);
+  filter: blur(3px);
+}
+
+.personal-secret.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+}
+
 .page-section {
   padding-block: 45px;
   border-top: 1px solid var(--line);
@@ -1647,7 +1679,8 @@ button:focus-visible {
   }
 
   a,
-  .theme-toggle {
+  .theme-toggle,
+  .personal-secret {
     transition: none;
   }
 }

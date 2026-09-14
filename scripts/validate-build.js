@@ -24,15 +24,15 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Beyond Research', 'INTP / Scorpio / Guitar / ACGN', 'Education &amp; Experience', 'News', 'Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '研究之外', 'INTP / 天蝎座 / 吉他 / ACGN', '教育与经历', 'News', '科研与实习', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/简历.pdf'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '研究以外', 'INTP / さそり座 / ギター / ACGN', '学歴・経歴', 'News', '研究・インターン経験', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv.pdf'
   }
 }
@@ -97,10 +97,19 @@ const experienceDetails = {
   ]
 }
 
-const hobbies = {
-  'index.html': ['Sleeping', 'Guitar', 'Fiction Writing'],
-  'zh/index.html': ['睡觉', '吉他', '创作'],
-  'ja/index.html': ['睡眠', 'ギター', '小説・二次創作']
+const personalDetails = {
+  'index.html': {
+    label: 'Beyond Research:', info: 'INTP / Scorpio / Guitar / ACGN', reveal: 'Reveal personal interests',
+    retired: ['>MBTI<', '>Hobbies<', 'Sleeping', 'Fiction Writing']
+  },
+  'zh/index.html': {
+    label: '研究之外：', info: 'INTP / 天蝎座 / 吉他 / ACGN', reveal: '显示研究之外的信息',
+    retired: ['>MBTI<', '>兴趣爱好<', '睡觉', '创作', '小说与同人创作']
+  },
+  'ja/index.html': {
+    label: '研究以外：', info: 'INTP / さそり座 / ギター / ACGN', reveal: '研究以外の情報を表示',
+    retired: ['>MBTI<', '>趣味<', '睡眠', '小説・二次創作']
+  }
 }
 
 for (const [filename, expected] of Object.entries(expectedPages)) {
@@ -160,8 +169,17 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   if (filename === 'ja/index.html') {
     for (const retired of ['北京郵電大学（', '北京航空航天大学（', 'Beijing University of Posts and Telecommunications', 'Beihang University']) assert(!timelineHtml.includes(retired), `Japanese Education still includes ${retired}`)
   }
-  for (const hobby of hobbies[filename]) assert(html.includes(hobby), `${filename} is missing hobby ${hobby}`)
-  if (filename === 'zh/index.html') assert(!html.includes('小说与同人创作'), 'Chinese page still contains the retired hobby wording')
+  const personal = personalDetails[filename]
+  const profileDetailsHtml = html.slice(html.indexOf('class="profile-details"'), html.indexOf('</dl>', html.indexOf('class="profile-details"')))
+  assert.strictEqual((profileDetailsHtml.match(/<dt/g) || []).length, 2, `${filename} still contains separate MBTI or Hobbies rows`)
+  assert(profileDetailsHtml.includes(personal.label), `${filename} is missing the localized personal-information label`)
+  const personalButton = profileDetailsHtml.match(/<button[^>]*class="personal-reveal"[^>]*>/)
+  assert(personalButton, `${filename} is missing the personal-information reveal button`)
+  for (const attribute of ['type="button"', `aria-label="${personal.reveal}"`, 'aria-pressed="false"']) {
+    assert(personalButton[0].includes(attribute), `${filename} is missing ${attribute} on the personal-information reveal button`)
+  }
+  assert(profileDetailsHtml.includes(`<span class="personal-secret">${personal.info}</span>`), `${filename} is missing the blurred personal information`)
+  for (const retired of personal.retired) assert(!html.includes(retired), `${filename} still exposes retired personal-information text: ${retired}`)
   assert.strictEqual((html.match(/class="news-event /g) || []).length, 11, `${filename} does not contain exactly eleven News events`)
   assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 11, `${filename} does not render every News date on its own line`)
   assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 11, `${filename} does not render every News event on its own line`)

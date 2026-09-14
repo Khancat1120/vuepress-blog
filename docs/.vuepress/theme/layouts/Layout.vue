@@ -91,16 +91,18 @@
                 </span>
               </dd>
             </div>
-            <div>
-              <dt>{{ copy.mbtiLabel }}</dt>
-              <dd>{{ copy.mbti }}</dd>
-            </div>
-            <div>
-              <dt>{{ copy.hobbiesLabel }}</dt>
+            <div class="personal-detail">
+              <dt class="personal-label">{{ copy.personalLabel }}{{ copy.labelSeparator }}</dt>
               <dd>
-                <span v-for="(item, index) in copy.hobbies" :key="item">
-                  {{ item }}<template v-if="index < copy.hobbies.length - 1"> · </template>
-                </span>
+                <button
+                  class="personal-reveal"
+                  type="button"
+                  :aria-label="personalToggleLabel"
+                  :aria-pressed="personalRevealed ? 'true' : 'false'"
+                  @click="togglePersonal"
+                >
+                  <span class="personal-secret" :class="{ 'is-revealed': personalRevealed }">{{ copy.personalInfo }}</span>
+                </button>
               </dd>
             </div>
           </dl>
@@ -330,7 +332,8 @@ export default {
       activeSection: 'about',
       observer: null,
       scrollFrame: null,
-      theme: 'light'
+      theme: 'light',
+      personalRevealed: false
     }
   },
   computed: {
@@ -387,6 +390,9 @@ export default {
     themeToggleLabel () {
       return this.theme === 'dark' ? this.copy.themeToLight : this.copy.themeToDark
     },
+    personalToggleLabel () {
+      return this.personalRevealed ? this.copy.personalHideLabel : this.copy.personalRevealLabel
+    },
     currentYear () {
       return 2026
     }
@@ -415,6 +421,9 @@ export default {
       document.documentElement.style.colorScheme = this.theme
       window.localStorage.setItem('theme', this.theme)
       this.updateThemeColor()
+    },
+    togglePersonal () {
+      this.personalRevealed = !this.personalRevealed
     },
     updateThemeColor () {
       const meta = document.querySelector('meta[name="theme-color"]')
