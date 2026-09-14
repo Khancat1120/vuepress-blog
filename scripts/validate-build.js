@@ -318,6 +318,7 @@ for (const retiredCv of ['cv/kehan-pang-cv-en.pdf', 'cv/kehan-pang-cv-zh.pdf', '
 
 const packageJson = fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8')
 const cvSyncScript = fs.readFileSync(path.join(projectRoot, 'scripts/sync-cv.sh'), 'utf8')
+const vuepressConfig = fs.readFileSync(path.join(projectRoot, 'docs/.vuepress/config.js'), 'utf8')
 assert(!packageJson.includes('latexmk'), 'package scripts still invoke LaTeX')
 assert(!cvSyncScript.includes('latexmk'), 'CV synchronization still invokes LaTeX')
 assert(cvSyncScript.includes('$PROJECT_ROOT/cv.pdf'), 'CV synchronization does not read blog/cv.pdf')
@@ -328,6 +329,7 @@ assert(cvSyncScript.includes('$DIST_DIR/简历.pdf'), 'CV synchronization does n
 const packageMetadata = JSON.parse(packageJson)
 assert.deepStrictEqual(Object.keys(packageMetadata.dependencies).sort(), ['vue', 'vue-server-renderer'], 'package.json still contains retired runtime dependencies')
 assert.deepStrictEqual(Object.keys(packageMetadata.devDependencies).sort(), ['vuepress'], 'package.json still contains retired build plugins')
+assert(vuepressConfig.includes('namedChunks: true') && vuepressConfig.includes('namedModules: true'), 'VuePress production bundles are not configured for repeatable names')
 for (const retiredSource of [
   'revise.py',
   'run.sh',

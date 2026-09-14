@@ -37,5 +37,11 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon-v5.png' }]
   ],
   plugins: [],
+  configureWebpack: {
+    optimization: {
+      namedChunks: true,
+      namedModules: true
+    }
+  },
   shouldPrefetch: () => false
 }
