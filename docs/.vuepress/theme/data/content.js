@@ -161,9 +161,9 @@ export const content = {
       }
     ],
     news: [
-      { date: '2019', event: 'CMC', status: 'First Prize', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2019.12', event: 'CMC', status: 'First Prize', position: 14.5, side: 'upper', lane: 0, align: 'end', target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: 'CMC', status: 'First Prize', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.12', event: 'CMC', status: 'First Prize', position: 26.2, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: 'Innovation Program', status: 'Municipal Project Award', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
       { date: '2023.12', event: 'TODS · J.', status: 'Accepted', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.07', event: 'TODS · J.', status: 'Accepted', position: 67.9, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
@@ -174,8 +174,22 @@ export const content = {
       { date: '2026.08', event: 'KDD · Conf.', status: 'Accepted', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
-      { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
-      { organization: 'Meituan', role: 'Algorithm Research Intern', unit: 'Core Local Commerce / M17', period: 'Sep. 2024 – Jan. 2025', summary: 'Foundation-model pre-training data cleaning and quality evaluation; local 7B deployment and full-parameter fine-tuning, reaching approximately 96% of the GPT-4 baseline ROUGE-L.', tone: 'red', start: 69.9, end: 73.8, row: 1 }
+      {
+        organization: 'Shenzhen Institute of Computing Sciences',
+        department: 'Fundamental Research Department',
+        role: 'Research Intern',
+        period: 'Jul. 2023 – Jan. 2024',
+        detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.',
+        tone: 'blue', start: 56.3, end: 62.1, row: 0
+      },
+      {
+        organization: 'Meituan',
+        role: 'Algorithm Research Intern',
+        unit: 'Core Local Commerce / M17',
+        period: 'Sep. 2024 – Jan. 2025',
+        detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.',
+        tone: 'red', start: 69.9, end: 73.8, row: 1
+      }
     ],
     awards: [
       'First Prize, Beijing Undergraduate Mathematics Competition, 2019 & 2020',
@@ -265,9 +279,9 @@ export const content = {
       }
     ],
     news: [
-      { date: '2019', event: '全国大学生数学竞赛', status: '一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2019.12', event: '全国大学生数学竞赛', status: '一等奖', position: 14.5, side: 'upper', lane: 0, align: 'end', target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: '全国大学生数学竞赛', status: '一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.12', event: '全国大学生数学竞赛', status: '一等奖', position: 26.2, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: '创新创业训练计划', status: '市级项目奖', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
       { date: '2023.12', event: 'TODS · J.', status: 'Accepted', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.07', event: 'TODS · J.', status: 'Accepted', position: 67.9, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
@@ -278,8 +292,22 @@ export const content = {
       { date: '2026.08', event: 'KDD · Conf.', status: 'Accepted', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
-      { organization: '深圳计算科学研究院', department: '基础研究部', role: '实习研究员', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
-      { organization: '美团', role: '算法研究实习生', unit: '核心本地商业 / M17', period: '2024.09 – 2025.01', summary: '参与 foundation model 预训练网页数据的清洗与质量评估；完成本地 7B 模型部署和全参数 fine-tuning，微调模型达到 GPT-4 基线约 96% 的 ROUGE-L。', tone: 'red', start: 69.9, end: 73.8, row: 1 }
+      {
+        organization: '深圳计算科学研究院',
+        department: '基础研究部',
+        role: '实习研究员',
+        period: '2023.07 – 2024.01',
+        detail: '参与图数据治理与增强、图神经网络可解释性、图计算系统，以及大规模数据场景下大语言模型的低资源适配等方向的研究。期间产出多篇学术论文，发表于 TODS、ICDE 等 CCF-A 类期刊与会议。',
+        tone: 'blue', start: 56.3, end: 62.1, row: 0
+      },
+      {
+        organization: '美团',
+        role: '算法研究实习生',
+        unit: '核心本地商业 / M17',
+        period: '2024.09 – 2025.01',
+        detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。',
+        tone: 'red', start: 69.9, end: 73.8, row: 1
+      }
     ],
     awards: [
       '北京市大学生数学竞赛一等奖，2019、2020',
@@ -369,9 +397,9 @@ export const content = {
       }
     ],
     news: [
-      { date: '2019', event: '全国大学生数学競技会', status: '一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2019.12', event: '全国大学生数学競技会', status: '一等賞', position: 14.5, side: 'upper', lane: 0, align: 'end', target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: '全国大学生数学競技会', status: '一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.12', event: '全国大学生数学競技会', status: '一等賞', position: 26.2, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
       { date: '2020.09', event: 'イノベーションプログラム', status: '市級プロジェクト賞', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
       { date: '2023.12', event: 'TODS · J.', status: 'Accepted', position: 61.2, side: 'upper', lane: 1, align: 'end', target: '#pub-tods-2024-entity-linking', tone: 'wine', kind: 'publication' },
       { date: '2024.07', event: 'TODS · J.', status: 'Accepted', position: 67.9, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
@@ -382,8 +410,22 @@ export const content = {
       { date: '2026.08', event: 'KDD · Conf.', status: 'Accepted', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
-      { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
-      { organization: 'Meituan（美団）', role: 'アルゴリズム研究インターン', unit: 'Core Local Commerce / M17', period: '2024年9月 – 2025年1月', summary: '基盤モデルの事前学習用Webデータのクリーニングと品質評価、ローカル7Bモデルの導入・全パラメータファインチューニングに従事。GPT-4ベースラインの約96%に相当するROUGE-Lを達成。', tone: 'red', start: 69.9, end: 73.8, row: 1 }
+      {
+        organization: 'Shenzhen Institute of Computing Sciences',
+        department: '基礎研究部',
+        role: '研究インターン',
+        period: '2023年7月 – 2024年1月',
+        detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。',
+        tone: 'blue', start: 56.3, end: 62.1, row: 0
+      },
+      {
+        organization: 'Meituan（美団）',
+        role: 'アルゴリズム研究インターン',
+        unit: 'Core Local Commerce / M17',
+        period: '2024年9月 – 2025年1月',
+        detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。',
+        tone: 'red', start: 69.9, end: 73.8, row: 1
+      }
     ],
     awards: [
       '北京市大学生数学コンテスト 一等賞（2019、2020年）',

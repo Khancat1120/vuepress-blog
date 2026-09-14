@@ -24,15 +24,15 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019.12', 'CMC', 'First Prize', '2020.12', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019.12', '全国大学生数学竞赛', '一等奖', '2020.12', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '创作', '北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/简历.pdf'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019.12', '全国大学生数学競技会', '一等賞', '2020.12', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
     cv: '/cv.pdf'
   }
 }
@@ -80,6 +80,21 @@ const advisorNames = {
   'index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', 'Wenfei Fan'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', 'Ping Lu']],
   'zh/index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', '樊文飞'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', '陆平']],
   'ja/index.html': [['https://homepages.inf.ed.ac.uk/wenfei/', 'Wenfei Fan'], ['https://scse.buaa.edu.cn/info/1388/10436.htm', 'Ping Lu']]
+}
+
+const experienceDetails = {
+  'index.html': [
+    { roleParts: ['Fundamental Research Department · ', 'Research Intern'], detail: 'Conducted research on graph data quality, data augmentation, GNN explainability, and low-resource LLM adaptation; contributed to publications in ACM TODS and IEEE ICDE.' },
+    { roleParts: ['Algorithm Research Intern', ' · Core Local Commerce / M17'], detail: 'Developed web-data cleaning and evaluation methods for LLM pretraining and fully fine-tuned a local 7B model, achieving ROUGE-L at approximately 96% of the GPT-4 baseline and an approximately 6 percentage-point improvement over conventional methods on a human-annotated internal dataset.' }
+  ],
+  'zh/index.html': [
+    { roleParts: ['基础研究部 · ', '实习研究员'], detail: '参与图数据治理与增强、图神经网络可解释性、图计算系统，以及大规模数据场景下大语言模型的低资源适配等方向的研究。期间产出多篇学术论文，发表于 TODS、ICDE 等 CCF-A 类期刊与会议。' },
+    { roleParts: ['算法研究实习生', ' · 核心本地商业 / M17'], detail: '参与基座大语言模型预训练网页数据的清洗与质量评估，并负责本地 7B 模型的部署与全量微调；在网页数据清洗任务上，微调后模型的 ROUGE-L 达到 GPT-4 基线的约 96%。' }
+  ],
+  'ja/index.html': [
+    { roleParts: ['基礎研究部 · ', '研究インターン'], detail: 'グラフデータガバナンスと拡張、GNNの説明可能性、グラフ計算システム、大規模データ環境におけるLLMの低リソース適応に関する研究に従事しました。関連成果はACM TODSおよびIEEE ICDEで発表されています。' },
+    { roleParts: ['アルゴリズム研究インターン', ' · Core Local Commerce / M17'], detail: '基盤LLMの事前学習に用いるWebデータのクリーニングと品質評価を行い、ローカル7Bモデルの導入および全パラメータファインチューニングを実施しました。Webデータクリーニングタスクでは、ファインチューニング後のモデルがGPT-4ベースラインの約96%に相当するROUGE-Lを達成しました。' }
+  ]
 }
 
 const hobbies = {
@@ -152,6 +167,14 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 11, `${filename} does not render every News event on its own line`)
   assert.strictEqual((html.match(/class="news-event__status"/g) || []).length, 11, `${filename} does not render every News status on its own line`)
   assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
+  assert.strictEqual((html.match(/<details class="experience-disclosure /g) || []).length, 2, `${filename} does not contain two native Experience disclosures`)
+  assert.strictEqual((html.match(/class="experience-summary"/g) || []).length, 2, `${filename} does not contain two Experience summaries`)
+  assert.strictEqual((html.match(/class="experience-detail"/g) || []).length, 2, `${filename} does not contain two Experience detail regions`)
+  assert(!timelineHtml.includes('<details open'), `${filename} opens an Experience disclosure by default`)
+  for (const { roleParts, detail } of experienceDetails[filename]) {
+    for (const rolePart of roleParts) assert(timelineHtml.includes(rolePart), `${filename} is missing the current CV role metadata ${rolePart}`)
+    assert(timelineHtml.includes(detail), `${filename} is missing current CV Experience detail text`)
+  }
   assert.strictEqual((html.match(/class="unified-timeline__axis"/g) || []).length, 1, `${filename} does not contain exactly one main timeline axis`)
   assert(!html.includes('milestone-track'), `${filename} still contains the retired milestone timeline`)
   assert(!html.includes('education-track'), `${filename} still contains the retired education timeline`)
@@ -187,6 +210,9 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert(!timelineBlock.includes('2024.12'), `${filename} still uses the old TODS publication month`)
   assert.strictEqual((timelineBlock.match(/news-event--publication/g) || []).length, 7, `${filename} does not contain seven publication News events`)
   assert.strictEqual((timelineBlock.match(/class="news-event__status">Accepted/g) || []).length, 7, `${filename} does not use Accepted for every publication News event`)
+  assert(timelineBlock.includes('class="news-event__date">2019.12</time>'), `${filename} does not use the December 2019 CMC award date`)
+  assert(timelineBlock.includes('class="news-event__date">2020.12</time>'), `${filename} does not use the December 2020 CMC award date`)
+  assert(!timelineBlock.includes('class="news-event__date">2019</time>') && !timelineBlock.includes('class="news-event__date">2020</time>'), `${filename} still contains a year-only CMC award date`)
   for (const localizedMetadata of [' · 会议', ' · 期刊', ' · 会議', '>Published<', '>接收<', '>发表<', '>採択<', '>掲載<']) {
     assert(!timelineBlock.includes(localizedMetadata), `${filename} contains inconsistent publication News metadata: ${localizedMetadata}`)
   }

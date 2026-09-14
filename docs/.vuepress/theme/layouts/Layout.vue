@@ -171,22 +171,35 @@
                 </a>
 
                 <p class="timeline-layer-label timeline-layer-label--experience">{{ copy.timelineLabels.work }}</p>
-                <article
-                  v-for="item in copy.experience"
-                  :key="item.organization"
-                  class="experience-range"
-                  :class="[`experience-range--row-${item.row}`, `tone-${item.tone}`]"
-                  :style="{ left: `${item.start}%`, width: `${item.end - item.start}%` }"
-                >
-                  <span class="timeline-range-bar" aria-hidden="true"></span>
-                  <div class="experience-range__content">
-                    <div class="experience-range__topline">
-                      <h3>{{ item.organization }}</h3>
-                      <time>{{ item.period }}</time>
+                <div class="experience-list">
+                  <details
+                    v-for="item in copy.experience"
+                    :key="item.organization"
+                    class="experience-disclosure"
+                    :class="`tone-${item.tone}`"
+                  >
+                    <summary class="experience-summary">
+                      <span
+                        class="experience-range"
+                        :class="`experience-range--row-${item.row}`"
+                        :style="{ left: `${item.start}%`, width: `${item.end - item.start}%` }"
+                      >
+                        <span class="timeline-range-bar" aria-hidden="true"></span>
+                        <span class="experience-range__content">
+                          <span class="experience-disclosure__marker" aria-hidden="true"></span>
+                          <span class="experience-range__topline">
+                            <strong class="experience-range__name">{{ item.organization }}</strong>
+                            <time>{{ item.period }}</time>
+                          </span>
+                          <span class="experience-range__role"><span v-if="item.department">{{ item.department }} · </span>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></span>
+                        </span>
+                      </span>
+                    </summary>
+                    <div class="experience-detail">
+                      <p>{{ item.detail }}</p>
                     </div>
-                    <p><span v-if="item.department">{{ item.department }} · </span>{{ item.role }}<span v-if="item.unit"> · {{ item.unit }}</span></p>
-                  </div>
-                </article>
+                  </details>
+                </div>
               </div>
             </div>
           </div>
