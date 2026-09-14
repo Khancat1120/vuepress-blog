@@ -124,20 +124,20 @@
                 >
                   <div class="education-range__content">
                     <div class="education-range__topline">
-                      <h3>{{ item.institution }} <small>{{ item.shortName }}</small></h3>
+                      <h3>{{ item.institution }}</h3>
                       <time>{{ item.period }}</time>
                     </div>
-                    <p class="education-range__summary">
-                      <strong>{{ item.degree }}</strong>
-                      <template v-for="detail in item.details"><span :key="detail"> · {{ detail }}</span></template>
+                    <p class="education-range__secondary">{{ item.program }}</p>
+                    <p class="education-range__meta">
+                      <template v-if="item.meta">{{ item.meta }}</template>
                       <template v-if="item.advisors">
-                        <span> · {{ item.advisorsLabel }} </span>
+                        <span>{{ item.advisorsLabel }}</span>
                         <template v-for="(advisor, index) in item.advisors">
-                          <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">, </span>
+                          <a :key="advisor.name" :href="advisor.href" target="_blank" rel="noopener noreferrer">{{ advisor.name }}</a><span v-if="index < item.advisors.length - 1" :key="`${advisor.name}-separator`">{{ item.advisorSeparator }}</span>
                         </template>
+                        <span> · {{ item.researchLabel }}{{ item.research }}</span>
                       </template>
                     </p>
-                    <p v-if="item.unit" class="education-range__unit">{{ item.unit }}</p>
                   </div>
                   <span class="timeline-range-bar" aria-hidden="true"></span>
                 </article>

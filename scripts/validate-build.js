@@ -24,17 +24,17 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', 'TODS · J.', 'Accepted', '2024.12', 'Published', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
     cv: '/cv.pdf',
     advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', 'TODS · 期刊', '接收', '2024.12', '发表', '2024.08', 'KDD · 会议', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '全国大学生数学竞赛', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '创作', '北京市海淀区学院路37号', '北京航空航天大学 Beihang University'],
     cv: '/简历.pdf',
     advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', 'TODS · J.', '採択', '2024.12', '掲載', '2024.08', 'KDD · 会議', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '全国大学生数学競技会', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2023.12', '2024.07', 'TODS · J.', 'Accepted', '2024.08', 'KDD · Conf.', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学（Beihang University）'],
     cv: '/cv.pdf',
     advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
@@ -62,6 +62,27 @@ const aboutEducationTerms = {
   'index.html': 'Before joining Beihang',
   'zh/index.html': '本科就读于北京邮电大学',
   'ja/index.html': '北京郵電大学（Beijing University of Posts and Telecommunications）'
+}
+
+const educationEntries = {
+  'index.html': [
+    ['Beijing University of Posts and Telecommunications', 'Sep. 2018 – Jul. 2022', 'School of Computer Science · Computer Science and Technology · B.Eng.', 'GPA: 3.7 / 4.0 · Rank: 30 / 396 (Top 7.6%)'],
+    ['Beihang University', 'Sep. 2022 – Apr. 2027 (Expected)', 'School of Computer Science and Engineering · Software Engineering · Ph.D. Student', 'Research: Data-Centric AI, Graph Data Mining, Graph Data Quality, and Graph Knowledge Reasoning']
+  ],
+  'zh/index.html': [
+    ['北京邮电大学 Beijing University of Posts and Telecommunications', '2018.09 – 2022.07', '计算机学院 · 计算机科学与技术 · 工学学士', 'GPA：3.7 / 4.0 · 专业排名：30 / 396（前 7.6%）'],
+    ['北京航空航天大学 Beihang University', '2022.09 – 2027.04（预计）', '计算机学院 · 软件工程 · 博士研究生', '研究方向：以数据为中心的人工智能、图数据挖掘、图数据质量与图知识推理']
+  ],
+  'ja/index.html': [
+    ['北京郵電大学（Beijing University of Posts and Telecommunications）', '2018.09 – 2022.07', 'コンピュータサイエンス学院 · コンピュータ科学技術 · 工学学士', 'GPA：3.7 / 4.0 · 専攻順位：30 / 396（上位 7.6%）'],
+    ['北京航空航天大学（Beihang University）', '2022.09 – 2027.04（予定）', 'コンピュータサイエンス学院 · ソフトウェア工学 · 博士課程', '研究分野：データ中心型AI、グラフデータマイニング、グラフデータ品質、グラフ知識推論']
+  ]
+}
+
+const hobbies = {
+  'index.html': ['Sleeping', 'Guitar', 'Fiction Writing'],
+  'zh/index.html': ['睡觉', '吉他', '创作'],
+  'ja/index.html': ['睡眠', 'ギター', '小説・二次創作']
 }
 
 for (const [filename, expected] of Object.entries(expectedPages)) {
@@ -101,6 +122,18 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert(!html.includes('id="education"'), `${filename} still contains the separate Education section`)
   assert(!html.includes('id="experience"'), `${filename} still contains the separate Experience section`)
   assert.strictEqual((html.match(/class="education-range /g) || []).length, 2, `${filename} does not contain exactly two education ranges`)
+  assert.strictEqual((html.match(/class="education-range__topline"/g) || []).length, 2, `${filename} does not keep both school names and dates on the first line`)
+  assert.strictEqual((html.match(/class="education-range__secondary"/g) || []).length, 2, `${filename} does not render both Education second lines`)
+  assert.strictEqual((html.match(/class="education-range__meta"/g) || []).length, 2, `${filename} does not render both Education third lines`)
+  const timelineHtml = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
+  assert(!timelineHtml.includes('<small>') && !timelineHtml.includes('education-range__unit'), `${filename} still renders detached school abbreviations or units`)
+  for (const [institution, period, secondary, meta] of educationEntries[filename]) {
+    assert(timelineHtml.includes(`<h3>${institution}</h3> <time>${period}</time>`), `${filename} does not keep ${institution} and its date together`)
+    assert(timelineHtml.includes(secondary), `${filename} is missing the second Education line for ${institution}`)
+    assert(timelineHtml.includes(meta), `${filename} is missing the third Education line for ${institution}`)
+  }
+  for (const hobby of hobbies[filename]) assert(html.includes(hobby), `${filename} is missing hobby ${hobby}`)
+  if (filename === 'zh/index.html') assert(!html.includes('小说与同人创作'), 'Chinese page still contains the retired hobby wording')
   assert.strictEqual((html.match(/class="news-event /g) || []).length, 11, `${filename} does not contain exactly eleven News events`)
   assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 11, `${filename} does not render every News date on its own line`)
   assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 11, `${filename} does not render every News event on its own line`)
@@ -128,9 +161,22 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
     assert(html.includes(`href="#${publicationId}"`), `${filename} does not link Timeline News to ${publicationId}`)
   }
 
-  const timelineBlock = html.slice(html.indexOf('id="timeline"'), html.indexOf('id="publications"'))
-  assert(timelineBlock.includes('href="#pub-tods-2024-entity-linking"') && timelineBlock.includes('2023.12'), `${filename} does not link the accepted TODS News to Linking Entities`)
-  assert(timelineBlock.includes('href="#pub-tods-2024-graph-errors"') && timelineBlock.includes('2024.12'), `${filename} does not link the published TODS News to Making It Tractable`)
+  const timelineBlock = timelineHtml
+  const timelineEvent = target => {
+    const match = timelineBlock.match(new RegExp(`<a href="${target}"[\\s\\S]*?</a>`))
+    assert(match, `${filename} is missing Timeline event ${target}`)
+    return match[0]
+  }
+  const linkingEntitiesNews = timelineEvent('#pub-tods-2024-entity-linking')
+  const graphErrorsNews = timelineEvent('#pub-tods-2024-graph-errors')
+  for (const value of ['2023.12', 'TODS · J.', 'Accepted']) assert(linkingEntitiesNews.includes(value), `${filename} has incorrect Linking Entities News metadata`)
+  for (const value of ['2024.07', 'TODS · J.', 'Accepted']) assert(graphErrorsNews.includes(value), `${filename} has incorrect Making It Tractable News metadata`)
+  assert(!timelineBlock.includes('2024.12'), `${filename} still uses the old TODS publication month`)
+  assert.strictEqual((timelineBlock.match(/news-event--publication/g) || []).length, 7, `${filename} does not contain seven publication News events`)
+  assert.strictEqual((timelineBlock.match(/class="news-event__status">Accepted/g) || []).length, 7, `${filename} does not use Accepted for every publication News event`)
+  for (const localizedMetadata of [' · 会议', ' · 期刊', ' · 会議', '>Published<', '>接收<', '>发表<', '>採択<', '>掲載<']) {
+    assert(!timelineBlock.includes(localizedMetadata), `${filename} contains inconsistent publication News metadata: ${localizedMetadata}`)
+  }
   if (filename === 'index.html') assert(!timelineBlock.includes('Math Competition'), 'English Timeline does not use CMC exclusively')
   if (filename === 'zh/index.html') assert(!timelineBlock.includes('>CMC<') && !timelineBlock.includes('>数学竞赛<'), 'Chinese Timeline abbreviates the national competition')
   if (filename === 'ja/index.html') assert(!timelineBlock.includes('>CMC<') && !timelineBlock.includes('数学コンテスト') && !timelineBlock.includes('中国大学生数学コンテスト'), 'Japanese Timeline does not use the requested competition name')

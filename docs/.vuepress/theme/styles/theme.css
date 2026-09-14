@@ -663,30 +663,19 @@ button:focus-visible {
 .experience-range__topline {
   display: flex;
   min-width: 0;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 8px;
 }
 
 .education-range h3,
 .experience-range h3 {
+  min-width: 0;
   margin: 0;
   color: var(--ink-strong);
   font-size: 14px;
   font-weight: 720;
   line-height: 1.35;
-}
-
-.education-range h3 small {
-  margin-left: 4px;
-  color: var(--mygo-blue);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.education-range.tone-wine h3 small {
-  color: var(--mujica-wine);
 }
 
 .education-range time,
@@ -698,24 +687,21 @@ button:focus-visible {
   white-space: nowrap;
 }
 
-.education-range__summary {
+.education-range__secondary {
   margin: 5px 0 0;
   color: var(--ink);
   font-size: 10.5px;
-  line-height: 1.5;
+  font-weight: 520;
+  line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
-.education-range__summary strong {
-  color: var(--ink-strong);
-  font-weight: 620;
-}
-
-.education-range__unit {
+.education-range__meta {
   margin: 2px 0 0;
   color: var(--ink-soft);
-  font-size: 9.5px;
-  line-height: 1.4;
+  font-size: 9.25px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .timeline-range-bar {
