@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .vuepress-temp --cache .vuepress-cache",
     "sync:cv": "bash scripts/sync-cv.sh",
-    "build": "npm run sync:cv && vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js",
+    "build": "vuepress build docs --temp .vuepress-temp --cache .vuepress-cache && node scripts/postbuild.js && npm run sync:cv",
     "validate": "node scripts/validate-build.js",
     "sync:dist": "bash scripts/sync-dist.sh",
     "docs:dev": "npm run dev",

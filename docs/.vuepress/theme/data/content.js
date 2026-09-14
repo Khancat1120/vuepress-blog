@@ -1,7 +1,6 @@
 export const links = {
-  cvEn: '/cv/kehan-pang-cv-en.pdf',
-  cvZh: '/cv/kehan-pang-cv-zh.pdf',
-  cvAlias: '/kehan-pang-cv.pdf',
+  cvEn: '/cv.pdf',
+  cvZh: '/简历.pdf',
   github: 'https://github.com/KehanPang',
   scholar: 'https://scholar.google.com/citations?user=b3XVG_oAAAAJ',
   orcid: 'https://orcid.org/0009-0006-4086-1421'
@@ -15,6 +14,7 @@ export const languages = [
 
 export const publications = [
   {
+    id: 'pub-icde-2026-gnn-negatives',
     year: '2026',
     venue: 'ICDE 2026',
     ccfType: 'conference',
@@ -25,6 +25,7 @@ export const publications = [
     href: 'https://doi.org/10.1109/ICDE65706.2026.00123'
   },
   {
+    id: 'pub-kdd-2026-influence-functions',
     year: '2026',
     venue: 'KDD 2026',
     ccfType: 'conference',
@@ -35,6 +36,7 @@ export const publications = [
     href: 'https://doi.org/10.1145/3770855.3817953'
   },
   {
+    id: 'pub-icde-2025-label-imputation',
     year: '2025',
     venue: 'ICDE 2025',
     ccfType: 'conference',
@@ -45,6 +47,7 @@ export const publications = [
     href: 'https://doi.org/10.1109/ICDE65448.2025.00174'
   },
   {
+    id: 'pub-sigmod-2025-gpu-graph-cleaning',
     year: '2025',
     venue: 'SIGMOD 2025',
     ccfType: 'conference',
@@ -55,6 +58,7 @@ export const publications = [
     href: 'https://doi.org/10.1145/3725303'
   },
   {
+    id: 'pub-tods-2024-graph-errors',
     year: '2024',
     venue: 'ACM TODS',
     ccfType: 'journal',
@@ -65,6 +69,7 @@ export const publications = [
     href: 'https://doi.org/10.1145/3702315'
   },
   {
+    id: 'pub-kdd-2024-meld',
     year: '2024',
     venue: 'KDD 2024',
     ccfType: 'conference',
@@ -75,6 +80,7 @@ export const publications = [
     href: 'https://doi.org/10.1145/3637528.3671873'
   },
   {
+    id: 'pub-tods-2024-entity-linking',
     year: '2024',
     venue: 'ACM TODS',
     ccfType: 'journal',
@@ -110,8 +116,8 @@ export const content = {
       service: 'Academic Service', patent: 'Patent', contact: 'Contact'
     },
     about: [
-      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University. I am advised by <a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Prof. Wenfei Fan</a> (CAS Academician) and <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Assoc. Prof. Ping Lu</a>.',
-      'My research centers on <strong>Data-centric AI</strong>, with a primary focus on <strong>Graph Data Mining</strong>, <strong>Graph Data Quality</strong>, and <strong>Graph Knowledge Reasoning</strong>. I also study <strong>GNN Explainability</strong> and applications of <strong>Large Language Models to Data Processing</strong>.'
+      'I am a Ph.D. student in Software Engineering at the School of Computer Science and Engineering, Beihang University, advised by <a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Prof. Wenfei Fan</a> (CAS Academician) and <a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Assoc. Prof. Ping Lu</a>.',
+      'My research centers on <strong>Data-Centric AI</strong>, with a focus on <strong>Data Quality, Knowledge Discovery, and Model Reliability</strong> in graph learning. My work spans entity alignment, data augmentation, graph association rule mining, and GNN explainability, while also exploring the use of LLMs for data processing and knowledge discovery.'
     ],
     researchLabel: 'Research Interests',
     research: ['Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning'],
@@ -151,22 +157,22 @@ export const content = {
         end: 100,
         advisorsLabel: 'Advisors:',
         advisors: [
-          { name: 'Prof. Wenfei Fan (CAS Academician)', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: 'Prof. Wenfei Fan (CAS Academician)', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
           { name: 'Assoc. Prof. Ping Lu', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
       }
     ],
     news: [
-      { date: '2019', event: 'Math Competition First Prizes', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: 'Math Competition First Prizes', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.09', event: 'Beijing Innovation Program Award', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
-      { date: '2024.08', event: 'KDD Paper Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2024.12', event: 'TODS Paper Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2025.05', event: 'ICDE Paper Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
-      { date: '2025.06', event: 'SIGMOD Paper Published', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2026.05', event: 'ICDE Paper Published', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2026.08', event: 'KDD Paper Published', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
+      { date: '2019', event: 'CMC', status: 'First Prize', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: 'CMC', status: 'First Prize', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: 'Innovation Program', status: 'Municipal Project Award', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD · Conf.', status: 'Published', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS · J.', status: 'Published', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE · Conf.', status: 'Published', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD · Conf.', status: 'Published', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#pub-sigmod-2025-gpu-graph-cleaning', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE · Conf.', status: 'Published', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#pub-icde-2026-gnn-negatives', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD · Conf.', status: 'Published', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: 'Shenzhen Institute of Computing Sciences', role: 'Research Intern', period: 'Jul. 2023 – Jan. 2024', summary: 'Graph data management and enhancement, GNN interpretability, graph computing, and low-resource LLM adaptation.', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
@@ -214,8 +220,8 @@ export const content = {
       awards: '荣誉与奖励', service: '学术服务', patent: '专利', contact: '联系方式'
     },
     about: [
-      '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">樊文飞院士</a>和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平副教授</a>。',
-      '我的研究聚焦于<strong>以数据为中心的人工智能</strong>，主要围绕<strong>图数据挖掘</strong>、<strong>图数据质量</strong>和<strong>图知识推理</strong>展开，关注复杂数据环境下的数据质量保障、知识发现与模型可靠性；同时研究 <strong>GNN 可解释性</strong>，并探索<strong>大语言模型在数据处理中的应用</strong>。'
+      '我目前是北京航空航天大学计算机学院软件工程专业博士研究生，导师为<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">樊文飞院士</a>和<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">陆平副教授</a>。',
+      '我的研究围绕<strong>以数据为中心的人工智能</strong>展开，关注图学习中的<strong>数据质量、知识发现与模型可靠性</strong>问题，主要涉及实体对齐、数据增强、图关联规则挖掘与 GNN 可解释性，并探索 LLM 在数据处理与知识发现中的应用。'
     ],
     researchLabel: '研究方向',
     research: ['图数据挖掘', '图数据质量', '图知识推理'],
@@ -248,22 +254,22 @@ export const content = {
         end: 100,
         advisorsLabel: '导师：',
         advisors: [
-          { name: '樊文飞院士', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: '樊文飞院士', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
           { name: '陆平副教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
       }
     ],
     news: [
-      { date: '2019', event: '数学竞赛一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: '数学竞赛一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.09', event: '创新创业训练项目表彰', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
-      { date: '2024.08', event: 'KDD 论文发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2024.12', event: 'TODS 论文发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2025.05', event: 'ICDE 论文发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
-      { date: '2025.06', event: 'SIGMOD 论文发表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2026.05', event: 'ICDE 论文发表', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2026.08', event: 'KDD 论文发表', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
+      { date: '2019', event: 'CMC', status: '一等奖', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: 'CMC', status: '一等奖', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: '创新创业训练计划', status: '市级项目奖', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD · 会议', status: '发表', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS · 期刊', status: '发表', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE · 会议', status: '发表', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD · 会议', status: '发表', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#pub-sigmod-2025-gpu-graph-cleaning', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE · 会议', status: '发表', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#pub-icde-2026-gnn-negatives', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD · 会议', status: '发表', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: '深圳计算科学研究院', role: '科研实习生', period: '2023.07 – 2024.01', summary: '研究图数据管理与增强、GNN 可解释性、图计算以及低资源大模型适配。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },
@@ -311,8 +317,8 @@ export const content = {
       awards: '受賞歴', service: '学術活動', patent: '特許', contact: '連絡先'
     },
     about: [
-      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://cs.pku.edu.cn/info/1008/2707.htm" target="_blank" rel="noopener noreferrer">Wenfei Fan 教授</a>（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu 准教授</a>です。',
-      '研究の中心は<strong>データ中心型AI（Data-centric AI）</strong>で、特に<strong>グラフデータマイニング</strong>、<strong>グラフデータ品質</strong>、<strong>グラフ知識推論</strong>に取り組んでいます。さらに、<strong>GNNの説明可能性</strong>と<strong>大規模言語モデルを用いたデータ処理</strong>も研究しています。'
+      '北京航空航天大学（Beihang University）の School of Computer Science and Engineering に所属し、博士課程に在籍しています。指導教員は<a href="https://homepages.inf.ed.ac.uk/wenfei/" target="_blank" rel="noopener noreferrer">Wenfei Fan 教授</a>（中国科学院院士）と<a href="https://scse.buaa.edu.cn/info/1388/10436.htm" target="_blank" rel="noopener noreferrer">Ping Lu 准教授</a>です。',
+      '私の研究は<strong>データ中心型AI（Data-Centric AI）</strong>を軸とし、グラフ学習における<strong>データ品質・知識発見・モデル信頼性</strong>に関する課題に取り組んでいます。主な研究テーマは、エンティティアライメント、データ拡張、グラフアソシエーションルールマイニング、GNNの説明可能性であり、LLMを用いたデータ処理と知識発見についても研究しています。'
     ],
     researchLabel: '研究分野',
     research: ['グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論'],
@@ -345,22 +351,22 @@ export const content = {
         end: 100,
         advisorsLabel: '指導教員：',
         advisors: [
-          { name: 'Wenfei Fan 教授（中国科学院院士）', href: 'https://cs.pku.edu.cn/info/1008/2707.htm' },
+          { name: 'Wenfei Fan 教授（中国科学院院士）', href: 'https://homepages.inf.ed.ac.uk/wenfei/' },
           { name: 'Ping Lu 准教授', href: 'https://scse.buaa.edu.cn/info/1388/10436.htm' }
         ]
       }
     ],
     news: [
-      { date: '2019', event: '数学コンテスト 一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.02', event: 'MCM Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
-      { date: '2020', event: '数学コンテスト 一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
-      { date: '2020.09', event: '北京市イノベーション プログラム表彰', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
-      { date: '2024.08', event: 'KDD 論文掲載', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2024.12', event: 'TODS 論文掲載', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2025.05', event: 'ICDE 論文掲載', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#publications', tone: 'red', kind: 'publication' },
-      { date: '2025.06', event: 'SIGMOD 論文掲載', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#publications', tone: 'blue', kind: 'publication' },
-      { date: '2026.05', event: 'ICDE 論文掲載', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#publications', tone: 'wine', kind: 'publication' },
-      { date: '2026.08', event: 'KDD 論文掲載', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#publications', tone: 'red', kind: 'publication' }
+      { date: '2019', event: 'CMC', status: '一等賞', position: 7, side: 'upper', lane: 0, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.02', event: 'MCM', status: 'Honorable Mention', position: 16.5, side: 'lower', lane: 0, align: 'end', target: '#honors', tone: 'red', kind: 'award' },
+      { date: '2020', event: 'CMC', status: '一等賞', position: 20, side: 'lower', lane: 1, target: '#honors', tone: 'blue', kind: 'award-subtle' },
+      { date: '2020.09', event: 'イノベーションプログラム', status: '市級プロジェクト賞', position: 23.3, side: 'upper', lane: 1, target: '#honors', tone: 'wine', kind: 'award-subtle' },
+      { date: '2024.08', event: 'KDD · 会議', status: '掲載', position: 68.9, side: 'upper', lane: 0, align: 'end', target: '#pub-kdd-2024-meld', tone: 'blue', kind: 'publication' },
+      { date: '2024.12', event: 'TODS · J.', status: '掲載', position: 72.8, side: 'lower', lane: 0, align: 'end', target: '#pub-tods-2024-graph-errors', tone: 'wine', kind: 'publication' },
+      { date: '2025.05', event: 'ICDE · 会議', status: '掲載', position: 77.7, side: 'upper', lane: 1, align: 'end', target: '#pub-icde-2025-label-imputation', tone: 'red', kind: 'publication' },
+      { date: '2025.06', event: 'SIGMOD · 会議', status: '掲載', position: 78.6, side: 'lower', lane: 1, align: 'end', target: '#pub-sigmod-2025-gpu-graph-cleaning', tone: 'blue', kind: 'publication' },
+      { date: '2026.05', event: 'ICDE · 会議', status: '掲載', position: 89.3, side: 'upper', lane: 0, align: 'end', target: '#pub-icde-2026-gnn-negatives', tone: 'wine', kind: 'publication' },
+      { date: '2026.08', event: 'KDD · 会議', status: '掲載', position: 92.2, side: 'lower', lane: 0, align: 'end', target: '#pub-kdd-2026-influence-functions', tone: 'red', kind: 'publication' }
     ],
     experience: [
       { organization: 'Shenzhen Institute of Computing Sciences', role: '研究インターン', period: '2023年7月 – 2024年1月', summary: 'グラフデータ管理・拡張、GNNの説明可能性、グラフ計算、低リソース環境におけるLLM適応に関する研究。', tone: 'blue', start: 56.3, end: 62.1, row: 0 },

@@ -149,7 +149,7 @@
                 </div>
                 <a
                   v-for="item in copy.news"
-                  :key="`${item.date}-${item.event}`"
+                  :key="`${item.date}-${item.event}-${item.status}`"
                   class="news-event"
                   :class="[
                     `news-event--${item.side}`,
@@ -165,6 +165,7 @@
                   <span class="news-event__label">
                     <time class="news-event__date">{{ item.date }}</time>
                     <span class="news-event__text">{{ item.event }}</span>
+                    <span class="news-event__status">{{ item.status }}</span>
                   </span>
                 </a>
 
@@ -199,7 +200,12 @@
           <div v-for="group in publicationGroups" :key="group.year" class="publication-year">
             <h3>{{ group.year }}</h3>
             <ol>
-              <li v-for="publication in group.items" :key="publication.title" class="publication">
+              <li
+                v-for="publication in group.items"
+                :id="publication.id"
+                :key="publication.title"
+                class="publication publication-anchor"
+              >
                 <div class="publication__heading">
                   <div class="publication__labels">
                     <span class="venue-badge">{{ publication.venue }}</span>

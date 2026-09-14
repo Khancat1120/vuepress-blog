@@ -2,7 +2,6 @@ const assert = require('assert')
 const crypto = require('crypto')
 const fs = require('fs')
 const path = require('path')
-const { execFileSync } = require('child_process')
 
 const projectRoot = path.resolve(__dirname, '..')
 const dist = path.join(projectRoot, 'docs/.vuepress/dist')
@@ -18,11 +17,6 @@ function digest (filename) {
   return crypto.createHash('sha256').update(fs.readFileSync(filename)).digest('hex')
 }
 
-function pdfPages (filename) {
-  const info = execFileSync('pdfinfo', [filename], { encoding: 'utf8' })
-  return Number(info.match(/^Pages:\s+(\d+)$/m)[1])
-}
-
 const files = walk(dist)
 const relativeFiles = files.map(filename => path.relative(dist, filename).replace(/\\/g, '/'))
 const htmlFiles = relativeFiles.filter(filename => filename.endsWith('.html')).sort()
@@ -30,18 +24,18 @@ assert.deepStrictEqual(htmlFiles, ['404.html', 'index.html', 'ja/index.html', 'z
 
 const expectedPages = {
   'index.html': {
-    phrases: ['Kehan Pang', 'About Me', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'Math Competition First Prizes', '2020.09', 'Beijing Innovation Program Award', '2024.08', 'KDD Paper Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
-    cv: '/cv/kehan-pang-cv-en.pdf',
+    phrases: ['Kehan Pang', 'About Me', 'Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability', 'Research Interests', 'Education &amp; Experience', 'News', 'Experience', '2019', 'CMC', 'First Prize', '2020.09', 'Innovation Program', 'Municipal Project Award', '2024.08', 'KDD · Conf.', 'Published', 'Publications', 'Contact', 'On this page', 'CCF-A Conference', 'CCF-A Journal', 'Fiction Writing', 'Beihang University', 'No. 37 Xueyuan Road', 'Haidian District, Beijing, China'],
+    cv: '/cv.pdf',
     advisor: 'Prof. Wenfei Fan (CAS Academician)'
   },
   'zh/index.html': {
-    phrases: ['庞可涵', '关于我', '研究方向', '教育与经历', 'News', '科研与实习', '2019', '数学竞赛一等奖', '2020.09', '创新创业训练项目表彰', '2024.08', 'KDD 论文发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
-    cv: '/cv/kehan-pang-cv-zh.pdf',
+    phrases: ['庞可涵', '关于我', '以数据为中心的人工智能', '数据质量、知识发现与模型可靠性', '研究方向', '教育与经历', 'News', '科研与实习', '2019', 'CMC', '一等奖', '2020.09', '创新创业训练计划', '市级项目奖', '2024.08', 'KDD · 会议', '发表', '学术成果', '联系方式', '本页目录', 'CCF-A 类会议', 'CCF-A 类期刊', '樊文飞院士', '小说与同人创作', '北京市海淀区学院路37号', '北京航空航天大学'],
+    cv: '/简历.pdf',
     advisor: '樊文飞院士'
   },
   'ja/index.html': {
-    phrases: ['Kehan Pang', 'プロフィール', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', '数学コンテスト 一等賞', '2020.09', '北京市イノベーション プログラム表彰', '2024.08', 'KDD 論文掲載', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
-    cv: '/cv/kehan-pang-cv-en.pdf',
+    phrases: ['Kehan Pang', 'プロフィール', 'データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性', '研究分野', '学歴・経歴', 'News', '研究・インターン経験', '2019', 'CMC', '一等賞', '2020.09', 'イノベーションプログラム', '市級プロジェクト賞', '2024.08', 'KDD · 会議', '掲載', '研究業績', '連絡先', '目次', 'CCF-A 会議', 'CCF-A ジャーナル', '小説・二次創作', '中国北京市海淀区学院路37号', '北京航空航天大学'],
+    cv: '/cv.pdf',
     advisor: 'Wenfei Fan 教授（中国科学院院士）'
   }
 }
@@ -59,9 +53,9 @@ const removedInterests = {
 }
 
 const boldResearchTerms = {
-  'index.html': ['Data-centric AI', 'Graph Data Mining', 'Graph Data Quality', 'Graph Knowledge Reasoning', 'GNN Explainability', 'Large Language Models to Data Processing'],
-  'zh/index.html': ['以数据为中心的人工智能', '图数据挖掘', '图数据质量', '图知识推理', 'GNN 可解释性', '大语言模型在数据处理中的应用'],
-  'ja/index.html': ['データ中心型AI（Data-centric AI）', 'グラフデータマイニング', 'グラフデータ品質', 'グラフ知識推論', 'GNNの説明可能性', '大規模言語モデルを用いたデータ処理']
+  'index.html': ['Data-Centric AI', 'Data Quality, Knowledge Discovery, and Model Reliability'],
+  'zh/index.html': ['以数据为中心的人工智能', '数据质量、知识发现与模型可靠性'],
+  'ja/index.html': ['データ中心型AI（Data-Centric AI）', 'データ品質・知識発見・モデル信頼性']
 }
 
 const aboutEducationTerms = {
@@ -80,7 +74,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   for (const languagePath of ['href="/"', 'href="/zh/"', 'href="/ja/"']) {
     assert(html.includes(languagePath), `${filename} is missing language link ${languagePath}`)
   }
-  for (const advisorUrl of ['https://cs.pku.edu.cn/info/1008/2707.htm', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
+  for (const advisorUrl of ['https://homepages.inf.ed.ac.uk/wenfei/', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
     assert(html.includes(`href="${advisorUrl}" target="_blank" rel="noopener noreferrer"`), `${filename} has an unsafe or missing advisor link`)
   }
   for (const interest of interests[filename]) assert(html.includes(interest), `${filename} is missing ${interest}`)
@@ -91,7 +85,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   const aboutBlock = html.slice(html.indexOf('id="about"'), html.indexOf('class="profile-details"'))
   for (const term of boldResearchTerms[filename]) assert(aboutBlock.includes(`<strong>${term}</strong>`), `${filename} does not emphasize ${term}`)
   assert(!aboutBlock.includes(aboutEducationTerms[filename]), `${filename} repeats the undergraduate history in About`)
-  for (const advisorUrl of ['https://cs.pku.edu.cn/info/1008/2707.htm', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
+  for (const advisorUrl of ['https://homepages.inf.ed.ac.uk/wenfei/', 'https://scse.buaa.edu.cn/info/1388/10436.htm']) {
     assert(aboutBlock.includes(`href="${advisorUrl}" target="_blank" rel="noopener noreferrer"`), `${filename} does not link the advisor name in About`)
   }
   assert.strictEqual((html.match(/href="mailto:pangkehan@buaa.edu.cn"/g) || []).length, 2, `${filename} does not link the primary email in both the rail and Contact`)
@@ -110,6 +104,7 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual((html.match(/class="news-event /g) || []).length, 10, `${filename} does not contain exactly ten News events`)
   assert.strictEqual((html.match(/class="news-event__date"/g) || []).length, 10, `${filename} does not render every News date on its own line`)
   assert.strictEqual((html.match(/class="news-event__text"/g) || []).length, 10, `${filename} does not render every News event on its own line`)
+  assert.strictEqual((html.match(/class="news-event__status"/g) || []).length, 10, `${filename} does not render every News status on its own line`)
   assert.strictEqual((html.match(/class="experience-range /g) || []).length, 2, `${filename} does not contain exactly two experience ranges`)
   assert.strictEqual((html.match(/class="unified-timeline__axis"/g) || []).length, 1, `${filename} does not contain exactly one main timeline axis`)
   assert(!html.includes('milestone-track'), `${filename} still contains the retired milestone timeline`)
@@ -126,7 +121,12 @@ for (const [filename, expected] of Object.entries(expectedPages)) {
   assert.strictEqual(occurrences('href="https://github.com/KehanPang"'), 2, `${filename} does not include GitHub in both header and rail`)
   assert.strictEqual(occurrences('href="https://scholar.google.com/citations?user=b3XVG_oAAAAJ"'), 2, `${filename} does not include Scholar in both header and rail`)
   assert.strictEqual(occurrences('href="https://orcid.org/0009-0006-4086-1421"'), 1, `${filename} has an incorrect ORCID link`)
-  assert(!html.includes(expected.cv.includes('-en.pdf') ? '/cv/kehan-pang-cv-zh.pdf' : '/cv/kehan-pang-cv-en.pdf'), `${filename} contains the wrong locale CV`)
+  assert(!html.includes(expected.cv === '/cv.pdf' ? 'href="/简历.pdf"' : 'href="/cv.pdf"'), `${filename} contains the wrong locale CV`)
+
+  for (const publicationId of ['pub-kdd-2024-meld', 'pub-tods-2024-graph-errors', 'pub-icde-2025-label-imputation', 'pub-sigmod-2025-gpu-graph-cleaning', 'pub-icde-2026-gnn-negatives', 'pub-kdd-2026-influence-functions']) {
+    assert(html.includes(`id="${publicationId}"`), `${filename} is missing publication anchor ${publicationId}`)
+    assert(html.includes(`href="#${publicationId}"`), `${filename} does not link Timeline News to ${publicationId}`)
+  }
 }
 
 const notFound = fs.readFileSync(path.join(dist, '404.html'), 'utf8')
@@ -153,7 +153,7 @@ const css = files
   .filter(filename => filename.endsWith('.css'))
   .map(filename => fs.readFileSync(filename, 'utf8'))
   .join('\n')
-for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event--award-subtle', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
+for (const required of ['data-theme=dark', '--paper:#f1f2f3', '--paper:#181a1e', '.profile-rail', '.unified-timeline__axis', '.news-event__label', '.news-event__status', '.news-event--award-subtle', '.publication-anchor', 'rotate(-20deg)', 'overflow-x:auto', 'scrollbar-width:none', '.page-toc', 'position:sticky', 'scroll-margin-top', 'prefers-reduced-motion']) {
   assert(css.includes(required), `theme CSS is missing ${required}`)
 }
 for (const forbidden of ['@keyframes', 'animation:', 'backdrop-filter']) {
@@ -165,21 +165,27 @@ for (const legacyPath of ['/jottings/', '/novels/', '/technology/', '/knowledge/
   assert(!sitemap.includes(legacyPath), `sitemap contains legacy route: ${legacyPath}`)
 }
 
-const englishCv = path.join(dist, 'cv/kehan-pang-cv-en.pdf')
-const chineseCv = path.join(dist, 'cv/kehan-pang-cv-zh.pdf')
-const aliasCv = path.join(dist, 'kehan-pang-cv.pdf')
-for (const filename of [englishCv, chineseCv, aliasCv]) {
+const englishCv = path.join(dist, 'cv.pdf')
+const chineseCv = path.join(dist, '简历.pdf')
+for (const filename of [englishCv, chineseCv]) {
   assert.strictEqual(fs.readFileSync(filename).subarray(0, 5).toString(), '%PDF-', `${filename} is not a valid PDF`)
-  assert.strictEqual(pdfPages(filename), 2, `${filename} is not a two-page PDF`)
 }
-assert.strictEqual(digest(englishCv), digest(aliasCv), 'the legacy CV alias differs from the English CV')
-assert.strictEqual(digest(englishCv), digest(path.resolve(projectRoot, "../KehanPang's Resume-202608.pdf")), 'the published English CV differs from the user-provided canonical source')
-assert.strictEqual(digest(chineseCv), digest(path.resolve(projectRoot, '../庞可涵的个人简历-202608.pdf')), 'the published Chinese CV differs from its selected source')
+assert.strictEqual(digest(englishCv), digest(path.join(projectRoot, 'cv.pdf')), 'the published English CV differs from blog/cv.pdf')
+assert.strictEqual(digest(chineseCv), digest(path.join(projectRoot, '简历.pdf')), 'the published Chinese CV differs from blog/简历.pdf')
+
+for (const retiredCv of ['cv/kehan-pang-cv-en.pdf', 'cv/kehan-pang-cv-zh.pdf', 'kehan-pang-cv.pdf']) {
+  assert(!relativeFiles.includes(retiredCv), `retired CV copy remains: ${retiredCv}`)
+  assert(!searchable.includes(`/${retiredCv}`), `a page still links the retired CV path: /${retiredCv}`)
+}
 
 const packageJson = fs.readFileSync(path.join(projectRoot, 'package.json'), 'utf8')
 const cvSyncScript = fs.readFileSync(path.join(projectRoot, 'scripts/sync-cv.sh'), 'utf8')
 assert(!packageJson.includes('latexmk'), 'package scripts still invoke LaTeX')
 assert(!cvSyncScript.includes('latexmk'), 'CV synchronization still invokes LaTeX')
+assert(cvSyncScript.includes('$PROJECT_ROOT/cv.pdf'), 'CV synchronization does not read blog/cv.pdf')
+assert(cvSyncScript.includes('$PROJECT_ROOT/简历.pdf'), 'CV synchronization does not read blog/简历.pdf')
+assert(cvSyncScript.includes('$DIST_DIR/cv.pdf'), 'CV synchronization does not publish /cv.pdf')
+assert(cvSyncScript.includes('$DIST_DIR/简历.pdf'), 'CV synchronization does not publish /简历.pdf')
 
 const gifSource = path.resolve(projectRoot, '../nina-iseri-girls-band-cry.gif')
 const gifPublic = path.join(dist, 'nina-iseri-girls-band-cry.gif')
@@ -212,8 +218,8 @@ const japaneseHtml = fs.readFileSync(path.join(dist, 'ja/index.html'), 'utf8')
 for (const forbidden of ['计算机', 'コンピューター', 'データセンター', '>Email<', '執筆']) {
   assert(!japaneseHtml.includes(forbidden), `Japanese page contains inconsistent wording: ${forbidden}`)
 }
-for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データ中心型AI（Data-centric AI）', '数学コンテスト', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
+for (const required of ['メール', '予備メール', 'コンピュータサイエンス', 'データ中心型AI（Data-Centric AI）', 'CMC', '学部奨学金', '学業奨学金', 'IEEE ICDE 外部査読者']) {
   assert(japaneseHtml.includes(required), `Japanese page is missing localized wording: ${required}`)
 }
 
-console.log(`Validated ${htmlFiles.length} HTML pages, three profile rails, one shared time axis with ten two-line News events, source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
+console.log(`Validated ${htmlFiles.length} HTML pages, three localized About sections, one shared time axis with ten three-line News events and six publication anchors, root-routed source-identical CVs, image.png favicons, animated 404, themes, page TOC, and legacy-route removal.`)
